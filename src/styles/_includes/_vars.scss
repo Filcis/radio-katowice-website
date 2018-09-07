@@ -3,7 +3,7 @@ $basic-red: #E24545;
 $link: #5B5B5B;
 $light: #EEE;
 $player-light-gray: #EFEFEF;
-$light-grey: #C0C1C4;
+$light-grey: #E1E1E1;
 
 // NAVIGATION
 
@@ -11,7 +11,7 @@ $navbar-height: 6rem;
 $navbar-item-color: $link;
 $navbar-item-hover-color: &link;
 $navbar-item-hover-background-color: &light;
-$navbar-item-active-color: &link;
+$navbar-item-active-color: $light;
 $navbar-item-active-background-color: &light;
 
 // TYPOGRAPHY
@@ -25,3 +25,9 @@ $size-4: 1.333em;
 $size-5: 1em;
 $size-6: 0.75em;
 $size-7: 0.563em;
+
+$tabs-link-color: $light;
+$tabs-toggle-link-active-background-color: $player-light-gray;
+$tabs-toggle-link-active-color: #E24545;
+$tabs-toggle-link-radius: 0;
+$tabs-toggle-link-border-width: 0;

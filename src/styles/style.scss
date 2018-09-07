@@ -38,10 +38,24 @@ button.is-red {
 .player-shortcut{
   min-height: 6rem;
   background-color: $light-grey;
+  border-right:2px solid white;
+  &:last-child {
+    border:none;
+  }
 }
 
 .player-interface {
   background-color: $player-light-gray;
+  position: relative;
+  .tabs {
+    a {
+      background-color: $light-grey;
+      color: $link;
+    }
+    position: absolute;
+    top: -1.75rem;
+    line-height: 1.75;
+    }
 }
 
 .player-live-info {
