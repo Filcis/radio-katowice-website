@@ -21,6 +21,21 @@ button.is-red {
   color: white;
 }
 
+.recent-news {
+  padding: $mobile-content-padding;
+}
+
+.tag {
+  border: 1px solid $light-gray;
+  &.date-tag {
+    color: $link;
+  }
+}
+
+.featured-img {
+  border-radius: 0 0 1em 0;
+}
+
 /* =============================================================
                           PLAYER INTERFACE
 =============================================================== */
@@ -37,7 +52,7 @@ button.is-red {
 
 .player-shortcut{
   min-height: 6rem;
-  background-color: $light-grey;
+  background-color: $light-gray;
   border-right:2px solid white;
   &:last-child {
     border:none;
@@ -49,7 +64,7 @@ button.is-red {
   position: relative;
   .tabs {
     a {
-      background-color: $light-grey;
+      background-color: $light-gray;
       color: $link;
     }
     position: absolute;

@@ -4,5 +4,38 @@ html.has-navbar-fixed-top
     body.starterkit
         include _includes/_header.pug
         include _includes/_player.pug
+        include mixins/_article.pug
+        .container
+          section.recent-news
+            h1.section-title Aktualności
+            - 
+              var article1 = {
+                title:"II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.",
+                image: "files/img/tour.jpg",
+                tags: ["sport","Katowice"],
+                date: "17.07.2018"
+              }
+              var article2 = {
+                title:"Trwa budowa drogi Pszczyna – Racibórz.",
+                image: "files/img/tour.jpg",
+                tags: ["region","Pszczyna", "Racibórz"],
+                date: "17.07.2018"
+              }
+              var article3 = {
+                title:"Naukobus. Mobilne centrum Nauki.",
+                image: "files/img/tour.jpg",
+                tags: ["kultura","Katowice"],
+                date: "17.07.2018"
+              }
+              var article4 = {
+                title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
+                image: "files/img/tour.jpg",
+                tags: ["region","Jaworzno"],
+                date: "17.07.2018"
+              }
+            +article(article1)
+            +article(article2)
+            +article(article3)
+            +article(article4)
         include _includes/_footer.pug
     script(src="js/script.js")

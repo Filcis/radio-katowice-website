@@ -1,0 +1,14 @@
+mixin article(articleContent)
+  .article
+    .article-wrapper
+      span.tag.date-tag.is-medium= articleContent.date
+      img.featured-img(src=articleContent.image)
+      .tags
+        each val in articleContent.tags
+          span.tag.is-medium= val
+      h2.featured-article-title= articleContent.title
+      if block
+        block
+      else
+        p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+      hr
