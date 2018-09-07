@@ -1,0 +1,74 @@
+@import '_includes/_vars';
+@import '_includes/_mixins';
+@import 'bulma/bulma.sass';
+@import 'bulma-carousel/dist/css/bulma-carousel.sass';
+
+.logo {
+  height: 6rem;
+}
+
+.player button {
+  border-radius: 0 0 15px 0;
+  height: 3em;
+  padding-right: 2em;
+  font-size: 0.8rem;
+}
+
+button.is-red {
+  background-color: $basic-red;
+  color: white;
+}
+
+/* =============================================================
+                          PLAYER INTERFACE
+=============================================================== */
+
+.player-artist {
+  height: 18rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.player-shortcuts {
+  max-width: 100%;
+}
+
+.player-shortcut{
+  min-height: 6rem;
+  background-color: $light-grey;
+}
+
+.player-interface {
+  background-color: $player-light-gray;
+}
+
+.player-live-info {
+  padding: 1rem .75rem;
+}
+
+.play-icon-wrapper {
+  width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  border: 2px solid white;
+  position: relative;
+  margin-right: 0.75em;
+}
+
+.play-icon {
+  @include triangle-icon(white);
+}
+
+.navbar-after-divider {
+  height: 0.3rem;
+  background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
+}
+
+.dropdown {
+  button {
+    border: none;
+  }
+}
+
+
+@import '../../node_modules/bulma/bulma.sass'

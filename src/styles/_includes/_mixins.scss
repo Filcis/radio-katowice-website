@@ -1,0 +1,11 @@
+@mixin triangle-icon($color: black) {
+  border-color: transparent transparent transparent $color;
+  box-sizing: border-box;
+  border-style: solid;
+  width: 10px;
+  height: 10px;
+  border-width: 5px 0px 5px 8px;
+  position: absolute;
+  top:50%;
+  transform: translate(-2px, -50%);
+}

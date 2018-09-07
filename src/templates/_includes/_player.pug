@@ -1,0 +1,36 @@
+section.player
+  .container.is-fullhd
+    .player-artist(style= "background-image: url('files/img/ferdek.jpg')")
+    .player-interface
+      .tabs.is-boxed.is-small
+        ul
+          li.is-active: a Teraz na antenie
+          li.is-active: a Następna audycja
+      .player-live-info
+        h1 Varius Manx, Kasia Stankiewicz
+        h2 Kot bez ogona
+        button.button.is-red(type="button") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+    .player-shortcuts.columns.is-mobile.is-marginless
+      .player-shortcut.column.is-4.has-text-centered
+        span(class="icon is-medium")
+          i(class="fas fa-cloud fa-2x")
+        p Pogoda
+      .player-shortcut.column.is-4.has-text-centered
+        span(class="icon is-medium")
+          i(class="fas fa-car fa-2x")
+        p Auto Radio
+      .player-shortcut.column.is-4.has-text-centered
+        span(class="icon is-medium")
+          i(class="fas fa-info fa-2x")
+        p Informacje
+    .player-auditions-carousel.carousel.carousel-animated.carousel-animate-slide
+      .carousel-container
+        .carousel-item.is-active.has-text-centered: p audycja 1
+        .carousel-item.has-text-centered: p audycja 2
+        .carousel-item.has-text-centered: p audycja 3
+      .carousel-navigation.is-overlay
+        .carousel-nav-left
+          i(class="fa fa-chevron-left")
+        .carousel-nav-right
+          i(class="fa fa-chevron-right")
+    
