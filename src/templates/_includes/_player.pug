@@ -28,9 +28,21 @@ section.player
         p Informacje
     .player-auditions-carousel.carousel.carousel-animated.carousel-animate-slide
       .carousel-container
-        .carousel-item.is-active.has-text-centered: p audycja 1
-        .carousel-item.has-text-centered: p audycja 2
-        .carousel-item.has-text-centered: p audycja 3
+        .carousel-item.is-active.has-text-centered
+          a  
+            p nazwa nagrania
+            .play-icon-wrapper #[span.play-icon] 
+            p SŁUCHAJ
+        .carousel-item.has-text-centered 
+          a  
+            p nazwa nagrania
+            .play-icon-wrapper #[span.play-icon] 
+            p SŁUCHAJ
+        .carousel-item.has-text-centered 
+          a  
+            p nazwa nagrania
+            .play-icon-wrapper #[span.play-icon] 
+            p SŁUCHAJ
       .carousel-navigation.is-overlay
         .carousel-nav-left
           i(class="fa fa-chevron-left")

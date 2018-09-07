@@ -9,3 +9,13 @@
   top:50%;
   transform: translate(-2px, -50%);
 }
+
+@mixin play-icon-wrapper($color: black) {
+  min-width: 2em;
+  height: 2em;
+  border-radius: 1em;
+  border: 2px solid $color;
+  position: relative;
+  margin: 0 0.75em;
+
+}
