@@ -8,9 +8,10 @@ body {
   font-size: $size-3;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid $grey;
-  margin-bottom: 1rem;
+  margin-bottom: $vertical-rhythm-unit-4;
 }
 
 .featured-article-title {
   font-size: $size-4;
+  margin-bottom: $vertical-rhythm-unit-1;
 }

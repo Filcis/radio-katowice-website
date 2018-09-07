@@ -25,15 +25,21 @@ button.is-red {
   padding: $mobile-content-padding;
 }
 
+.article .tags {
+  margin-bottom: 0;
+}
+
 .tag {
   border: 1px solid $light-gray;
   &.date-tag {
     color: $link;
+    margin-bottom: $vertical-rhythm-unit-3;
   }
 }
 
 .featured-img {
   border-radius: 0 0 1em 0;
+  margin-bottom: $vertical-rhythm-unit-3;
 }
 
 /* =============================================================
@@ -110,6 +116,7 @@ button.is-red {
 
 
 .player-artist-name {
+  margin-top: $vertical-rhythm-unit-3;
   font-size: $size-4;
 }
 
@@ -117,6 +124,7 @@ button.is-red {
   font-size: $size-4;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: $vertical-rhythm-unit-3;
 }
 
 .navbar-after-divider {

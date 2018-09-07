@@ -17,14 +17,25 @@ $navbar-item-active-background-color: &light;
 // TYPOGRAPHY
 
 $family-primary	: 'IBM Plex Sans', sans-serif;
+$body-line-height: 1.4;
+$hr-background-color: $light-gray;
 
-$size-1: 3.157em;
-$size-2: 2.369em;
-$size-3: 1.777em;
-$size-4: 1.333em;
-$size-5: 1em;
-$size-6: 0.75em;
-$size-7: 0.563em;
+$size-1: 3.157rem;
+$size-2: 2.369rem;
+$size-3: 1.777rem;
+$size-4: 1.333rem;
+$size-5: 1rem;
+$size-6: 0.75rem;
+$size-7: 0.563rem;
+
+// Vertical rhythm
+$vertical-rhythm-unit-1: $body-line-height * $size-7;
+$vertical-rhythm-unit-2: $body-line-height * $size-6;
+$vertical-rhythm-unit-3: $body-line-height * $size-5;
+$vertical-rhythm-unit-4: $body-line-height * $size-4;
+$vertical-rhythm-unit-5: $body-line-height * $size-3;
+$vertical-rhythm-unit-6: $body-line-height * $size-2;
+$vertical-rhythm-unit-7: $body-line-height * $size-1;
 
 $tabs-link-color: $light;
 $tabs-toggle-link-active-background-color: $player-light-gray;
@@ -33,7 +44,7 @@ $tabs-toggle-link-radius: 0;
 $tabs-toggle-link-border-width: 0;
 
 // LAYOUT
-$mobile-content-padding: 1rem 0.75rem;
+$mobile-content-padding: $vertical-rhythm-unit-3 0.75rem;
 
 $tag-radius: 0 0 5px 0;
 $tag-color: $basic-red;
