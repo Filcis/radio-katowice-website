@@ -2,13 +2,13 @@ section.player
   .container.is-fullhd
     .player-artist(style= "background-image: url('files/img/ferdek.jpg')")
     .player-interface
-      .tabs.is-boxed.is-small
+      .tabs.is-boxed
         ul
           li.is-active: a Teraz na antenie
-          li.is-active: a Następna audycja
+          li: a Następna audycja
       .player-live-info
-        h1 Varius Manx, Kasia Stankiewicz
-        h2 Kot bez ogona
+        h1.player-artist-name Varius Manx, Kasia Stankiewicz
+        h2.player-song-title Kot bez ogona
         button.button.is-red(type="button") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
     .player-shortcuts.columns.is-mobile.is-marginless
       .player-shortcut.column.is-4.has-text-centered

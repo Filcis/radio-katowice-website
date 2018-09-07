@@ -2,6 +2,7 @@
 @import '_includes/_mixins';
 @import 'bulma/bulma.sass';
 @import 'bulma-carousel/dist/css/bulma-carousel.sass';
+@import '_includes/_typography';
 
 .logo {
   height: 6rem;
@@ -59,6 +60,17 @@ button.is-red {
   @include triangle-icon(white);
 }
 
+
+.player-artist-name {
+  font-size: $size-4;
+}
+
+.player-song-title {
+  font-size: $size-4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .navbar-after-divider {
   height: 0.3rem;
   background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
@@ -69,6 +81,3 @@ button.is-red {
     border: none;
   }
 }
-
-
-@import '../../node_modules/bulma/bulma.sass'

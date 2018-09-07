@@ -1,0 +1,5 @@
+body {
+  @include until($tablet) {
+    font-size: 14px;
+  }
+}
