@@ -30,6 +30,20 @@ button.is-red {
   color: white;
 }
 
+.navbar {
+  z-index: 999 !important;
+}
+
+menu .navbar-item {
+    font-size: $size-5;
+    width: 90%;
+    margin: 0 auto;
+    padding: $vertical-rhythm-unit-1 2rem;
+    &:last-child{
+      padding-bottom: $vertical-rhythm-unit-3;
+    }
+  }
+
 /* =============================================================
                           LAYOUT
 =============================================================== */
