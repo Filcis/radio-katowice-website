@@ -37,6 +37,20 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
+.carousel-title {
+  background-color: darken($gray, 10);
+  color: lighten($link, 50);
+  padding: $vertical-rhythm-unit-1 1em;
+  font-size: $size-6;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.player-auditions-carousel a {
+    color: lighten($link, 50);
+    font-size: $size-5;
+}
+
 footer {
     a, p {
       color: lighten($link, 20);

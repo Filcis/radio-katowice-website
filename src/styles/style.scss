@@ -171,14 +171,35 @@ footer {
 
 .player-shortcuts {
   max-width: 100%;
+  padding-bottom: $vertical-rhythm-unit-1;
 }
 
-.player-shortcut{
-  min-height: 6rem;
+.player-shortcut {
+  min-height: 8rem;
+  position: relative;
   background-color: $light-gray;
   border-right:2px solid white;
   &:last-child {
     border:none;
+  }
+}
+
+.player-shortcut-call-to-action {
+  background-color: #fff;
+  color: $gray;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  line-height: 2rem;
+  font-size: $size-6;
+  font-weight: bold;
+  display: flex;
+  align-items:center;
+  border: 1px solid $light-gray;
+  .play-icon-wrapper {
+      @include play-icon-wrapper($basic-red, 1.5em);
   }
 }
 
@@ -223,12 +244,8 @@ footer {
   }
 }
 
-.play-icon {
-  @include triangle-icon(white);
-}
-
-.carousel .play-icon {
-  @include triangle-icon($basic-red);
+.player-auditions-carousel {
+  background-color: darken($gray, 20);
 }
 
 
