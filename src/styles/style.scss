@@ -76,6 +76,12 @@ footer {
   padding-bottom: $vertical-rhythm-unit-4;
 }
 
+.dropdown .stream-dropdown-button {
+  background-color: #fff;
+  border: 1px solid $light-gray;
+  padding-right: 0.75em;
+}
+
 // ----------- Video ------------------
 
 // .carousel .carousel-container .video-card-wrapper.carousel-item {

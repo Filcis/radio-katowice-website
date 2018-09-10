@@ -11,12 +11,13 @@
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script type="text/javascript" src="js/bulma-carousel.min.js"></script>
+    <script type="text/javascript" src="js/jQuery.min.js"></script>
   </head>
   <body class="starterkit">
     <header>
       <nav class="navbar is-fixed-top">
         <div class="container">
-          <logo class="navbar-brand"><img class="logo" src="files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice"><a class="navbar-burger" data-target="main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></logo>
+          <logo class="navbar-brand"><img class="logo" src="files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice"><a class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></logo>
           <div class="navbar-after-divider"></div>
           <menu class="navbar-menu" id="main-menu">
             <div class="navbar-start">
@@ -51,6 +52,12 @@
             </ul>
           </div>
           <div class="player-live-info">
+            <div class="dropdown" id="stream-dropdown">
+              <button class="stream-dropdown-button dropdown-trigger"> <span>Streamy </span><span class="icon is-small"><i class="fas fa-angle-down has-text-grey"></i></span></button>
+              <div class="dropdown-menu">
+                <div class="dropdown-content"><a class="dropdown-item">Stream 1</a><a class="dropdown-item">Stream 2</a><a class="dropdown-item">Stream 3</a></div>
+              </div>
+            </div>
             <h1 class="player-artist-name">Varius Manx, Kasia Stankiewicz</h1>
             <h2 class="player-song-title">Kot bez ogona</h2>
             <button class="button is-red" type="button">
