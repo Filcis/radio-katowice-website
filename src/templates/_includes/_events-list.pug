@@ -1,0 +1,24 @@
+- 
+  var highlights = [
+    {
+      title: "100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.",
+      description:"Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik."
+    },
+    {
+      title: "Młodzież z Żytomierza w Radiu Katowice",
+      description:"Katowice: polska młodzież z Żytomierza odwiedza Śląsk. To wspólny projekt obu regionów. Dziś zwiedza Polskie Radio Katowice."
+    },
+    {
+      title: "Krajoznawcze fascynacje",
+      description:"Katowice: w radiowej galerii \"Na żywo\" otwarta została wystawa rysunku Edwarda Wieczorka i odznak krajoznawczych z kolekcji Gerarda Suchanka."
+    },
+  ]
+.container
+  section.events-list
+    h1.section-title-secondary Wydarzenia
+    ul
+      each val in highlights
+        li
+          h3.highlights-body
+            a.highlights-title= val.title
+            span= val.description

@@ -11,7 +11,19 @@ body {
   margin-bottom: $vertical-rhythm-unit-4;
 }
 
+.section-title-secondary {
+  font-size: $size-4;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid $grey;
+  margin-bottom: $vertical-rhythm-unit-4;
+}
+
 .featured-article-title {
   font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-1;
+}
+
+.highlights-title {
+  display: block;
+  color: $basic-red;
 }

@@ -35,8 +35,14 @@ button.is-red {
 =============================================================== */
 
 .recent-news,
-.recent-video {
+.recent-video,
+.highlights,
+.events-list {
   padding: $mobile-content-padding;
+}
+
+.events-list {
+  background-color: $player-light-gray;
 }
 
 /* =============================================================
@@ -58,6 +64,10 @@ button.is-red {
 .featured-img {
   border-radius: 0 0 1em 0;
   margin-bottom: $vertical-rhythm-unit-3;
+}
+
+.highlights-body {
+  padding-bottom: $vertical-rhythm-unit-4;
 }
 
 // ----------- Video ------------------

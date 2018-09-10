@@ -1,0 +1,36 @@
+- 
+  var highlights = [
+    {
+      title: "Odlotowa zabawa w Radiu Katowice",
+      description:"Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł"
+    },
+    {
+      title: "Radio Katowice najlepsze na rynku",
+      description:"Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!"
+    },
+    {
+      title: "Lista Przebojów",
+      description:"20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00"
+    },
+    {
+      title: "Auto Radio – aktualne informacje drogowe",
+      description:"Informacje z dróg województwa śląskiego."
+    },
+    {
+      title: "Trójwymiarowa Prognoza Pogody na dziś",
+      description:"Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!"
+    },
+    {
+      title: "Infostrada",
+      description:"Magazyn reporterów Radia Katowice. Każdego dnia od 14.00"
+    },
+  ]
+.container
+  section.highlights
+    h1.section-title-secondary Polecamy
+    ul
+      each val in highlights
+        li
+          h3.highlights-body
+            a.highlights-title= val.title
+            span= val.description
