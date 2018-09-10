@@ -15,7 +15,12 @@ $(document).ready(() => {
         $(e.currentTarget.dataset.target).slideToggle("slow");
     });
     //==================================================
-
+    // const tabs = $('a.tab');
+    // console.log(tabs);
+    // tabs.click((e) => {
+    //     $(e.currentTarget).toggleClass('is-active');
+    //     console.log(e.currentTarget.dataset.target);
+    // });
     //==================================================
     var carousels = bulmaCarousel.attach();
 })

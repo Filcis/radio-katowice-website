@@ -4,9 +4,9 @@ section.player
     .player-interface
       .tabs.is-toggle
         ul
-          li.is-active: a Teraz na antenie
-          li: a Następna audycja
-      .player-live-info
+          li.is-active: a.tab(data-target= "#player-tab-1") Teraz na antenie
+          li: a.tab(data-target= "#player-tab-2") Następna audycja
+      .player-live-info#player-tab-1
         .dropdown#stream-dropdown
           button.stream-dropdown-button.dropdown-trigger 
             span Streamy 
@@ -19,6 +19,7 @@ section.player
         h1.player-artist-name Andrzej Grabowski
         h2.player-song-title Jestem jak motyl
         button.button.is-red(type="button") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+        .player-next-info#player-tab-2
     .player-shortcuts.columns.is-mobile.is-marginless
       .player-shortcut.column.is-4.has-text-centered
         p 14:00

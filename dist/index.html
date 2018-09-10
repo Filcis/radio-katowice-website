@@ -40,11 +40,11 @@
         <div class="player-interface">
           <div class="tabs is-toggle">
             <ul>
-              <li class="is-active"><a>Teraz na antenie</a></li>
-              <li><a>Następna audycja</a></li>
+              <li class="is-active"><a class="tab" data-target="#player-tab-1">Teraz na antenie</a></li>
+              <li><a class="tab" data-target="#player-tab-2">Następna audycja</a></li>
             </ul>
           </div>
-          <div class="player-live-info">
+          <div class="player-live-info" id="player-tab-1">
             <div class="dropdown" id="stream-dropdown">
               <button class="stream-dropdown-button dropdown-trigger"> <span>Streamy </span><span class="icon is-small"><i class="fas fa-angle-down has-text-grey"></i></span></button>
               <div class="dropdown-menu">
@@ -56,6 +56,7 @@
             <button class="button is-red" type="button">
               <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo
             </button>
+            <div class="player-next-info" id="player-tab-2"></div>
           </div>
         </div>
         <div class="player-shortcuts columns is-mobile is-marginless">
