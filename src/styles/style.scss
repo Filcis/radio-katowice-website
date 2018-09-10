@@ -37,8 +37,14 @@ button.is-red {
 .recent-news,
 .recent-video,
 .highlights,
-.events-list {
+.events-list,
+footer {
   padding: $mobile-content-padding;
+}
+
+footer {
+  background-color: $dark-gray;
+  min-height: 20rem;
 }
 
 .events-list {

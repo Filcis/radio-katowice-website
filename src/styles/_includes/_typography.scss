@@ -27,3 +27,19 @@ body {
   display: block;
   color: $basic-red;
 }
+
+.footer_headline {
+  color: lighten($link, 50);
+  font-size: $size-5;
+  text-transform: uppercase;
+  padding-bottom: $vertical-rhythm-unit-1;
+  margin-bottom: $vertical-rhythm-unit-1;
+  border-bottom: 1px solid #ccc;
+}
+
+footer {
+    a, p {
+      color: lighten($link, 20);
+      line-height: $vertical-rhythm-unit-3;
+    }
+}
