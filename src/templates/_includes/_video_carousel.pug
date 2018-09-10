@@ -1,0 +1,15 @@
+include ../mixins/_video.pug
+.container
+  section.recent-video
+    h1.section-title Video
+    .video.carousel.carousel-animated.carousel-animate-slide
+      .carousel-container
+        +video({isActive: 1, image: "video_3.jpg", tag:"wywiady"})
+        +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
+        +video({isActive: 0, image: "video_4.jpg", tag:"wywiady"})
+        +video({isActive: 0, image: "video_1.jpg", tag:"wywiady"})
+      .carousel-navigation.is-overlay
+        .carousel-nav-left
+          i(class="fa fa-chevron-left")
+        .carousel-nav-right
+          i(class="fa fa-chevron-right")

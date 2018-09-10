@@ -5,15 +5,24 @@
 @import 'bulma-carousel/dist/css/bulma-carousel.sass';
 @import '_includes/_typography';
 
+
+/* =============================================================
+                          NAVIGATION
+=============================================================== */
+
 .logo {
   height: 6rem;
 }
 
-.player button {
-  border-radius: 0 0 15px 0;
-  height: 3em;
-  padding-right: 2em;
-  font-size: 0.8rem;
+.navbar-after-divider {
+  height: 0.3rem;
+  background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
+}
+
+.dropdown {
+  button {
+    border: none;
+  }
 }
 
 button.is-red {
@@ -21,9 +30,18 @@ button.is-red {
   color: white;
 }
 
-.recent-news {
+/* =============================================================
+                          LAYOUT
+=============================================================== */
+
+.recent-news,
+.recent-video {
   padding: $mobile-content-padding;
 }
+
+/* =============================================================
+                          ELEMENTS
+=============================================================== */
 
 .article .tags {
   margin-bottom: 0;
@@ -42,6 +60,48 @@ button.is-red {
   margin-bottom: $vertical-rhythm-unit-3;
 }
 
+// ----------- Video ------------------
+
+// .carousel .carousel-container .video-card-wrapper.carousel-item {
+//   flex: 1 0 90%;
+//   padding-left: 2rem;
+// }
+
+.carousel-item .video-card {
+  background-color: $light-gray;
+  min-height: 20rem;
+  border-radius: 0 0 15px 0;
+  width: 90%;
+  display: block;
+}
+
+.video-card-img-wrapper {
+  min-height: 8rem;
+  width: 100%;
+  position: relative;
+}
+
+.video-card-body {
+  color: $gray;
+  padding:$vertical-rhythm-unit-1 1rem;
+}
+
+.video-card-title {
+  display: block;
+  font-size: $size-4;
+}
+
+.video-card-tag {
+  display: block;
+  position: absolute;
+  top:0;
+  right:0;
+  color: #fff;
+  padding: 0.25em 0.5em;
+  border-radius: 0 0 1em 0;
+  background-color: $basic-red;
+}
+
 /* =============================================================
                           PLAYER INTERFACE
 =============================================================== */
@@ -50,6 +110,13 @@ button.is-red {
   height: 18rem;
   background-position: center;
   background-size: cover;
+}
+
+.player button {
+  border-radius: 0 0 15px 0;
+  height: 3em;
+  padding-right: 2em;
+  font-size: 0.8rem;
 }
 
 .player-shortcuts {
@@ -125,15 +192,4 @@ button.is-red {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: $vertical-rhythm-unit-3;
-}
-
-.navbar-after-divider {
-  height: 0.3rem;
-  background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
-}
-
-.dropdown {
-  button {
-    border: none;
-  }
 }
