@@ -22,6 +22,9 @@
 .dropdown {
   button {
     border: none;
+    &:focus {
+      outline: 0;
+    }
   }
 }
 
@@ -54,6 +57,17 @@ menu .navbar-item {
 .events-list,
 footer {
   padding: $mobile-content-padding;
+}
+
+.article {
+  margin-bottom: $vertical-rhythm-unit-4;
+  padding-bottom: $vertical-rhythm-unit-3;
+  border-bottom: 1px solid $light-gray;
+  &:last-child {
+    padding-bottom: 0;
+    border: none;
+    margin-bottom: 0;
+  }
 }
 
 footer {
