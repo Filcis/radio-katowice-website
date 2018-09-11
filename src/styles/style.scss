@@ -213,6 +213,7 @@ footer {
     a {
       background-color: $light-gray;
       color: $link;
+      padding: 0.25rem 0.5rem;
     }
     position: absolute;
     top: -1.75rem;
@@ -220,8 +221,17 @@ footer {
     }
 }
 
-.player-live-info {
+.tab-content {
+  display: none;
+  &.is-active{
+    display: block;
+  }
+}
+
+.player-live-info,
+.player-next-info {
   padding: 1rem .75rem;
+  min-height: $vertical-rhythm-unit-5 * 6;
 }
 
 .play-icon-wrapper {
