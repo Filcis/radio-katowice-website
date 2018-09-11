@@ -58,6 +58,7 @@ menu .navbar-item {
 .recent-video,
 .highlights,
 .events-list,
+.newsletter,
 footer {
   padding: $mobile-content-padding;
 }
@@ -80,6 +81,10 @@ footer {
 
 .events-list {
   background-color: $player-light-gray;
+}
+
+.newsletter {
+  margin-bottom: $vertical-rhythm-unit-5;
 }
 
 /* =============================================================
