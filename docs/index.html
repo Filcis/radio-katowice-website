@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top"><!DOCTYPE html>
+  <head>
+    <title>Filip Ciślak | radio katowice www</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Filip Ciślak">
+    <meta name="description" content="Radio Katowice www front end">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./assets/">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script type="text/javascript" src="js/bulma-carousel.min.js"></script>
+    <script type="text/javascript" src="js/jQuery.min.js"></script>
+  </head>
+  <body class="starterkit">
+    <header>
+      <nav class="navbar is-fixed-top">
+        <div class="container">
+          <logo class="navbar-brand"><img class="logo" src="files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice"><a class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></logo>
+          <div class="navbar-after-divider"></div>
+          <menu class="navbar-menu" id="main-menu">
+            <div class="navbar-start"><a class="navbar-item"><span>na antenie</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>muzyka</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>informacje</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>reklama</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>radio</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>więcej</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item field">
+                <p class="control has-icons-left">
+                  <input class="input is-medium" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"> </i></span>
+                </p>
+              </div>
+            </div>
+          </menu>
+        </div>
+      </nav>
+      <div class="navbar-after-divider"></div>
+    </header>
+    <section class="player">
+      <div class="container is-fullhd">
+        <div class="player-artist" style="background-image: url('files/img/ferdek.jpg')"></div>
+        <div class="player-interface">
+          <div class="tabs is-toggle">
+            <ul>
+              <li class="is-active"><a class="tab" data-target="#player-tab-1">Teraz na antenie</a></li>
+              <li><a class="tab" data-target="#player-tab-2">Następna audycja</a></li>
+            </ul>
+          </div>
+          <div class="player-live-info" id="player-tab-1">
+            <div class="dropdown" id="stream-dropdown">
+              <button class="stream-dropdown-button dropdown-trigger"> <span>Streamy </span><span class="icon is-small"><i class="fas fa-angle-down has-text-grey"></i></span></button>
+              <div class="dropdown-menu">
+                <div class="dropdown-content"><a class="dropdown-item">Stream 1</a><a class="dropdown-item">Stream 2</a><a class="dropdown-item">Stream 3</a></div>
+              </div>
+            </div>
+            <h1 class="player-artist-name">Andrzej Grabowski</h1>
+            <h2 class="player-song-title">Jestem jak motyl</h2>
+            <button class="button is-red" type="button">
+              <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo
+            </button>
+            <div class="player-next-info" id="player-tab-2"></div>
+          </div>
+        </div>
+        <div class="player-shortcuts columns is-mobile is-marginless">
+          <div class="player-shortcut column is-4 has-text-centered">
+            <p>14:00</p><span class="icon is-medium"><i class="fas fa-cloud fa-2x"></i></span>
+            <p>Pogoda</p>
+            <div class="player-shortcut-call-to-action"> 
+              <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+            </div>
+          </div>
+          <div class="player-shortcut column is-4 has-text-centered">
+            <p>16:10</p><span class="icon is-medium"><i class="fas fa-car fa-2x"></i></span>
+            <p>Auto Radio</p>
+            <div class="player-shortcut-call-to-action"> 
+              <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+            </div>
+          </div>
+          <div class="player-shortcut column is-4 has-text-centered">
+            <p>12:45</p><span class="icon is-medium"><i class="fas fa-info fa-2x"></i></span>
+            <p>Informacje</p>
+            <div class="player-shortcut-call-to-action"> 
+              <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+            </div>
+          </div>
+        </div>
+        <div class="player-auditions-carousel carousel carousel-animated carousel-animate-slide">
+          <h2 class="carousel-title">Ostatnio na antenie</h2>
+          <div class="carousel-container">
+            <div class="carousel-item is-active has-text-centered"><a> 
+                <p>nazwa nagrania</p>
+                <div class="play-icon-wrapper"><span class="play-icon"></span> </div></a></div>
+            <div class="carousel-item has-text-centered"> <a> 
+                <p>nazwa nagrania</p>
+                <div class="play-icon-wrapper"><span class="play-icon"></span> </div></a></div>
+            <div class="carousel-item has-text-centered"> <a> 
+                <p>nazwa nagrania</p>
+                <div class="play-icon-wrapper"><span class="play-icon"></span> </div></a></div>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left"><i class="fa fa-chevron-left"></i></div>
+            <div class="carousel-nav-right"><i class="fa fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <section class="recent-news">
+        <h1 class="section-title">Aktualności</h1>
+            <div class="article">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">17.07.2018</span><img class="featured-img" src="files/img/tour.jpg">
+                <div class="tags"><span class="tag is-medium">sport</span><span class="tag is-medium">Katowice</span>
+                </div>
+                <h2 class="featured-article-title">II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              </div>
+            </div>
+            <div class="article">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">15.07.2018</span><img class="featured-img" src="files/img/pszczyna-raciborz.jpg">
+                <div class="tags"><span class="tag is-medium">region</span><span class="tag is-medium">Pszczyna</span><span class="tag is-medium">Racibórz</span>
+                </div>
+                <h2 class="featured-article-title">Trwa budowa drogi Pszczyna – Racibórz.</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              </div>
+            </div>
+            <div class="article">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">13.07.2018</span><img class="featured-img" src="files/img/naukobus.jpg">
+                <div class="tags"><span class="tag is-medium">kultura</span><span class="tag is-medium">Katowice</span>
+                </div>
+                <h2 class="featured-article-title">Naukobus. Mobilne centrum Nauki.</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              </div>
+            </div>
+            <div class="article">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">12.07.2018</span><img class="featured-img" src="files/img/fetor.jpg">
+                <div class="tags"><span class="tag is-medium">region</span><span class="tag is-medium">Jaworzno</span>
+                </div>
+                <h2 class="featured-article-title">Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.</h2>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              </div>
+            </div>
+      </section>
+    </div>
+    <div class="container">
+      <section class="recent-video">
+        <h1 class="section-title">Video</h1>
+        <div class="video carousel carousel-animated carousel-animate-slide">
+          <div class="carousel-container">
+                <div class="carousel-item video-card-wrapper is-active"><a class="video-card">
+                    <div class="video-card-img-wrapper">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_3.jpg">
+                      <div class="video-card-play-icon"> </div>
+                    </div>
+                    <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
+                <div class="carousel-item video-card-wrapper"><a class="video-card">
+                    <div class="video-card-img-wrapper">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_2.jpg">
+                      <div class="video-card-play-icon"> </div>
+                    </div>
+                    <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
+                <div class="carousel-item video-card-wrapper"><a class="video-card">
+                    <div class="video-card-img-wrapper">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_4.jpg">
+                      <div class="video-card-play-icon"> </div>
+                    </div>
+                    <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
+                <div class="carousel-item video-card-wrapper"><a class="video-card">
+                    <div class="video-card-img-wrapper">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_1.jpg">
+                      <div class="video-card-play-icon"> </div>
+                    </div>
+                    <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left"><i class="fa fa-chevron-left"></i></div>
+            <div class="carousel-nav-right"><i class="fa fa-chevron-right"></i></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <section class="highlights">
+        <h1 class="section-title-secondary">Polecamy</h1>
+        <ul>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Odlotowa zabawa w Radiu Katowice</a><span>Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Radio Katowice najlepsze na rynku</a><span>Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Lista Przebojów</a><span>20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Auto Radio – aktualne informacje drogowe</a><span>Informacje z dróg województwa śląskiego.</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Trójwymiarowa Prognoza Pogody na dziś</a><span>Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Infostrada</a><span>Magazyn reporterów Radia Katowice. Każdego dnia od 14.00</span></h3>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <div class="container">
+      <section class="events-list">
+        <h1 class="section-title-secondary">Wydarzenia</h1>
+        <ul>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.</a><span>Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik.</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Młodzież z Żytomierza w Radiu Katowice</a><span>Katowice: polska młodzież z Żytomierza odwiedza Śląsk. To wspólny projekt obu regionów. Dziś zwiedza Polskie Radio Katowice.</span></h3>
+          </li>
+          <li>
+            <h3 class="highlights-body"><a class="highlights-title">Krajoznawcze fascynacje</a><span>Katowice: w radiowej galerii &quot;Na żywo&quot; otwarta została wystawa rysunku Edwarda Wieczorka i odznak krajoznawczych z kolekcji Gerarda Suchanka.</span></h3>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>
+      <div class="container columns">
+        <div class="column is-2">
+          <section>
+            <h4 class="footer_headline">Partnerzy radia katowice</h4>
+            <ul>
+              <li><a>Górnośląskie Towarzystwo Literackie</a></li>
+              <li><a>Wydawnictwo Górnicze</a></li>
+              <li><a>Portal Górniczy</a></li>
+              <li><a>Głos Ziemi Cieszyńskiej</a></li>
+              <li><a>Kronika Beskidzka</a></li>
+              <li><a>Regionalny Portal Informacyjny</a></li>
+              <li><a>Paskud</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="column is-2">
+          <section>
+            <h4 class="footer_headline">archiwum dźwiękowe</h4>
+            <ul>
+              <li><a>Debata Samorządowa Radia Katowice</a></li>
+              <li><a>Wybuch w Bielsku. Jazda autostradą</a></li>
+              <li><a>U progu dnia – ks. Stanisław KOŁAKOWSK</a></li>
+              <li><a>Wypożyczanie samochodu za granicą</a></li>
+              <li><a>Wizyta ministra kultury. Umowa</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="column is-2">
+          <section>
+            <h4 class="footer_headline">częstotliwości</h4>
+            <ul>
+              <li><a>89.3 FM – Gliwice</a></li>
+              <li><a>97.0 FM – Racibórz</a></li>
+              <li><a>98.4 FM – Częstochowa</a></li>
+              <li><a>101.2 FM – Katowice</a></li>
+              <li><a>102.2 FM – Katowice</a></li>
+              <li><a>103.0 FM – Bielsko-Biała</a></li>
+              <li><a>216,928 MHz DAB+ </a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="column is-2">
+          <section>
+            <h4 class="footer_headline">kontakt</h4>
+            <p>
+                Polskie Radio <br/>
+               Regionalna Rozgłośnia w Katowicach <br/>
+               Radio Katowice SA <br/>
+            </p>
+            <p>
+                ul. Ligonia 29, 40-953 Katowice <br/>
+               tel. +48 32 2005 400, fax +48 32 2005 581 <br/>
+               e-mail: sekretariat@radio.katowice.p <br/>
+            </p>
+          </section>
+        </div>
+        <div class="column is-2">
+          <section>
+            <ul>
+              <li><a>Debata Samorządowa Radia Katowice</a></li>
+              <li><a>Wybuch w Bielsku. Jazda autostradą</a></li>
+              <li><a>U progu dnia – ks. Stanisław KOŁAKOWSK</a></li>
+              <li><a>Wypożyczanie samochodu za granicą</a></li>
+              <li><a>Wizyta ministra kultury. Umowa</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="column is-2">
+          <section>
+            <ul>
+              <li><a>facebook</a></li>
+              <li><a>twitter</a></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/script.js"></script>
+</html>
