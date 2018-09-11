@@ -31,6 +31,9 @@
 button.is-red {
   background-color: $basic-red;
   color: white;
+  &:active, &:hover {
+    color: white;
+  }
 }
 
 .navbar {
