@@ -1,0 +1,35 @@
+header
+  nav.navbar.is-fixed-top
+    .container
+      logo.navbar-brand
+        img.logo(src="files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice")
+        a.navbar-burger(data-target="#main-menu")
+          span(aria-hidden="true")
+          span(aria-hidden="true")
+          span(aria-hidden="true")
+      .navbar-after-divider
+      menu.navbar-menu(id="main-menu")
+        .navbar-start
+          -
+            var menuItems = [
+                {'title':'na antenie'}, 
+                {'title':'muzyka'}, 
+                {'title':'informacje'}, 
+                {'title':'reklama'},
+                {'title':'radio'}, 
+                {'title':'więcej'}
+            ];
+          each menu in menuItems
+            a.navbar-item
+              span= menu.title
+              span(class="icon is-small")
+                i(class="fas fa-caret-down fa-xs")
+        .navbar-end
+          div.navbar-item.field
+            p.control.has-icons-left
+              input.input.is-medium(type="text", placeholder="Szukaj")
+              span.icon.is-left: i.is-medium.fas.fa-search 
+          //- div.navbar-item
+          //-   p ikony media
+  .navbar-after-divider
+      
