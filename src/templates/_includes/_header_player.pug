@@ -1,23 +1,16 @@
 header
-  nav.navbar.is-fixed-top
+  nav.navbar.navbar-player.is-fixed-top
     .container
-      logo.navbar-brand
-        img.logo(src="files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice")
-        a.navbar-burger(data-target="#main-menu")
-          span(aria-hidden="true")
-          span(aria-hidden="true")
-          span(aria-hidden="true")
-      .navbar-after-divider
-      menu.navbar-menu(id="main-menu")
+      .navbar-brand
+        img.logo-player(src="files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice")
+        a.stream-menu-trigger(data-target="#stream-menu") STREAMY
+      menu.navbar-menu(id="stream-menu")
         .navbar-start
           -
             var menuItems = [
-                {'title':'na antenie'}, 
-                {'title':'muzyka'}, 
-                {'title':'informacje'}, 
-                {'title':'reklama'},
-                {'title':'radio'}, 
-                {'title':'więcej'}
+                {'title':'główny'}, 
+                {'title':'oldies'}, 
+                {'title':'top50'} 
             ];
           each menu in menuItems
             a.navbar-item
@@ -31,5 +24,4 @@ header
               span.icon.is-left: i.is-medium.fas.fa-search 
           //- div.navbar-item
           //-   p ikony media
-  .navbar-after-divider
       
