@@ -1,0 +1,20 @@
+doctype html
+html.has-player-navbar-fixed-top
+  include _includes/_head.pug
+  body.starterkit
+    include _includes/_header_player.pug
+    section.player
+      include _includes/mixins/_player-current.pug
+      +current({
+      icon: "car",
+      date: "25.04.2018 | 15:20",
+      title: "Auto Radio"
+      })
+      .player-shortcuts
+        include _includes/mixins/_player_shortcuts.pug
+        +shortcuts([
+          {image:"Ferdek.jpg", title:"Andrzej Grabowski: Jest dobrze", href:"/player.html"},
+          {icon:"cloud", title:"Pogoda", hour:"14:00", href:"/player-pogoda.html"},
+          {icon:"info", title:"Informacje", hour:"16:45", href:"/player-info.html"}
+        ])
+        include _includes/player_includes/_player_carousel.pug

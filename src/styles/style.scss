@@ -161,8 +161,8 @@ footer {
 
 .icon-music {color: $music-color}
 .icon-info {color: $info-color}
-.icon-weather {color: $weather-color}
-.icon-auto-radio {color: $auto-radio-color}
+.icon-cloud {color: $weather-color}
+.icon-auto {color: $auto-radio-color}
 
 // ----------- Video ------------------
 
@@ -205,10 +205,24 @@ footer {
                           PLAYER INTERFACE
 =============================================================== */
 
-.player-artist {
+.player-cover {
   height: 18rem;
+}
+
+.cover {
   background-position: center;
   background-size: cover;
+}
+
+.player-cover-icon {
+  height: 18rem;
+  background-color: darken($dark-gray, 20);
+  display: flex;
+  .icon {
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
 }
 
 .player button {

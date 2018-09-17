@@ -3,5 +3,18 @@ html.has-player-navbar-fixed-top
   include _includes/_head.pug
   body.starterkit
     include _includes/_header_player.pug
-    include _includes/_main_player.pug
-    script(src="js/script.js")
+    section.player
+      include _includes/mixins/_player-current.pug
+      +current({
+      image: "Ferdek.jpg",
+      name: "Andrzej Grabowski",
+      title: "Jest dobrze"
+      })
+      .player-shortcuts
+        include _includes/mixins/_player_shortcuts.pug
+        +shortcuts([
+          {icon:"info", title:"Informacje", hour:"16:45", href:"/player-info.html"},
+          {icon:"cloud", title:"Pogoda", hour:"14:00", href:"/player-pogoda.html"},
+          {icon:"car", title:"Auto Radio", hour:"15:20", href:"/player-autoradio.html"}
+        ])
+        include _includes/player_includes/_player_carousel.pug

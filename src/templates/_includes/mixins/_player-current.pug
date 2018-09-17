@@ -1,0 +1,19 @@
+mixin current(current)
+  .container.is-fullhd
+    if current.image
+      .player-cover.cover(style= "background-image: url('assets/files/img/" + current.image + "')")
+    else if current.icon
+      .player-cover-icon
+        span(class="icon is-large icon-"+ current.icon)
+          i(class="fas fa-3x fa-"+ current.icon)
+    .player-interface
+      .tabs.is-toggle
+        ul
+          li.is-active: a.tab(data-target= "#player-tab-1") Teraz odtwarzane
+      .player-live-info.tab-content.is-active#player-tab-1
+        if current.name
+          h1.player-artist-name= current.name
+        else if current.date
+          h1.player-artist-name= current.date
+        h2.player-song-title= current.title
+        include ../player_includes/_controls.pug
