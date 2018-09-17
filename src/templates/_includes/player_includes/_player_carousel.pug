@@ -1,18 +1,35 @@
 .player-auditions-carousel.carousel.carousel-animated.carousel-animate-slide
-  h2.carousel-title Ostatnio na antenie
   .carousel-container
-    .carousel-item.is-active.has-text-centered
-      a  
-        p nazwa nagrania
-        .play-icon-wrapper #[span.play-icon] 
-    .carousel-item.has-text-centered 
-      a  
-        p nazwa nagrania
-        .play-icon-wrapper #[span.play-icon] 
-    .carousel-item.has-text-centered 
-      a  
-        p nazwa nagrania
-        .play-icon-wrapper #[span.play-icon] 
+    .carousel-item.is-active.player-shortcut.columns.is-mobile.is-marginless
+      .column.is-3.has-text-centered.has-icon
+        span(class="icon is-medium icon-music")
+          i(class="fas fa-music fa-2x")
+      .column.is-9
+        p 24.03.2019 15:00
+        p Nazwa nagrania
+        .player-shortcut-call-to-action 
+          .play-icon-wrapper #[span.play-icon]
+          span SŁUCHAJ
+    .carousel-item.player-shortcut.columns.is-mobile.is-marginless
+      .column.is-3.has-text-centered.has-icon
+        span(class="icon is-medium icon-music")
+          i(class="fas fa-music fa-2x")
+      .column.is-9
+        p 24.03.2019 13:10
+        p Nazwa nagrania
+        .player-shortcut-call-to-action 
+          .play-icon-wrapper #[span.play-icon]
+          span SŁUCHAJ
+    .carousel-item.player-shortcut.columns.is-mobile.is-marginless
+      .column.is-3.has-text-centered.has-icon
+        span(class="icon is-medium icon-music")
+          i(class="fas fa-music fa-2x")
+      .column.is-9
+        p 23.03.2019 12:10
+        p Nazwa nagrania
+        .player-shortcut-call-to-action 
+          .play-icon-wrapper #[span.play-icon]
+          span SŁUCHAJ
   .carousel-navigation.is-overlay
     .carousel-nav-left
       i(class="fa fa-chevron-left")

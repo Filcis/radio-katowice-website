@@ -12,6 +12,7 @@
 
 @mixin play-icon-wrapper($color: black, $size: 2em) {
   min-width: $size;
+  text-align: center;
   height: $size;
   border-radius: $size;
   border: 2px solid $color;

@@ -159,19 +159,19 @@ footer {
   padding:0 0.75em 0 0;
 }
 
+.icon-music {color: $music-color}
+.icon-info {color: $info-color}
+.icon-weather {color: $weather-color}
+.icon-auto-radio {color: $auto-radio-color}
+
 // ----------- Video ------------------
 
-// .carousel .carousel-container .video-card-wrapper.carousel-item {
-//   flex: 1 0 90%;
-//   padding-left: 2rem;
-// }
-
 .carousel-item .video-card {
+  display: block;
   background-color: $light-gray;
   min-height: 20rem;
   border-radius: 0 0 15px 0;
   width: 90%;
-  display: block;
 }
 
 .video-card-img-wrapper {
@@ -220,35 +220,42 @@ footer {
 
 .player-shortcuts {
   max-width: 100%;
+  background-color: #f5f5f5;
+  padding-top: $vertical-rhythm-unit-1;
   padding-bottom: $vertical-rhythm-unit-1;
 }
 
 .player-shortcut {
-  min-height: 8rem;
+  min-height: 6rem;
   position: relative;
-  background-color: $light-gray;
-  border-right:2px solid white;
-  &:last-child {
-    border:none;
+  background-color: white;
+  border:1px solid $light-gray;
+  border-radius: 0 0 12px 0;
+  margin: $vertical-rhythm-unit-1;
+  .has-icon {
+    border-right: 1px solid $light-gray;
+    display: flex;
+    align-items: center;
+    .icon {
+      margin: auto;
+    }
   }
 }
 
 .player-shortcut-call-to-action {
-  background-color: #fff;
   color: $gray;
-  position: absolute;
   bottom: 0;
   width: 100%;
-  left: 0;
-  right: 0;
   line-height: 2rem;
   font-size: $size-6;
   font-weight: bold;
   display: flex;
   align-items:center;
-  border: 1px solid $light-gray;
+  position: relative;
   .play-icon-wrapper {
       @include play-icon-wrapper($basic-red, 1.5em);
+            position: relative;
+      margin-left: 0;
   }
 }
 
@@ -284,29 +291,13 @@ footer {
   @include play-icon-wrapper(white);
 }
 
-.carousel .play-icon-wrapper {
-  margin: 0 auto;
-  @include play-icon-wrapper($basic-red);
-}
-
-.carousel-item {
-  a {
+.carousel-container .carousel-item.columns {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    min-height: 4rem;
-    p {
-      text-align: left;
-      margin-right:1em;
-    }
-  }
 }
 
 .player-auditions-carousel {
-  background-color: darken($gray, 20);
+    margin: $vertical-rhythm-unit-1;
 }
-
 
 .player-artist-name {
   font-size: $size-4;
