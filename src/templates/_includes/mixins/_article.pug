@@ -2,7 +2,7 @@ mixin article(articleContent)
   .article
     .article-wrapper
       span.tag.date-tag.is-medium= articleContent.date
-      img.featured-img(src="files/img/" + articleContent.image)
+      img.featured-img(src="assets/files/img/" + articleContent.image)
       .tags
         each val in articleContent.tags
           span.tag.is-medium= val

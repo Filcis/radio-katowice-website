@@ -6,18 +6,19 @@
     <meta name="author" content="Filip Ciślak">
     <meta name="description" content="Radio Katowice www front end">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="./assets/">
+    <base href="./">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script type="text/javascript" src="js/bulma-carousel.min.js"></script>
-    <script type="text/javascript" src="js/jQuery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bulma-carousel.min.js"></script>
+    <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
+    <script src="assets/js/script.js"></script>
   </head>
   <body class="starterkit">
     <header>
       <nav class="navbar is-fixed-top">
         <div class="container">
-          <div class="navbar-brand"><img class="logo" src="files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice"><a class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+          <div class="navbar-brand"><img class="logo" src="assets/files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice"><a class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
           <div class="navbar-after-divider"></div>
           <menu class="navbar-menu" id="main-menu">
             <div class="navbar-start"><a class="navbar-item"><span>na antenie</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>muzyka</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>informacje</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>reklama</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>radio</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>więcej</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a>
@@ -35,7 +36,7 @@
     </header>
     <section class="player">
       <div class="container is-fullhd">
-        <div class="player-artist" style="background-image: url('files/img/Ferdek.jpg')"></div>
+        <div class="player-artist" style="background-image: url('assets/files/img/Ferdek.jpg')"></div>
         <div class="player-interface">
           <div class="tabs is-toggle">
             <ul>
@@ -51,10 +52,8 @@
               </div>
             </div>
             <h1 class="player-artist-name">Andrzej Grabowski</h1>
-            <h2 class="player-song-title">Jestem jak motyl</h2>
-            <button class="button is-red" type="button">
-              <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo
-            </button>
+            <h2 class="player-song-title">Jestem jak motyl</h2><a class="button button is-red" type="button" href="player.html">
+              <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo</a>
           </div>
           <div class="player-next-info tab-content" id="player-tab-2">
             <h3>Następna Audycja</h3>
@@ -107,7 +106,7 @@
       <section class="recent-news">
         <h1 class="section-title">Aktualności</h1>
             <div class="article">
-              <div class="article-wrapper"><span class="tag date-tag is-medium">17.07.2018</span><img class="featured-img" src="files/img/tour.jpg">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">17.07.2018</span><img class="featured-img" src="assets/files/img/tour.jpg">
                 <div class="tags"><span class="tag is-medium">sport</span><span class="tag is-medium">Katowice</span>
                 </div>
                 <h2 class="featured-article-title">II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.</h2>
@@ -115,7 +114,7 @@
               </div>
             </div>
             <div class="article">
-              <div class="article-wrapper"><span class="tag date-tag is-medium">15.07.2018</span><img class="featured-img" src="files/img/pszczyna-raciborz.jpg">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">15.07.2018</span><img class="featured-img" src="assets/files/img/pszczyna-raciborz.jpg">
                 <div class="tags"><span class="tag is-medium">region</span><span class="tag is-medium">Pszczyna</span><span class="tag is-medium">Racibórz</span>
                 </div>
                 <h2 class="featured-article-title">Trwa budowa drogi Pszczyna – Racibórz.</h2>
@@ -123,7 +122,7 @@
               </div>
             </div>
             <div class="article">
-              <div class="article-wrapper"><span class="tag date-tag is-medium">13.07.2018</span><img class="featured-img" src="files/img/naukobus.jpg">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">13.07.2018</span><img class="featured-img" src="assets/files/img/naukobus.jpg">
                 <div class="tags"><span class="tag is-medium">kultura</span><span class="tag is-medium">Katowice</span>
                 </div>
                 <h2 class="featured-article-title">Naukobus. Mobilne centrum Nauki.</h2>
@@ -131,7 +130,7 @@
               </div>
             </div>
             <div class="article">
-              <div class="article-wrapper"><span class="tag date-tag is-medium">12.07.2018</span><img class="featured-img" src="files/img/fetor.jpg">
+              <div class="article-wrapper"><span class="tag date-tag is-medium">12.07.2018</span><img class="featured-img" src="assets/files/img/fetor.jpg">
                 <div class="tags"><span class="tag is-medium">region</span><span class="tag is-medium">Jaworzno</span>
                 </div>
                 <h2 class="featured-article-title">Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.</h2>
@@ -147,25 +146,25 @@
           <div class="carousel-container">
                 <div class="carousel-item video-card-wrapper is-active"><a class="video-card">
                     <div class="video-card-img-wrapper">
-                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_3.jpg">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_3.jpg">
                       <div class="video-card-play-icon"> </div>
                     </div>
                     <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
                 <div class="carousel-item video-card-wrapper"><a class="video-card">
                     <div class="video-card-img-wrapper">
-                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_2.jpg">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_2.jpg">
                       <div class="video-card-play-icon"> </div>
                     </div>
                     <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
                 <div class="carousel-item video-card-wrapper"><a class="video-card">
                     <div class="video-card-img-wrapper">
-                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_4.jpg">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_4.jpg">
                       <div class="video-card-play-icon"> </div>
                     </div>
                     <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
                 <div class="carousel-item video-card-wrapper"><a class="video-card">
                     <div class="video-card-img-wrapper">
-                      <div class="video-card-tag"><span>wywiady</span></div><img src="files/img/video_1.jpg">
+                      <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_1.jpg">
                       <div class="video-card-play-icon"> </div>
                     </div>
                     <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a></div>
@@ -219,7 +218,7 @@
       </section>
     </div>
     <div class="container">
-      <section class="newsletter"><img src="files/img/grajki.svg">
+      <section class="newsletter"><img src="assets/files/img/grajki.svg">
         <h1 class="section-title-secondary">Zapisz się do naszego newslettera</h1>
         <div class="field">
           <div class="control">
@@ -307,5 +306,4 @@
       </div>
     </footer>
   </body>
-  <script src="js/script.js"></script>
 </html>

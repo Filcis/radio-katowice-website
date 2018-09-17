@@ -3,6 +3,7 @@
 @import '_includes/_mixins';
 @import 'bulma/bulma.sass';
 @import 'bulma-carousel/dist/css/bulma-carousel.sass';
+@import 'bulma-slider/dist/css/bulma-slider.sass';
 @import '_includes/_typography';
 
 
@@ -50,7 +51,7 @@ button.is-red {
   }
 }
 
-// Player
+// Player Navigation
 
 .has-player-navbar-fixed-top {
   padding-top: $navbar-player-height;
@@ -83,6 +84,8 @@ button.is-red {
   height: $navbar-player-height - 1.2rem;
   margin: .6em 0;
 }
+
+
 
 /* =============================================================
                           LAYOUT
@@ -127,6 +130,10 @@ footer {
 
 .article .tags {
   margin-bottom: 0;
+}
+
+.button {
+  @extend button;
 }
 
 .tag {
@@ -310,4 +317,31 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: $vertical-rhythm-unit-3;
+}
+
+#player-button-play {
+  border: 0;
+  background-color: transparent;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin-right: 2em;
+  .play-icon-wrapper {
+    @include play-icon-wrapper($basic-red, 2.5rem);
+    margin: 0;
+  }
+}
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  flex-grow: 2;
+  i {
+    margin-left: .75em;
+    line-height: 2.5rem;
+  }
 }

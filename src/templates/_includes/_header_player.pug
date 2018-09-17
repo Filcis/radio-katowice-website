@@ -2,8 +2,10 @@ header
   nav.navbar.navbar-player.is-fixed-top
     .container
       .navbar-brand
-        img.logo-player(src="files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice")
+        img.logo-player(src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice")
         a.stream-menu-trigger(data-target="#stream-menu") STREAMY
+          span(class="icon is-small")
+            i(class="fas fa-caret-down fa-xs")
       menu.navbar-menu(id="stream-menu")
         .navbar-start
           -

@@ -1,6 +1,6 @@
 section.player
   .container.is-fullhd
-    .player-artist(style= "background-image: url('files/img/Ferdek.jpg')")
+    .player-artist(style= "background-image: url('assets/files/img/Ferdek.jpg')")
     .player-interface
       .tabs.is-toggle
         ul
@@ -18,7 +18,7 @@ section.player
               a.dropdown-item Stream 3
         h1.player-artist-name Andrzej Grabowski
         h2.player-song-title Jestem jak motyl
-        button.button.is-red(type="button") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+        a.button.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
       .player-next-info.tab-content#player-tab-2
         h3 Następna Audycja
     include ./player_includes/_player_shortcuts.pug

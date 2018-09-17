@@ -2,7 +2,7 @@
   border-color: transparent transparent transparent $color;
   box-sizing: border-box;
   border-style: solid;
-  width: $size/3; 
+  width: $size/3;
   height: $size/3;
   border-width: $size/6 0px $size/6 $size/4;
   position: absolute;
@@ -13,7 +13,7 @@
 @mixin play-icon-wrapper($color: black, $size: 2em) {
   min-width: $size;
   height: $size;
-  border-radius: 1em;
+  border-radius: $size;
   border: 2px solid $color;
   position: relative;
   margin: 0 0.75em;
