@@ -18,17 +18,8 @@
     <header>
       <nav class="navbar navbar-player is-fixed-top">
         <div class="container">
-          <div class="navbar-brand"><img class="logo-player" src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice"><a class="stream-menu-trigger" data-target="#stream-menu">Programy<span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a></div>
-          <menu class="navbar-menu" id="stream-menu">
-            <div class="navbar-start"><a class="navbar-item"><span>główny</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>oldies</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>top50</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a>
-            </div>
-            <div class="navbar-end">
-              <div class="navbar-item field">
-                <p class="control has-icons-left">
-                  <input class="input is-medium" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"> </i></span>
-                </p>
-              </div>
-            </div>
+          <div class="navbar-brand"><img class="logo-player" src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice"><a class="stream-menu-trigger" id="stream-dropdown" data-target="#stream-menu">Programy<span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a></div>
+          <menu class="navbar-menu dropdown-menu" id="stream-menu"><a class="navbar-item"><span>główny</span></a><a class="navbar-item"><span>oldies</span></a><a class="navbar-item"><span>top50</span></a><a class="navbar-item"><span>stream</span></a>
           </menu>
         </div>
       </nav>

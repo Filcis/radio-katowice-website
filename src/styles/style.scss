@@ -76,8 +76,21 @@ button.is-red {
   padding: 0 1em;
   line-height: $navbar-player-height;
   color: white;
+  &:hover {
+    color: white;
+  }
   margin-left: auto;
   margin-top: 0;
+}
+
+#stream-menu {
+  background-color: $basic-red;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  .navbar-item {
+  color: white;
+  }
 }
 
 .logo-player {
@@ -297,7 +310,7 @@ footer {
 
 .player-live-info,
 .player-next-info {
-  padding: 1rem .75rem;
+  padding: 1rem 1.75rem;
   min-height: $vertical-rhythm-unit-5 * 4;
 }
 

@@ -3,25 +3,18 @@ header
     .container
       .navbar-brand
         img.logo-player(src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice")
-        a.stream-menu-trigger(data-target="#stream-menu") Programy
+        a#stream-dropdown.stream-menu-trigger(data-target="#stream-menu") Programy
           span(class="icon is-small")
             i(class="fas fa-caret-down fa-xs")
-      menu.navbar-menu(id="stream-menu")
-        .navbar-start
-          -
-            var menuItems = [
-                {'title':'główny'}, 
-                {'title':'oldies'}, 
-                {'title':'top50'} 
-            ];
-          each menu in menuItems
-            a.navbar-item
-              span= menu.title
-              span(class="icon is-small")
-                i(class="fas fa-caret-down fa-xs")
-        .navbar-end
-          div.navbar-item.field
-            p.control.has-icons-left
-              input.input.is-medium(type="text", placeholder="Szukaj")
-              span.icon.is-left: i.is-medium.fas.fa-search 
+      menu.navbar-menu.dropdown-menu(id="stream-menu")
+        -
+          var menuItems = [
+              {'title':'główny'}, 
+              {'title':'oldies'}, 
+              {'title':'top50'},
+              {'title': 'stream'}
+          ];
+        each menu in menuItems
+          a.navbar-item
+            span= menu.title
       

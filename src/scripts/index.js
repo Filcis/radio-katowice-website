@@ -6,6 +6,7 @@ $(document).ready(() => {
     const dropdown = $('#stream-dropdown');
     dropdown.click((e) => {
         $(e.currentTarget).toggleClass('is-active');
+        $(e.currentTarget.dataset.target).slideToggle("slow");
     });
     //==================================================
     const navbarBurgers = $('.navbar-burger');
