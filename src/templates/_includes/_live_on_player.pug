@@ -1,6 +1,6 @@
 section.player
   .container.is-fullhd
-    .player-cover(style= "background-image: url('assets/files/img/Ferdek.jpg')")
+    .player-cover.cover(style= "background-image: url('assets/files/img/Ferdek.jpg')")
     .player-interface
       .tabs.is-toggle
         ul
@@ -21,6 +21,12 @@ section.player
         a.button.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
       .player-next-info.tab-content#player-tab-2
         h3 Następna Audycja
-    include ./player_includes/_player_shortcuts.pug
+  .player-shortcuts.container
+    include ./mixins/_player_shortcuts.pug
+    +shortcuts([
+      {icon:"info", title:"Informacje", hour:"16:45", href:"/player-info.html"},
+      {icon:"cloud", title:"Pogoda", hour:"14:00", href:"/player-pogoda.html"},
+      {icon:"car", title:"Auto Radio", hour:"15:20", href:"/player-autoradio.html"}
+    ])
     include ./player_includes/_player_carousel.pug
     
