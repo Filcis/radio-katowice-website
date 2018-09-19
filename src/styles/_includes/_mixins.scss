@@ -17,7 +17,7 @@
   border-radius: $size;
   border: 2px solid $color;
   position: relative;
-  margin: 0 0.75em;
+  margin: 0 $size/3;
   .play-icon {
       @include triangle-icon($color, $size);
   }

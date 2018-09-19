@@ -76,14 +76,15 @@ button.is-red {
 
 .stream-menu-trigger {
   background-color: $basic-red;
-  padding: 0 1em;
+  height: 100%;
   line-height: $navbar-player-height;
+  padding: 0 0.75rem;
   color: white;
   &:hover {
     color: white;
   }
-  margin-left: auto;
-  margin-top: 0;
+  position: absolute;
+  right: 0;
 }
 
 #stream-menu {
@@ -106,6 +107,19 @@ button.is-red {
 /* =============================================================
                           LAYOUT
 =============================================================== */
+.player-body * {
+  max-width: 360px;
+}
+.player-body {
+  background-color: darken($dark-gray, 15);
+  body{
+      font-size: 14px;
+  }
+  .player-interface {
+    height: 12rem;
+  }
+}
+
 
 .recent-news,
 .recent-video,
@@ -221,8 +235,12 @@ footer {
                           PLAYER INTERFACE
 =============================================================== */
 
-.player-cover {
-  height: 18rem;
+.player-cover,
+.player-cover-icon {
+  height: 12rem;
+  @include from($tablet) {
+    height: 18rem;
+  }
 }
 
 .cover {
@@ -231,7 +249,6 @@ footer {
 }
 
 .player-cover-icon {
-  height: 18rem;
   background-color: darken($dark-gray, 20);
   display: flex;
   .icon {
@@ -258,12 +275,16 @@ footer {
     display: block;
     display: flex;
     flex-direction: column;
+    font-size: 0.8rem;
     height: 100%;
     background-color: white;
     border: 1px solid $light-gray;
-    padding: $vertical-rhythm-unit-2 $vertical-rhythm-unit-1;
+    padding: $vertical-rhythm-unit-1 0.5rem;
     & > * {
       margin-bottom: $vertical-rhythm-unit-1/2;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -281,17 +302,15 @@ footer {
 
 .player-shortcut-call-to-action {
   color: $gray;
-  bottom: 0;
-  width: 100%;
-  line-height: 2rem;
-  font-size: $size-6;
+  margin: auto;
+  line-height: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   display: flex;
   align-items:center;
   .play-icon-wrapper {
       @include play-icon-wrapper($basic-red, 1.5em);
-      // position: relative;
-      margin-left: 0;
+      margin-left: -0.2rem;
   }
 }
 
@@ -308,6 +327,9 @@ footer {
     top: -1.75rem;
     line-height: 1.75;
     }
+  @include from($tablet) {
+    height: 18rem;
+  }
 }
 
 .tab-content {
@@ -327,7 +349,7 @@ footer {
   @include play-icon-wrapper(white);
 }
 
-.player-auditions-carousel {
+.player-body .player-auditions-carousel {
     margin: $vertical-rhythm-unit-1 0.25em;
 }
 

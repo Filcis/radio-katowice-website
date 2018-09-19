@@ -1,5 +1,5 @@
 doctype html
-html.has-player-navbar-fixed-top
+html.has-player-navbar-fixed-top.player-body
   include _includes/_head.pug
   body
     include _includes/_header_player.pug
@@ -10,7 +10,7 @@ html.has-player-navbar-fixed-top
       name: "Andrzej Grabowski",
       title: "Jest dobrze"
       })
-      .player-shortcuts.container
+      .player-shortcuts
         include _includes/mixins/_player_shortcuts.pug
         +shortcuts([
           {icon:"info", title:"Informacje", hour:"16:45", href:"/player-info.html"},

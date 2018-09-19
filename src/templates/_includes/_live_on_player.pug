@@ -1,23 +1,29 @@
 section.player
   .container.is-fullhd
-    .player-cover.cover(style= "background-image: url('assets/files/img/Ferdek.jpg')")
-    .player-interface
-      .tabs.is-toggle
-        ul
-          li.is-active: a.tab(data-target= "#player-tab-1") Teraz na antenie
-          li: a.tab(data-target= "#player-tab-2") Następna audycja
-      .player-live-info.tab-content.is-active#player-tab-1
-        h1.player-artist-name Andrzej Grabowski
-        h2.player-song-title Jestem jak motyl
-        a.button.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
-      .player-next-info.tab-content#player-tab-2
-        h3 Następna Audycja
+    .columns.is-gapless
+      .column.is-4-desktop
+        .player-cover.cover(style= "background-image: url('assets/files/img/Ferdek.jpg')")
+      .column
+        .player-interface
+          .tabs.is-toggle
+            ul
+              li.is-active: a.tab(data-target= "#player-tab-1") Teraz na antenie
+              li: a.tab(data-target= "#player-tab-2") Następna audycja
+          .player-live-info.tab-content.is-active#player-tab-1
+            h1.player-artist-name Andrzej Grabowski
+            h2.player-song-title Jestem jak motyl
+            a.button.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+          .player-next-info.tab-content#player-tab-2
+            h3 Następna Audycja
   .player-shortcuts.container
-    include ./mixins/_player_shortcuts.pug
-    +shortcuts([
-      {icon:"info", title:"Informacje", hour:"16:45", href:"/player-info.html"},
-      {icon:"cloud", title:"Pogoda", hour:"14:00", href:"/player-pogoda.html"},
-      {icon:"car", title:"Auto Radio", hour:"15:20", href:"/player-autoradio.html"}
-    ])
-    include ./player_includes/_player_carousel.pug
+    .columns
+      .column.is-5
+        include ./mixins/_player_shortcuts.pug
+        +shortcuts([
+          {icon:"info", title:"Informacje", hour:"16:45", href:"/player-info.html"},
+          {icon:"cloud", title:"Pogoda", hour:"14:00", href:"/player-pogoda.html"},
+          {icon:"car", title:"Auto Radio", hour:"15:20", href:"/player-autoradio.html"}
+        ], true)
+      .column
+        include ./player_includes/_player_carousel.pug
     

@@ -1,4 +1,4 @@
-mixin shortcuts(data)
+mixin shortcuts(data, isPopup)
   .columns.is-mobile.is-marginless.is-gapless
     each i in data
       .column.is-4.has-text-centered
@@ -11,8 +11,8 @@ mixin shortcuts(data)
           if i.icon
             span(class="icon is-medium icon-" + i.icon)
               i(class="fas fa-2x fa-" + i.icon)
-          else if i.image
-            .cover(style= "background-image: url('assets/files/img/" + i.image + "')")
+          //- else if i.image
+          //-   .cover(style= "background-image: url('assets/files/img/" + i.image + "')")
           .player-shortcut-title
             p= i.title
           .player-shortcut-call-to-action 
