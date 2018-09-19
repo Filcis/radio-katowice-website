@@ -13,7 +13,7 @@ $(document).ready(() => {
     navbarBurgers.click((e) => {
         $(e.currentTarget).toggleClass('is-active');
         console.log(e.currentTarget.dataset);
-        $(e.currentTarget.dataset.target).slideToggle("slow");
+        $(e.currentTarget.dataset.target).toggleClass('is-active');
     });
     //==================================================
     const tabs = $('a.tab');

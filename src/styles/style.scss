@@ -12,25 +12,28 @@
 =============================================================== */
 
 .logo {
-  height: 5rem;
+  height: 100%;
 }
 
 .navbar-after-divider {
   height: 0.3rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
 }
 
-.navbar {
-  z-index: 999 !important;
+.navbar-menu .navbar-item {
+  font-size: $size-6;
+  // padding: $vertical-rhythm-unit-1 2rem;
+  &:last-child{
+    // padding-bottom: $vertical-rhythm-unit-3;
+  }
 }
 
-menu .navbar-item {
-  font-size: $size-5;
-  width: 90%;
-  margin: 0 auto;
-  padding: $vertical-rhythm-unit-1 2rem;
-  &:last-child{
-    padding-bottom: $vertical-rhythm-unit-3;
+.navbar-link {
+  &:after {
+    border-width: 1px !important;
   }
 }
 

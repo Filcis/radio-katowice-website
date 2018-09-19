@@ -16,22 +16,28 @@
   </head>
   <body class="starterkit">
     <header>
-      <nav class="navbar is-fixed-top">
+      <nav class="navbar is-fixed-top is-transparent">
         <div class="container">
-          <div class="navbar-brand"><img class="logo" src="assets/files/img/Polskie-Radio-Katowice-Logo.svg" alt="Polskie Radio Katowice"><a class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
-          <div class="navbar-after-divider"></div>
-          <menu class="navbar-menu" id="main-menu">
-            <div class="navbar-start"><a class="navbar-item"><span>na antenie</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>muzyka</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>informacje</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>reklama</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>radio</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a><a class="navbar-item"><span>więcej</span><span class="icon is-small"><i class="fas fa-caret-down fa-xs"></i></span></a>
-            </div>
+          <div class="navbar-brand"><a class="navbar-item" href="index.html"><img class="logo" src="assets/files/img/Polskie-Radio-Katowice-Logo.png" alt="Polskie Radio Katowice"></a>
+            <div class="navbar-burger burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></div>
+          </div>
+          <div class="navbar-menu" id="main-menu">
             <div class="navbar-end">
+              <div class="navbar-item has-dropdown"><a class="navbar-link">na antenie</a></div>
+              <div class="navbar-item has-dropdown"><a class="navbar-link">muzyka</a></div>
+              <div class="navbar-item has-dropdown"><a class="navbar-link">informacje</a></div>
+              <div class="navbar-item has-dropdown"><a class="navbar-link">reklama</a></div>
+              <div class="navbar-item has-dropdown"><a class="navbar-link">radio</a></div>
+              <div class="navbar-item has-dropdown"><a class="navbar-link">więcej</a></div>
               <div class="navbar-item field">
                 <p class="control has-icons-left">
                   <input class="input is-medium" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"> </i></span>
                 </p>
               </div>
             </div>
-          </menu>
+          </div>
         </div>
+        <div class="navbar-after-divider"></div>
       </nav>
     </header>
     <section class="player">
@@ -45,12 +51,6 @@
             </ul>
           </div>
           <div class="player-live-info tab-content is-active" id="player-tab-1">
-            <div class="dropdown" id="stream-dropdown">
-              <button class="stream-dropdown-button dropdown-trigger"> <span>Streamy </span><span class="icon is-small"><i class="fas fa-angle-down has-text-grey"></i></span></button>
-              <div class="dropdown-menu">
-                <div class="dropdown-content"><a class="dropdown-item">Stream 1</a><a class="dropdown-item">Stream 2</a><a class="dropdown-item">Stream 3</a></div>
-              </div>
-            </div>
             <h1 class="player-artist-name">Andrzej Grabowski</h1>
             <h2 class="player-song-title">Jestem jak motyl</h2><a class="button button is-red" type="button" href="player.html">
               <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo</a>

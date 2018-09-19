@@ -7,15 +7,6 @@ section.player
           li.is-active: a.tab(data-target= "#player-tab-1") Teraz na antenie
           li: a.tab(data-target= "#player-tab-2") Następna audycja
       .player-live-info.tab-content.is-active#player-tab-1
-        .dropdown#stream-dropdown
-          button.stream-dropdown-button.dropdown-trigger 
-            span Streamy 
-            span(class= "icon is-small"): i(class="fas fa-angle-down has-text-grey")
-          .dropdown-menu
-            .dropdown-content
-              a.dropdown-item Stream 1
-              a.dropdown-item Stream 2
-              a.dropdown-item Stream 3
         h1.player-artist-name Andrzej Grabowski
         h2.player-song-title Jestem jak motyl
         a.button.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
