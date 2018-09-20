@@ -40,7 +40,11 @@ html.has-navbar-fixed-top
                 +article(article3)
                 +article(article4)
         include _includes/_video_carousel.pug
-        include _includes/_highlights.pug
-        include _includes/_events-list.pug
+        .container
+          .columns
+            .column
+              include _includes/_highlights.pug
+            .column
+              include _includes/_events-list.pug
         include _includes/_newsletter.pug
         include _includes/_footer.pug

@@ -2,7 +2,7 @@ include ./mixins/_video.pug
 .container
   section.recent-video
     h1.section-title Video
-    .video.carousel.carousel-animated.carousel-animate-slide
+    .video.carousel.carousel-animated.carousel-animate-slide#main-video-carousel(data-size='1')
       .carousel-container
         +video({isActive: 1, image: "video_3.jpg", tag:"wywiady"})
         +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})

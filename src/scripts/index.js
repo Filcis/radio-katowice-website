@@ -27,4 +27,11 @@ $(document).ready(() => {
     });
     //==================================================
     var carousels = bulmaCarousel.attach();
+
+    // $(window).resize(() => {
+    //     if (window.innerWidth >= 1200) {
+    //         $('#main-video-carousel').data('size', 4);
+    //     }
+    // })
+
 })

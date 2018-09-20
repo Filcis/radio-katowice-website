@@ -112,11 +112,11 @@ button.is-red {
 }
 .player-body {
   background-color: darken($dark-gray, 15);
-  body{
+  body  {
       font-size: 14px;
   }
   .player-interface {
-    height: 12rem;
+  height: inherit;
   }
 }
 
@@ -129,6 +129,17 @@ button.is-red {
 footer {
   padding: $mobile-content-padding;
 }
+
+.article-wrapper {
+  position: relative;
+  .date-tag {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+}
+
+
 
 .article {
   margin-bottom: $vertical-rhythm-unit-4;
@@ -237,7 +248,7 @@ footer {
 
 .player-cover,
 .player-cover-icon {
-  height: 12rem;
+  height: 15rem;
   @include from($tablet) {
     height: 18rem;
   }
