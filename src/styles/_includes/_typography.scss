@@ -47,6 +47,23 @@ body {
   text-align: center;
 }
 
+.player-artist-name,
+.player-song-title {
+  font-size: $size-4;
+  @include from($tablet) {
+  font-size: $size-3;
+  }
+  @include from($desktop) {
+  font-size: $size-2;
+  }
+}
+
+.player-song-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: $vertical-rhythm-unit-3;
+}
+
 footer {
     a, p {
       color: lighten($link, 20);

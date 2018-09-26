@@ -21,7 +21,7 @@ mixin video(videoData)
 mixin shortcut(shortcutData)
   if shortcutData.isActive
     .carousel-item.is-ref
-      a.player-shortcut
+      a.player-shortcut-carousel
         .columns.is-mobile
           .column.is-3.has-text-centered.has-icon-onleft
             span(class="icon is-medium icon-music")
@@ -34,7 +34,7 @@ mixin shortcut(shortcutData)
               span SŁUCHAJ
   else
     .carousel-item
-      a.player-shortcut
+      a.player-shortcut-carousel
         .columns.is-mobile
           .column.is-3.has-text-centered.has-icon-onleft
             span(class="icon is-medium icon-music")

@@ -45,14 +45,6 @@
   }
 }
 
-button.is-red {
-  background-color: $basic-red;
-  color: white;
-  &:active, &:hover {
-    color: white;
-  }
-}
-
 // Player Navigation
 
 .has-player-navbar-fixed-top {
@@ -114,11 +106,23 @@ button.is-red {
   body  {
       font-size: 14px;
   }
-  .player-interface {
+.player-main {
   height: inherit;
   }
 }
 
+.player .container {
+  @include from($desktop) {
+    margin-bottom: $vertical-rhythm-unit-3;
+  }
+}
+
+.is-offset-one-desktop {
+  @include from($desktop)
+ {
+    margin-left: 8.3333%;
+ }
+}
 
 .recent-news,
 .recent-video,
@@ -199,10 +203,6 @@ footer {
   padding:0 0.75em 0 0;
 }
 
-.icon-music {color: $music-color}
-.icon-info {color: $info-color}
-.icon-cloud {color: $weather-color}
-.icon-auto {color: $auto-radio-color}
 
 // ----------- Carousels ------------------
 
@@ -298,6 +298,30 @@ a.carousel-toggle-next {
                           PLAYER INTERFACE
 =============================================================== */
 
+
+.player-main {
+  background-color: $player-light-gray;
+  position: relative;
+  .tabs {
+    a {
+      background-color: $light-gray;
+      color: $link;
+      padding: 0.25rem 0.5rem;
+    }
+    position: absolute;
+    top: -1.75rem;
+    line-height: 1.75;
+    }
+  padding: $vertical-rhythm-unit-1;
+  @include from($tablet) {
+    height: 18rem;
+    padding: $vertical-rhythm-unit-2;
+  }
+  @include from($desktop) {
+    padding: $vertical-rhythm-unit-3;
+  }
+}
+
 .player-cover,
 .player-cover-icon {
   height: 15rem;
@@ -321,47 +345,100 @@ a.carousel-toggle-next {
   }
 }
 
-.player button {
-  border-radius: 0 0 15px 0;
-  height: 3em;
-  padding-right: 2em;
-  font-size: 0.8rem;
-}
-
+//wrapper
 .player-shortcuts {
   max-width: 100%;
-  background-color: #f5f5f5; // brighter?
+  background-color: #f5f5f5; // jaśniej?
   padding: $vertical-rhythm-unit-1;
 }
 
-  a.player-shortcut {
-    display: block;
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8rem;
-    height: 100%;
-    background-color: white;
-    border: 1px solid $light-gray;
-    padding: $vertical-rhythm-unit-1 0.5rem;
-    & > * {
-      margin-bottom: $vertical-rhythm-unit-1/2;
-      &:last-child {
-        margin-bottom: 0;
-      }
+//layout dla: pogoda, informacje, auto radio
+.permanent-shortcuts {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    .column {
+      padding: 0.25em;
     }
-  }
+}
 
-  .icon {
-    display: block;
-        margin: auto;
-  }
+a.player-shortcut {
+  display: block; //backup flexboxa, zbędne?
+  display: flex;
+  flex-direction: column; //na desktop zmienic na row
+  font-size: 0.8rem;
+  height: 100%; //zbędne?
+  background-color: white;
+  border-radius: 0 0 15px 0;
+  border: 1px solid $light-gray;
+}
 
-.player-shortcut .has-icon-onleft {
+.player-shortcut-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  color: #000;
+  &.icon-music {background-color: $music-color};
+  &.icon-info {background-color: $info-color};
+  &.icon-cloud {background-color: $weather-color};
+  &.icon-car {background-color: $auto-radio-color};
+  @include from(370px){
+    font-size: 1.2em; //większe ikony
+    height: 6rem;
+  }
+  @include from(450px){
+    font-size: 1.4em;
+    height: 7rem;
+  }
+  @include from($tablet){
+    font-size: 1em;
+    height: 5rem;
+  }
+}
+
+.player-shortcut-time {
+  position: absolute;
+  top:0.2rem;
+  left:0.2rem;
+}
+
+.player-shortcut-bottom {
+  padding: $vertical-rhythm-unit-1 0.25rem;
+}
+
+.player-carousel-shortcut {
     border-right: 1px solid $light-gray;
     display: flex;
     align-items: center;
     margin-right: 1em;
   }
+
+.player-main-call-to-action {
+    border-radius: 0 0 15px 0;
+    height: 3em;
+    padding-right: 2em;
+    font-size: 0.8rem;
+    background-color: $basic-red;
+    color: white;
+  &:active, &:hover {
+    color: white;
+  }
+  .play-icon-wrapper {
+    @include play-icon-wrapper(white); //mixin dla ikony play
+      // @include from($tablet) {
+      //   @include play-icon-wrapper($basic-red); //zmiana koloru od tabletu wzwyż
+      // }
+  }
+  @include from($tablet) {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 2rem;
+    // background-color: transparent;
+    // color: $basic-red;
+    // border: none;
+  }
+}
 
 .player-shortcut-call-to-action {
   color: $gray;
@@ -369,29 +446,11 @@ a.carousel-toggle-next {
   line-height: 1rem;
   font-size: 0.75rem;
   font-weight: bold;
-  display: flex;
+  display: inline-flex;
   align-items:center;
   .play-icon-wrapper {
       @include play-icon-wrapper($basic-red, 1.5em);
       margin-left: -0.2rem;
-  }
-}
-
-.player-interface {
-  background-color: $player-light-gray;
-  position: relative;
-  .tabs {
-    a {
-      background-color: $light-gray;
-      color: $link;
-      padding: 0.25rem 0.5rem;
-    }
-    position: absolute;
-    top: -1.75rem;
-    line-height: 1.75;
-    }
-  @include from($tablet) {
-    height: 18rem;
   }
 }
 
@@ -408,23 +467,8 @@ a.carousel-toggle-next {
   min-height: $vertical-rhythm-unit-5 * 4;
 }
 
-.play-icon-wrapper {
-  @include play-icon-wrapper(white);
-}
-
 .player-body .player-auditions-carousel {
     margin: $vertical-rhythm-unit-1 0.25em;
-}
-
-.player-artist-name {
-  font-size: $size-4;
-}
-
-.player-song-title {
-  font-size: $size-4;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: $vertical-rhythm-unit-3;
 }
 
 #player-button-play {

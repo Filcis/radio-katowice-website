@@ -1,20 +1,20 @@
 mixin shortcuts(data, isPopup)
-  .columns.is-mobile.is-marginless.is-gapless
+  .columns.is-mobile.permanent-shortcuts
     each i in data
       .column.is-4.has-text-centered
         a.player-shortcut(href=i.href)
-          .player-shortcut-time
-            if i.hour
-              p.player-hour.is-size-6= i.hour
-            else
-              p.player-hour.time-info.is-size-6 LIVE
-          if i.icon
-            span(class="icon is-medium icon-" + i.icon)
-              i(class="fas fa-2x fa-" + i.icon)
-          //- else if i.image
-          //-   .cover(style= "background-image: url('assets/files/img/" + i.image + "')")
-          .player-shortcut-title
-            p= i.title
-          .player-shortcut-call-to-action 
-            .play-icon-wrapper #[span.play-icon]
-            span SŁUCHAJ
+          .player-shortcut-top(class="icon-" + i.icon)
+            .player-shortcut-time
+              if i.hour
+                p.is-size-7= i.hour
+              else
+                p.player-hour.time-info.is-size-6 LIVE
+            if i.icon
+              span(class="icon is-medium")
+                i(class="fas fa-2x fa-" + i.icon)
+          .player-shortcut-bottom
+            .player-shortcut-title
+              p= i.title
+            .player-shortcut-call-to-action 
+              .play-icon-wrapper #[span.play-icon]
+              span SŁUCHAJ
