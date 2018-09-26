@@ -1,50 +1,55 @@
 doctype html
 html.has-navbar-fixed-top
     include _includes/_head.pug
-    body.starterkit
-        include _includes/_header.pug
+    body
+      include _includes/_header.pug
+      section.player
         include _includes/_live_on_player.pug
-        include _includes/mixins/_article.pug
+      include _includes/mixins/_article.pug
+      section.recent-news.section
         .container
           .columns
             .column.is-offset-1.is-7-desktop
-              section.recent-news
-                h1.section-title Aktualności
-                - 
-                  var article1 = {
-                    title:"II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.",
-                    image: "tour.jpg",
-                    tags: ["sport","Katowice"],
-                    date: "17.07.2018"
-                  }
-                  var article2 = {
-                    title:"Trwa budowa drogi Pszczyna – Racibórz.",
-                    image: "pszczyna-raciborz.jpg",
-                    tags: ["region","Pszczyna", "Racibórz"],
-                    date: "15.07.2018"
-                  }
-                  var article3 = {
-                    title:"Naukobus. Mobilne centrum Nauki.",
-                    image: "naukobus.jpg",
-                    tags: ["kultura","Katowice"],
-                    date: "13.07.2018"
-                  }
-                  var article4 = {
-                    title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
-                    image: "fetor.jpg",
-                    tags: ["region","Jaworzno"],
-                    date: "12.07.2018"
-                  }
-                +article(article1)
-                +article(article2)
-                +article(article3)
-                +article(article4)
+              h1.section-title Aktualności
+              - 
+                var article1 = {
+                  title:"II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.",
+                  image: "tour.jpg",
+                  tags: ["sport","Katowice"],
+                  date: "17.07.2018"
+                }
+                var article2 = {
+                  title:"Trwa budowa drogi Pszczyna – Racibórz.",
+                  image: "pszczyna-raciborz.jpg",
+                  tags: ["region","Pszczyna", "Racibórz"],
+                  date: "15.07.2018"
+                }
+                var article3 = {
+                  title:"Naukobus. Mobilne centrum Nauki.",
+                  image: "naukobus.jpg",
+                  tags: ["kultura","Katowice"],
+                  date: "13.07.2018"
+                }
+                var article4 = {
+                  title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
+                  image: "fetor.jpg",
+                  tags: ["region","Jaworzno"],
+                  date: "12.07.2018"
+                }
+              +article(article1)
+              +article(article2)
+              +article(article3)
+              +article(article4)
+      //- <!-- end news -->
+      section.recent-video.section
         include _includes/_video_carousel.pug
+      section.section
         .container
           .columns
             .column
               include _includes/_highlights.pug
             .column
               include _includes/_events-list.pug
+      section.section
         include _includes/_newsletter.pug
-        include _includes/_footer.pug
+      include _includes/_footer.pug

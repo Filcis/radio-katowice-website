@@ -1,13 +1,12 @@
 include ./mixins/_carousel.pug
 .container
-  section.recent-video
-    h1.section-title Video
-    .carousel-wrapper
-      .video-carousel
-        +video({isActive: 1, image: "video_3.jpg", tag:"wywiady"})
-        +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
-        +video({isActive: 0, image: "video_4.jpg", tag:"wywiady"})
-        +video({isActive: 0, image: "video_1.jpg", tag:"wywiady"})
-        +video({isActive: 0, image: "video_3.jpg", tag:"wywiady"})
-        +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
-      +controls
+  h1.section-title Video
+  .carousel-wrapper
+    .video-carousel
+      +video({isActive: 1, image: "video_3.jpg", tag:"wywiady"})
+      +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
+      +video({isActive: 0, image: "video_4.jpg", tag:"wywiady"})
+      +video({isActive: 0, image: "video_1.jpg", tag:"wywiady"})
+      +video({isActive: 0, image: "video_3.jpg", tag:"wywiady"})
+      +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
+    +controls

@@ -6,11 +6,9 @@ mixin current(current)
       .player-cover-icon
         span(class="icon is-large icon-"+ current.icon)
           i(class="fas fa-3x fa-"+ current.icon)
-    .player-interface
-      .tabs.is-toggle
-        ul
-          li.is-active: a.tab(data-target= "#player-tab-1") Teraz odtwarzane
-      .player-live-info.tab-content.is-active#player-tab-1
+    .player-main 
+      include ../player_includes/_player_stations.pug
+      .player-live-info
         if current.name
           h1.player-artist-name= current.name
         else if current.date
