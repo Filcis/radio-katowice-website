@@ -1,0 +1,53 @@
+mixin video(videoData)
+  if videoData.isActive
+    a.carousel-item.is-ref
+      .video-card-img-wrapper
+        .video-card-tag: span= videoData.tag
+        img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
+        .video-card-play-icon 
+      .video-card-body
+        span.video-card-title nazwa nagrania
+        span.video-card-info dodatkowe informacje o nagraniu
+  else
+    a.carousel-item
+      .video-card-img-wrapper
+        .video-card-tag: span= videoData.tag
+        img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
+        .video-card-play-icon 
+      .video-card-body
+        span.video-card-title nazwa nagrania
+        span.video-card-info dodatkowe informacje o nagraniu
+        
+mixin shortcut(shortcutData)
+  if shortcutData.isActive
+    .carousel-item.is-ref
+      a.player-shortcut
+        .columns.is-mobile
+          .column.is-3.has-text-centered.has-icon-onleft
+            span(class="icon is-medium icon-music")
+              i(class="fas fa-music fa-2x")
+          .column.is-9
+            p 24.03.2019 15:00
+            p Nazwa nagrania
+            .player-shortcut-call-to-action 
+              .play-icon-wrapper #[span.play-icon]
+              span SŁUCHAJ
+  else
+    .carousel-item
+      a.player-shortcut
+        .columns.is-mobile
+          .column.is-3.has-text-centered.has-icon-onleft
+            span(class="icon is-medium icon-music")
+              i(class="fas fa-music fa-2x")
+          .column.is-9
+            p 24.03.2019 15:00
+            p Nazwa nagrania
+            .player-shortcut-call-to-action 
+              .play-icon-wrapper #[span.play-icon]
+              span SŁUCHAJ
+
+mixin controls
+  a.carousel-toggle-prev(role="button")
+    <i class="fas fa-chevron-left"></i>
+  a.carousel-toggle-next(role="button", data-toggle="next")
+    <i class="fas fa-chevron-right"></i>   

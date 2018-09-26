@@ -2,7 +2,6 @@
 @import '_includes/_vars';
 @import '_includes/_mixins';
 @import 'bulma/bulma.sass';
-@import 'bulma-carousel/dist/css/bulma-carousel.sass';
 @import 'bulma-slider/dist/css/bulma-slider.sass';
 @import '_includes/_typography';
 
@@ -205,14 +204,67 @@ footer {
 .icon-cloud {color: $weather-color}
 .icon-auto {color: $auto-radio-color}
 
-// ----------- Video ------------------
+// ----------- Carousels ------------------
 
-.carousel-item .video-card {
-  display: block;
-  background-color: $light-gray;
-  min-height: 20rem;
-  border-radius: 0 0 15px 0;
-  width: 90%;
+.carousel-wrapper {
+  overflow:hidden;
+  position: relative;
+}
+
+.carousel, .video-carousel {
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  // transform: translate3d(-100%, 0, 0);
+  -webkit-overflow-scrolling: touch;
+  @include from($desktop) {
+    overflow-x: hidden;
+    // padding: 1em;
+  }
+}
+
+a.carousel-toggle-prev,
+a.carousel-toggle-next {
+  display: none;
+  @include from($desktop) {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 35px;
+    background-color: hsla(0,0%,90%,.6);
+    i {
+      position: absolute;
+      top: 50%;
+      width: 35px;
+      text-align: center;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.carousel-toggle-prev {
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-toggle-next {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.carousel-item {
+  background-color: #fff;
+  width: 310px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-height: 18rem; //tymczasowo, do ustalenia rozmiaru zdjęc
+  flex: 1 0 auto;
+  &:first-child {
+    margin-left: -10px;
+  }
 }
 
 .video-card-img-wrapper {

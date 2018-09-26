@@ -1,43 +1,10 @@
-.player-auditions-carousel.carousel.carousel-animated.carousel-animate-slide
-  .carousel-container
-    .carousel-item.is-active
-      a.player-shortcut
-        .columns.is-mobile
-          .column.is-3.has-text-centered.has-icon-onleft
-            span(class="icon is-medium icon-music")
-              i(class="fas fa-music fa-2x")
-          .column.is-9
-            p 24.03.2019 15:00
-            p Nazwa nagrania
-            .player-shortcut-call-to-action 
-              .play-icon-wrapper #[span.play-icon]
-              span SŁUCHAJ
-    .carousel-item
-      a.player-shortcut
-        .columns.is-mobile
-          .column.is-3.has-text-centered.has-icon-onleft
-            span(class="icon is-medium icon-music")
-              i(class="fas fa-music fa-2x")
-          .column.is-9
-            p 24.03.2019 15:00
-            p Nazwa nagrania
-            .player-shortcut-call-to-action 
-              .play-icon-wrapper #[span.play-icon]
-              span SŁUCHAJ
-    .carousel-item
-      a.player-shortcut
-        .columns.is-mobile
-          .column.is-3.has-text-centered.has-icon-onleft
-            span(class="icon is-medium icon-music")
-              i(class="fas fa-music fa-2x")
-          .column.is-9
-            p 24.03.2019 15:00
-            p Nazwa nagrania
-            .player-shortcut-call-to-action 
-              .play-icon-wrapper #[span.play-icon]
-              span SŁUCHAJ
-  .carousel-navigation.is-overlay
-    .carousel-nav-left
-      i(class="fa fa-chevron-left")
-    .carousel-nav-right
-      i(class="fa fa-chevron-right")
+include ../mixins/_carousel.pug
+.carousel-wrapper
+  .carousel
+    +shortcut({isActive: 1})
+    +shortcut({isActive: 0})
+    +shortcut({isActive: 0})
+    +shortcut({isActive: 0})
+    +shortcut({isActive: 0})
+    +shortcut({isActive: 0})
+  +controls
