@@ -2,7 +2,6 @@
 @import '_includes/_vars';
 @import '_includes/_mixins';
 @import 'bulma/bulma.sass';
-@import 'bulma-slider/dist/css/bulma-slider.sass';
 @import '_includes/_typography';
 
 
@@ -326,6 +325,7 @@ a.carousel-toggle-next {
 }
 
 .cover {
+  position: relative;
   background-position: center;
   background-size: cover;
 }
@@ -484,29 +484,42 @@ a.player-shortcut-carousel > * {
     margin: $vertical-rhythm-unit-1 0.25em;
 }
 
+.controls {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
 #player-button-play {
   border: 0;
   background-color: transparent;
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  margin-right: 2em;
+  margin: 0 1em;
   .play-icon-wrapper {
-    @include play-icon-wrapper($basic-red, 2.5rem);
+    @include play-icon-wrapper(#fff, 2.5rem);
     margin: 0;
   }
-}
-.controls {
-  display: flex;
-  align-items: center;
 }
 
 .volume-control {
   display: flex;
   align-items: center;
-  flex-grow: 2;
+  margin: 0 1em;
   i {
-    margin-left: .75em;
+    margin-right: .75em;
     line-height: 2.5rem;
   }
+  @include volume-control;
+}
+
+.time-played {
+  display: block;
+  margin: 0 1em;
 }

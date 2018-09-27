@@ -2,6 +2,7 @@ mixin current(current)
   .container.is-fullhd
     if current.image
       .player-cover.cover(style= "background-image: url('assets/files/img/" + current.image + "')")
+        include ../player_includes/_controls.pug
     else if current.icon
       .player-cover-icon
         span(class="icon is-large icon-"+ current.icon)
@@ -14,4 +15,3 @@ mixin current(current)
         else if current.date
           h1.player-artist-name= current.date
         h2.player-song-title= current.title
-        include ../player_includes/_controls.pug
