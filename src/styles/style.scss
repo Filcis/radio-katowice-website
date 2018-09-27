@@ -204,7 +204,6 @@ footer {
 // ----------- Carousels ------------------
 
 .carousel-wrapper {
-  overflow:hidden;
   position: relative;
 }
 
@@ -213,11 +212,10 @@ footer {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: scroll;
-  // transform: translate3d(-100%, 0, 0);
+  min-height: 5rem;
   -webkit-overflow-scrolling: touch;
   @include from($desktop) {
     overflow-x: hidden;
-    // padding: 1em;
   }
 }
 
@@ -365,33 +363,45 @@ a.player-shortcut {
   font-size: 0.8rem;
   height: 100%; //zbędne?
   background-color: white;
+}
+
+a.player-shortcut,
+a.player-shortcut-carousel > * {
   border-radius: 0 0 15px 0;
   border: 1px solid $light-gray;
 }
 
-.player-shortcut-top {
+.player-shortcut-top,
+.player-shortcut-carousel-left {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 5rem;
   color: #000;
   &.icon-music {background-color: $music-color};
   &.icon-info {background-color: $info-color};
   &.icon-cloud {background-color: $weather-color};
   &.icon-car {background-color: $auto-radio-color};
-  @include from(370px){
+}
+
+.player-shortcut-top {
+    height: 5rem;
+  @include from(370px) {
     font-size: 1.2em; //większe ikony
     height: 6rem;
   }
-  @include from(450px){
+  @include from(450px) {
     font-size: 1.4em;
     height: 7rem;
   }
-  @include from($tablet){
+  @include from($tablet) {
     font-size: 1em;
     height: 5rem;
   }
+}
+
+.player-shortcut-carousel-left {
+  flex: 1;
 }
 
 .player-stations-menu {

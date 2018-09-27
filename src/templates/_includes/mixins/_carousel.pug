@@ -20,31 +20,29 @@ mixin video(videoData)
         
 mixin shortcut(shortcutData)
   if shortcutData.isActive
-    .carousel-item.is-ref
-      a.player-shortcut-carousel
-        .columns.is-mobile
-          .column.is-3.has-text-centered.has-icon-onleft
-            span(class="icon is-medium icon-music")
-              i(class="fas fa-music fa-2x")
-          .column.is-9
-            p 24.03.2019 15:00
-            p Nazwa nagrania
-            .player-shortcut-call-to-action 
-              .play-icon-wrapper #[span.play-icon]
-              span SŁUCHAJ
+    a.player-shortcut-carousel.carousel-item.is-ref
+      .columns.is-mobile.is-marginless
+        .column.is-4.has-text-centered.player-shortcut-carousel-left.icon-music
+          span(class="icon is-medium")
+            i(class="fas fa-music fa-2x")
+        .column.is-8
+          p 24.03.2019 15:00
+          p Nazwa nagrania
+          .player-shortcut-call-to-action 
+            .play-icon-wrapper #[span.play-icon]
+            span SŁUCHAJ
   else
-    .carousel-item
-      a.player-shortcut-carousel
-        .columns.is-mobile
-          .column.is-3.has-text-centered.has-icon-onleft
-            span(class="icon is-medium icon-music")
-              i(class="fas fa-music fa-2x")
-          .column.is-9
-            p 24.03.2019 15:00
-            p Nazwa nagrania
-            .player-shortcut-call-to-action 
-              .play-icon-wrapper #[span.play-icon]
-              span SŁUCHAJ
+    a.player-shortcut-carousel.carousel-item
+      .columns.is-mobile.is-marginless
+        .column.is-4.has-text-centered.player-shortcut-carousel-left.icon-music
+          span(class="icon is-medium")
+            i(class="fas fa-music fa-2x")
+        .column.is-8
+          p 24.03.2019 15:00
+          p Nazwa nagrania
+          .player-shortcut-call-to-action 
+            .play-icon-wrapper #[span.play-icon]
+            span SŁUCHAJ
 
 mixin controls
   a.carousel-toggle-prev(role="button")
