@@ -96,14 +96,13 @@ gulp.task('styles', function() {
             })
         }))
         .pipe(sourcemaps.init())
-            .pipe(sass({
-              includePaths: ['./node_modules', './bower_components'],
-                outputStyle: 'compressed'
-            }))
-            .pipe(autoprefixer('last 3 versions'))
+        .pipe(sass({
+          includePaths: ['./node_modules', './bower_components'],
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer('last 3 versions'))
         .pipe(sourcemaps.write())
         .pipe(cssimport({}))
-        .pipe(rename('style.css'))
         .pipe(gulp.dest(routes.styles.css))
         .pipe(browserSync.stream())
         .pipe(notify({

@@ -1,6 +1,6 @@
 doctype html
-html.has-player-navbar-fixed-top.player-body
-  include _includes/_head.pug
+html.has-player-navbar-fixed-top
+  include _includes/_head_player.pug
   body
     include _includes/_header_player.pug
     section.player
@@ -13,9 +13,9 @@ html.has-player-navbar-fixed-top.player-body
       .player-shortcuts
         include _includes/mixins/_player_shortcuts.pug
         +shortcuts([
-          {icon:"info", title:"Informacje", hour:"16:45", href:"/player_info.html"},
-          {icon:"cloud", title:"Pogoda", hour:"14:00", href:"/player_pogoda.html"},
-          {icon:"car", title:"Auto Radio", hour:"15:20", href:"/player_autoradio.html"}
+          {icon:"info", title:"Informacje", hour:"16:45", href:"player_info.html"},
+          {icon:"cloud", title:"Pogoda", hour:"14:00", href:"player_pogoda.html"},
+          {icon:"car", title:"Auto Radio", hour:"15:20", href:"player_autoradio.html"}
         ])
         include _includes/player_includes/_player_carousel.pug
     script(src="assets/js/script.js")

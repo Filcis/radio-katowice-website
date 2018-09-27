@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700&subset=latin-ext');
+@import '_includes/_vars';
+@import '_includes/_mixins';
+@import 'bulma/bulma.sass';
+@import '_includes/_typography';
+@import '_includes/_elements';
+
+
+/* =============================================================
+                          NAVIGATION
+=============================================================== */
+
+.navbar-menu .navbar-item {
+  font-size: $size-6;
+  &:last-child{
+  }
+}
+
+.navbar-link {
+  &:after {
+    border-width: 1px !important;
+  }
+}
+
+.dropdown {
+  button {
+    border: none;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+// Player Navigation
+
+.has-player-navbar-fixed-top {
+  padding-top: $navbar-player-height;
+}
+
+.navbar.navbar-player {
+  background-color: $dark-gray;
+  min-height: $navbar-player-height;
+  &>.container {
+    min-height: $navbar-player-height;
+  }
+}
+
+.navbar-player {
+  .navbar-brand {
+    min-height: $navbar-player-height;
+  }
+}
+
+.stream-menu-trigger {
+  background-color: $basic-red;
+  height: 100%;
+  line-height: $navbar-player-height;
+  padding: 0 0.75rem;
+  color: white;
+  &:hover {
+    color: white;
+  }
+  position: absolute;
+  right: 0;
+}
+
+#stream-menu {
+  background-color: $basic-red;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  .navbar-item {
+  color: white;
+  }
+}
+
+.logo-player {
+  height: $navbar-player-height - 0.5rem;
+  margin: 0;
+}
+
+
+
+/* =============================================================
+                          LAYOUT
+=============================================================== */
+html * {
+  max-width: 360px;
+}
+
+body {
+  background-color: #fff;
+}
+
+html  {
+  font-size: 14px;
+  background-color: darken($dark-gray, 15);
+}
+
+.player-main {
+  height: auto;
+}
+
+/* =============================================================
+                          ELEMENTS
+=============================================================== */
+
+
+/* =============================================================
+                          PLAYER INTERFACE
+=============================================================== */
+
+
+.player-main {
+  background-color: $player-light-gray;
+  position: relative;
+  padding: $vertical-rhythm-unit-1;
+}
+
+.player-cover,
+.player-cover-icon {
+  height: 15rem;
+  @include from($tablet) {
+    height: 18rem;
+  }
+}
+
+.cover {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.player-cover-icon {
+  background-color: darken($dark-gray, 20);
+  display: flex;
+  .icon {
+    text-align: center;
+    display: block;
+    margin: auto;
+  }
+}
+
+//wrapper
+.player-shortcuts {
+  max-width: 100%;
+  background-color: #f5f5f5; // jaśniej?
+  padding: $vertical-rhythm-unit-1;
+}
+
+//layout dla: pogoda, informacje, auto radio
+.permanent-shortcuts {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    .column {
+      padding: 0.25em;
+    }
+}
+
+a.player-shortcut {
+  display: block; //backup flexboxa, zbędne?
+  display: flex;
+  flex-direction: column; //na desktop zmienic na row
+  font-size: 0.8rem;
+  height: 100%; //zbędne?
+  background-color: white;
+}
+
+a.player-shortcut,
+a.player-shortcut-carousel > * {
+  border-radius: 0 0 15px 0;
+  border: 1px solid $light-gray;
+}
+
+.player-shortcut-top,
+.player-shortcut-carousel-left {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  &.icon-music {background-color: $music-color};
+  &.icon-info {background-color: $info-color};
+  &.icon-cloud {background-color: $weather-color};
+  &.icon-car {background-color: $auto-radio-color};
+}
+
+.player-shortcut-carousel-left {
+  flex: 1;
+}
+
+.player-shortcut-top {
+    height: 5rem;
+}
+
+.player-stations-menu {
+  background-color: $gray;
+  margin: -$vertical-rhythm-unit-1;
+  color: $light-gray;
+  height: 3rem;
+  .is-station-active figure.image img {
+    opacity: 1;
+  }
+  & > .column:first-child {
+    border-right: 1px solid lighten($gray, 10);
+  }
+  figure.image {
+    height: 24px;
+    img {
+      height: inherit;
+      width: auto;
+      opacity: 0.5;
+    }
+  }
+}
+
+.player-artist-name,
+.player-song-title {
+  font-size: $size-4;
+}
+
+.player-shortcut-time {
+  position: absolute;
+  top:0.2rem;
+  left:0.2rem;
+}
+
+.player-shortcut-bottom {
+  padding: $vertical-rhythm-unit-1 0.25rem;
+}
+
+.player-carousel-shortcut {
+    border-right: 1px solid $light-gray;
+    display: flex;
+    align-items: center;
+    margin-right: 1em;
+  }
+
+.player-shortcut-call-to-action {
+  color: $gray;
+  margin: auto;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: inline-flex;
+  align-items:center;
+  .play-icon-wrapper {
+      @include play-icon-wrapper($basic-red, 1.5em);
+      margin-left: -0.2rem;
+  }
+}
+
+.player-live-info,
+.player-next-info {
+  padding: 0;
+  min-height: $vertical-rhythm-unit-5 * 2;
+}
+
+.player-body .player-auditions-carousel {
+    margin: $vertical-rhythm-unit-1 0.25em;
+}
+
+.controls {
+  display: flex;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+}
+
+#player-button-play {
+  border: 0;
+  background-color: transparent;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0 1em;
+  .play-icon-wrapper {
+    @include play-icon-wrapper(#fff, 2.5rem);
+    margin: 0;
+  }
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  margin: 0 1em;
+  i {
+    margin-right: .75em;
+    line-height: 2.5rem;
+  }
+  @include volume-control;
+}
+
+.time-played {
+  display: block;
+  margin: 0 1em;
+}
