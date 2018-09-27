@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700&subset=latin-ext');
 @import '_includes/_vars';
-@import '_includes/_mixins';
 @import 'bulma/bulma.sass';
+@import '_includes/_mixins';
 @import '_includes/_typography';
 @import '_includes/_elements';
 
+html {
+  @include from($tablet){
+    font-size: 16px;
+  }
+}
 
 /* =============================================================
                           NAVIGATION

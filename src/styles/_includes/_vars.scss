@@ -15,7 +15,7 @@ $music-color: #EBEBEB;
 
 
 // TYPOGRAPHY
-
+$body-size : 14px;
 $family-primary	: 'IBM Plex Sans', sans-serif;
 $body-line-height: 1.4;
 $hr-background-color: $light-gray;
@@ -46,7 +46,7 @@ $tabs-toggle-link-border-width: 0;
 // NAVIGATION
 
 $navbar-height: 5rem;
-$navbar-player-height: 3.5rem;
+$navbar-player-height: 3rem;
 $navbar-item-color: $link;
 $navbar-item-hover-color: &link;
 $navbar-item-hover-background-color: &light;

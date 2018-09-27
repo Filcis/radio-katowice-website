@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700&subset=latin-ext');
-@import '_includes/_vars';
 @import '_includes/_mixins';
+@import '_includes/_vars';
 @import 'bulma/bulma.sass';
+@import '_includes/_mixins';
 @import '_includes/_typography';
 @import '_includes/_elements';
 
@@ -39,24 +40,28 @@
 
 .navbar.navbar-player {
   background-color: $dark-gray;
+  height: $navbar-player-height;
   min-height: $navbar-player-height;
-  &>.container {
+  & > * {
+    height: $navbar-player-height;
     min-height: $navbar-player-height;
   }
 }
 
 .navbar-player {
-  .navbar-brand {
-    min-height: $navbar-player-height;
+  .navbar-brand,
+  .navbar-item {
+    height: $navbar-player-height;
   }
 }
 
 .stream-menu-trigger {
   background-color: $basic-red;
-  height: 100%;
+  height: $navbar-player-height;
   line-height: $navbar-player-height;
   padding: 0 0.75rem;
   color: white;
+  height: $navbar-player-height;
   &:hover {
     color: white;
   }
@@ -75,7 +80,7 @@
 }
 
 .logo-player {
-  height: $navbar-player-height - 0.5rem;
+  height: $navbar-player-height;
   margin: 0;
 }
 
@@ -93,7 +98,6 @@ body {
 }
 
 html  {
-  font-size: 14px;
   background-color: darken($dark-gray, 15);
 }
 
