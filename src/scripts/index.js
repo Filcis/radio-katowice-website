@@ -1,8 +1,11 @@
 'use strict';
 
-$(document).ready(() => {
-    // TODO: Organize code as different modules
-    //==================================================
+// TODO: Organize code as different modules, create namespaces for different functionalities
+// no need for document.ready
+//==================================================
+
+(function($) {
+
     const dropdown = $('#stream-dropdown');
     dropdown.click((e) => {
         $(e.currentTarget).toggleClass('is-active');
@@ -41,4 +44,4 @@ $(document).ready(() => {
         }
     })
 
-})
+})(jQuery);
