@@ -205,12 +205,16 @@ a.player-shortcut-carousel > * {
   }
   figure.image {
     height: 24px;
+    width: auto;
     img {
       height: inherit;
       width: auto;
       opacity: 0.5;
     }
   }
+}
+
+.stations-list {
 }
 
 .player-artist-name,

@@ -224,26 +224,40 @@ footer {
     margin: auto;
   }
 }
-
+@include until($desktop) {
 .player-stations-menu {
-  padding: 0.75rem;
-  background-color: $gray;
-  color: $light-gray;
-  .is-station-active figure.image img {
-    opacity: 1;
+  display: none;
   }
-  & > .column:first-child {
-    border-right: 1px solid lighten($gray, 10);
-  }
-  figure.image {
-    height: 24px;
-    img {
-      height: inherit;
-      width: auto;
-      opacity: 0.5;
+}
+
+@include from($desktop) {
+  .player-stations-menu {
+    padding: $vertical-rhythm-unit-1 0;
+    background-color: transparent;
+    color: $gray;
+    .is-station-active figure.image img {
+      opacity: 1;
+    }
+    .player-stations-title {
+      display: none;
+        color: $light-gray;
+        h2 {
+          line-height: 2rem;
+        }
+      }
+    figure.image {
+      height: 30px;
+      width: 30px;
+      border-radius: 30px;
+      background-color: lighten($light-gray, 9);
+      padding: 0.5rem;
+      img {
+        display: none;
+      }
     }
   }
 }
+
 
 //wrapper
 .player-shortcuts {
@@ -330,27 +344,6 @@ a.player-shortcut {
 
 .player-shortcut-carousel-left {
   flex: 1;
-}
-
-.player-stations-menu {
-  font-size: 0.8rem;
-  background-color: $gray;
-  margin: 0;
-  color: $light-gray;
-  .is-station-active figure.image img {
-    opacity: 1;
-  }
-  .player-stations-title {
-    border-right: 1px solid lighten($gray, 10);
-  }
-  figure.image {
-    height: 24px;
-    img {
-      height: inherit;
-      width: auto;
-      opacity: 0.5;
-    }
-  }
 }
 
 .player-shortcut-time {
