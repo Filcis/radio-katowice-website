@@ -9,9 +9,9 @@ mixin current(current)
           i(class="fas fa-3x fa-"+ current.icon)
     .player-main 
       .player-live-info
+        p.is-red Teraz odtwarzane
         if current.name
           h1.player-artist-name= current.name
         else if current.date
           h1.player-artist-name= current.date
         h2.player-song-title= current.title
-      include ../player_includes/_player_stations.pug

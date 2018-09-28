@@ -42,10 +42,6 @@
   background-color: $dark-gray;
   height: $navbar-player-height;
   min-height: $navbar-player-height;
-  & > * {
-    height: $navbar-player-height;
-    min-height: $navbar-player-height;
-  }
 }
 
 .navbar-player {
@@ -149,7 +145,6 @@ html  {
 .player-shortcuts {
   max-width: 100%;
   background-color: #f5f5f5; // jaśniej?
-  padding: $vertical-rhythm-unit-1;
 }
 
 //layout dla: pogoda, informacje, auto radio
@@ -198,10 +193,9 @@ a.player-shortcut-carousel > * {
 }
 
 .player-stations-menu {
+  padding: 0.75rem;
   background-color: $gray;
-  margin: -$vertical-rhythm-unit-1;
   color: $light-gray;
-  height: 3rem;
   .is-station-active figure.image img {
     opacity: 1;
   }
@@ -221,6 +215,7 @@ a.player-shortcut-carousel > * {
 .player-artist-name,
 .player-song-title {
   font-size: $size-4;
+  margin-bottom: 0;
 }
 
 .player-shortcut-time {
@@ -257,7 +252,7 @@ a.player-shortcut-carousel > * {
 .player-live-info,
 .player-next-info {
   padding: 0;
-  min-height: $vertical-rhythm-unit-5 * 2;
+  min-height: $vertical-rhythm-unit-5;
 }
 
 .player-body .player-auditions-carousel {
