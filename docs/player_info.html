@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html class="has-player-navbar-fixed-top player-body"><!DOCTYPE html>
+<html><!DOCTYPE html>
   <head>
     <title>Polskie Radio Katowice</title>
     <meta charset="utf-8">
     <meta name="author" content="Filip Ciślak">
-    <meta name="description" content="Radio Katowice www front end">
+    <meta name="description" content="Polskie Radio Katowice">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base href="./">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/player.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script type="text/javascript" src="assets/js/bulma-carousel.min.js"></script>
     <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
-    <script src="assets/js/script.js"></script>
   </head>
-  <body>
+  <body class="has-player-navbar-fixed-top">
     <header>
       <nav class="navbar navbar-player is-fixed-top">
         <div class="navbar-brand"><a class="navbar-item" href="index.html"><img class="logo-player" src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice"></a><a class="stream-menu-trigger" id="stream-dropdown" data-target="#stream-menu">Programy</a></div>
@@ -27,101 +25,146 @@
     <section class="player">
             <div class="container is-fullhd">
               <div class="player-cover-icon"><span class="icon is-large icon-info"><i class="fas fa-3x fa-info"></i></span></div>
-              <div class="player-interface">
-                <div class="tabs is-toggle">
-                  <ul>
-                    <li class="is-active"><a class="tab" data-target="#player-tab-1">Teraz odtwarzane</a></li>
-                  </ul>
-                </div>
-                <div class="player-live-info tab-content is-active" id="player-tab-1">
+              <div class="player-main"> 
+                <div class="player-live-info">
+                  <p class="is-red">Teraz odtwarzane</p>
                   <h1 class="player-artist-name">25.04.2018 | 16:45</h1>
                   <h2 class="player-song-title">Informacje</h2>
-                  <div class="controls">
-                    <button id="player-button-play">
-                      <div class="play-icon-wrapper"><span class="play-icon"></span></div>
-                    </button>
-                    <div class="volume-control">
-                      <input class="slider" type="range" step="1" min="0" max="100" value="50"><i class="fas fa-volume-up"></i>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
-      <div class="player-shortcuts">
-                <div class="columns is-mobile is-marginless is-gapless">
-                  <div class="column is-4 has-text-centered"><a class="player-shortcut" href="/player.html">
-                      <div class="player-shortcut-time">
-                        <p class="player-hour time-info is-size-6">LIVE</p>
-                      </div>
-                      <div class="player-shortcut-title">
-                        <p>Andrzej Grabowski: Jest dobrze</p>
-                      </div>
-                      <div class="player-shortcut-call-to-action"> 
-                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                      </div></a></div>
-                  <div class="column is-4 has-text-centered"><a class="player-shortcut" href="/player_pogoda.html">
-                      <div class="player-shortcut-time">
-                        <p class="player-hour is-size-6">14:00</p>
-                      </div><span class="icon is-medium icon-cloud"><i class="fas fa-2x fa-cloud"></i></span>
-                      <div class="player-shortcut-title">
-                        <p>Pogoda</p>
-                      </div>
-                      <div class="player-shortcut-call-to-action"> 
-                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                      </div></a></div>
-                  <div class="column is-4 has-text-centered"><a class="player-shortcut" href="/player_autoradio.html">
-                      <div class="player-shortcut-time">
-                        <p class="player-hour is-size-6">15:20</p>
-                      </div><span class="icon is-medium icon-car"><i class="fas fa-2x fa-car"></i></span>
-                      <div class="player-shortcut-title">
-                        <p>Auto Radio</p>
-                      </div>
-                      <div class="player-shortcut-call-to-action"> 
-                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                      </div></a></div>
-                </div>
-        <div class="player-auditions-carousel carousel carousel-animated carousel-animate-slide">
-          <div class="carousel-container">
-            <div class="carousel-item is-active"><a class="player-shortcut">
-                <div class="columns is-mobile">
-                  <div class="column is-3 has-text-centered has-icon-onleft"><span class="icon is-medium icon-music"><i class="fas fa-music fa-2x"></i></span></div>
-                  <div class="column is-9">
-                    <p>24.03.2019 15:00</p>
-                    <p>Nazwa nagrania</p>
-                    <div class="player-shortcut-call-to-action"> 
-                      <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                    </div>
-                  </div>
-                </div></a></div>
-            <div class="carousel-item"><a class="player-shortcut">
-                <div class="columns is-mobile">
-                  <div class="column is-3 has-text-centered has-icon-onleft"><span class="icon is-medium icon-music"><i class="fas fa-music fa-2x"></i></span></div>
-                  <div class="column is-9">
-                    <p>24.03.2019 15:00</p>
-                    <p>Nazwa nagrania</p>
-                    <div class="player-shortcut-call-to-action"> 
-                      <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                    </div>
-                  </div>
-                </div></a></div>
-            <div class="carousel-item"><a class="player-shortcut">
-                <div class="columns is-mobile">
-                  <div class="column is-3 has-text-centered has-icon-onleft"><span class="icon is-medium icon-music"><i class="fas fa-music fa-2x"></i></span></div>
-                  <div class="column is-9">
-                    <p>24.03.2019 15:00</p>
-                    <p>Nazwa nagrania</p>
-                    <div class="player-shortcut-call-to-action"> 
-                      <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                    </div>
-                  </div>
-                </div></a></div>
-          </div>
-          <div class="carousel-navigation is-overlay">
-            <div class="carousel-nav-left"><i class="fa fa-chevron-left"></i></div>
-            <div class="carousel-nav-right"><i class="fa fa-chevron-right"></i></div>
+    </section>
+    <section class="section player-stations-menu">
+      <div class="columns is-mobile">
+        <div class="column player-stations-title is-3-mobile is-narrow-desktop">
+          <h2>Programy</h2>
+        </div>
+        <div class="column is-9-mobile is-narrow-desktop">
+          <div class="columns is-mobile stations-list">
+            <div class="column is-narrow-tablet"><a class="is-station-active" href="#">
+                <figure class="image"><img src="assets/files/img/logo_programu-1.png"></figure></a></div>
+            <div class="column is-narrow-tablet">       <a href="#"> 
+                <figure class="image"><img src="assets/files/img/logo_programu-2.png"></figure></a></div>
+            <div class="column is-narrow-tablet">       <a href="#"> 
+                <figure class="image"><img src="assets/files/img/logo_programu-3.png"></figure></a></div>
+            <div class="column is-narrow-tablet">       <a href="#"> 
+                <figure class="image"><img src="assets/files/img/logo_programu-4.png"></figure></a></div>
           </div>
         </div>
       </div>
     </section>
+    <section class="section player-shortcuts">
+            <div class="columns is-mobile permanent-shortcuts">
+              <div class="column is-4 has-text-centered-mobile"><a class="player-shortcut" href="player_info.html">
+                  <div class="player-shortcut-icon icon-info">
+                    <div class="player-shortcut-time">
+                      <p class="is-size-7">16:45</p>
+                    </div><span class="icon is-medium"><i class="fas fa-2x fa-info"></i></span>
+                  </div>
+                  <div class="player-shortcut-bottom">
+                    <div class="player-shortcut-title">
+                      <p>Informacje</p>
+                    </div>
+                    <div class="player-shortcut-call-to-action"> 
+                      <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                    </div>
+                  </div></a></div>
+              <div class="column is-4 has-text-centered-mobile"><a class="player-shortcut" href="player_pogoda.html">
+                  <div class="player-shortcut-icon icon-cloud">
+                    <div class="player-shortcut-time">
+                      <p class="is-size-7">14:00</p>
+                    </div><span class="icon is-medium"><i class="fas fa-2x fa-cloud"></i></span>
+                  </div>
+                  <div class="player-shortcut-bottom">
+                    <div class="player-shortcut-title">
+                      <p>Pogoda</p>
+                    </div>
+                    <div class="player-shortcut-call-to-action"> 
+                      <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                    </div>
+                  </div></a></div>
+              <div class="column is-4 has-text-centered-mobile"><a class="player-shortcut" href="player_autoradio.html">
+                  <div class="player-shortcut-icon icon-car">
+                    <div class="player-shortcut-time">
+                      <p class="is-size-7">15:20</p>
+                    </div><span class="icon is-medium"><i class="fas fa-2x fa-car"></i></span>
+                  </div>
+                  <div class="player-shortcut-bottom">
+                    <div class="player-shortcut-title">
+                      <p>Auto Radio</p>
+                    </div>
+                    <div class="player-shortcut-call-to-action"> 
+                      <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                    </div>
+                  </div></a></div>
+            </div>
+      <div class="carousel-wrapper">
+        <div class="carousel"><a class="player-shortcut-carousel carousel-item is-ref">
+                  <div class="columns is-mobile is-marginless">
+                    <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
+                    <div class="column is-8">
+                      <p class="is-size-7">24.03.2019 15:00</p>
+                      <div class="player-shortcut-title">
+                        <p>Nazwa nagrania</p>
+                      </div>
+                      <div class="player-shortcut-call-to-action"> 
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                      </div>
+                    </div>
+                  </div></a><a class="player-shortcut-carousel carousel-item">
+                  <div class="columns is-mobile is-marginless">
+                    <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
+                    <div class="column is-8">
+                      <p>24.03.2019 15:00</p>
+                      <p>Nazwa nagrania</p>
+                      <div class="player-shortcut-call-to-action"> 
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                      </div>
+                    </div>
+                  </div></a><a class="player-shortcut-carousel carousel-item">
+                  <div class="columns is-mobile is-marginless">
+                    <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
+                    <div class="column is-8">
+                      <p>24.03.2019 15:00</p>
+                      <p>Nazwa nagrania</p>
+                      <div class="player-shortcut-call-to-action"> 
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                      </div>
+                    </div>
+                  </div></a><a class="player-shortcut-carousel carousel-item">
+                  <div class="columns is-mobile is-marginless">
+                    <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
+                    <div class="column is-8">
+                      <p>24.03.2019 15:00</p>
+                      <p>Nazwa nagrania</p>
+                      <div class="player-shortcut-call-to-action"> 
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                      </div>
+                    </div>
+                  </div></a><a class="player-shortcut-carousel carousel-item">
+                  <div class="columns is-mobile is-marginless">
+                    <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
+                    <div class="column is-8">
+                      <p>24.03.2019 15:00</p>
+                      <p>Nazwa nagrania</p>
+                      <div class="player-shortcut-call-to-action"> 
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                      </div>
+                    </div>
+                  </div></a><a class="player-shortcut-carousel carousel-item">
+                  <div class="columns is-mobile is-marginless">
+                    <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
+                    <div class="column is-8">
+                      <p>24.03.2019 15:00</p>
+                      <p>Nazwa nagrania</p>
+                      <div class="player-shortcut-call-to-action"> 
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
+                      </div>
+                    </div>
+                  </div></a>
+        </div><a class="carousel-toggle-prev" role="button"><i class="fas fa-chevron-left"></i></a><a class="carousel-toggle-next" role="button" data-toggle="next"><i class="fas fa-chevron-right"></i>   </a>
+      </div>
+    </section>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
