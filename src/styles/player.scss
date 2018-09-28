@@ -194,13 +194,17 @@ a.player-shortcut-carousel > * {
 
 .player-stations-menu {
   padding: 0.75rem;
-  background-color: $gray;
+  background-color: #363636;
   color: $light-gray;
   .is-station-active figure.image img {
     opacity: 1;
   }
-  .player-stations-title {
+  .player-stations-title  {
+    font-size: $size-6;
     border-right: 1px solid lighten($gray, 10);
+    h2 {
+      line-height: 2rem;
+    }
   }
   figure.image {
     height: 24px;
