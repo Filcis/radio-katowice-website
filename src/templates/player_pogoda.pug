@@ -10,11 +10,14 @@ html
       date: "25.04.2018 | 14:00",
       title: "Pogoda"
       })
-      .player-shortcuts
-        include _includes/mixins/_player_shortcuts.pug
-        +shortcuts([
-          {image:"Ferdek.jpg", title:"Andrzej Grabowski: Jest dobrze", href:"player.html"},
-          {icon:"info", title:"Informacje", hour:"16:45", href:"player_info.html"},
-          {icon:"car", title:"Auto Radio", hour:"15:20", href:"player_autoradio.html"}
-        ])
-        include _includes/player_includes/_player_carousel.pug
+    section.section.player-stations-menu
+      include _includes/player_includes/_player_stations.pug
+    section.section.player-shortcuts
+      include _includes/mixins/_player_shortcuts.pug
+      +shortcuts([
+        {icon:"info", title:"Informacje", hour:"16:45", href:"player_info.html"},
+        {icon:"cloud", title:"Pogoda", hour:"14:00", href:"player_pogoda.html"},
+        {icon:"car", title:"Auto Radio", hour:"15:20", href:"player_autoradio.html"}
+      ])
+      include _includes/player_includes/_player_carousel.pug
+    script(src="assets/js/script.js")

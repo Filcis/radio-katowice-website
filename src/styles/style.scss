@@ -99,11 +99,16 @@ footer {
 }
 
 .events-list {
-  background-color: $player-light-gray;
+  @include until($desktop){
+      background-color: $player-light-gray;
+  }
 }
 
 .newsletter {
   margin-bottom: $vertical-rhythm-unit-5;
+  .columns{
+    align-items: center;
+  }
 }
 
 /* =============================================================
