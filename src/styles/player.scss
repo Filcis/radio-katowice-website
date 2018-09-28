@@ -120,9 +120,6 @@ html  {
 .player-cover,
 .player-cover-icon {
   height: 15rem;
-  @include from($tablet) {
-    height: 18rem;
-  }
 }
 
 .cover {

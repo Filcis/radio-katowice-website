@@ -193,6 +193,7 @@ footer {
     padding: $vertical-rhythm-unit-2;
   }
   @include from($desktop) {
+    height: 20rem;
     padding: $vertical-rhythm-unit-3;
   }
 }
@@ -202,6 +203,9 @@ footer {
   height: 15rem;
   @include from($tablet) {
     height: 18rem;
+  }
+  @include from($desktop) {
+    height: 20rem;
   }
 }
 
