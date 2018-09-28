@@ -171,7 +171,7 @@ a.player-shortcut-carousel > * {
   border: 1px solid $light-gray;
 }
 
-.player-shortcut-top,
+.player-shortcut-icon,
 .player-shortcut-carousel-left {
   position: relative;
   display: flex;
@@ -188,7 +188,7 @@ a.player-shortcut-carousel > * {
   flex: 1;
 }
 
-.player-shortcut-top {
+.player-shortcut-icon {
     height: 5rem;
 }
 
@@ -199,7 +199,7 @@ a.player-shortcut-carousel > * {
   .is-station-active figure.image img {
     opacity: 1;
   }
-  & > .column:first-child {
+  .player-stations-title {
     border-right: 1px solid lighten($gray, 10);
   }
   figure.image {

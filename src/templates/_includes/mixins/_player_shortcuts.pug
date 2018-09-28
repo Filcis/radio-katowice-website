@@ -1,9 +1,9 @@
 mixin shortcuts(data, isPopup)
   .columns.is-mobile.permanent-shortcuts
     each i in data
-      .column.is-4.has-text-centered
+      .column.is-4.has-text-centered-mobile
         a.player-shortcut(href=i.href)
-          .player-shortcut-top(class="icon-" + i.icon)
+          .player-shortcut-icon(class="icon-" + i.icon)
             .player-shortcut-time
               if i.hour
                 p.is-size-7= i.hour
