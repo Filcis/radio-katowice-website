@@ -3,57 +3,19 @@ html
     include _includes/_head.pug
     body.has-navbar-fixed-top
       include _includes/_header.pug
-      section.player-homepage
-        .container.is-fullhd
-          include _includes/_live_on_player.pug
-      section.section.player-shortcuts
+      section.section
         .container
-          .columns
-            .column.is-6
-              include _includes/mixins/_player_shortcuts.pug
-              +shortcuts([
-                {icon:"info", title:"Informacje", hour:"16:45", href:"player_info.html"},
-                {icon:"cloud", title:"Pogoda", hour:"14:00", href:"player_pogoda.html"},
-                {icon:"car", title:"Auto Radio", hour:"15:20", href:"player_autoradio.html"}
-              ])
-            .column.is-6
-              include _includes/player_includes/_player_carousel.pug
-      include _includes/mixins/_article.pug
-      section.recent-news.section
-        .container
-          .columns
-            .column.is-offset-1.is-7-desktop
-              h1.section-title Aktualności
-              - 
-                var article1 = {
-                  title:"II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.",
-                  image: "tour.jpg",
-                  tags: ["sport","Katowice"],
-                  date: "17.07.2018"
-                }
-                var article2 = {
-                  title:"Trwa budowa drogi Pszczyna – Racibórz.",
-                  image: "pszczyna-raciborz.jpg",
-                  tags: ["region","Pszczyna", "Racibórz"],
-                  date: "15.07.2018"
-                }
-                var article3 = {
-                  title:"Naukobus. Mobilne centrum Nauki.",
-                  image: "naukobus.jpg",
-                  tags: ["kultura","Katowice"],
-                  date: "13.07.2018"
-                }
-                var article4 = {
-                  title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
-                  image: "fetor.jpg",
-                  tags: ["region","Jaworzno"],
-                  date: "12.07.2018"
-                }
-              +article(article1)
-              +article(article2)
-              +article(article3)
-              +article(article4)
-      //- <!-- end news -->
+          .columns.is-desktop
+            .column.is-10-desktop.is-9-widescreen
+              section.on-air
+                include _includes/_on_air.pug
+              section.player-shortcuts
+                include _includes/_shortcuts.pug
+              section.recent-news
+                include _includes/_recent_news.pug
+            .column.is-2-desktop.is-3-widescreen
+              aside
+                h2 sidebar
       section.recent-video.section
         include _includes/_video_carousel.pug
       section.section
