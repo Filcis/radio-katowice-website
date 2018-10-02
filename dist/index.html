@@ -14,19 +14,114 @@
   </head>
   <body class="has-navbar-fixed-top">
     <header>
-      <nav class="navbar is-fixed-top">
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main-navigation">
         <div class="container">
           <div class="navbar-brand"><a class="navbar-item" href="index.html"><img class="logo" src="assets/files/img/Polskie-Radio-Katowice-Logo.png" alt="Polskie Radio Katowice"></a>
-            <div class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></div>
+            <div class="navbar-burger" data-target="#main-menu" aria-label="menu" aria-expanded="false" role="button"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></div>
           </div>
           <div class="navbar-menu" id="main-menu">
+            <div class="navbar-start">
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Na antenie</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Program</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Audycje</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Informacje</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Pogoda</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Auto radio</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Wywiady</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Porady</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Muzyka</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Playlista</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Lista przebojów</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Informacje</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Aktualności</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Region</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Sport</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Biznes</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Kultura</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Zdrowie</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Styl życia</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Reklama</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Agencja reklamy</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Promocja i marketing</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Radio</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Kontakt</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Ludzie</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>O radiu</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Więcej</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Polecamy</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Patronaty</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Radiowe wydarzenia</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Więcej</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="navbar-end">
-              <div class="navbar-item has-dropdown"><a class="navbar-link">na antenie</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">muzyka</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">informacje</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">reklama</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">radio</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">więcej</a></div>
               <div class="navbar-item field">
                 <p class="control has-icons-left">
                   <input class="input is-medium" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"> </i></span>
@@ -65,14 +160,17 @@
                       </div>
                       <div class="column is-9-mobile is-narrow">
                         <div class="columns is-mobile stations-list">
-                          <div class="column is-narrow"><a class="is-station-active" href="#">
+                          <div class="column is-narrow"><a class="station-list-item is-station-active" href="#">
                               <figure class="image"><img src="assets/files/img/logo_programu-1.png"></figure></a></div>
-                          <div class="column is-narrow">     <a href="#"> 
-                              <figure class="image"><img src="assets/files/img/logo_programu-2.png"></figure></a></div>
-                          <div class="column is-narrow">      <a href="#"> 
-                              <figure class="image"><img src="assets/files/img/logo_programu-3.png"></figure></a></div>
-                          <div class="column is-narrow">    <a href="#"> 
-                              <figure class="image"><img src="assets/files/img/logo_programu-4.png"></figure></a></div>
+                          <div class="column is-narrow">     <a class="station-list-item" href="#"> 
+                              <figure class="image"><img src="assets/files/img/logo_programu-2.png"></figure>
+                              <div class="station-tooltip"><span class="tooltip-station-name">Teraz na <i>2</i>:</span><span class="tooltip-artist">Artur Rojek </span><span class="tooltip-title">Beksa</span></div></a></div>
+                          <div class="column is-narrow">      <a class="station-list-item" href="#">
+                              <figure class="image"><img src="assets/files/img/logo_programu-3.png"></figure>
+                              <div class="station-tooltip"><span class="tooltip-station-name">Teraz na <i>top50</i>:</span><span class="tooltip-artist">Tom Waits </span><span class="tooltip-title">Fumblin' With The Blues</span></div></a></div>
+                          <div class="column is-narrow">    <a class="station-list-item" href="#"> 
+                              <figure class="image"><img src="assets/files/img/logo_programu-4.png"></figure>
+                              <div class="station-tooltip"><span class="tooltip-station-name">Teraz na <i>oldies</i>:</span><span class="tooltip-artist">Nick Cave</span><span class="tooltip-title">Weeping song</span></div></a></div>
                         </div>
                       </div>
                     </div>

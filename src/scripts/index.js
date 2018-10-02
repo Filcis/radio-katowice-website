@@ -27,29 +27,40 @@
         $(e.currentTarget.dataset.target).toggleClass('is-active');
     });
     //==================================================
-    const tabs = $('a.tab');
-    tabs.click((e) => {
-        tabs.each((i, e) => {
-            $(e).parent().removeClass('is-active')
-            $(e.dataset.target).removeClass('is-active');
-        });
-        $(e.currentTarget.dataset.target).addClass('is-active');
-        $(e.currentTarget).parent().addClass('is-active');
+    // TODO: asynchroniczne tooltipy
+    $(".station-list-item").hover(function() {
+        console.log('ajax request');
+        var val = $(this).html();
+        //
+        // $.get('./stations.html'),
+        //     function() {
+        //         //This function is for unhover.
+        //     }
     });
     //==================================================
-    const carousel = $('.video-carousel');
-    const carouselItems = carousel.children();
-
-    var nextItem = (el) => el.next().length > 0 ? el.next() : carouselItems.first();
-    var prevItem = (el) => el.prev().length > 0 ? el.prev() : carouselItems.last();
-
-    $('.carousel-toggle').on('click', (e) => {
-        var el = $('.is-ref');
-        if ($(e.currentTarget).data('toggle') === 'next') {
-            var newItem = nextItem(el);
-        } else {
-            var newItem = prevItem(el);
-        }
-    })
+    // const tabs = $('a.tab');
+    // tabs.click((e) => {
+    //     tabs.each((i, e) => {
+    //         $(e).parent().removeClass('is-active')
+    //         $(e.dataset.target).removeClass('is-active');
+    //     });
+    //     $(e.currentTarget.dataset.target).addClass('is-active');
+    //     $(e.currentTarget).parent().addClass('is-active');
+    // });
+    //==================================================
+    // const carousel = $('.video-carousel');
+    // const carouselItems = carousel.children();
+    //
+    // var nextItem = (el) => el.next().length > 0 ? el.next() : carouselItems.first();
+    // var prevItem = (el) => el.prev().length > 0 ? el.prev() : carouselItems.last();
+    //
+    // $('.carousel-toggle').on('click', (e) => {
+    //     var el = $('.is-ref');
+    //     if ($(e.currentTarget).data('toggle') === 'next') {
+    //         var newItem = nextItem(el);
+    //     } else {
+    //         var newItem = prevItem(el);
+    //     }
+    // });
 
 })(jQuery);

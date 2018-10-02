@@ -4,18 +4,30 @@
   .column.is-9-mobile.is-narrow
     .columns.is-mobile.stations-list
       .column.is-narrow
-        a(href="#").is-station-active
+        a(href="#").station-list-item.is-station-active
           figure.image
             img(src="assets/files/img/logo_programu-1.png")
       .column.is-narrow      
-        a(href="#") 
+        a(href="#").station-list-item 
           figure.image
             img(src="assets/files/img/logo_programu-2.png")
+          div.station-tooltip
+            span.tooltip-station-name Teraz na #[i 2]:
+            span.tooltip-artist Artur Rojek 
+            span.tooltip-title Beksa
       .column.is-narrow       
-        a(href="#") 
+        a(href="#").station-list-item
           figure.image
             img(src="assets/files/img/logo_programu-3.png")
+          div.station-tooltip
+            span.tooltip-station-name Teraz na #[i top50]:
+            span.tooltip-artist Tom Waits 
+            span.tooltip-title Fumblin' With The Blues
       .column.is-narrow     
-        a(href="#") 
+        a(href="#").station-list-item 
           figure.image
             img(src="assets/files/img/logo_programu-4.png")
+          div.station-tooltip
+            span.tooltip-station-name Teraz na #[i oldies]:
+            span.tooltip-artist Nick Cave
+            span.tooltip-title Weeping song
