@@ -187,7 +187,7 @@ gulp.task('uncss', function() {
     return gulp.src(routes.files.cssFiles)
         .pipe(uncss({
             html:[routes.files.htmlFiles],
-            ignore:['*:*',/carousel.is-4/,/.carousel.is-1/,/.carousel.is-2/]
+            ignore:['*:*',/carousel.is-4/,/.carousel.is-1/,/.carousel.is-2/,/.is-fixed-top/,/.has-navbar-fixed-top/]
         }))
         .pipe(plumber({
             errorHandler: notify.onError({
