@@ -1,6 +1,6 @@
 mixin video(videoData)
   if videoData.isActive
-    a.carousel-item.is-ref
+    a.carousel-item.is-active
       .video-card-img-wrapper
         .video-card-tag: span= videoData.tag
         img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
@@ -17,36 +17,3 @@ mixin video(videoData)
       .video-card-body
         span.video-card-title nazwa nagrania
         span.video-card-info dodatkowe informacje o nagraniu
-        
-mixin shortcut(shortcutData)
-  if shortcutData.isActive
-    a.player-shortcut-carousel.carousel-item.is-ref
-      .columns.is-mobile.is-marginless
-        .column.is-4.has-text-centered.player-shortcut-carousel-left.icon-music
-          span(class="icon is-medium")
-            i(class="fas fa-music fa-2x")
-        .column.is-8
-          p.is-size-7 24.03.2019 15:00
-          .player-shortcut-title
-            p Nazwa nagrania
-          .player-shortcut-call-to-action 
-            .play-icon-wrapper #[span.play-icon]
-            span SŁUCHAJ
-  else
-    a.player-shortcut-carousel.carousel-item
-      .columns.is-mobile.is-marginless
-        .column.is-4.has-text-centered.player-shortcut-carousel-left.icon-music
-          span(class="icon is-medium")
-            i(class="fas fa-music fa-2x")
-        .column.is-8
-          p 24.03.2019 15:00
-          p Nazwa nagrania
-          .player-shortcut-call-to-action 
-            .play-icon-wrapper #[span.play-icon]
-            span SŁUCHAJ
-
-mixin controls
-  a.carousel-toggle-prev(role="button")
-    <i class="fas fa-chevron-left"></i>
-  a.carousel-toggle-next(role="button", data-toggle="next")
-    <i class="fas fa-chevron-right"></i>   

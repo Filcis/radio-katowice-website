@@ -1,12 +1,16 @@
 include ./mixins/_carousel.pug
 .container
   h1.section-title Video
-  .carousel-wrapper
-    .video-carousel
+  .carousel.carousel-animated.carousel-animate-slide(data-size="4")
+    .carousel-container
       +video({isActive: 1, image: "video_3.jpg", tag:"wywiady"})
       +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
       +video({isActive: 0, image: "video_4.jpg", tag:"wywiady"})
       +video({isActive: 0, image: "video_1.jpg", tag:"wywiady"})
       +video({isActive: 0, image: "video_3.jpg", tag:"wywiady"})
       +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})
-    +controls
+    .carousel-navigation.is-overlay
+      .carousel-nav-left
+        i.fa.fa-chevron-left(aria-hidden="true")
+      .carousel-nav-right
+        i.fa.fa-chevron-right(aria-hidden="true")

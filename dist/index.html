@@ -341,8 +341,8 @@
     <section class="recent-video section">
       <div class="container">
         <h1 class="section-title">Video</h1>
-        <div class="carousel-wrapper">
-          <div class="video-carousel"><a class="carousel-item is-ref">
+        <div class="carousel carousel-animated carousel-animate-slide" data-size="4">
+          <div class="carousel-container"><a class="carousel-item is-active">
                     <div class="video-card-img-wrapper">
                       <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_3.jpg">
                       <div class="video-card-play-icon"> </div>
@@ -373,7 +373,11 @@
                       <div class="video-card-play-icon"> </div>
                     </div>
                     <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a>
-          </div><a class="carousel-toggle-prev" role="button"><i class="fas fa-chevron-left"></i></a><a class="carousel-toggle-next" role="button" data-toggle="next"><i class="fas fa-chevron-right"></i>   </a>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="carousel-nav-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+          </div>
         </div>
       </div>
     </section>

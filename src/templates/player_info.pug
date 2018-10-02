@@ -14,10 +14,5 @@ html
       include _includes/player_includes/_player_stations.pug
     section.section.player-shortcuts
       include _includes/mixins/_player_shortcuts.pug
-      +shortcuts([
-        {icon:"info", title:"Informacje", hour:"16:45", href:"player_info.html"},
-        {icon:"cloud", title:"Pogoda", hour:"14:00", href:"player_pogoda.html"},
-        {icon:"car", title:"Auto Radio", hour:"15:20", href:"player_autoradio.html"}
-      ])
-      include _includes/player_includes/_player_carousel.pug
+      include _includes/_shortcuts.pug
     script(src="assets/js/script.js")

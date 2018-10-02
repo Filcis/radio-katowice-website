@@ -1,48 +1,13 @@
 // ----------- Carousels ------------------
 
-.carousel-wrapper {
-  position: relative;
-}
 
-.video-carousel {
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: scroll;
-  min-height: 5rem;
-  -webkit-overflow-scrolling: touch;
-  @include from($desktop) {
-    overflow-x: hidden;
+.carousel-item .player-shortcut {
+  width: 80%;
+  margin: 0 auto;
+  @include from($large-mobile){
+    width: 70%;
   }
-}
-
-a.carousel-toggle-prev,
-a.carousel-toggle-next {
-  display: none;
-  @include from($desktop) {
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 35px;
-    background-color: hsla(0,0%,90%,.6);
-    i {
-      position: absolute;
-      top: 50%;
-      width: 35px;
-      text-align: center;
-      transform: translateY(-50%);
-    }
+  @include from($tablet){
+    width: 90%;
   }
-}
-
-.carousel-toggle-prev {
-  top: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.carousel-toggle-next {
-  top: 0;
-  bottom: 0;
-  right: 0;
 }
