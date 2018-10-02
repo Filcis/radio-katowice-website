@@ -82,20 +82,6 @@
     //     $(e.currentTarget).parent().addClass('is-active');
     // });
 
-    //==================================================
-    // const carousel = $('.video-carousel');
-    // const carouselItems = carousel.children();
-    //
-    // var nextItem = (el) => el.next().length > 0 ? el.next() : carouselItems.first();
-    // var prevItem = (el) => el.prev().length > 0 ? el.prev() : carouselItems.last();
-    //
-    // $('.carousel-toggle').on('click', (e) => {
-    //     var el = $('.is-ref');
-    //     if ($(e.currentTarget).data('toggle') === 'next') {
-    //         var newItem = nextItem(el);
-    //     } else {
-    //         var newItem = prevItem(el);
-    //     }
-    // });
+    var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 
 })(jQuery);

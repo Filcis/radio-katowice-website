@@ -11,13 +11,19 @@
         .player-shortcut
           p informacje
   .column.is-4
-    .carousel.columns
-      .column.is-12
-        .player-shortcut
-          p karuzela
-      //- .column.is-12
-      //-   .player-shortcut
-      //-     p karuzela
-      //- .column.is-12
-      //-   .player-shortcut
-      //-     p karuzela
+    .carousel.carousel-animated.carousel-animate-slide
+      .carousel-container
+        .carousel-item.is-active
+          .player-shortcut
+            p karuzela
+        .carousel-item
+          .player-shortcut
+            p karuzela
+        .carousel-item
+          .player-shortcut
+            p karuzela
+      .carousel-navigation.is-overlay
+        .carousel-nav-left
+          i.fa.fa-chevron-left(aria-hidden="true")
+        .carousel-nav-right
+          i.fa.fa-chevron-right(aria-hidden="true")

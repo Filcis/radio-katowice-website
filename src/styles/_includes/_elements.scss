@@ -46,15 +46,3 @@ a.carousel-toggle-next {
   bottom: 0;
   right: 0;
 }
-
-.carousel-item {
-  background-color: #fff;
-  width: 310px;
-  padding-left: 10px;
-  padding-right: 10px;
-  max-height: 18rem; //tymczasowo, do ustalenia rozmiaru zdjęc
-  flex: 1 0 auto;
-  &:first-child {
-    margin-left: -10px;
-  }
-}
