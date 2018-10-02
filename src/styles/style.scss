@@ -415,102 +415,99 @@ footer {
   }
 }
 
-//layout dla: pogoda, informacje, auto radio
-.permanent-shortcuts {
-  @include until($tablet){
-    margin-left: -0.25rem;
-    margin-right: -0.25rem;
-    .column {
-      padding: 0.25em;
-    }
-  }
-}
 
-a.player-shortcut {
+// //layout dla: pogoda, informacje, auto radio
+// .permanent-shortcuts {
+//   @include until($tablet){
+//     margin-left: -0.25rem;
+//     margin-right: -0.25rem;
+//     .column {
+//       padding: 0.25em;
+//     }
+//   }
+// }
+//
+.player-shortcut {
   display: block; //backup flexboxa, zbędne?
-  display: flex;
-  flex-direction: column; //na desktop zmienic na row
   font-size: 0.8rem;
-  height: 100%; //zbędne?
   background-color: white;
-  @include from($tablet) {
-    flex-direction: row;
-  }
+  padding: 1rem;
+  border-radius: 0 0 12px 0;
 }
-
-a.player-shortcut,
-a.player-shortcut-carousel {
-  font-size: 0.8rem;
-  border-radius: 0 0 15px 0;
-  border: 1px solid $light-gray;
-}
-
-a.player-shortcut {
-  transition: 0.5s all;
-  @include from($tablet) {
-    &:hover{
-      border: 1px solid $basic-red;
-    }
-  }
-}
-
-.player-shortcut-icon,
-.player-shortcut-carousel-left {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #000;
-  @include until($tablet) {
-    &.icon-music {background-color: $music-color};
-    &.icon-info {background-color: $info-color};
-    &.icon-cloud {background-color: $weather-color};
-    &.icon-car {background-color: $auto-radio-color};
-  }
-  @include from ($tablet){
-    padding: 0 0.75rem;
-  }
-}
-
-.player-shortcut-icon {
-    height: 5rem;
-  @include from(370px) {
-    font-size: 1.2em; //większe ikony
-    height: 6rem;
-  }
-  @include from(450px) {
-    font-size: 1.4em;
-    height: 7rem;
-  }
-  @include from($tablet) {
-    font-size: 0.8em;
-    height: 5rem;
-  }
-}
-
-.player-shortcut-carousel-left {
-  flex: 1;
-}
-
-.player-shortcut-time {
-  position: absolute;
-  top:0.2rem;
-  left:0.2rem;
-}
-
-.player-shortcut-bottom {
-  padding: $vertical-rhythm-unit-1 0.25rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.player-carousel-shortcut {
-    border-right: 1px solid $light-gray;
-    display: flex;
-    align-items: center;
-    margin-right: 1em;
-  }
+//
+// a.player-shortcut,
+// a.player-shortcut-carousel {
+//   font-size: 0.8rem;
+//   border-radius: 0 0 15px 0;
+//   border: 1px solid $light-gray;
+// }
+//
+// a.player-shortcut {
+//   transition: 0.5s all;
+//   @include from($tablet) {
+//     &:hover{
+//       border: 1px solid $basic-red;
+//     }
+//   }
+// }
+//
+// .player-shortcut-icon,
+// .player-shortcut-carousel-left {
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: #000;
+//   @include until($tablet) {
+//     &.icon-music {background-color: $music-color};
+//     &.icon-info {background-color: $info-color};
+//     &.icon-cloud {background-color: $weather-color};
+//     &.icon-car {background-color: $auto-radio-color};
+//   }
+//   @include from ($tablet){
+//     padding: 0 0.75rem;
+//   }
+// }
+//
+// .player-shortcut-icon {
+//     height: 5rem;
+//   @include from(370px) {
+//     font-size: 1.2em; //większe ikony
+//     height: 6rem;
+//   }
+//   @include from(450px) {
+//     font-size: 1.4em;
+//     height: 7rem;
+//   }
+//   @include from($tablet) {
+//     font-size: 0.8em;
+//     height: 5rem;
+//   }
+// }
+//
+// .player-shortcut-carousel-left {
+//   flex: 1;
+// }
+//
+// .player-shortcut-time {
+//   position: absolute;
+//   top:0.2rem;
+//   left:0.2rem;
+// }
+//
+// .player-shortcut-bottom {
+//   padding: $vertical-rhythm-unit-1 0.25rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+//
+// .player-carousel-shortcut {
+//     border-right: 1px solid $light-gray;
+//     display: flex;
+//     align-items: center;
+//     margin-right: 1em;
+//   }
 
 #player-main-call-to-action {
     border-radius: 0 0 15px 0;
