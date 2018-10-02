@@ -1,20 +1,23 @@
 include ./mixins/_carousel.pug
 .container
   h1.section-title Patronaty
-  .carousel.carousel-animated.carousel-animate-slide#main-video-carousel(data-size="4")
+  .carousel.carousel-animated.carousel-animate-slide.responsive-carousel
     .carousel-container
       .carousel-item
         .patronate
           p patronat 1
       .carousel-item
         .patronate
-          p patronat 1
+          p patronat 2
       .carousel-item
         .patronate
-          p patronat 1
+          p patronat 3
       .carousel-item
         .patronate
-          p patronat 1
+          p patronat 4
+      .carousel-item
+        .patronate
+          p patronat 5
     .carousel-navigation.is-overlay
       .carousel-nav-left
         i.fa.fa-chevron-left(aria-hidden="true")

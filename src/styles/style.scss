@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700&subset=latin-ext');
 @import '_includes/_vars';
 @import 'bulma/bulma.sass';
-@import 'bulma-carousel/dist/css/bulma-carousel.sass';
+@import '_includes/carousel.sass';
 @import '_includes/_mixins';
 @import '_includes/_typography';
 @import '_includes/_elements';
@@ -356,6 +356,8 @@ footer {
   }
   .player-stations-title  {
     font-size: $size-6;
+    padding-right: 1rem;
+    line-height: 3rem;
     border-right: 1px solid lighten($gray, 10);
   }
   figure.image {
