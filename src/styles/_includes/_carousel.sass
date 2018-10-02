@@ -53,6 +53,7 @@ $carousel-sizes: (2, 3, 4, 5) !default
     .carousel-container
       transform: translateX(-100%)
     @each $size in $carousel-sizes
+      /* uncss:ignore */
       &.is-#{$size}
         .carousel-container
           transform: translateX(calc(-100% / #{$size}))
@@ -88,6 +89,7 @@ $carousel-sizes: (2, 3, 4, 5) !default
       right: 0
 
 // Sizes
+/* uncss:ignore start*/
 .carousel
   +carousel
   @each $size in $carousel-sizes
@@ -98,6 +100,7 @@ $carousel-sizes: (2, 3, 4, 5) !default
         .carousel-item
           padding: 1em
           flex-basis: calc(100% / #{$size})
+/* uncss:ignore end*/
 
 // Hero Carousel
 =hero-carousel

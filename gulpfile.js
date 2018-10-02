@@ -97,8 +97,7 @@ gulp.task('styles', function() {
         }))
         .pipe(sourcemaps.init())
         .pipe(sass({
-          includePaths: ['./node_modules', './bower_components'],
-            outputStyle: 'compressed'
+          includePaths: ['./node_modules', './bower_components']
         }))
         .pipe(autoprefixer('last 3 versions'))
         .pipe(sourcemaps.write())
@@ -188,7 +187,7 @@ gulp.task('uncss', function() {
     return gulp.src(routes.files.cssFiles)
         .pipe(uncss({
             html:[routes.files.htmlFiles],
-            ignore:['*:*']
+            ignore:['*:*',/carousel.is-4/,/.carousel.is-1/,/.carousel.is-2/]
         }))
         .pipe(plumber({
             errorHandler: notify.onError({
@@ -232,7 +231,7 @@ gulp.task('critical', function () {
 
 gulp.task('dev', ['templates', 'styles', 'scripts', 'images', 'serve']);
 
-gulp.task('build', ['templates', 'styles','uncss', 'scripts', 'images']);
+gulp.task('build', ['templates', 'styles', 'scripts', 'images']);
 
 gulp.task('optimize', ['uncss', 'critical', 'images']);
 
