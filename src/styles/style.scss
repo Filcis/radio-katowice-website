@@ -55,6 +55,11 @@ html {
 /* =============================================================
                           LAYOUT
 =============================================================== */
+.column  {
+    padding-top: $vertical-rhythm-unit-1/2;
+    padding-bottom: $vertical-rhythm-unit-1/2;
+}
+
 section.on-air {
   margin-bottom: $vertical-rhythm-unit-4;
   @include from($desktop) {
@@ -68,8 +73,14 @@ section.recent-news {
 }
 
 aside.sidebar {
+  @include until($desktop) {
+    padding: 1.4rem 0.75rem;
+  }
   margin-top: 1.4rem;
   @include from($desktop) {
+  margin-left: 1rem;
+  }
+  @include from($widescreen) {
   margin-left: $gap/2;
   }
 }
@@ -80,17 +91,23 @@ aside.sidebar {
 
 .sidebar-box-item .sidebar-link {
   display: flex;
-  padding: 1rem 0.75rem;
   font-size: $size-6;
+  padding: 0.75rem 0.5rem;
   span {
       color: $gray;
       transition: color 0.5s ease;
-      margin-right: 1rem;
+  }
+  .icon {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   &:hover, &:focus {
     span {
         color: $basic-red;
     }
+  }
+  @include from($desktop) {
+    padding: 1rem 0.75rem;
   }
 }
 
@@ -146,13 +163,13 @@ footer {
   position: relative;
   .date-tag {
     position: absolute;
-    top: 0.75rem;
+    top: $vertical-rhythm-unit-1/2;
     left: 0.75rem;
   }
 }
 
 article {
-  margin-bottom: $vertical-rhythm-unit-4;
+  margin-bottom: $vertical-rhythm-unit-3;
   padding-bottom: $vertical-rhythm-unit-3;
   border-bottom: 1px solid $light-gray;
   &:last-child {
@@ -184,25 +201,36 @@ footer {
                           ELEMENTS
 =============================================================== */
 
-.article .tags {
-  margin-bottom: 0;
-}
-
 .button {
   @extend button;
 }
 
-.tag {
+.article-tags {
+  margin-bottom: $vertical-rhythm-unit-1;
+}
+
+.article-tag {
   border: 1px solid $light-gray;
+  padding: 0.25rem 0.5rem;
+  font-size: $size-6;
+  margin-right: 0.75rem;
+  border-radius: 0 0 12px 0;
+  cursor: pointer;
+  transition: all 0.25s;
+  &:hover {
+    color: #fff;
+    background-color: $basic-red;
+  }
   &.date-tag {
     color: $link;
-    margin-bottom: $vertical-rhythm-unit-3;
   }
 }
 
 .featured-img {
   border-radius: 0 0 1em 0;
-  margin-bottom: $vertical-rhythm-unit-3;
+  @include from($desktop) {
+    margin-bottom: $vertical-rhythm-unit-3;
+  }
 }
 
 .highlights-body {
@@ -528,7 +556,7 @@ a.player-shortcut {
 }
 
 
-.add-placeholder {
+.advertisement-placeholder {
   margin: 1rem 0;
   padding: 2rem;
   background-color: $light-gray;
