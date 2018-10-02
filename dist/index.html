@@ -12,9 +12,17 @@
     <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
   </head>
-  <body class="has-navbar-fixed-top">
+  <body>
+    <div class="hero" id="top-add">
+      <div class="container">
+        <!-- zamienic na container dla reklamy-->
+        <div class="add-placeholder">
+          <p>reklama</p>
+        </div>
+      </div>
+    </div>
     <header>
-      <nav class="navbar is-fixed-top" role="navigation" aria-label="main-navigation">
+      <nav class="navbar" id="main-nav" role="navigation" aria-label="main-navigation">
         <div class="container">
           <div class="navbar-brand"><a class="navbar-item" href="index.html"><img class="logo" src="assets/files/img/Polskie-Radio-Katowice-Logo.png" alt="Polskie Radio Katowice"></a>
             <div class="navbar-burger" data-target="#main-menu" aria-label="menu" aria-expanded="false" role="button"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></div>
@@ -360,13 +368,17 @@
                       <li class="sidebar-box-item"> <a class="sidebar-link"> <span>Rozmowa dnia: Michał Wójcik, wiceminister sprawiedliwości</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
                     </ul>
                   </div>
-                </div><a>
-                  <div class="ad-placeholder"></div></a>
+                </div>
                 <div class="sidebar-box">
                   <h3 class="sidebar-headline">Live TV</h3>
                   <div class="responsive-yt-embed">
                     <div id="ytplayer"></div>
                   </div>
+                </div>
+                <div class="sidebar-box"></div>
+                <!-- zamienic na container dla reklamy-->
+                <div class="add-placeholder">
+                  <p>reklama</p>
                   <script>
                     var tag = document.createElement('script');
                     tag.src = "https://www.youtube.com/player_api";
