@@ -3,8 +3,11 @@
     .player-cover.cover(style= "background-image: url('assets/files/img/Ferdek.jpg')")
   .column.is-7-tablet.is-8-desktop
     .player-main
-      p.is-red.is-size-6 Teraz na antenie
-      .artist.is-clearfix
-        h1.player-artist-name Andrzej Grabowski
-        h2.player-song-title Jestem jak motyl
-      a#player-main-call-to-action.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+      .player-main-center
+        p.is-red.is-size-6 Teraz na antenie
+        .artist.is-clearfix
+          h1.player-artist-name Andrzej Grabowski
+          h2.player-song-title Jestem jak motyl
+        a#player-main-call-to-action.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+    .player-stations-menu
+      include player_includes/_player_stations.pug

@@ -3,9 +3,9 @@ html
     include _includes/_head.pug
     body.has-navbar-fixed-top
       include _includes/_header.pug
-      section.section
+      section.main-content
         .container
-          .columns.is-desktop
+          .columns.is-desktop.is-gapless
             .column.is-10-desktop.is-9-widescreen
               section.on-air
                 include _includes/_on_air.pug
@@ -14,8 +14,14 @@ html
               section.recent-news
                 include _includes/_recent_news.pug
             .column.is-2-desktop.is-3-widescreen
-              aside
-                h2 sidebar
+              aside.sidebar
+                .regional-news
+                  h3 Tym żyje region  
+                  .regional-news-body
+                    ul
+                      li wydarzenie 1
+                      li wydarzenie 2
+                      li wydarzenie 3             
       section.recent-video.section
         include _includes/_video_carousel.pug
       section.section

@@ -38,9 +38,9 @@
         <div class="navbar-after-divider"></div>
       </nav>
     </header>
-    <section class="section">
+    <section class="main-content">
       <div class="container">
-        <div class="columns is-desktop">
+        <div class="columns is-desktop is-gapless">
           <div class="column is-10-desktop is-9-widescreen">
             <section class="on-air">
               <div class="columns is-gapless">
@@ -49,12 +49,33 @@
                 </div>
                 <div class="column is-7-tablet is-8-desktop">
                   <div class="player-main">
-                    <p class="is-red is-size-6">Teraz na antenie</p>
-                    <div class="artist is-clearfix">
-                      <h1 class="player-artist-name">Andrzej Grabowski</h1>
-                      <h2 class="player-song-title">Jestem jak motyl</h2>
-                    </div><a class="button is-red" id="player-main-call-to-action" type="button" href="player.html">
-                      <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo</a>
+                    <div class="player-main-center">
+                      <p class="is-red is-size-6">Teraz na antenie</p>
+                      <div class="artist is-clearfix">
+                        <h1 class="player-artist-name">Andrzej Grabowski</h1>
+                        <h2 class="player-song-title">Jestem jak motyl</h2>
+                      </div><a class="button is-red" id="player-main-call-to-action" type="button" href="player.html">
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo</a>
+                    </div>
+                  </div>
+                  <div class="player-stations-menu">
+                    <div class="columns is-mobile is-gapless">
+                      <div class="column player-stations-title is-4">
+                        <h2>Programy</h2>
+                      </div>
+                      <div class="column is-9-mobile is-narrow">
+                        <div class="columns is-mobile stations-list">
+                          <div class="column is-narrow"><a class="is-station-active" href="#">
+                              <figure class="image"><img src="assets/files/img/logo_programu-1.png"></figure></a></div>
+                          <div class="column is-narrow">     <a href="#"> 
+                              <figure class="image"><img src="assets/files/img/logo_programu-2.png"></figure></a></div>
+                          <div class="column is-narrow">      <a href="#"> 
+                              <figure class="image"><img src="assets/files/img/logo_programu-3.png"></figure></a></div>
+                          <div class="column is-narrow">    <a href="#"> 
+                              <figure class="image"><img src="assets/files/img/logo_programu-4.png"></figure></a></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -179,7 +200,7 @@
             </section>
             <section class="recent-news">
               <div class="columns">
-                <div class="column is-offset-1 is-11-desktop">
+                <div class="column is-10-desktop">
                   <h1 class="section-title">Aktualności</h1>
                                 <article>
                                   <div class="article-wrapper columns">
@@ -230,8 +251,17 @@
             </section>
           </div>
           <div class="column is-2-desktop is-3-widescreen">
-            <aside>
-              <h2>sidebar</h2>
+            <aside class="sidebar">
+              <div class="regional-news">
+                <h3>Tym żyje region  </h3>
+                <div class="regional-news-body">
+                  <ul>
+                    <li>wydarzenie 1</li>
+                    <li>wydarzenie 2</li>
+                    <li>wydarzenie 3             </li>
+                  </ul>
+                </div>
+              </div>
             </aside>
           </div>
         </div>
