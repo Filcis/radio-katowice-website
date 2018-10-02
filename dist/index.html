@@ -131,10 +131,23 @@
               </div>
             </div>
             <div class="navbar-end">
-              <div class="navbar-item field">
-                <p class="control has-icons-left">
-                  <input class="input is-medium" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"> </i></span>
-                </p>
+              <div class="level">
+                <div class="level-left">
+                  <div class="navbar-item field">
+                    <p class="control has-icons-left">
+                      <input class="input" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="navbar-item">
+                    <div class="social-media-icons">
+                      <div class="social-icon"><img src="./assets/files/img/facebook.svg"></div>
+                      <div class="social-icon"><img class="social-icon" src="./assets/files/img/youtube.svg"></div>
+                      <div class="social-icon"><img class="social-icon" src="./assets/files/img/instagram.svg"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -331,6 +344,21 @@
                       e.target.playVideo();
                     }
                   </script>
+                </div><img src="assets/files/img/grajki.svg">
+                <h1 class="section-title-secondary">Zapisz się do naszego newslettera</h1>
+                <div class="field">
+                  <div class="level">
+                    <div class="level-left">
+                      <div class="control">
+                        <input class="input is-medium" placeholder="e-mail" type="e-mail">
+                      </div>
+                    </div>
+                    <div class="level-right">
+                      <div class="control">
+                        <input class="input" type="submit">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </aside>
@@ -341,7 +369,7 @@
     <section class="recent-video section">
       <div class="container">
         <h1 class="section-title">Video</h1>
-        <div class="carousel carousel-animated carousel-animate-slide" data-size="4">
+        <div class="carousel carousel-animated carousel-animate-slide" id="main-video-carousel" data-size="4">
           <div class="carousel-container"><a class="carousel-item is-active">
                     <div class="video-card-img-wrapper">
                       <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_3.jpg">
@@ -384,43 +412,43 @@
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-offset-1 is-5">
+          <div class="column is-6">
             <section class="highlights">
               <h1 class="section-title-secondary">Polecamy</h1>
-              <ul>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Odlotowa zabawa w Radiu Katowice</a><span>Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł</span></h3>
+              <ul class="columns is-multiline">
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Odlotowa zabawa w Radiu Katowice</a><span>Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Radio Katowice najlepsze na rynku</a><span>Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Radio Katowice najlepsze na rynku</a><span>Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Lista Przebojów</a><span>20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Lista Przebojów</a><span>20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Auto Radio – aktualne informacje drogowe</a><span>Informacje z dróg województwa śląskiego.</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Auto Radio – aktualne informacje drogowe</a><span>Informacje z dróg województwa śląskiego.</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Trójwymiarowa Prognoza Pogody na dziś</a><span>Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Trójwymiarowa Prognoza Pogody na dziś</a><span>Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Infostrada</a><span>Magazyn reporterów Radia Katowice. Każdego dnia od 14.00</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Infostrada</a><span>Magazyn reporterów Radia Katowice. Każdego dnia od 14.00</span></div>
                 </li>
               </ul>
             </section>
           </div>
-          <div class="column is-5">
+          <div class="column is-6">
             <section class="events-list">
               <h1 class="section-title-secondary">Wydarzenia</h1>
-              <ul>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.</a><span>Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik.</span></h3>
+              <ul class="columns is-multiline">
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.</a><span>Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik.</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Młodzież z Żytomierza w Radiu Katowice</a><span>Katowice: polska młodzież z Żytomierza odwiedza Śląsk. To wspólny projekt obu regionów. Dziś zwiedza Polskie Radio Katowice.</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Młodzież z Żytomierza w Radiu Katowice</a><span>Katowice: polska młodzież z Żytomierza odwiedza Śląsk. To wspólny projekt obu regionów. Dziś zwiedza Polskie Radio Katowice.</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Krajoznawcze fascynacje</a><span>Katowice: w radiowej galerii &quot;Na żywo&quot; otwarta została wystawa rysunku Edwarda Wieczorka i odznak krajoznawczych z kolekcji Gerarda Suchanka.</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Krajoznawcze fascynacje</a><span>Katowice: w radiowej galerii &quot;Na żywo&quot; otwarta została wystawa rysunku Edwarda Wieczorka i odznak krajoznawczych z kolekcji Gerarda Suchanka.</span></div>
                 </li>
               </ul>
             </section>
@@ -428,17 +456,35 @@
         </div>
       </div>
     </section>
-    <section class="section newsletter">
+    <section class="section partners">
       <div class="container">
-        <div class="columns">
-          <div class="column"><img src="assets/files/img/grajki.svg"></div>
-          <div class="column">
-            <h1 class="section-title-secondary">Zapisz się do naszego newslettera</h1>
-            <div class="field">
-              <div class="control">
-                <input class="input is-large" placeholder="e-mail" type="e-mail">
+        <h1 class="section-title">Patronaty</h1>
+        <div class="carousel carousel-animated carousel-animate-slide" id="main-video-carousel" data-size="4">
+          <div class="carousel-container">
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 1</p>
               </div>
             </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 1</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 1</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 1</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="carousel-nav-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           </div>
         </div>
       </div>

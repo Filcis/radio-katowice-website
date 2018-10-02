@@ -18,7 +18,6 @@
             return false;
         });
     }
-
     //==================================================
     // Dropdown
     //==================================================
@@ -46,7 +45,6 @@
 
     let Adspace = $('#top-add').outerHeight(true);
     let navbar = $('#main-nav');
-    console.log(Adspace);
     $(window).scroll((event) => {
         let windowScrollTop = $(window).scrollTop();
         if (windowScrollTop >= Adspace) {

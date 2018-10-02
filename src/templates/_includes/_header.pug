@@ -84,8 +84,19 @@ header
                     a= item.title
                     hr.dropdown-divider
         .navbar-end
-          div.navbar-item.field
-            p.control.has-icons-left
-              input.input.is-medium(type="text", placeholder="Szukaj")
-              span.icon.is-left: i.is-medium.fas.fa-search 
+          .level
+            .level-left
+              .navbar-item.field
+                p.control.has-icons-left
+                  input.input(type="text", placeholder="Szukaj")
+                  span.icon.is-left: i.is-medium.fas.fa-search
+            .level-right
+              .navbar-item
+                .social-media-icons
+                  .social-icon
+                    img(src='./assets/files/img/facebook.svg')
+                  .social-icon
+                    img.social-icon(src='./assets/files/img/youtube.svg')
+                  .social-icon
+                    img.social-icon(src='./assets/files/img/instagram.svg')
     .navbar-after-divider

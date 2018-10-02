@@ -27,9 +27,9 @@
   ]
 section.highlights
   h1.section-title-secondary Polecamy
-  ul
+  ul.columns.is-multiline
     each val in highlights
-      li
-        h3.highlights-body
+      li.column.is-6
+        .highlights-body
           a.highlights-title= val.title
           span= val.description

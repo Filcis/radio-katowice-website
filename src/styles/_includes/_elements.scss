@@ -11,3 +11,24 @@
     width: 90%;
   }
 }
+
+#main-nav {
+  .input {
+    border-radius: 1rem;
+    font-size: $size-6;
+  }
+}
+
+.social-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-flex;
+  margin-right: 0.5rem;
+  &:last-child {
+    margin-right: none;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 include ./mixins/_carousel.pug
 .container
   h1.section-title Video
-  .carousel.carousel-animated.carousel-animate-slide(data-size="4")
+  .carousel.carousel-animated.carousel-animate-slide#main-video-carousel(data-size="4")
     .carousel-container
       +video({isActive: 1, image: "video_3.jpg", tag:"wywiady"})
       +video({isActive: 0, image: "video_2.jpg", tag:"wywiady"})

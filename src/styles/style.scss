@@ -24,6 +24,10 @@ html {
   max-width: 100%;
 }
 
+// #main-menu .navbar-end {
+//   flex-direction: column;
+// }
+
 .navbar-dropdown {
   margin-top: -0.3rem;
   border-top: none;
@@ -68,8 +72,20 @@ html {
     // padding-bottom: $vertical-rhythm-unit-1/2;
 }
 
+.container {
+  @include until($tablet){
+      max-width: 560px;
+  }
+}
+
 section.on-air {
   margin-bottom: $vertical-rhythm-unit-4;
+  @include from(600px) {
+    margin-top: 1.4rem;
+  }
+  @include from($tablet) {
+    margin-top: 0;
+  }
   @include from($desktop) {
     margin-top: 1.4rem;
   }
@@ -190,12 +206,6 @@ article {
 footer {
   background-color: $dark-gray;
   min-height: 20rem;
-}
-
-.events-list {
-  @include until($desktop){
-      background-color: $player-light-gray;
-  }
 }
 
 .newsletter {
@@ -365,14 +375,14 @@ footer {
 .station-list-item {
   &:hover {
     .station-tooltip {
-      visibility: visible;
+      display: block;
       opacity: 0.9;
     }
   }
 }
 
 .station-tooltip {
-  visibility: hidden;
+  display: none;
   position: absolute;
   bottom: 3.5rem;
   margin-left: -20px;
