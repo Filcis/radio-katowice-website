@@ -350,14 +350,44 @@
           </div>
           <div class="column is-2-desktop is-3-widescreen">
             <aside class="sidebar">
-              <div class="regional-news">
-                <h3>Tym żyje region  </h3>
-                <div class="regional-news-body">
-                  <ul>
-                    <li>wydarzenie 1</li>
-                    <li>wydarzenie 2</li>
-                    <li>wydarzenie 3             </li>
-                  </ul>
+              <div class="sidebar-content">
+                <div class="sidebar-box">
+                  <h3 class="sidebar-headline">Tym żyje region  </h3>
+                  <div class="sidebar-box-body">
+                    <ul class="sidebar-box-list">
+                      <li class="sidebar-box-item"><a class="sidebar-link"><span>Nowy blok operacyjny oddany do użytku</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
+                      <li class="sidebar-box-item"> <a class="sidebar-link"><span>Ekspert radzi: jak ocenić błąd lekarza?</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
+                      <li class="sidebar-box-item"> <a class="sidebar-link"> <span>Rozmowa dnia: Michał Wójcik, wiceminister sprawiedliwości</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div><a>
+                  <div class="ad-placeholder"></div></a>
+                <div class="sidebar-box">
+                  <h3 class="sidebar-headline">Live TV</h3>
+                  <div class="responsive-yt-embed">
+                    <div id="ytplayer"></div>
+                  </div>
+                  <script>
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/player_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                    var player;
+                    
+                    function onYouTubePlayerAPIReady() {
+                      player = new YT.Player('ytplayer', {
+                        videoId: 'M7lc1UVf-VE',
+                        events: {
+                          'onReady': onPlayerReady
+                        }
+                      });
+                    }
+                    
+                    function onPlayerReady(e) {
+                      e.target.setVolume(0);
+                      e.target.playVideo();
+                    }
+                  </script>
                 </div>
               </div>
             </aside>

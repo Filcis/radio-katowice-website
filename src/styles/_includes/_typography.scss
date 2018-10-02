@@ -57,6 +57,11 @@
   text-transform: uppercase;
 }
 
+.sidebar-headline {
+  font-size: $size-4;
+  margin-bottom: $vertical-rhythm-unit-1;
+}
+
 footer {
     a, p {
       color: lighten($link, 20);

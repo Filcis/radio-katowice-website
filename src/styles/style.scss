@@ -57,6 +57,9 @@ html {
 =============================================================== */
 section.on-air {
   margin-bottom: $vertical-rhythm-unit-4;
+  @include from($desktop) {
+    margin-top: 1.4rem;
+  }
 }
 
 section.recent-news {
@@ -65,7 +68,62 @@ section.recent-news {
 }
 
 aside.sidebar {
-  padding: 1.4rem 0.75rem;
+  margin-top: 1.4rem;
+  @include from($desktop) {
+  margin-left: $gap/2;
+  }
+}
+
+.sidebar-box {
+  margin-bottom: $vertical-rhythm-unit-3;
+}
+
+.sidebar-box-item .sidebar-link {
+  display: flex;
+  padding: 1rem 0.75rem;
+  font-size: $size-6;
+  span {
+      color: $gray;
+      transition: color 0.5s ease;
+      margin-right: 1rem;
+  }
+  &:hover, &:focus {
+    span {
+        color: $basic-red;
+    }
+  }
+}
+
+.sidebar-link {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-box-body {
+    background-color: #fff;
+    border-radius: 0 0 1rem 0;
+    border: 1px solid $light-gray;
+}
+
+.sidebar-box-item {
+  border-bottom: 1px solid $light-gray;
+  &:last-child {
+    border: none;
+  }
+}
+
+.responsive-yt-embed {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  & iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
 }
 
 .is-large-mobile {
