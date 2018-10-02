@@ -232,7 +232,7 @@ gulp.task('critical', function () {
 
 gulp.task('dev', ['templates', 'styles', 'scripts', 'images', 'serve']);
 
-gulp.task('build', ['templates', 'styles', 'scripts', 'images']);
+gulp.task('build', ['templates', 'styles','uncss', 'scripts', 'images']);
 
 gulp.task('optimize', ['uncss', 'critical', 'images']);
 

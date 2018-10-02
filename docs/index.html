@@ -11,26 +11,143 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script type="text/javascript" src="assets/js/jQuery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bulma-carousel.min.js"></script>
   </head>
-  <body class="has-navbar-fixed-top">
+  <body>
+    <div class="hero" id="top-add">
+      <div class="container">
+        <!-- zamienic na container dla reklamy-->
+        <div class="advertisement-placeholder">
+          <p>reklama</p>
+        </div>
+      </div>
+    </div>
     <header>
-      <nav class="navbar is-fixed-top">
+      <nav class="navbar" id="main-nav" role="navigation" aria-label="main-navigation">
         <div class="container">
           <div class="navbar-brand"><a class="navbar-item" href="index.html"><img class="logo" src="assets/files/img/Polskie-Radio-Katowice-Logo.png" alt="Polskie Radio Katowice"></a>
-            <div class="navbar-burger" data-target="#main-menu"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></div>
+            <div class="navbar-burger" data-target="#main-menu" aria-label="menu" aria-expanded="false" role="button"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></div>
           </div>
           <div class="navbar-menu" id="main-menu">
+            <div class="navbar-start">
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Na antenie</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Program</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Audycje</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Informacje</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Pogoda</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Auto radio</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Wywiady</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Porady</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Muzyka</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Playlista</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Lista przebojów</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Informacje</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Aktualności</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Region</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Sport</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Biznes</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Kultura</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Zdrowie</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Styl życia</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Reklama</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Agencja reklamy</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Promocja i marketing</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Radio</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Kontakt</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Ludzie</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>O radiu</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Więcej</a>
+                <div class="navbar-dropdown">
+                  <div class="navbar-item"> <a>Polecamy</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Patronaty</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Radiowe wydarzenia</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                  <div class="navbar-item"> <a>Więcej</a>
+                    <hr class="dropdown-divider">
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="navbar-end">
-              <div class="navbar-item has-dropdown"><a class="navbar-link">na antenie</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">muzyka</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">informacje</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">reklama</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">radio</a></div>
-              <div class="navbar-item has-dropdown"><a class="navbar-link">więcej</a></div>
-              <div class="navbar-item field">
-                <p class="control has-icons-left">
-                  <input class="input is-medium" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"> </i></span>
-                </p>
+              <div class="level">
+                <div class="level-left">
+                  <div class="navbar-item field">
+                    <p class="control has-icons-left">
+                      <input class="input" type="text" placeholder="Szukaj"><span class="icon is-left"><i class="is-medium fas fa-search"></i></span>
+                    </p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="navbar-item">
+                    <div class="social-media-icons">
+                      <div class="social-icon"><img src="./assets/files/img/facebook.svg"></div>
+                      <div class="social-icon"><img class="social-icon" src="./assets/files/img/youtube.svg"></div>
+                      <div class="social-icon"><img class="social-icon" src="./assets/files/img/instagram.svg"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -38,211 +155,213 @@
         <div class="navbar-after-divider"></div>
       </nav>
     </header>
-    <section class="player-homepage">
-      <div class="container is-fullhd">
-        <div class="columns is-gapless">
-          <div class="column is-4-desktop">
-            <div class="player-cover cover" style="background-image: url('assets/files/img/Ferdek.jpg')"></div>
-          </div>
-          <div class="column is-8-desktop">
-            <div class="player-main">
-              <div class="player-stations-menu">
-                <div class="columns is-mobile">
-                  <div class="column player-stations-title is-3-mobile is-narrow-desktop">
-                    <h2>Programy</h2>
+    <section class="main-content">
+      <div class="container">
+        <div class="columns is-desktop is-gapless">
+          <div class="column is-10-desktop is-9-widescreen">
+            <section class="on-air">
+              <div class="columns is-gapless">
+                <div class="column is-5-tablet is-4-desktop">
+                  <div class="player-cover cover" style="background-image: url('assets/files/img/Ferdek.jpg')"></div>
+                </div>
+                <div class="column is-7-tablet is-8-desktop">
+                  <div class="player-main">
+                    <div class="player-main-center">
+                      <p class="is-red is-size-6">Teraz na antenie</p>
+                      <div class="artist is-clearfix">
+                        <h1 class="player-artist-name">Andrzej Grabowski</h1>
+                        <h2 class="player-song-title">Jestem jak motyl</h2>
+                      </div><a class="button is-red" id="player-main-call-to-action" type="button" href="player.html">
+                        <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo</a>
+                    </div>
                   </div>
-                  <div class="column is-9-mobile is-narrow-desktop">
-                    <div class="columns is-mobile stations-list">
-                      <div class="column is-narrow-tablet"><a class="is-station-active" href="#">
-                          <figure class="image"><img src="assets/files/img/logo_programu-1.png"></figure></a></div>
-                      <div class="column is-narrow-tablet">       <a href="#"> 
-                          <figure class="image"><img src="assets/files/img/logo_programu-2.png"></figure></a></div>
-                      <div class="column is-narrow-tablet">       <a href="#"> 
-                          <figure class="image"><img src="assets/files/img/logo_programu-3.png"></figure></a></div>
-                      <div class="column is-narrow-tablet">       <a href="#"> 
-                          <figure class="image"><img src="assets/files/img/logo_programu-4.png"></figure></a></div>
+                  <div class="player-stations-menu">
+                    <div class="level is-mobile">
+                      <div class="level-left">
+                        <div class="level-item player-stations-title">
+                          <h2>Programy</h2>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <div class="level-item"><a class="station-list-item is-station-active" href="#">
+                            <figure class="image"><img src="assets/files/img/logo_programu-1.png"></figure></a></div>
+                        <div class="level-item">     <a class="station-list-item" href="#"> 
+                            <figure class="image"><img src="assets/files/img/logo_programu-2.png"></figure>
+                            <div class="station-tooltip"><span class="tooltip-station-name">Teraz na <i>2</i>:</span><span class="tooltip-artist">Artur Rojek </span><span class="tooltip-title">Beksa</span></div></a></div>
+                        <div class="level-item">  <a class="station-list-item" href="#">
+                            <figure class="image"><img src="assets/files/img/logo_programu-3.png"></figure>
+                            <div class="station-tooltip"><span class="tooltip-station-name">Teraz na <i>top50</i>:</span><span class="tooltip-artist">Tom Waits </span><span class="tooltip-title">Fumblin' With The Blues</span></div></a></div>
+                        <div class="level-item">   <a class="station-list-item" href="#"> 
+                            <figure class="image"><img src="assets/files/img/logo_programu-4.png"></figure>
+                            <div class="station-tooltip"><span class="tooltip-station-name">Teraz na <i>oldies</i>:</span><span class="tooltip-artist">Nick Cave</span><span class="tooltip-title">Weeping song</span></div></a></div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <p class="is-red is-size-6">Teraz na antenie</p>
-              <h1 class="player-artist-name">Andrzej Grabowski</h1>
-              <h2 class="player-song-title">Jestem jak motyl</h2><a class="button is-red" id="player-main-call-to-action" type="button" href="player.html">
-                <div class="play-icon-wrapper"><span class="play-icon"></span></div> posłuchaj na żywo</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section player-shortcuts">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-6">
-                        <div class="columns is-mobile permanent-shortcuts">
-                          <div class="column is-4 has-text-centered-mobile"><a class="player-shortcut" href="player_info.html">
-                              <div class="player-shortcut-icon icon-info">
-                                <div class="player-shortcut-time">
-                                  <p class="is-size-7">16:45</p>
-                                </div><span class="icon is-medium"><i class="fas fa-2x fa-info"></i></span>
-                              </div>
-                              <div class="player-shortcut-bottom">
-                                <div class="player-shortcut-title">
-                                  <p>Informacje</p>
-                                </div>
-                                <div class="player-shortcut-call-to-action"> 
-                                  <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                </div>
-                              </div></a></div>
-                          <div class="column is-4 has-text-centered-mobile"><a class="player-shortcut" href="player_pogoda.html">
-                              <div class="player-shortcut-icon icon-cloud">
-                                <div class="player-shortcut-time">
-                                  <p class="is-size-7">14:00</p>
-                                </div><span class="icon is-medium"><i class="fas fa-2x fa-cloud"></i></span>
-                              </div>
-                              <div class="player-shortcut-bottom">
-                                <div class="player-shortcut-title">
-                                  <p>Pogoda</p>
-                                </div>
-                                <div class="player-shortcut-call-to-action"> 
-                                  <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                </div>
-                              </div></a></div>
-                          <div class="column is-4 has-text-centered-mobile"><a class="player-shortcut" href="player_autoradio.html">
-                              <div class="player-shortcut-icon icon-car">
-                                <div class="player-shortcut-time">
-                                  <p class="is-size-7">15:20</p>
-                                </div><span class="icon is-medium"><i class="fas fa-2x fa-car"></i></span>
-                              </div>
-                              <div class="player-shortcut-bottom">
-                                <div class="player-shortcut-title">
-                                  <p>Auto Radio</p>
-                                </div>
-                                <div class="player-shortcut-call-to-action"> 
-                                  <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                </div>
-                              </div></a></div>
+            </section>
+            <section class="player-shortcuts">
+              <div class="columns">
+                <div class="column is-8">
+                  <div class="columns is-mobile">
+                    <div class="column is-4">
+                      <div class="player-shortcut">
+                        <p>pogoda</p>
+                      </div>
+                    </div>
+                    <div class="column is-4">
+                      <div class="player-shortcut">
+                        <p>auto radio</p>
+                      </div>
+                    </div>
+                    <div class="column is-4">
+                      <div class="player-shortcut">
+                        <p>informacje</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column is-4">
+                  <div class="carousel carousel-animated carousel-animate-slide">
+                    <div class="carousel-container">
+                      <div class="carousel-item is-active">
+                        <div class="player-shortcut">
+                          <p>karuzela</p>
                         </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="player-shortcut">
+                          <p>karuzela</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="player-shortcut">
+                          <p>karuzela</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-navigation is-overlay">
+                      <div class="carousel-nav-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                      <div class="carousel-nav-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="recent-news">
+              <div class="columns">
+                <div class="column is-10-desktop">
+                  <h1 class="section-title">Aktualności</h1>
+                                <article>
+                                  <div class="article-wrapper columns">
+                                    <div class="column is-half"><span class="tag date-tag is-medium">17.07.2018</span><img class="featured-img" src="assets/files/img/tour.jpg"></div>
+                                    <div class="column">
+                                      <div class="article-tags"><span class="article-tag is-medium">sport</span><span class="article-tag is-medium">Katowice</span>
+                                      </div>
+                                      <h2 class="featured-article-title">II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.</h2>
+                                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                                    </div>
+                                  </div>
+                                </article>
+                                <article>
+                                  <div class="article-wrapper columns">
+                                    <div class="column is-half"><span class="tag date-tag is-medium">15.07.2018</span><img class="featured-img" src="assets/files/img/pszczyna-raciborz.jpg"></div>
+                                    <div class="column">
+                                      <div class="article-tags"><span class="article-tag is-medium">region</span><span class="article-tag is-medium">Pszczyna</span><span class="article-tag is-medium">Racibórz</span>
+                                      </div>
+                                      <h2 class="featured-article-title">Trwa budowa drogi Pszczyna – Racibórz.</h2>
+                                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                                    </div>
+                                  </div>
+                                </article>
+                                <article>
+                                  <div class="article-wrapper columns">
+                                    <div class="column is-half"><span class="tag date-tag is-medium">13.07.2018</span><img class="featured-img" src="assets/files/img/naukobus.jpg"></div>
+                                    <div class="column">
+                                      <div class="article-tags"><span class="article-tag is-medium">kultura</span><span class="article-tag is-medium">Katowice</span>
+                                      </div>
+                                      <h2 class="featured-article-title">Naukobus. Mobilne centrum Nauki.</h2>
+                                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                                    </div>
+                                  </div>
+                                </article>
+                                <article>
+                                  <div class="article-wrapper columns">
+                                    <div class="column is-half"><span class="tag date-tag is-medium">12.07.2018</span><img class="featured-img" src="assets/files/img/fetor.jpg"></div>
+                                    <div class="column">
+                                      <div class="article-tags"><span class="article-tag is-medium">region</span><span class="article-tag is-medium">Jaworzno</span>
+                                      </div>
+                                      <h2 class="featured-article-title">Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.</h2>
+                                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                                    </div>
+                                  </div>
+                                </article>
+                </div>
+              </div>
+            </section>
           </div>
-          <div class="column is-6">
-            <div class="carousel-wrapper">
-              <div class="carousel"><a class="player-shortcut-carousel carousel-item is-ref">
-                              <div class="columns is-mobile is-marginless">
-                                <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
-                                <div class="column is-8">
-                                  <p class="is-size-7">24.03.2019 15:00</p>
-                                  <div class="player-shortcut-title">
-                                    <p>Nazwa nagrania</p>
-                                  </div>
-                                  <div class="player-shortcut-call-to-action"> 
-                                    <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                  </div>
-                                </div>
-                              </div></a><a class="player-shortcut-carousel carousel-item">
-                              <div class="columns is-mobile is-marginless">
-                                <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
-                                <div class="column is-8">
-                                  <p>24.03.2019 15:00</p>
-                                  <p>Nazwa nagrania</p>
-                                  <div class="player-shortcut-call-to-action"> 
-                                    <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                  </div>
-                                </div>
-                              </div></a><a class="player-shortcut-carousel carousel-item">
-                              <div class="columns is-mobile is-marginless">
-                                <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
-                                <div class="column is-8">
-                                  <p>24.03.2019 15:00</p>
-                                  <p>Nazwa nagrania</p>
-                                  <div class="player-shortcut-call-to-action"> 
-                                    <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                  </div>
-                                </div>
-                              </div></a><a class="player-shortcut-carousel carousel-item">
-                              <div class="columns is-mobile is-marginless">
-                                <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
-                                <div class="column is-8">
-                                  <p>24.03.2019 15:00</p>
-                                  <p>Nazwa nagrania</p>
-                                  <div class="player-shortcut-call-to-action"> 
-                                    <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                  </div>
-                                </div>
-                              </div></a><a class="player-shortcut-carousel carousel-item">
-                              <div class="columns is-mobile is-marginless">
-                                <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
-                                <div class="column is-8">
-                                  <p>24.03.2019 15:00</p>
-                                  <p>Nazwa nagrania</p>
-                                  <div class="player-shortcut-call-to-action"> 
-                                    <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                  </div>
-                                </div>
-                              </div></a><a class="player-shortcut-carousel carousel-item">
-                              <div class="columns is-mobile is-marginless">
-                                <div class="column is-4 has-text-centered player-shortcut-carousel-left icon-music"><span class="icon is-medium"><i class="fas fa-music fa-2x"></i></span></div>
-                                <div class="column is-8">
-                                  <p>24.03.2019 15:00</p>
-                                  <p>Nazwa nagrania</p>
-                                  <div class="player-shortcut-call-to-action"> 
-                                    <div class="play-icon-wrapper"><span class="play-icon"></span></div><span>SŁUCHAJ</span>
-                                  </div>
-                                </div>
-                              </div></a>
-              </div><a class="carousel-toggle-prev" role="button"><i class="fas fa-chevron-left"></i></a><a class="carousel-toggle-next" role="button" data-toggle="next"><i class="fas fa-chevron-right"></i>   </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="recent-news section">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-offset-1 is-7-desktop">
-            <h1 class="section-title">Aktualności</h1>
-                <article>
-                  <div class="article-wrapper columns">
-                    <div class="column is-half"><span class="tag date-tag is-medium">17.07.2018</span><img class="featured-img" src="assets/files/img/tour.jpg"></div>
-                    <div class="column">
-                      <div class="tags"><span class="tag is-medium">sport</span><span class="tag is-medium">Katowice</span>
+          <div class="column is-2-desktop is-3-widescreen">
+            <aside class="sidebar">
+              <div class="sidebar-content">
+                <div class="sidebar-box">
+                  <h3 class="sidebar-headline">Tym żyje region  </h3>
+                  <div class="sidebar-box-body">
+                    <ul class="sidebar-box-list">
+                      <li class="sidebar-box-item"><a class="sidebar-link"><span>Nowy blok operacyjny oddany do użytku</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
+                      <li class="sidebar-box-item"> <a class="sidebar-link"><span>Ekspert radzi: jak ocenić błąd lekarza?</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
+                      <li class="sidebar-box-item"> <a class="sidebar-link"> <span>Rozmowa dnia: Michał Wójcik, wiceminister sprawiedliwości</span><span class="icon is-small"><i class="fas fa-arrow-right"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sidebar-box">
+                  <h3 class="sidebar-headline">Live TV</h3>
+                  <div class="responsive-yt-embed">
+                    <div id="ytplayer"></div>
+                  </div>
+                </div>
+                <div class="sidebar-box"></div>
+                <!-- zamienic na container dla reklamy-->
+                <div class="advertisement-placeholder">
+                  <p>reklama</p>
+                  <script>
+                    var tag = document.createElement('script');
+                    tag.src = "https://www.youtube.com/player_api";
+                    var firstScriptTag = document.getElementsByTagName('script')[0];
+                    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                    var player;
+                    
+                    function onYouTubePlayerAPIReady() {
+                      player = new YT.Player('ytplayer', {
+                        videoId: 'M7lc1UVf-VE',
+                        events: {
+                          'onReady': onPlayerReady
+                        }
+                      });
+                    }
+                    
+                    function onPlayerReady(e) {
+                      e.target.setVolume(0);
+                      e.target.playVideo();
+                    }
+                  </script>
+                </div><img src="assets/files/img/grajki.svg">
+                <h1 class="section-title-secondary">Zapisz się do naszego newslettera</h1>
+                <div class="field">
+                  <div class="level">
+                    <div class="level-left">
+                      <div class="control">
+                        <input class="input is-medium" placeholder="e-mail" type="e-mail">
                       </div>
-                      <h2 class="featured-article-title">II etap Tour de Pologne w regionie. Fatalna pomyłka po starcie.</h2>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                    </div>
+                    <div class="level-right">
+                      <div class="control">
+                        <input class="input" type="submit">
+                      </div>
                     </div>
                   </div>
-                </article>
-                <article>
-                  <div class="article-wrapper columns">
-                    <div class="column is-half"><span class="tag date-tag is-medium">15.07.2018</span><img class="featured-img" src="assets/files/img/pszczyna-raciborz.jpg"></div>
-                    <div class="column">
-                      <div class="tags"><span class="tag is-medium">region</span><span class="tag is-medium">Pszczyna</span><span class="tag is-medium">Racibórz</span>
-                      </div>
-                      <h2 class="featured-article-title">Trwa budowa drogi Pszczyna – Racibórz.</h2>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    </div>
-                  </div>
-                </article>
-                <article>
-                  <div class="article-wrapper columns">
-                    <div class="column is-half"><span class="tag date-tag is-medium">13.07.2018</span><img class="featured-img" src="assets/files/img/naukobus.jpg"></div>
-                    <div class="column">
-                      <div class="tags"><span class="tag is-medium">kultura</span><span class="tag is-medium">Katowice</span>
-                      </div>
-                      <h2 class="featured-article-title">Naukobus. Mobilne centrum Nauki.</h2>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    </div>
-                  </div>
-                </article>
-                <article>
-                  <div class="article-wrapper columns">
-                    <div class="column is-half"><span class="tag date-tag is-medium">12.07.2018</span><img class="featured-img" src="assets/files/img/fetor.jpg"></div>
-                    <div class="column">
-                      <div class="tags"><span class="tag is-medium">region</span><span class="tag is-medium">Jaworzno</span>
-                      </div>
-                      <h2 class="featured-article-title">Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.</h2>
-                      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-                    </div>
-                  </div>
-                </article>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </div>
@@ -250,8 +369,8 @@
     <section class="recent-video section">
       <div class="container">
         <h1 class="section-title">Video</h1>
-        <div class="carousel-wrapper">
-          <div class="video-carousel"><a class="carousel-item is-ref">
+        <div class="carousel carousel-animated carousel-animate-slide responsive-carousel">
+          <div class="carousel-container"><a class="carousel-item is-active">
                     <div class="video-card-img-wrapper">
                       <div class="video-card-tag"><span>wywiady</span></div><img src="assets/files/img/video_3.jpg">
                       <div class="video-card-play-icon"> </div>
@@ -282,50 +401,54 @@
                       <div class="video-card-play-icon"> </div>
                     </div>
                     <div class="video-card-body"><span class="video-card-title">nazwa nagrania</span><span class="video-card-info">dodatkowe informacje o nagraniu</span></div></a>
-          </div><a class="carousel-toggle-prev" role="button"><i class="fas fa-chevron-left"></i></a><a class="carousel-toggle-next" role="button" data-toggle="next"><i class="fas fa-chevron-right"></i>   </a>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="carousel-nav-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+          </div>
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container">
         <div class="columns">
-          <div class="column is-offset-1 is-5">
+          <div class="column is-6">
             <section class="highlights">
               <h1 class="section-title-secondary">Polecamy</h1>
-              <ul>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Odlotowa zabawa w Radiu Katowice</a><span>Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł</span></h3>
+              <ul class="columns is-multiline">
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Odlotowa zabawa w Radiu Katowice</a><span>Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Radio Katowice najlepsze na rynku</a><span>Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Radio Katowice najlepsze na rynku</a><span>Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Lista Przebojów</a><span>20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Lista Przebojów</a><span>20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Auto Radio – aktualne informacje drogowe</a><span>Informacje z dróg województwa śląskiego.</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Auto Radio – aktualne informacje drogowe</a><span>Informacje z dróg województwa śląskiego.</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Trójwymiarowa Prognoza Pogody na dziś</a><span>Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Trójwymiarowa Prognoza Pogody na dziś</a><span>Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Infostrada</a><span>Magazyn reporterów Radia Katowice. Każdego dnia od 14.00</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Infostrada</a><span>Magazyn reporterów Radia Katowice. Każdego dnia od 14.00</span></div>
                 </li>
               </ul>
             </section>
           </div>
-          <div class="column is-5">
+          <div class="column is-6">
             <section class="events-list">
               <h1 class="section-title-secondary">Wydarzenia</h1>
-              <ul>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.</a><span>Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik.</span></h3>
+              <ul class="columns is-multiline">
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.</a><span>Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik.</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Młodzież z Żytomierza w Radiu Katowice</a><span>Katowice: polska młodzież z Żytomierza odwiedza Śląsk. To wspólny projekt obu regionów. Dziś zwiedza Polskie Radio Katowice.</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Młodzież z Żytomierza w Radiu Katowice</a><span>Katowice: polska młodzież z Żytomierza odwiedza Śląsk. To wspólny projekt obu regionów. Dziś zwiedza Polskie Radio Katowice.</span></div>
                 </li>
-                <li>
-                  <h3 class="highlights-body"><a class="highlights-title">Krajoznawcze fascynacje</a><span>Katowice: w radiowej galerii &quot;Na żywo&quot; otwarta została wystawa rysunku Edwarda Wieczorka i odznak krajoznawczych z kolekcji Gerarda Suchanka.</span></h3>
+                <li class="column is-6">
+                  <div class="highlights-body"><a class="highlights-title">Krajoznawcze fascynacje</a><span>Katowice: w radiowej galerii &quot;Na żywo&quot; otwarta została wystawa rysunku Edwarda Wieczorka i odznak krajoznawczych z kolekcji Gerarda Suchanka.</span></div>
                 </li>
               </ul>
             </section>
@@ -333,17 +456,40 @@
         </div>
       </div>
     </section>
-    <section class="section newsletter">
+    <section class="section partners">
       <div class="container">
-        <div class="columns">
-          <div class="column"><img src="assets/files/img/grajki.svg"></div>
-          <div class="column">
-            <h1 class="section-title-secondary">Zapisz się do naszego newslettera</h1>
-            <div class="field">
-              <div class="control">
-                <input class="input is-large" placeholder="e-mail" type="e-mail">
+        <h1 class="section-title">Patronaty</h1>
+        <div class="carousel carousel-animated carousel-animate-slide responsive-carousel">
+          <div class="carousel-container">
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 1</p>
               </div>
             </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 2</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 3</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 4</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="patronate">
+                <p>patronat 5</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+            <div class="carousel-nav-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
           </div>
         </div>
       </div>
