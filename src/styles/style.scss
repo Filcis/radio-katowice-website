@@ -63,8 +63,8 @@ html {
                           LAYOUT
 =============================================================== */
 .column  {
-    padding-top: $vertical-rhythm-unit-1/2;
-    padding-bottom: $vertical-rhythm-unit-1/2;
+    // padding-top: $vertical-rhythm-unit-1/2;
+    // padding-bottom: $vertical-rhythm-unit-1/2;
 }
 
 section.on-air {
@@ -433,7 +433,7 @@ a.player-shortcut {
   font-size: 0.8rem;
   height: 100%; //zbędne?
   background-color: white;
-  @include from($desktop) {
+  @include from($tablet) {
     flex-direction: row;
   }
 }
