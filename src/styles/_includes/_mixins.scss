@@ -1,13 +1,13 @@
-@mixin triangle-icon($color: black, $size: 2em) {
+@mixin triangle-icon($color: black, $size: 2em, $position:static) {
   border-color: transparent transparent transparent $color;
   box-sizing: border-box;
   border-style: solid;
   width: $size/3;
   height: $size/3;
   border-width: $size/6 0px $size/6 $size/4;
-  position: absolute;
+  position: $position;
   top:50%;
-  transform: translate(-$size/10, -50%);
+  transform: translate(-20%, -50%); //pierwsza wartośc, to korekta optyczna, poziom
 }
 
 @mixin play-icon-wrapper($color: black, $size: 2em) {
@@ -19,12 +19,12 @@
   position: relative;
   margin: 0 $size/3;
   .play-icon {
-      @include triangle-icon($color, $size);
+      @include triangle-icon($color, $size, absolute);
   }
 }
 
 @mixin volume-control {
-  
+
     /* usuń domyślne style slidera */
     input[type=range] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */

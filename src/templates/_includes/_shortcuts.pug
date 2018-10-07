@@ -1,27 +1,30 @@
+mixin shortcut(time, title, isvertical)
+  a.player-shortcut(class= isvertical)
+    .player-shortcut-icon-wrapper
+      span.icon.is-medium
+        i(class!=attributes.class)
+    .player-shortcut-info-wrapper
+      span.player-shortcut-time= time
+      span.player-shortcut-title= title
+      span.player-shortcut-call-to-action słuchaj
 .columns
   .column.is-8
-    .columns.is-mobile
+    .columns.is-mobile.has-small-gap-mobile
       .column.is-4
-        .player-shortcut
-          p pogoda
+        +shortcut('14:30','Pogoda', 'shortcut-is-vertical-mobile')(class='fas fa-cloud fa-2x')
       .column.is-4
-        .player-shortcut
-          p auto radio
+        +shortcut('15:20','Auto Radio', 'shortcut-is-vertical-mobile')(class='fas fa-car fa-2x')
       .column.is-4
-        .player-shortcut
-          p informacje
+        +shortcut('16:15','Informacje', 'shortcut-is-vertical-mobile')(class='fas fa-info fa-2x')
   .column.is-4
     .carousel.carousel-animated.carousel-animate-slide
       .carousel-container
         .carousel-item.is-active
-          .player-shortcut
-            p karuzela
+          +shortcut('20.01.2019','Nazwa audycji')(class='fas fa-music fa-2x')
         .carousel-item
-          .player-shortcut
-            p karuzela
+          +shortcut('18.01.2019','Bardzo bardzo bardzo długa nazwa audycji')(class='fas fa-music fa-2x')
         .carousel-item
-          .player-shortcut
-            p karuzela
+          +shortcut('16.01.2019','Nazwa audycji')(class='fas fa-music fa-2x')
       .carousel-navigation.is-overlay
         .carousel-nav-left
           i.fa.fa-chevron-left(aria-hidden="true")
