@@ -243,7 +243,6 @@ footer {
 }
 
 .artist {
-  max-width: 70%;
   @include from($tablet) {
     margin-bottom: $vertical-rhythm-unit-1;
   }
@@ -496,4 +495,12 @@ footer {
   margin: 1rem 0;
   padding: 2rem;
   background-color: $light-gray;
+}
+
+.illustration-wrapper {
+  height: 100%;
+  img {
+    height: 100%;
+    width: auto;
+  }
 }

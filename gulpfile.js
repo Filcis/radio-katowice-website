@@ -36,8 +36,9 @@ var routes = {
     },
 
     templates: {
-    	pug: baseDirs.src+'templates/*.pug',
-        _pug: baseDirs.src+'templates/_includes/*.pug',
+    	base: baseDirs.src+'templates/*.pug',
+      articles: baseDirs.src+'templates/articles/*.pug',
+      _includes: baseDirs.src+'templates/_includes/*.pug',
     },
 
     scripts: {
@@ -67,7 +68,7 @@ var routes = {
 // Templating
 
 gulp.task('templates', function() {
-    return gulp.src([routes.templates.pug, '!' + routes.templates._pug])
+    return gulp.src([routes.templates.base, routes.templates.articles, '!' + routes.templates._includes], {base: baseDirs.src + 'templates'})
         .pipe(plumber({
             errorHandler: notify.onError({
                 title: "Error: Compiling pug.",
@@ -177,7 +178,7 @@ gulp.task('serve', function() {
     });
 
     gulp.watch([routes.styles.scss, routes.styles._scss], ['styles']);
-    gulp.watch([routes.templates.pug, routes.templates._pug], ['templates']);
+    gulp.watch([routes.templates.base,routes.templates.articles, routes.templates._includes], ['templates']);
     gulp.watch(routes.scripts.js, ['scripts', 'beautify']);
 });
 
