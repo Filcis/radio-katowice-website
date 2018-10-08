@@ -46,6 +46,12 @@ html {
   text-align: center;
 }
 
+.on-air-title {
+  @include from($tablet) {
+    margin-bottom: $vertical-rhythm-unit-1;
+  }
+}
+
 .player-artist-name,
 .player-song-title {
   display: inline-block;
@@ -54,7 +60,10 @@ html {
   font-size: $size-3;
   }
   @include from($desktop) {
-  font-size: $size-2;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 

@@ -4,10 +4,11 @@
   .column.is-7-tablet.is-8-desktop
     .player-main
       .player-main-center
-        p.is-red.is-size-6 Teraz na antenie
+        h3.on-air-title.is-red.is-size-6 Teraz na antenie
         .artist.is-clearfix
-          h1.player-artist-name Andrzej Grabowski
+          h2.player-artist-name Andrzej Grabowski
           h2.player-song-title Jestem jak motyl
-        a#player-main-call-to-action.button.is-red(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] posłuchaj na żywo
+        a#player-main-call-to-action(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] 
+          span.button-span-text posłuchaj na żywo
     .player-stations-menu
       include player_includes/_player_stations.pug

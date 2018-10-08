@@ -221,6 +221,7 @@ footer {
 
 .player-main-center {
   align-self: center;
+  width: 100%;
 }
 
 .player-cover,
@@ -228,7 +229,7 @@ footer {
   height: 15rem;
   height: 85vw;
   @include from($large-mobile) {
-    height: 15rem;
+    height: 20rem;
   }
   @include from($tablet) {
     height: 18rem;
@@ -242,7 +243,10 @@ footer {
 }
 
 .artist {
-  margin-bottom: $vertical-rhythm-unit-1;
+  max-width: 70%;
+  @include from($tablet) {
+    margin-bottom: $vertical-rhythm-unit-1;
+  }
 }
 
 .player-cover-icon {
@@ -362,9 +366,6 @@ footer {
   padding: 1rem;
   border-radius: 0 0 12px 0;
   border:1px solid $player-light-gray;
-  // @include from($tablet) {
-  //   border:1px solid #fff;
-  // }
   @include from($desktop) {
     transition: border 0.3s ease-in-out;
     &:hover {
@@ -437,37 +438,41 @@ footer {
 
 
 #player-main-call-to-action {
-    border-radius: 0 0 15px 0;
-    height: 3em;
-    padding-right: 2em;
-    font-size: 0.8rem;
-    background-color: $basic-red;
-    color: white;
-    margin-bottom: $vertical-rhythm-unit-1;
+    display: inline-flex;
+    align-items: center;
+    // border-radius: 0 0 15px 0;
+    height: 3rem;
+    font-size: $size-5;
+    color: $gray;
   &:active, &:hover {
-    color: white;
+    color: $basic-red;
   }
   .play-icon-wrapper {
-    @include play-icon-wrapper(white);
+    @include play-icon-wrapper($basic-red, 2rem);
+    @include from($desktop) {
+      transition: all 0.1s ease-in-out;
+      // background-color: $basic-red;
+
+    }
+  }
+  @include from($desktop) {
+    &:hover {
+      .play-icon-wrapper {
+        transform: scale(1.2);
+        background-color: $basic-red;
+        .play-icon {
+          border-color: transparent transparent transparent #fff;
+        }
+      }
+    }
+  }
+  .button-span-text {
+
   }
   @include from($tablet) {
-    font-size: 0.9rem;
+
   }
 }
-
-// .player-shortcut-call-to-action {
-//   color: $gray;
-//   margin: auto;
-//   line-height: 1rem;
-//   font-size: 0.75rem;
-//   font-weight: bold;
-//   display: inline-flex;
-//   align-items:center;
-//   .play-icon-wrapper {
-//       @include play-icon-wrapper($basic-red, 1.5em);
-//       margin-left: -0.2rem;
-//   }
-// }
 
 .tab-content {
   display: none;
