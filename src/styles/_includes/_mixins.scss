@@ -1,13 +1,16 @@
-@mixin triangle-icon($color: black, $size: 2em, $position:static) {
-  border-color: transparent transparent transparent $color;
-  box-sizing: border-box;
-  border-style: solid;
-  width: $size/3;
-  height: $size/3;
-  border-width: $size/6 0px $size/6 $size/4;
-  position: $position;
+@mixin triangle-icon($color: black, $size: 2em) {
+  display: block;
+  position: absolute;
   top:50%;
-  transform: translate(-20%, -50%); //pierwsza wartośc, to korekta optyczna, poziom
+  left:50%;
+  text-align: center;
+  border-color: transparent transparent transparent $color;
+  // box-sizing: border-box;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  border-width: $size/5 0px $size/5 $size/4;
+  transform: translate(-25%, -50%); //pierwsza wartośc, to korekta optyczna, poziom
 }
 
 @mixin play-icon-wrapper($color: black, $size: 2em) {
@@ -15,11 +18,11 @@
   text-align: center;
   height: $size;
   border-radius: $size;
-  border: 2px solid $color;
+  border: 1px solid $color;
   position: relative;
   margin: 0 $size/3;
   .play-icon {
-      @include triangle-icon($color, $size, absolute);
+      @include triangle-icon($color, $size);
   }
 }
 

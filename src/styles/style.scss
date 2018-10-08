@@ -5,72 +5,11 @@
 @import '_includes/_mixins';
 @import '_includes/_typography';
 @import '_includes/_elements';
-
-html {
-  @include from($tablet){
-    font-size: 16px;
-  }
-}
-
-/* =============================================================
-                          NAVIGATION
-=============================================================== */
-
-.logo {
-  height: 100%;
-}
-
-.navbar {
-  max-width: 100%;
-}
-
-// #main-menu .navbar-end {
-//   flex-direction: column;
-// }
-
-.navbar-dropdown {
-  margin-top: -0.3rem;
-  border-top: none;
-  border-radius: 0 0 12px 0;
-  padding: 0.75rem 1.5rem;
-}
-
-.navbar-after-divider {
-  height: 0.3rem;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
-}
-
-.navbar-menu .navbar-item {
-  font-size: $size-6;
-  &:last-child{
-  }
-}
-
-.navbar-link {
-  &:after {
-    border-width: 1px !important;
-  }
-}
-
-.dropdown {
-  button {
-    border: none;
-    &:focus {
-      outline: 0;
-    }
-  }
-}
+@import '_includes/_navigation';
 
 /* =============================================================
                           LAYOUT
 =============================================================== */
-.column  {
-    // padding-top: $vertical-rhythm-unit-1/2;
-    // padding-bottom: $vertical-rhythm-unit-1/2;
-}
 
 .container {
   @include until($tablet){
@@ -224,42 +163,6 @@ footer {
   }
 }
 
-/* =============================================================
-                          ELEMENTS
-=============================================================== */
-
-.button {
-  @extend button;
-}
-
-.article-tags {
-  margin-bottom: $vertical-rhythm-unit-1;
-}
-
-.article-tag {
-  border: 1px solid $light-gray;
-  padding: 0.25rem 0.5rem;
-  font-size: $size-6;
-  margin-right: 0.75rem;
-  border-radius: 0 0 12px 0;
-  cursor: pointer;
-  transition: all 0.25s;
-  &:hover {
-    color: #fff;
-    background-color: $basic-red;
-  }
-  &.date-tag {
-    color: $link;
-  }
-}
-
-.featured-img {
-  border-radius: 0 0 1em 0;
-  @include from($desktop) {
-    margin-bottom: $vertical-rhythm-unit-3;
-  }
-}
-
 .highlights-body {
   padding-bottom: $vertical-rhythm-unit-4;
 }
@@ -357,10 +260,9 @@ footer {
   padding: 0 1.25rem;
   background-color: #363636;
   color: $light-gray;
-  display: flex;
-  align-items: center;
   height: 3rem;
-  .is-station-active figure.image img {
+  .is-station-active figure.image img,
+  figure.image img:hover {
     opacity: 1;
   }
   .player-stations-title  {
@@ -370,7 +272,7 @@ footer {
     border-right: 1px solid lighten($gray, 10);
   }
   figure.image {
-    height: 24px;
+    height: 1.4rem;
     width: auto;
     img {
       height: inherit;
@@ -384,10 +286,16 @@ footer {
 }
 
 .station-list-item {
-  &:hover {
-    .station-tooltip {
-      display: block;
-      opacity: 0.9;
+  padding: 0 0.25rem;
+  @include from($tablet) {
+    padding: 0 1rem;
+  }
+  @include from($desktop) {
+    &:hover, &:active {
+      .station-tooltip {
+        display: flex;
+        opacity: 0.9;
+      }
     }
   }
 }
@@ -395,24 +303,29 @@ footer {
 .station-tooltip {
   display: none;
   position: absolute;
+  align-items: center;
   bottom: 3.5rem;
   margin-left: -20px;
   background-color: #fff;
   padding: 0.75rem;
   border-radius: 0 0 12px 0;
-  width: 200px;
+  border: 1px solid lighten($basic-red, 35);
   opacity: 0;
   transition: opacity 0.5s ease-out;
   font-size: $size-6;
+  .tooltip-left{
+    min-width: 160px;
+  }
   .tooltip-station-name {
     display: block;
     color: $basic-red;
   }
   .tooltip-title {
+    display: block;
     font-weight: bold;
     color: $gray;
   }
-  &:after {
+  &:after { //trójkąt
     content: '';
     display: block;
     position: absolute;
@@ -422,6 +335,9 @@ footer {
     height: 0;
     border: 0.5rem solid transparent;
     border-top-color: white;
+  }
+  .play-icon-wrapper {
+    @include play-icon-wrapper($light-gray, 1.5rem);
   }
 }
 

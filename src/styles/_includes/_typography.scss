@@ -1,3 +1,9 @@
+html {
+  @include from($tablet){
+    font-size: 16px;
+  }
+}
+
 .section-title {
   font-size: $size-3;
   padding-bottom: 0.75rem;

@@ -1,5 +1,38 @@
-// ----------- Carousels ------------------
+/* =============================================================
+                          ELEMENTS
+=============================================================== */
 
+.button {
+  @extend button;
+}
+
+.article-tags {
+  margin-bottom: $vertical-rhythm-unit-1;
+}
+
+.article-tag {
+  border: 1px solid $light-gray;
+  padding: 0.25rem 0.5rem;
+  font-size: $size-6;
+  margin-right: 0.75rem;
+  border-radius: 0 0 12px 0;
+  cursor: pointer;
+  transition: all 0.25s;
+  &:hover {
+    color: #fff;
+    background-color: $basic-red;
+  }
+  &.date-tag {
+    color: $link;
+  }
+}
+
+.featured-img {
+  border-radius: 0 0 1em 0;
+  @include from($desktop) {
+    margin-bottom: $vertical-rhythm-unit-3;
+  }
+}
 
 .carousel-item .player-shortcut {
   width: 80%;
