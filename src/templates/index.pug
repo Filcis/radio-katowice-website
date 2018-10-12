@@ -1,6 +1,8 @@
 extends layouts/layout.pug
-append head
-  title Polskie Radio Katowice
+block vars
+  -
+    let title ="Polskie Radio Katowice";
+    let baseurl= "";
 block content
   section.main-content
     .container

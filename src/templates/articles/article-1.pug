@@ -1,6 +1,8 @@
 extends ../layouts/layout.pug
-append head
-  title Polskie Radio Katowice Artykuł
+block vars
+  -
+    let title ="Polskie Radio Katowice";
+    let baseurl= "../";
 block content
   include ../_includes/_small_on_air.pug
   section.main-content
