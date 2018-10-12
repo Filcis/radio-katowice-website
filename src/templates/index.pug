@@ -1,31 +1,28 @@
-doctype html
-html
-    include _includes/_head.pug
-    body
-      include _includes/_top_adspace.pug
-      include _includes/_header.pug
-      section.main-content
-        .container
-          .columns.is-desktop.is-gapless
-            .column.is-10-desktop.is-9-widescreen
-              section.on-air
-                include _includes/_on_air.pug
-              section.player-shortcuts
-                include _includes/_shortcuts.pug
-              section.recent-news
-                include _includes/_recent_news.pug
-            .column.is-2-desktop.is-3-widescreen
-              aside.sidebar
-                include _includes/_sidebar.pug
-      section.recent-video.section
-        include _includes/_video_carousel.pug
-      section.section
-        .container
-          .columns
-            .column.is-6
-              include _includes/_highlights.pug
-            .column.is-6
-              include _includes/_events-list.pug
-      section.section.partners
-        include _includes/_patrons_carousel.pug
-      include _includes/_footer.pug
+extends layouts/layout.pug
+append head
+  title Polskie Radio Katowice
+block content
+  section.main-content
+    .container
+      .columns.is-desktop.is-gapless
+        .column.is-10-desktop.is-9-widescreen
+          section.on-air
+            include _includes/_on_air.pug
+          section.player-shortcuts
+            include _includes/_shortcuts.pug
+          section.recent-news
+            include _includes/_recent_news.pug
+        .column.is-2-desktop.is-3-widescreen
+          aside.sidebar
+            include _includes/_sidebar.pug
+  section.recent-video.section
+    include _includes/_video_carousel.pug
+  section.section
+    .container
+      .columns
+        .column.is-6
+          include _includes/_highlights.pug
+        .column.is-6
+          include _includes/_events-list.pug
+  section.section.partners
+    include _includes/_patrons_carousel.pug
