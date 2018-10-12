@@ -26,6 +26,13 @@
 }
 }
 
+.main-content {
+@include from ($desktop) {
+  margin-top: $vertical-rhythm-unit-5;
+  margin-bottom: $vertical-rhythm-unit-5;
+  }
+}
+
 section.on-air {
   margin-bottom: $vertical-rhythm-unit-4;
   @include from(600px) {
@@ -39,9 +46,11 @@ section.on-air {
   }
 }
 
-section.recent-news {
+section.recent-news, .main-article-container {
   background-color: #fff;
   @extend .section;
+  padding-top: $vertical-rhythm-unit-5;
+  padding-bottom: $vertical-rhythm-unit-5;
 }
 
 aside.sidebar {
@@ -144,6 +153,14 @@ article {
   margin-bottom: $vertical-rhythm-unit-3;
   padding-bottom: $vertical-rhythm-unit-3;
   border-bottom: 1px solid $light-gray;
+  p {
+    margin-bottom: $vertical-rhythm-unit-1;
+  }
+  audio {
+    margin-top: $vertical-rhythm-unit-2;
+    margin-bottom: $vertical-rhythm-unit-2;
+    height: 60px;
+  }
   &:last-child {
     padding-bottom: 0;
     border: none;

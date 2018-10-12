@@ -18,6 +18,34 @@ html {
   margin-bottom: $vertical-rhythm-unit-4;
 }
 
+.article-title {
+  font-size: $size-3;
+  margin-bottom: $vertical-rhythm-unit-4;
+}
+
+.article-category {
+  color: $gray;
+  font-size: $size-4;
+  font-variant: small-caps;
+  margin-right: 2rem;
+}
+
+blockquote {
+  font-size: $size-4;
+  color: $medium-gray;
+  font-style: italic;
+  padding-left: 3rem;
+  border-left: 2px solid $basic-red;
+  small {
+    margin-top: $vertical-rhythm-unit-1;
+    display: block;
+    font-size: $size-5;
+  }
+  @include from($desktop) {
+    max-width:80%;
+  }
+}
+
 .featured-article-title {
   font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-1;
