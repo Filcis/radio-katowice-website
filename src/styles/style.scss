@@ -48,9 +48,7 @@ section.on-air {
 
 section.recent-news, .main-article-container {
   background-color: #fff;
-  @extend .section;
-  padding-top: $vertical-rhythm-unit-5;
-  padding-bottom: $vertical-rhythm-unit-5;
+  padding: $vertical-rhythm-unit-5 2rem;
 }
 
 aside.sidebar {

@@ -2,13 +2,14 @@ extends ../layouts/layout.pug
 append head
   title Polskie Radio Katowice Artykuł
 block content
- section.main-content
-   .container
-     .columns.is-desktop
-       .column.is-10-desktop.is-9-widescreen
-         .main-article-container
-           .columns.is-centered
-             .column.is-10
+  include ../_includes/_small_on_air.pug
+  section.main-content
+    .container
+       .columns.is-desktop
+         .column.is-10-desktop.is-9-widescreen
+           .main-article-container
+             .columns
+               .column.is-10
                  article
                    .article-meta
                      span.article-category informacje
@@ -29,6 +30,6 @@ block content
                    p Obecnie trwa przygotowanie infrastruktury pod względem technicznym, uzupełnianie i szkolenie kadry. Spodek i MCK  mają być przekazane na przełomie października i listopada. 
                    p Według szacunków w Katowicach gościć będzie około 40 tysięcy osób. Szczyt klimatyczny ONZ odbędzie się w dniach 3-14 grudnia.
                    p.article-author Autor: Paulina Kurek/ds
-       .column.is-2-desktop.is-3-widescreen
-         aside.sidebar
-           include ../_includes/_sidebar.pug
+         .column.is-2-desktop.is-3-widescreen
+           aside.sidebar
+             include ../_includes/_sidebar.pug

@@ -20,6 +20,9 @@
   img {
     border-radius: 0 0 1rem 0;
   }
+  @include from($desktop) {
+    max-width: 700px;
+  }
 }
 
 .featured .article-tags {
@@ -80,9 +83,14 @@
   }
 }
 
+.on-air-top-bar {
+  background-color: $player-light-gray;
+  padding: $vertical-rhythm-unit-1/2 1.4rem;
+}
+
 .social-icon {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.85rem;
+  height: 0.85rem;
   display: inline-flex;
   margin-right: 0.5rem;
   &:last-child {
