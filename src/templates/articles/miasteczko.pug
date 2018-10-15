@@ -1,0 +1,86 @@
+extends ../layouts/layout.pug
+include ../_includes/mixins/_article_list.pug 
+block vars
+    -
+        let title ="Polskie Radio Katowice";
+        let baseurl= "../";
+        var article1 = {
+            title:"Miasteczko na szczyt klimatyczny",
+            image: "miasteczko.jpg",
+            tags: ["sport","Katowice"],
+            date: "17.07.2018",
+            link: "miasteczko"
+        };
+        var article2 = {
+            title:"Trwa budowa drogi Pszczyna – Racibórz.",
+            image: "pszczyna-raciborz.jpg",
+            tags: ["region","Pszczyna", "Racibórz"],
+            date: "15.07.2018",
+            link: "#"
+        };
+        var article3 = {
+            title:"Naukobus. Mobilne centrum Nauki.",
+            image: "naukobus.jpg",
+            tags: ["kultura","Katowice"],
+            date: "13.07.2018",
+            link: "#"
+        };
+        var article4 = {
+            title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
+            image: "fetor.jpg",
+            tags: ["region","Jaworzno"],
+            date: "12.07.2018",
+            link: "#"
+        }
+block content
+    include ../_includes/_small_on_air.pug
+    main.main-content
+        .container
+            .columns.is-desktop
+                .column.is-10-desktop.is-9-widescreen
+                    .main-article-container
+                        .columns
+                            .column.is-10
+                                article
+                                    .article-meta
+                                        span.article-category informacje
+                                        .article-tags
+                                            span.article-tag.is-medium Region
+                                            span.article-tag.is-medium Katowice
+                                            span.article-tag.is-medium Kultura
+                                        span.article-date 15.07.2018
+                                    h1.article-title Miasteczko na szczyt klimatyczny
+                                    figure.image
+                                        img(src=baseurl + "/assets/files/img/miasteczko.jpg")
+                                    p W Katowicach powstaje miasteczko na szczyt klimatyczny ONZ.
+                                    p Wydarzenie odbędzie się w Spodku i Międzynarodowym Centrum Kongresowym. Grupa PTWP, która zarządza obiektami, zapewnia, że prace  przebiegają bez zakłóceń, jednak trzeba sprostać szczególnym wymaganiom, także kulinarnym. Różnorodna kuchnia musi zadowolić gości z blisko 200 krajów. 
+                                    blockquote
+                                        |  Szczyt klimatyczny ONZ jest dużym wyzwaniem logistycznym. To spotkanie wielu kultur i religii
+                                        small Marcin Stolarz z PTWP Event Center. 
+                                    audio(controls="true" src="https://www.radio.katowice.pl/sound/38272/08-23-szczyt-klimatyczny-nietypowe-przygotowania.mp3")
+                                    p Obecnie trwa przygotowanie infrastruktury pod względem technicznym, uzupełnianie i szkolenie kadry. Spodek i MCK  mają być przekazane na przełomie października i listopada. 
+                                    p Według szacunków w Katowicach gościć będzie około 40 tysięcy osób. Szczyt klimatyczny ONZ odbędzie się w dniach 3-14 grudnia.
+                                    footer.level.article-footer
+                                      .level-left.social-media-icons
+                                        .social-icon.is-large
+                                          img(src= baseurl +'assets/files/img/facebook.svg')
+                                        .social-icon.is-large
+                                          img.social-icon(src= baseurl +'assets/files/img/youtube.svg')
+                                        .social-icon.is-large
+                                          img.social-icon(src= baseurl +'assets/files/img/instagram.svg')
+                                        .social-icon.is-large
+                                          img.social-icon(src= baseurl +'assets/files/img/twitter.svg')
+                                      .level-right
+                                        p.article-author Autor: Paulina Kurek/ds
+                                    
+                .column.is-2-desktop.is-3-widescreen
+                    aside.sidebar
+                        include ../_includes/_sidebar.pug
+    section.similiar-articles
+        .container
+          h2.section-title Podobne artykuły
+          .columns
+            +similiarArticles(article1)
+            +similiarArticles(article2)
+            +similiarArticles(article3)
+            +similiarArticles(article4)

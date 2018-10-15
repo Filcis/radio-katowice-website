@@ -46,14 +46,14 @@ section.on-air {
   }
 }
 
-section.recent-news, .main-article-container {
+section.recent-news, .main-article-container, .similiar-articles {
   background-color: #fff;
   padding: $vertical-rhythm-unit-5 2rem;
 }
 
 aside.sidebar {
   @include until($desktop) {
-    padding: 1.4rem 0.75rem;
+    padding: 0 2rem $vertical-rhythm-unit-5 2rem;
   }
   margin-top: 1.4rem;
   @include from($desktop) {
@@ -138,13 +138,26 @@ footer {
   padding: $mobile-content-padding;
 }
 
+.date-tag {
+    position: absolute;
+    z-index: 2;
+}
+
+
 .article-wrapper {
   position: relative;
   .date-tag {
-    position: absolute;
-    top: $vertical-rhythm-unit-1/2;
+    top: 0.75rem;
     left: 0.75rem;
   }
+}
+
+.similiar-article-wrapper, {
+  position: relative;
+    .date-tag {
+      top: 0;
+      left: 0;
+    }
 }
 
 article {
@@ -169,6 +182,14 @@ article {
 footer {
   background-color: $dark-gray;
   min-height: 20rem;
+}
+
+footer.article-footer {
+  background-color: transparent;
+  padding-top: $vertical-rhythm-unit-1;
+  margin-top: $vertical-rhythm-unit-1*2;
+  border-top: 1px solid $light-gray;
+  min-height: 3rem;
 }
 
 .newsletter {

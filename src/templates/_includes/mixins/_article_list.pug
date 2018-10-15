@@ -1,0 +1,34 @@
+mixin article(articleContent)
+  article.featured
+    .article-wrapper.columns
+      .column.is-half
+        span.tag.date-tag.is-medium= articleContent.date
+        a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
+          img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+      .column
+        .article-tags
+          each val in articleContent.tags
+            span.article-tag.is-medium= val
+        a(href=baseurl + 'articles/' + articleContent.link + '.html')
+          h2.featured-article-title= articleContent.title
+        if block
+          block
+        else
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+          
+mixin similiarArticles(articleContent)
+  .column
+    article.featured
+      .similiar-article-wrapper
+        span.tag.date-tag.is-medium= articleContent.date
+        a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
+          img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+        .article-tags
+          each val in articleContent.tags
+            span.article-tag.is-medium= val
+        a(href=baseurl + 'articles/' + articleContent.link + '.html')
+          h3.featured-article-title= articleContent.title
+        if block
+          block
+        else
+          p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
