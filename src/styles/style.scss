@@ -15,7 +15,11 @@
   @include until($tablet){
       max-width: 560px;
   }
-}
+@include desktop-only {
+        max-width: 1060px;
+        width: 1060px;
+    }
+  }
 
 .columns.has-small-gap-mobile {
   @include until($tablet){

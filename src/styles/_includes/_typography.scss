@@ -25,33 +25,32 @@ html {
 
 .article-meta {
     position: relative;
-    .article-category {
-      display: block;
-      margin-bottom: $vertical-rhythm-unit-1/2;
-    }
     margin-bottom: $vertical-rhythm-unit-1;
-    @include until ($large-mobile) {
-      .article-date {
-          position: absolute;
-          top: 0;
-          right: 0;
-      }
-    }
     @include from($large-mobile) {
-        align-items: center;
         display: flex;
+        align-items: center;
         margin-bottom: $vertical-rhythm-unit-3;
-        .article-date {
-          margin-left: auto;
-        }
+    }
+}
+
+.article-date {
+  margin-left: auto;
+    @include until ($large-mobile) {
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
 .article-category {
-  color: $gray;
-  font-size: $size-5;
-  text-transform: uppercase;
-  margin-right: 2rem;
+    color: $gray;
+    font-size: $size-5;
+    text-transform: uppercase;
+    margin-right: 2rem;
+    @include until($large-mobile) {
+        display: block;
+        margin-bottom: $vertical-rhythm-unit-1/2;
+    }
 }
 
 blockquote {
