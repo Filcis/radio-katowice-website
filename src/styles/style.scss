@@ -209,6 +209,13 @@ footer.article-footer {
 
 // ----------- Video carousel ------------------
 
+.video-card {
+  @include from($tablet) {
+      max-width: 340px;
+  }
+
+}
+
 .video-card-img-wrapper {
   min-height: 8rem;
   width: 100%;

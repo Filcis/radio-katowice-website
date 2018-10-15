@@ -7,12 +7,9 @@
 }
 
 .main-article-container figure {
-  margin-bottom: $vertical-rhythm-unit-4;
+  margin: $vertical-rhythm-unit-4 auto;
   img {
     border-radius: 0 0 1rem 0;
-  }
-  @include from($desktop) {
-    max-width: 700px;
   }
 }
 

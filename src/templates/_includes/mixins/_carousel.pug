@@ -1,19 +1,21 @@
 mixin video(videoData)
   if videoData.isActive
     a.carousel-item.is-active
-      .video-card-img-wrapper
-        .video-card-tag: span= videoData.tag
-        img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
-        .video-card-play-icon 
-      .video-card-body
-        span.video-card-title nazwa nagrania
-        span.video-card-info dodatkowe informacje o nagraniu
+      .video-card
+        .video-card-img-wrapper
+          .video-card-tag: span= videoData.tag
+          img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
+          .video-card-play-icon 
+        .video-card-body
+          span.video-card-title nazwa nagrania
+          span.video-card-info dodatkowe informacje o nagraniu
   else
     a.carousel-item
-      .video-card-img-wrapper
-        .video-card-tag: span= videoData.tag
-        img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
-        .video-card-play-icon 
-      .video-card-body
-        span.video-card-title nazwa nagrania
-        span.video-card-info dodatkowe informacje o nagraniu
+      .video-card
+        .video-card-img-wrapper
+          .video-card-tag: span= videoData.tag
+          img(src="assets/files/img/" + videoData.image alt=videoData.imageAlt)
+          .video-card-play-icon 
+        .video-card-body
+          span.video-card-title nazwa nagrania
+          span.video-card-info dodatkowe informacje o nagraniu
