@@ -1,8 +1,9 @@
 - 
   var highlights = [
     {
-      title: "100 lat odzyskania niepodległości. Konkurs rozstrzygnięty.",
-      description:"Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik."
+      title: "Z naszego na nosz! Niezwykłe wersje zwykłych piosenek.",
+      description:"Konkurs na plakat promujący 100. rocznicę odzyskania niepodległości Polski pod patronatem poseł na Sejm RP Ewy Malik.",
+      link: "Z-naszego-na-nosz"
     },
     {
       title: "Młodzież z Żytomierza w Radiu Katowice",
@@ -19,5 +20,5 @@ section.events-list
     each val in highlights
       li.column.is-6
         .highlights-body
-          a.highlights-title= val.title
+          a(href="articles/" + val.link + ".html").highlights-title= val.title
           span= val.description

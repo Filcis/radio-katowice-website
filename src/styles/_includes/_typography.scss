@@ -1,6 +1,6 @@
 html {
   @include from($tablet){
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
@@ -18,9 +18,36 @@ html {
   margin-bottom: $vertical-rhythm-unit-4;
 }
 
+// article p {
+//   font-size: $size-4 * 0.8;
+//   line-height: 1.6;
+// }
+
+article.intertext {
+  font-style: italic;
+  padding-left: 2rem;
+}
+
 .article-title {
   font-size: $size-3;
   margin-bottom: $vertical-rhythm-unit-4;
+  @include from($desktop) {
+      border-top: 1px solid $player-light-gray;
+      padding-top: $vertical-rhythm-unit-1;
+      font-size: $size-2;
+      margin-bottom: $vertical-rhythm-unit-5;
+  }
+}
+
+h2.article-subtitle {
+  font-size: $size-3;
+  margin-bottom: $vertical-rhythm-unit-3;
+  margin-top: $vertical-rhythm-unit-5;
+}
+
+h3.article-subtitle {
+  font-size: $size-4;
+  margin-bottom: $vertical-rhythm-unit-3;
 }
 
 .article-meta {
