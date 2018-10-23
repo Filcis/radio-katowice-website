@@ -119,3 +119,36 @@
     left: 0;
   }
 }
+
+.c-content {
+  padding: 20px;
+}
+
+.c-go-top {
+  background: none repeat scroll 0 0 padding-box $basic-red;
+  bottom: 20px;
+  border-radius: 0 0 12px 0;
+  color: #eee;
+  font-size: 12px;
+  opacity: 0.8;
+  padding: 10px;
+  position: fixed;
+  text-decoration: none;
+  z-index: 999;
+  right: 90px;
+  &::before {
+    content: 'w górę';
+  }
+  @include from($desktop) {
+    display: none;
+  }
+}
+
+.c-go-top:hover,
+.c-go-top:focus,
+.c-go-top:active,
+.c-go-top:visited {
+  color: #fff;
+  outline: 0;
+  text-decoration: none;
+}

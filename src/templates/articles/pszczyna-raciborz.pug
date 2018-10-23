@@ -4,6 +4,7 @@ block vars
     -
         let title ="Polskie Radio Katowice";
         let useFacebook= true;
+        let useTwitter= true;
         let baseurl= "../";
         var article1 = {
             title:"Miasteczko na szczyt klimatyczny",
@@ -51,27 +52,14 @@ block content
                                             span.article-tag.is-medium Racibórz
                                         span.article-date 15.07.2018
                                     h1.article-title Trwa budowa drogi Pszczyna – Racibórz
+                                    p.lead
+                                        |  Gotowy jest pierwszy kilometr drogi Racibórz – Pszczyna.
                                     figure.image
                                         img(src=baseurl + "assets/files/img/pszczyna-raciborz.jpg")
-                                    blockquote
-                                        |  Gotowy jest pierwszy kilometr drogi Racibórz – Pszczyna.
                                     p Symboliczny odcinek został położony od strony Żor. Jednocześnie trwają intensywne prace związane z betonowaniem 13 obiektów mostowych.
                                     p W ubiegłym miesiącu wykonawca lał beton przez około 30 godzin ciągle na wiadukcie przy Wodzisławskiej, gdzie dostarczył 140 betoniarek betonu.
                                     p Droga Racibórz – Pszczyna będzie miała po dwa pasy ruchu w dwóch kierunkach. Zakończenie rybnickiego odcinka inwestycji zaplanowano na lato 2019 roku. Łączna wartość projektu wyniesie ponad 430 milionów złotych.
-                                    footer.article-footer
-                                      .level
-                                        .level-left.social-media-icons
-                                          .social-icon.is-large
-                                            img(src= baseurl +'assets/files/img/facebook.svg')
-                                          .social-icon.is-large
-                                            img.social-icon(src= baseurl +'assets/files/img/youtube.svg')
-                                          .social-icon.is-large
-                                            img.social-icon(src= baseurl +'assets/files/img/instagram.svg')
-                                          .social-icon.is-large
-                                            img.social-icon(src= baseurl +'assets/files/img/twitter.svg')
-                                        .level-right
-                                          p.article-author Autor: Dorota Stabik /rs/        
-                                      .fb-like(data-href="https://www.facebook.com/radiokatowice" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true")                      
+                                    include ../_includes/_article_footer.pug                     
                 .column.is-2-desktop.is-3-widescreen
                     aside.sidebar
                         include ../_includes/_sidebar.pug
