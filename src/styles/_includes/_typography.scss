@@ -18,10 +18,13 @@ html {
   margin-bottom: $vertical-rhythm-unit-4;
 }
 
-// article p {
-//   font-size: $size-4 * 0.8;
-//   line-height: 1.6;
-// }
+article p {
+  color: $dark-gray;
+  @include from($desktop) {
+    padding-right: 4rem;
+    line-height: 1.6;
+  }
+}
 
 article.intertext {
   border-bottom: none;

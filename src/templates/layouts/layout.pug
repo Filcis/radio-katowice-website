@@ -13,7 +13,7 @@ block head
     script(type="text/javascript" src= baseurl + 'assets/js/jQuery.min.js')
     script(type="text/javascript" src= baseurl + 'assets/js/bulma-carousel.min.js')
     block additionalHeadScripts
-  body
+  body(class = bodyClass)
     block header
       include ../_includes/_top_adspace.pug
       include ../_includes/_header.pug
