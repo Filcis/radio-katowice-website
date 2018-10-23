@@ -3,6 +3,7 @@ include ../_includes/mixins/_article_list.pug
 block vars
     -
         let title ="Polskie Radio Katowice";
+        let author= ""
         let useFacebook= true;
         let baseurl= "../";
         var article1 = {
@@ -68,20 +69,7 @@ block content
                                       | W ubiegłym roku prezydent Jaworzna, zobowiązał Garbarnię Szczakowa do wykonania działań ograniczających oddziaływania na 
                                       | środowisko w zakresie uciążliwości odorowych. 
                                       | Zakład miał m.in. wprowadzić monitoring emisji odoru oraz wykonać remont magazynu w którym przechowywane są odpady.
-                                    footer.article-footer
-                                      .level
-                                        .level-left.social-media-icons
-                                          .social-icon.is-large
-                                            img(src= baseurl +'assets/files/img/facebook.svg')
-                                          .social-icon.is-large
-                                            img.social-icon(src= baseurl +'assets/files/img/youtube.svg')
-                                          .social-icon.is-large
-                                            img.social-icon(src= baseurl +'assets/files/img/instagram.svg')
-                                          .social-icon.is-large
-                                            img.social-icon(src= baseurl +'assets/files/img/twitter.svg')
-                                        .level-right
-                                          p.article-author Autor: Dorota Stabik /rs/        
-                                      .fb-like(data-href="https://www.facebook.com/radiokatowice" data-layout="standard" data-action="like" data-size="small" data-show-faces="false" data-share="true")
+                                    include ../_includes/_article_footer.pug
                 .column.is-2-desktop.is-3-widescreen
                     aside.sidebar
                         include ../_includes/_sidebar.pug

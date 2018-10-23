@@ -102,29 +102,6 @@
         });
     });
 
-    //==================================================
-    // TODO: asynchroniczne tooltipy
-    // $(".station-list-item").hover(function() {
-    //     console.log('ajax request');
-    //     var val = $(this).html();
-    //
-    // $.get('./stations.html'),
-    //     function() {
-    //         //This function is for unhover.
-    //     }
-    // });
-
-    //==================================================
-    // const tabs = $('a.tab');
-    // tabs.click((e) => {
-    //     tabs.each((i, e) => {
-    //         $(e).parent().removeClass('is-active')
-    //         $(e.dataset.target).removeClass('is-active');
-    //     });
-    //     $(e.currentTarget.dataset.target).addClass('is-active');
-    //     $(e.currentTarget).parent().addClass('is-active');
-    // });
-
     var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 
 })(jQuery);

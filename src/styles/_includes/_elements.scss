@@ -10,6 +10,9 @@
   margin: $vertical-rhythm-unit-4 auto;
   img {
     border-radius: 0 0 1rem 0;
+    max-height: 900px;
+    width: auto;
+    // margin: 0 auto;
   }
 }
 

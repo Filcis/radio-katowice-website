@@ -122,7 +122,7 @@ gulp.task('scripts', function() {
             })
         }))
         .pipe(sourcemaps.init())
-            .pipe(concat('script.js'))
+            // .pipe(concat('script.js'))
             .pipe(babel({
               presets: ['env']
             }))
