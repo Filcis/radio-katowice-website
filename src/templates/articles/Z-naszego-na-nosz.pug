@@ -5,34 +5,7 @@ block vars
         let title ="Polskie Radio Katowice";
         let useFacebook= true;
         let baseurl= "../";
-        var article1 = {
-            title:"Miasteczko na szczyt klimatyczny",
-            image: "miasteczko.jpg",
-            tags: ["Region","Katowice","Kultura"],
-            date: "17.07.2018",
-            link: "miasteczko"
-        };
-        var article2 = {
-            title:"Trwa budowa drogi Pszczyna – Racibórz.",
-            image: "pszczyna-raciborz.jpg",
-            tags: ["region","Pszczyna", "Racibórz"],
-            date: "15.07.2018",
-            link: "pszczyna-raciborz"
-        };
-        var article3 = {
-            title:"Naukobus. Mobilne centrum Nauki.",
-            image: "naukobus.jpg",
-            tags: ["kultura","Katowice"],
-            date: "13.07.2018",
-            link: "naukobus"
-        };
-        var article4 = {
-            title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
-            image: "fetor.jpg",
-            tags: ["region","Jaworzno"],
-            date: "12.07.2018",
-            link: "fetor"
-        }
+        
 block content
     include ../_includes/_small_on_air.pug
     main.main-content
@@ -44,7 +17,7 @@ block content
                             .column.is-10
                                 article
                                     .article-meta
-                                        span.article-category wydarzenia
+                                        span.article-category wydarzenia radiowe
                                         span.article-date 12.10.2018
                                     h1.article-title Z naszego na nosz! Niezwykłe wersje zwykłych piosenek.
                                     p.lead Fragmenty porannego programu Radia Katowice. #DzieńDobryDziśPiątek
@@ -136,12 +109,4 @@ block content
                                     include ../_includes/_article_footer.pug  
                 .column.is-2-desktop.is-3-widescreen
                     aside.sidebar
-                        include ../_includes/_sidebar.pug
-    section.similiar-articles
-        .container
-          h2.section-title Podobne artykuły
-          .columns
-            +similiarArticles(article1)
-            +similiarArticles(article2)
-            +similiarArticles(article3)
-            +similiarArticles(article4)
+                        include ../_includes/_sidebar_events.pug

@@ -10,8 +10,12 @@
 /* =============================================================
                           LAYOUT
 =============================================================== */
-body.whiteBackground {
+body {
   background-color: #fff;
+}
+
+body.home {
+  background-color: transparent;
 }
 
 .container {
@@ -75,13 +79,21 @@ aside.sidebar {
   margin-bottom: $vertical-rhythm-unit-3;
 }
 
-.sidebar-box-item .sidebar-link {
-  display: flex;
+.sidebar-box-item {
   font-size: $size-6;
   padding: 0.75rem 0.5rem;
+  @include from($widescreen) {
+    padding: 1rem 0.75rem;
+  }
+}
+.sidebar-date {
+  color: $basic-red;
+}
+.sidebar-link {
+  display: flex;
   span {
       color: $gray;
-      transition: color 0.5s ease;
+      transition: color 0.2s ease;
   }
   .icon {
     margin-left: 0.5rem;
@@ -92,9 +104,7 @@ aside.sidebar {
         color: $basic-red;
     }
   }
-  @include from($desktop) {
-    padding: 1rem 0.75rem;
-  }
+
 }
 
 .sidebar-link {

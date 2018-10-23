@@ -155,3 +155,54 @@
   outline: 0;
   text-decoration: none;
 }
+
+.hourly-list {
+  li {
+    margin-bottom: 0;
+    position:relative;
+    padding-bottom: $vertical-rhythm-unit-4;
+    margin-left: 4rem;
+    &:before {
+      content:"";
+      position: absolute;
+      left: -1.5rem;
+      border-left: 1px solid $light-gray;
+      height: 100%;
+      width: 1px;
+      z-index: 0;
+    }
+    &:last-child:before {
+      content: none;
+    }
+  }
+  .hour {
+    color: $basic-red;
+    position: relative;
+    // margin-right: 1rem;
+    margin-left: -3rem;
+    background-color: #fff;
+    z-index: 2;
+  }
+}
+
+.accordion-content {
+  @include until($desktop) {
+      padding: $vertical-rhythm-unit-1 2rem;
+  }
+  @include from($desktop) {
+      padding-left: 3rem;
+  }
+}
+
+.information-program {
+  width: 100%;
+  @include from($desktop) {
+  width: 70%;
+}
+  td {
+      vertical-align: middle;
+  }
+  .table-title {
+    color: $basic-red;
+  }
+}

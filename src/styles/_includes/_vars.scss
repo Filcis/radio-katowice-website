@@ -41,7 +41,8 @@ $vertical-rhythm-unit-5: $body-line-height * $size-3;
 $vertical-rhythm-unit-6: $body-line-height * $size-2;
 $vertical-rhythm-unit-7: $body-line-height * $size-1;
 
-$tabs-link-color: $light;
+$tabs-link-color: $gray;
+$tabs-border-bottom-color: transparent;
 $tabs-toggle-link-active-background-color: $player-light-gray;
 $tabs-toggle-link-active-color: #E24545;
 $tabs-toggle-link-radius: 0;

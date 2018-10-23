@@ -61,6 +61,13 @@
 
     let Adspace = $('#top-add').outerHeight(true);
     let navbar = $('#main-nav');
+    let addFixedClass = () => {
+        if ($(window).scrollTop() >= Adspace) {
+            navbar = $('#main-nav').addClass('is-fixed-top');
+            $('body').addClass('has-navbar-fixed-top');
+        }
+    }
+    addFixedClass();
     $(window).scroll((event) => {
         let windowScrollTop = $(window).scrollTop();
         if (windowScrollTop >= Adspace) {

@@ -1,0 +1,65 @@
+.sidebar-content
+  .sidebar-box
+    h3.sidebar-headline Archiwum wydarzeń radiowych
+    .sidebar-box-body
+      ul.sidebar-box-list
+        li.sidebar-box-item
+          span #[small.sidebar-date 21-06-2018 ]
+          a.sidebar-link
+            span Spotkania Medyczne im. Krystyny Bochenek. Menopauza i andropauza
+            span.icon.is-small
+              i.fas.fa-arrow-right
+        li.sidebar-box-item 
+          span #[small.sidebar-date 15-04-2018 ]
+          a.sidebar-link
+            span Nagroda dla naszej redakcyjnej koleżanki Ewy Niewiadomskiej! 
+            span.icon.is-small
+              i.fas.fa-arrow-right
+        li.sidebar-box-item 
+          span #[small.sidebar-date 11-02-2018 ]
+          a.sidebar-link 
+            span Malarstwo Ewy Błaszak
+            span.icon.is-small
+              i.fas.fa-arrow-right
+        li.sidebar-box-item 
+          span #[small.sidebar-date 22-01-2018 ]
+          a.sidebar-link 
+            span Velostrada otwarta! Pierwsza w Polsce autostrada dla rowerow
+            span.icon.is-small
+              i.fas.fa-arrow-right
+      nav.pagination.is-small.is-centered
+        ul.pagination-list
+          li 
+            a.pagination-link.is-current 1
+          li 
+            a.pagination-link 2
+          li 
+            a.pagination-link 3
+          li 
+            a.pagination-link 4
+          li 
+            a.pagination-link 5
+  .sidebar-box
+  .advertisement-placeholder
+    p reklama
+    script.
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player;
+      
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('ytplayer', {
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady
+          }
+        });
+      }
+      
+      function onPlayerReady(e) {
+        e.target.setVolume(0);
+        e.target.playVideo();
+      }
+  include ./_newsletter.pug

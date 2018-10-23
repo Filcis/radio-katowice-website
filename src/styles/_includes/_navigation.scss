@@ -45,3 +45,10 @@
     }
   }
 }
+
+.pagination {
+  margin: $vertical-rhythm-unit-1;
+  .pagination-link {
+    border-radius: 0 0 0.4em 0;
+  }
+}
