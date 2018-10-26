@@ -1,8 +1,8 @@
-mixin shortcut(time, title, isvertical)
+mixin shortcut(time, title, icon, isvertical)
   a.player-shortcut(class= isvertical)
     .player-shortcut-icon-wrapper
-      span.icon.is-medium
-        i(class!=attributes.class)
+      span.icon.is-large
+        img(src=  baseurl + "assets/files/img/" + icon +".svg")
     .player-shortcut-info-wrapper
       span.player-shortcut-time= time
       span.player-shortcut-title= title
@@ -11,20 +11,20 @@ mixin shortcut(time, title, isvertical)
   .column.is-8
     .columns.is-mobile.has-small-gap-mobile
       .column.is-4
-        +shortcut('14:30','Pogoda', 'shortcut-is-vertical-mobile')(class='fas fa-cloud fa-2x')
+        +shortcut('14:30','Pogoda','pogoda', 'shortcut-is-vertical-mobile')(class='fas fa-cloud fa-2x')
       .column.is-4
-        +shortcut('15:20','Auto Radio', 'shortcut-is-vertical-mobile')(class='fas fa-car fa-2x')
+        +shortcut('15:20','Auto Radio','auto radio', 'shortcut-is-vertical-mobile')(class='fas fa-car fa-2x')
       .column.is-4
-        +shortcut('16:15','Informacje', 'shortcut-is-vertical-mobile')(class='fas fa-info fa-2x')
+        +shortcut('16:15','Informacje','informacje', 'shortcut-is-vertical-mobile')(class='fas fa-info fa-2x')
   .column.is-4
     .carousel.carousel-animated.carousel-animate-slide
       .carousel-container
         .carousel-item.is-active
-          +shortcut('20.01.2019','Nazwa audycji')(class='fas fa-music fa-2x')
+          +shortcut('20.01.2019','Nazwa audycji', 'audycje')(class='fas fa-music fa-2x')
         .carousel-item
-          +shortcut('18.01.2019','Bardzo bardzo bardzo długa nazwa audycji')(class='fas fa-music fa-2x')
+          +shortcut('18.01.2019','Bardzo bardzo bardzo długa nazwa audycji', 'audycje')(class='fas fa-music fa-2x')
         .carousel-item
-          +shortcut('16.01.2019','Nazwa audycji')(class='fas fa-music fa-2x')
+          +shortcut('16.01.2019','Nazwa audycji', 'audycje')(class='fas fa-music fa-2x')
       .carousel-navigation.is-overlay
         .carousel-nav-left
           i.fa.fa-chevron-left(aria-hidden="true")

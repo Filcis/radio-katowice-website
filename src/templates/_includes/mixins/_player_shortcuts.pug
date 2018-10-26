@@ -11,7 +11,7 @@ mixin shortcuts(data, isPopup)
                 p.player-hour.time-info.is-size-6 LIVE
             if i.icon
               span(class="icon is-medium")
-                i(class="fas fa-2x fa-" + i.icon)
+                img(src=  baseurl + "assets/files/img/" + i.icon +".svg")
           .player-shortcut-bottom
             .player-shortcut-title
               p= i.title
