@@ -152,16 +152,10 @@ blockquote {
 .song-title, .artist-name {
   display: inline-block;
   font-size: $size-4;
-  @include from($tablet) {
-  font-size: $size-4;
-  }
-  @include from($desktop) {
-    // max-width: 280px;
-    // vertical-align: top;
-    // overflow-x: hidden;
-    // white-space: nowrap;
-    // text-overflow: ellipsis;
-  }
+}
+
+.artist-name {
+  margin-right: 0.5rem; 
 }
 
 .song-title {
