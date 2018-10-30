@@ -7,6 +7,10 @@
   border-radius: 0 0 0.5rem 0;
 }
 
+.on-air .button {
+  font-size: $size-5 * 0.9;
+}
+
 .call-to-action {
   background-color: $basic-red;
   color: #fff;
@@ -272,4 +276,9 @@
 
 .musician-illustration-right img {
   left: -3rem;
+}
+.has-background-test {
+  // background-color: lighten(#374e61, 30);
+  background-image: url('/assets/files/img/green_cup.png');
+  // background-size: cover;
 }

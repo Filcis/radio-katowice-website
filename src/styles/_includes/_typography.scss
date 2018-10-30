@@ -149,13 +149,22 @@ blockquote {
   text-transform: uppercase;
 }
 
+.on-air .tab-title {
+  font-size: $size-4;
+  margin-bottom: $vertical-rhythm-unit-4;
+}
+
+.audition-info {
+  max-width: 250px;
+}
+
 .song-title, .artist-name {
   display: inline-block;
   font-size: $size-4;
 }
 
 .artist-name {
-  margin-right: 0.5rem; 
+  margin-right: 0.5rem;
 }
 
 .song-title {
