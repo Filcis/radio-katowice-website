@@ -4,6 +4,52 @@
 
 .button {
   @extend button;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.call-to-action {
+  background-color: $basic-red;
+  color: #fff;
+  border: none;
+  transition: 0.2s background-color ease-in-out;
+  i {
+    font-size: 0.5rem;
+    position: relative;
+    top: 0.1rem;
+  }
+  &:hover {
+    color: #fff;
+    background-color: darken($basic-red, 15);
+  }
+}
+.station-list {
+  padding-right: 0.5rem;
+  @include from($desktop){
+    padding-right: 0.5rem;
+}
+  li {
+    padding-bottom: $vertical-rhythm-unit-1/2;
+    margin-bottom: $vertical-rhythm-unit-1/2;
+    border-bottom: 1px solid $light-gray;
+    &:last-child {
+      border:none;
+    }
+  }
+}
+.station-link {
+  display: flex;
+  font-size: $size-6;
+  position: relative;
+  .play-icon-wrapper {
+    @include play-icon-wrapper($light-gray, 1.2rem);
+    position: absolute;
+    right: 0;
+  }
+  &:hover {
+    .play-icon-wrapper {
+      color: $basic-red;
+    }
+  }
 }
 
 .main-article-container figure {
@@ -205,4 +251,24 @@
   .table-title {
     color: $basic-red;
   }
+}
+
+.musician-illustration-left,
+.musician-illustration-right {
+  position: relative;
+  min-height: 20rem;
+  img {
+    position: absolute;
+    height: 28rem;
+    max-width: none;
+    top: -2rem;
+  }
+}
+
+.musician-illustration-left img {
+  right: -2rem;
+}
+
+.musician-illustration-right img {
+  left: -3rem;
 }

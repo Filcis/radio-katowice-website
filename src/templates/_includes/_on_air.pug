@@ -1,19 +1,53 @@
-.columns.is-gapless
-  .column.is-5-tablet.is-4-desktop
-    .player-cover.cover(style= "background-image: url('assets/files/img/Ferdek.jpg')")
-  .column.is-7-tablet.is-8-desktop
-    .player-main
-      .columns
-        .column.is-8
-          .player-main-center
-            h3.on-air-title.is-red.is-size-6 Teraz na antenie
-            .artist.is-clearfix
-              h2.player-artist-name Andrzej Grabowski
-              h2.player-song-title Jestem jak motyl
-            a#player-main-call-to-action(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] 
-              span.button-span-text posłuchaj na żywo
-        .column.is-hidden-mobile
-          figure.illustration-wrapper
-            img(src="assets/files/img/grajki.svg")
-    .player-stations-menu
-      include player_includes/_player_stations.pug
+.on-air.columns
+  .column.is-7
+    h1.tab-title
+      span.icon
+        img(src=baseurl + "assets/files/img/soundwave.svg")
+      span Teraz na antenie
+    // obrazek i tytuł utworu
+    .columns.is-vcentered.current-audition.is-mobile
+      .column.is-3
+        .audition-cover
+          figure.image
+            img(src= baseurl + 'assets/files/img/Hey.jpg')
+      .column
+        .audition-info
+          h3.audition-title Lato z Radiem Katowice
+          h3
+            span.artist-name Andrzej Grabowski
+            span.song-title Jest Dobrze
+    button.button.call-to-action 
+      span.icon.is-small #[i.fas.fa-play] 
+      span Słuchaj Radia
+    button.button Sprawdź program
+  .column.is-5
+    h1.tab-title Stacje
+    ul.station-list
+      li
+        a.station-link(href='#') 
+          span.icon
+            img(src=baseurl + "assets/files/img/radio-2.svg")
+          span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
+          .play-icon-wrapper
+            .play-icon
+      li
+        a.station-link(href='#') 
+          span.icon
+            img(src=baseurl + "assets/files/img/radio-3.svg")
+          span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
+          .play-icon-wrapper
+            .play-icon
+      li
+        a.station-link(href='#') 
+          span.icon
+            img(src=baseurl + "assets/files/img/oldies.svg")
+          span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
+          .play-icon-wrapper
+            .play-icon
+      li
+        a.station-link(href='#') 
+          span.icon
+            img(src=baseurl + "assets/files/img/top50.svg")
+          span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
+          .play-icon-wrapper
+            .play-icon

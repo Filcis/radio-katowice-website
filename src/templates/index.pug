@@ -5,12 +5,18 @@ block vars
     let bodyClass ="home"
     let baseurl= "";
 block content
+  section.hero.has-background-light
+    .hero-body
+        .musician-illustration-left.is-hidden-mobile
+            img(src= baseurl + "assets/files/img/grajek_chudy.svg")
+        .on-air-wrapper
+          include _includes/_on_air.pug
+        .musician-illustration-right.is-hidden-mobile
+            img(src= baseurl + "assets/files/img/grajek_gruby.svg")
   section.main-content
     .container
       .columns.is-desktop.is-gapless
         .column.is-10-desktop.is-9-widescreen
-          section.on-air
-            include _includes/_on_air.pug
           section.player-shortcuts
             include _includes/_shortcuts.pug
           section.recent-news

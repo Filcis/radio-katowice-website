@@ -10,7 +10,7 @@
   width: 0;
   height: 0;
   border-width: $size/5 0px $size/5 $size/4;
-  transform: translate(-25%, -50%); //pierwsza wartośc, to korekta optyczna, poziom
+  transform: translate(-25%, -50%); //pierwsza wartośc to korekta optyczna, poziom
 }
 
 @mixin play-icon-wrapper($color: black, $size: 2em) {

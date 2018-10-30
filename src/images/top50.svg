@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27 11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8b8b8b;
+        font-size: 9px;
+        font-family: IBMPlexSans-Bold, IBM Plex Sans;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g id="top50" transform="translate(-720.109 -292.019)">
+    <text id="top_50" data-name="top 50" class="cls-1" transform="translate(720.109 301.019)"><tspan x="0" y="0">top 50</tspan></text>
+  </g>
+</svg>

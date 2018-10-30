@@ -141,30 +141,48 @@ blockquote {
   text-align: center;
 }
 
-.on-air-title {
+.tab-title {
   @include from($tablet) {
     margin-bottom: $vertical-rhythm-unit-1;
   }
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
-.player-artist-name,
-.player-song-title {
+.song-title, .artist-name {
   display: inline-block;
   font-size: $size-4;
   @include from($tablet) {
-  font-size: $size-3;
+  font-size: $size-4;
   }
   @include from($desktop) {
-    max-width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    // max-width: 280px;
+    // vertical-align: top;
+    // overflow-x: hidden;
+    // white-space: nowrap;
+    // text-overflow: ellipsis;
   }
 }
 
-.player-song-title {
+.song-title {
   font-weight: bold;
-  text-transform: uppercase;
+}
+
+.audition-title {
+  font-style: italic;
+  font-size: $size-6;
+}
+
+.tab-title .icon {
+  margin-right: 1rem;
+}
+
+.stationlink-artist-name {
+  margin-left: 2rem;
+}
+
+.stationlink-title {
+  font-weight: bold;
 }
 
 .sidebar-headline {
