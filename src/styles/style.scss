@@ -44,7 +44,7 @@ body.home {
   }
 }
 .hero-body {
-  min-height: 30rem;
+  min-height: 28rem;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -52,6 +52,12 @@ body.home {
 .on-air-wrapper {
   flex-grow: 2;
   max-width: 800px;
+  @include from($widescreen) {
+    max-width: 900px;
+  }
+  @include from($fullhd) {
+    max-width: 960px;
+  }
 }
 .on-air {
   margin-bottom: $vertical-rhythm-unit-4;
