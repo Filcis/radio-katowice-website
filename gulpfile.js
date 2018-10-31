@@ -52,7 +52,7 @@ var routes = {
         images: baseDirs.src+'images/*',
         imgmin: baseDirs.assets+'files/img/',
         cssFiles: baseDirs.assets+'css/*.css',
-        htmlFiles: baseDirs.dist+'*.html',
+        htmlFiles: baseDirs.dist+'**/*.html',
         styleCss: baseDirs.assets+'css/style.css'
     },
 
@@ -188,7 +188,7 @@ gulp.task('uncss', function() {
     return gulp.src(routes.files.cssFiles)
         .pipe(uncss({
             html:[routes.files.htmlFiles],
-            ignore:['*:*',/carousel.is-4/,/.carousel.is-1/,/.carousel.is-2/,/.is-fixed-top/,/.has-navbar-fixed-top/]
+            ignore:['*:*',/carousel.is-4/,/.carousel.is-1/,/.carousel.is-2/,/.is-fixed-top/,/.has-navbar-fixed-top/,/.responsive-yt-embed/,/social-media-icons.*/]
         }))
         .pipe(plumber({
             errorHandler: notify.onError({
