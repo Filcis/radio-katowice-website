@@ -281,3 +281,27 @@
   background-image: url('../files/img/green_cup.png');
   // background-size: cover;
 }
+
+.responsive-yt-embed {
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  & iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+}
+
+#sidebar-fixedIframe-wrapper.fixed-player {
+  @include from($desktop) {
+    position: fixed;
+    z-index: 999;
+    width: 240px;
+    bottom: 0;
+    left: 0;
+  }
+}

@@ -179,7 +179,7 @@ gulp.task('serve', function() {
 
     gulp.watch([routes.styles.scss, routes.styles._scss], ['styles']);
     gulp.watch([routes.templates.base,routes.templates.articles, routes.templates._includes], ['templates']);
-    gulp.watch(routes.scripts.js, ['scripts', 'beautify']);
+    gulp.watch(routes.scripts.js, ['scripts']);
 });
 
 /* Optimize your project */

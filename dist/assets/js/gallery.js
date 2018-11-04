@@ -1,2 +1,0 @@
-"use strict";$(document).ready(function(){$("#lightSlider").lightSlider()});
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImdhbGxlcnkuanMiXSwibmFtZXMiOlsiJCIsImRvY3VtZW50IiwicmVhZHkiLCJsaWdodFNsaWRlciJdLCJtYXBwaW5ncyI6IllBQUFBLEdBQUVDLFVBQVVDLE1BQU0sV0FDZEYsRUFBRSxnQkFBZ0JHIiwiZmlsZSI6ImdhbGxlcnkuanMiLCJzb3VyY2VzQ29udGVudCI6WyIkKGRvY3VtZW50KS5yZWFkeShmdW5jdGlvbigpIHtcclxuICAgICQoXCIjbGlnaHRTbGlkZXJcIikubGlnaHRTbGlkZXIoKTtcclxufSk7Il19

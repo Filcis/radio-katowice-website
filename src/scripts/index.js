@@ -1,10 +1,10 @@
 'use strict';
+/*jshint esversion: 6 */
 
 // TODO: Zorganizowac kod jako oddzielne moduły
 //==================================================
 
-
-(function($) {
+(function($, window, console) {
 
     //==================================================
     // Player popup
@@ -29,7 +29,7 @@
         } else {
             $('.responsive-carousel').removeClass('is-4');
         }
-    }
+    };
 
     mediaSize();
     /* Attach the function to the resize event listener */
@@ -59,18 +59,22 @@
     // Sticky menu
     //==================================================
 
-    let Adspace = $('#top-add').outerHeight(true);
+    let adspace = $('#top-add').outerHeight(true);
     let navbar = $('#main-nav');
+
     let addFixedClass = () => {
-        if ($(window).scrollTop() >= Adspace) {
+        if ($(window).scrollTop() >= adspace) {
             navbar = $('#main-nav').addClass('is-fixed-top');
             $('body').addClass('has-navbar-fixed-top');
         }
-    }
+    };
+
     addFixedClass();
+
     $(window).scroll((event) => {
         let windowScrollTop = $(window).scrollTop();
-        if (windowScrollTop >= Adspace) {
+
+        if (windowScrollTop >= adspace) {
             navbar = $('#main-nav').addClass('is-fixed-top');
             $('body').addClass('has-navbar-fixed-top');
         } else {
@@ -78,7 +82,25 @@
             $('body').removeClass('has-navbar-fixed-top');
         }
 
-    })
+    });
+
+    //TODO: merge scroll functions
+
+    //==================================================
+    // Sticky Video
+    //==================================================
+
+    let youtubeLive = $('#sidebar-fixedIframe-wrapper');
+    let youtubeLiveScrollTop = $('#sidebar-fixedIframe-wrapper').offset();
+
+    $(window).scroll(() => {
+        let windowScrollTop = $(window).scrollTop();
+        if (windowScrollTop >= youtubeLiveScrollTop.top) {
+            youtubeLive.addClass('fixed-player');
+        } else {
+            youtubeLive.removeClass('fixed-player');
+        }
+    });
 
     // =================================================
     // To the top
@@ -107,8 +129,8 @@
             }, duration);
             return false;
         });
-    });
+    })();
 
     var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 
-})(jQuery);
+})(jQuery, window, console);
