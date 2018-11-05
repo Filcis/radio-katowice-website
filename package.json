@@ -21,7 +21,6 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "browser-sync": "^2.16.1",
     "bulma": "^0.7.1",
     "bulma-carousel": "^3.0.0",
     "bulma-slider": "^2.0.0",
@@ -42,10 +41,29 @@
     "gulp-sass": "^2.3.2",
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
-    "gulp-uncss": "^1.0.6"
+    "gulp-uncss": "^1.0.6",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.16.1",
+    "browserify": "^16.2.3",
+    "gulplog": "^1.0.0",
     "mocha": "*"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
   }
 }

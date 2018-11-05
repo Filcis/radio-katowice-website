@@ -4,133 +4,32 @@
 // TODO: Zorganizowac kod jako oddzielne moduły
 //==================================================
 
-(function($, window, console) {
+import { attachScrollEvents } from './scroll_events.js';
+import { attachClickEvents } from './click_events.js';
+import { responsiveResizing } from './media_size.js';
+import * as rkUtilities from './utils.js'
 
+attachScrollEvents();
+attachClickEvents();
+responsiveResizing();
+rkUtilities.dropdownHandler();
+rkUtilities.burgerHandler();
+rkUtilities.attachCarousels();
+
+(function($, window, console) {
     //==================================================
     // Player popup
     //==================================================
 
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        $('#player-main-call-to-action').click(function(e) {
-            e.preventDefault();
-            window.open(this.href, "RK_Player", "width=360,height=640");
-            console.log('player popup');
-            return false;
-        });
-    }
-    const mediaSize = () => {
-        if (window.matchMedia('(min-width: 680px)').matches) {
-            $('.responsive-carousel').addClass('is-2');
-        } else {
-            $('.responsive-carousel').removeClass('is-4');
-        }
-        if (window.matchMedia('(min-width: 968px)').matches) {
-            $('.responsive-carousel').addClass('is-4');
-        } else {
-            $('.responsive-carousel').removeClass('is-4');
-        }
-    };
+    // if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    //     $('#player-main-call-to-action').click(function(e) {
+    //         e.preventDefault();
+    //         window.open(this.href, "RK_Player", "width=360,height=640");
+    //         console.log('player popup');
+    //         return false;
+    //     });
+    // }
 
-    mediaSize();
-    /* Attach the function to the resize event listener */
-    window.addEventListener('resize', mediaSize, false);
-    //==================================================
-    // Dropdown
-    //==================================================
 
-    const dropdown = $('#stream-dropdown');
-    dropdown.click((e) => {
-        $(e.currentTarget).toggleClass('is-active');
-        $(e.currentTarget.dataset.target).slideToggle("slow");
-    });
-
-    //==================================================
-    // Burger
-    //==================================================
-
-    const navbarBurgers = $('.navbar-burger');
-    navbarBurgers.click((e) => {
-        $(e.currentTarget).toggleClass('is-active');
-        console.log(e.currentTarget.dataset);
-        $(e.currentTarget.dataset.target).toggleClass('is-active');
-    });
-
-    //==================================================
-    // Sticky menu
-    //==================================================
-
-    let adspace = $('#top-add').outerHeight(true);
-    let navbar = $('#main-nav');
-
-    let addFixedClass = () => {
-        if ($(window).scrollTop() >= adspace) {
-            navbar = $('#main-nav').addClass('is-fixed-top');
-            $('body').addClass('has-navbar-fixed-top');
-        }
-    };
-
-    addFixedClass();
-
-    $(window).scroll((event) => {
-        let windowScrollTop = $(window).scrollTop();
-
-        if (windowScrollTop >= adspace) {
-            navbar = $('#main-nav').addClass('is-fixed-top');
-            $('body').addClass('has-navbar-fixed-top');
-        } else {
-            navbar = $('#main-nav').removeClass('is-fixed-top');
-            $('body').removeClass('has-navbar-fixed-top');
-        }
-
-    });
-
-    //TODO: merge scroll functions
-
-    //==================================================
-    // Sticky Video
-    //==================================================
-
-    let youtubeLive = $('#sidebar-fixedIframe-wrapper');
-    let youtubeLiveScrollTop = $('#sidebar-fixedIframe-wrapper').offset();
-
-    $(window).scroll(() => {
-        let windowScrollTop = $(window).scrollTop();
-        if (windowScrollTop >= youtubeLiveScrollTop.top) {
-            youtubeLive.addClass('fixed-player');
-        } else {
-            youtubeLive.removeClass('fixed-player');
-        }
-    });
-
-    // =================================================
-    // To the top
-    // =================================================
-    $(function() {
-        // Amount of scrolling before button is shown/hidden.
-        var offset = 1000;
-
-        // Fade duration
-        var duration = 500;
-
-        // Toggle view of button when scrolling.
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > offset) {
-                $('#c-go-top').fadeIn(duration);
-            } else {
-                $('#c-go-top').fadeOut(duration);
-            }
-        });
-
-        // Scroll to top when button is clicked.
-        $('#c-go-top').click(function(event) {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: 0
-            }, duration);
-            return false;
-        });
-    })();
-
-    var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 
 })(jQuery, window, console);
