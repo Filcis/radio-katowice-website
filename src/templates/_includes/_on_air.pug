@@ -1,53 +1,65 @@
-.on-air.columns
-  .column.is-7
-    h1.tab-title
-      span.icon
-        img(src=baseurl + "assets/files/img/soundwave.svg")
-      span Teraz na antenie
-    // obrazek i tytuł utworu
-    .columns.is-vcentered.current-audition.is-mobile
-      .column.is-3
-        .audition-cover
-          figure.image
-            img(src= baseurl + 'assets/files/img/Hey.jpg')
-      .column
-        .audition-info
-          h3.audition-title Lato z Radiem Katowice
-          h3
-            span.artist-name Andrzej Grabowski
-            span.song-title Jest Dobrze
-    a.button.call-to-action 
-      span.icon.is-small #[i.fas.fa-play] 
-      span Słuchaj Radia
-    a(href=baseurl + "program.html").button Sprawdź program
-  .column.is-5
-    h1.tab-title Stacje
-    ul.station-list
-      li
-        a.station-link(href='#') 
-          span.icon
-            img(src=baseurl + "assets/files/img/radio-2.svg")
-          span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
-          .play-icon-wrapper
-            .play-icon
-      li
-        a.station-link(href='#') 
-          span.icon
-            img(src=baseurl + "assets/files/img/radio-3.svg")
-          span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
-          .play-icon-wrapper
-            .play-icon
-      li
-        a.station-link(href='#') 
-          span.icon
-            img(src=baseurl + "assets/files/img/oldies.svg")
-          span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
-          .play-icon-wrapper
-            .play-icon
-      li
-        a.station-link(href='#') 
-          span.icon
-            img(src=baseurl + "assets/files/img/top50.svg")
-          span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
-          .play-icon-wrapper
-            .play-icon
+.tabs.is-hidden-tablet.is-boxed.is-fullwidth.is-toggle
+  ul
+    li.tab-title.is-active(data-tab-content = "on-air-tab") 
+      a
+        span.icon
+          img(src=baseurl + "assets/files/img/soundwave.svg")
+        span Teraz na antenie
+    li.tab-title(data-tab-content = "stations-tab") 
+      a Stacje
+.on-air
+  .columns
+    .column.is-7
+      h1.on-air-title.is-hidden-mobile
+        span.icon
+          img(src=baseurl + "assets/files/img/soundwave.svg")
+        span Teraz na antenie
+      // obrazek i tytuł utworu
+      .content-tab#on-air-tab
+        .columns.is-vcentered.current-audition.is-mobile
+          .column.is-3
+            .audition-cover
+              figure.image
+                img(src= baseurl + 'assets/files/img/Hey.jpg')
+          .column
+            .audition-info
+              h3.audition-title Lato z Radiem Katowice
+              h3
+                span.artist-name Andrzej Grabowski
+                span.song-title Jest Dobrze
+        a.button.call-to-action 
+          span.icon.is-small #[i.fas.fa-play] 
+          span Słuchaj Radia
+        a(href=baseurl + "program.html").button Sprawdź program
+    .column.is-5
+      h1.on-air-title.is-hidden-mobile Stacje
+      .content-tab#stations-tab
+        ul.station-list
+          li
+            a.station-link(href='#') 
+              span.icon
+                img(src=baseurl + "assets/files/img/radio-2.svg")
+              span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
+              .play-icon-wrapper
+                .play-icon
+          li
+            a.station-link(href='#') 
+              span.icon
+                img(src=baseurl + "assets/files/img/radio-3.svg")
+              span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
+              .play-icon-wrapper
+                .play-icon
+          li
+            a.station-link(href='#') 
+              span.icon
+                img(src=baseurl + "assets/files/img/oldies.svg")
+              span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
+              .play-icon-wrapper
+                .play-icon
+          li
+            a.station-link(href='#') 
+              span.icon
+                img(src=baseurl + "assets/files/img/top50.svg")
+              span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
+              .play-icon-wrapper
+                .play-icon

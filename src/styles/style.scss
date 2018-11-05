@@ -44,14 +44,21 @@ body.home {
   }
 }
 .hero-body {
-  min-height: 28rem;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+    @include until($tablet) {
+      padding: 0.75rem;
+    }
+    @include from ($tablet) {
+    min-height: 28rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
 }
 .on-air-wrapper {
   flex-grow: 2;
-  max-width: 800px;
+  @include from($tablet) {
+    max-width: 800px;
+  }
   @include from($widescreen) {
     max-width: 900px;
   }
@@ -59,15 +66,31 @@ body.home {
     max-width: 960px;
   }
 }
+
 .on-air {
+  position: relative;
   margin-bottom: $vertical-rhythm-unit-4;
   background-color: #fff;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1rem;
   box-shadow:  3px 3px 7px -1px rgba(163,163,163,1);
+  @include from($tablet) {
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+  }
   @include from($desktop) {
     padding: 2.5rem 2.5rem;
     border-radius: 0 0 1.2rem 0;
   }
+}
+
+.on-air-wrapper .tabs {
+margin: 0;
+li {
+  background-color: $light-gray;
+}
+a{
+  height: 2.5rem;
+}
 }
 
 .audition-info {

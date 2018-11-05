@@ -141,15 +141,15 @@ blockquote {
   text-align: center;
 }
 
-.tab-title {
-  @include from($tablet) {
+.on-air-title, .tab-title {
+  @include from($desktop) {
     margin-bottom: $vertical-rhythm-unit-1;
   }
   font-weight: lighter;
   text-transform: uppercase;
 }
 
-.on-air .tab-title {
+.on-air .on-air-title {
   font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-4;
 }
@@ -176,7 +176,7 @@ blockquote {
   font-size: $size-6;
 }
 
-.tab-title .icon {
+.on-air-title .icon {
   margin-right: 1rem;
 }
 
