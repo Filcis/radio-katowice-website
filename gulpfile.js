@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     buffer = require('vinyl-buffer'),
     browserify = require('browserify'),
     babelify = require('babelify'),
-    log = require('gulplog'),
     sass = require('gulp-sass'),
     pug = require('gulp-pug'),
     jscs = require('gulp-jscs'),
@@ -114,30 +113,7 @@ gulp.task('styles', function() {
         }));
 });
 
-/* Scripts (js) ES6 => ES5, minify and concat into a single file.*/
 
-// gulp.task('scripts', function() {
-//     return gulp.src(routes.scripts.js)
-//         .pipe(plumber({
-//             errorHandler: notify.onError({
-//                 title: "Error: Babel and Concat failed.",
-//                 message:"<%= error.message %>"
-//             })
-//         }))
-//         .pipe(sourcemaps.init())
-//             // .pipe(concat('script.js'))
-//             .pipe(babel({
-//               presets: ['env']
-//             }))
-//             .pipe(uglify())
-//         .pipe(sourcemaps.write())
-//         .pipe(gulp.dest(routes.scripts.jsmin))
-//         .pipe(browserSync.stream())
-//         .pipe(notify({
-//             title: 'JavaScript Minified and Concatenated!',
-//             message: 'your js files has been minified and concatenated.'
-//         }));
-// });
 
 gulp.task('scripts', function() {
     var b = browserify({
@@ -146,20 +122,24 @@ gulp.task('scripts', function() {
     });
     return b.transform("babelify", {presets: ["@babel/preset-env"]})
     .bundle()
+    .pipe(plumber({
+        errorHandler: notify.onError({
+            title: "Error: Compiling SCSS.",
+            message:"<%= error.message %>"
+        })
+    }))
     .pipe(source('index.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
         .pipe(uglify())
-        .pipe(plumber({
-                   errorHandler: notify.onError({
-                       title: "Error: Scripts failed.",
-                       message:"<%= error.message %>"
-                   })
-               }))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/assets/js/'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
+    .pipe(notify({
+        title: 'JavaScript Minified and Concatenated!',
+        message: 'your js files has been minified and concatenated.'
+    }));
 });
 
 /* Lint, lint the JavaScript files */

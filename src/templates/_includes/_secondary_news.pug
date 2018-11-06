@@ -1,0 +1,20 @@
+- 
+  var teasers = [
+    {
+      category: "sport",
+      title: "Odlotowa zabawa w Radiu Katowice",
+      description:"Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł"
+    },
+  ]
+section.article-teasers
+  h1.section-title-secondary Informacje
+  ul.columns.is-multiline
+    each val in teasers
+      li.column.is-6
+        .article-teaser
+          figure.image.is-64x64
+            img
+          .description
+            h2.teaser-category= val.category
+            a.teaser-title= val.title
+            span= val.description

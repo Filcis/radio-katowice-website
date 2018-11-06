@@ -9,6 +9,7 @@
   <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
   <link href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" rel="stylesheet" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <script type="text/javascript" src="../assets/js/jQuery.min.js"></script>
+  <script type="text/javascript" src="../assets/js/lodash.min.js"></script>
   <script type="text/javascript" src="../assets/js/bulma-carousel.min.js"></script>
 </head>
 <body>
@@ -217,8 +218,10 @@
               </div>
               <div class="sidebar-box">
                 <h3 class="sidebar-headline">Live TV</h3>
-                <div class="responsive-yt-embed">
-                  <div id="ytplayer"></div>
+                <div id="sidebar-fixedIframe-wrapper">
+                  <div class="responsive-yt-embed">
+                    <div id="ytplayer"></div>
+                  </div>
                 </div>
               </div>
               <div class="sidebar-box"></div>
