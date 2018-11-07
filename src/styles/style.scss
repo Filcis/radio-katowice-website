@@ -112,7 +112,7 @@ aside.sidebar {
   @include until($desktop) {
     padding: 0 2rem $vertical-rhythm-unit-5 2rem;
   }
-  margin-top: 1.4rem;
+  margin-top: 0.5rem;
   @include from($desktop) {
   margin-left: 1rem;
   }
@@ -245,6 +245,12 @@ footer.article-footer {
   margin-bottom: $vertical-rhythm-unit-5;
   .columns{
     align-items: center;
+  }
+}
+
+.article-teaser {
+  figure img {
+    border-radius: 0 0 0.75rem 0;
   }
 }
 
@@ -445,6 +451,11 @@ footer.article-footer {
   @include from($desktop){
     background-color: transparent;
     padding-bottom: $vertical-rhythm-unit-4;
+    h2 {
+      margin-top: 0.5rem;
+      font-size: $size-4;
+      margin-bottom: $vertical-rhythm-unit-1
+    }
   }
 }
 

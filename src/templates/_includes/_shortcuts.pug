@@ -9,6 +9,7 @@ mixin shortcut(time, title, icon, isvertical)
       span.player-shortcut-call-to-action słuchaj
 .columns
   .column.is-8
+    h2 Serwisy
     .columns.is-mobile.has-small-gap-mobile
       .column.is-4
         +shortcut('14:30','Pogoda','ico-pogoda', 'shortcut-is-vertical-mobile')(class='fas fa-cloud fa-2x')
@@ -17,6 +18,7 @@ mixin shortcut(time, title, icon, isvertical)
       .column.is-4
         +shortcut('16:15','Informacje','ico-informacje', 'shortcut-is-vertical-mobile')(class='fas fa-info fa-2x')
   .column.is-4
+    h2 Podcasty
     .carousel.carousel-animated.carousel-animate-slide
       .carousel-container
         .carousel-item.is-active

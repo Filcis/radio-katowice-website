@@ -71,6 +71,10 @@
   margin-bottom: $vertical-rhythm-unit-1;
 }
 
+.article-teaser .article-tags {
+  margin-bottom: $vertical-rhythm-unit-1/2;
+}
+
 .article-tag {
   border: 1px solid $light-gray;
   padding: 0.15rem 0.4rem;
@@ -278,7 +282,7 @@
   left: -3rem;
 }
 .has-background-test {
-  background-image: url('../files/img/test_bcg3.jpg');
+  background-color: $light-gray;
   // background-position: center;
   background-size: cover;
 }

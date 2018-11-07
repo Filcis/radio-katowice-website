@@ -1,20 +1,42 @@
 - 
   var teasers = [
-    {
-      category: "sport",
-      title: "Odlotowa zabawa w Radiu Katowice",
-      description:"Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł"
+    { 
+      tags: ["biznes i gospodarka"],
+      title: "Konferencja gospodarcza z okazji 100-lecia odzyskania niepodległości",
+    },
+    { 
+      tags: ["biznes i gospodarka"],
+      title: "Powstanie park technologiczny",
+    },
+    { 
+      tags: ["kultura"],
+      title: "Sto tytułów na 100-lecie niepodległości",
+    },
+    { 
+      tags: ["kultura"],
+      title: "Wodecki. Sny podróżnika. Rozmowa z Michałem Wilczyńskim",
+    },
+    { 
+      tags: ["sport"],
+      title: "Produkcja śniegu na skoczni. Coraz większe zapasy.",
+    },
+    { 
+      tags: ["sport"],
+      title: "Bezpieczny stadion. Wyróżnienie dla Ustronia.",
     },
   ]
+  
 section.article-teasers
   h1.section-title-secondary Informacje
   ul.columns.is-multiline
     each val in teasers
       li.column.is-6
-        .article-teaser
-          figure.image.is-64x64
-            img
-          .description
-            h2.teaser-category= val.category
+        .article-teaser.columns.is-mobile
+          .teaser-image-wrapper.column.is-5
+            figure.image.is-16by9
+              img(src="https://via.placeholder.com/320x180" alt="placeholder")
+          .description.column
+            .article-tags
+              each tag in val.tags
+                 span.article-tag.is-medium= tag
             a.teaser-title= val.title
-            span= val.description
