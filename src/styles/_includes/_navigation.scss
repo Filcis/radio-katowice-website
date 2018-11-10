@@ -10,6 +10,40 @@
   max-width: 100%;
 }
 
+#main-menu {
+  .navbar-end {
+        order: 2;
+  }
+  @include until($desktop) {
+    padding: 0 1rem;
+    background-color: $player-light-gray;
+  }
+}
+
+#main-menu .level-left, #main-menu .level-right {
+  @include until($desktop) {
+    margin-top: $vertical-rhythm-unit-1;
+  }
+}
+
+.has-dropdown > .navbar-link {
+  @include until($desktop) {
+    font-weight: bold;
+    &::after {
+      display: block;
+    }
+  }
+}
+
+.navbar-dropdown {
+  display: none;
+  &.open {
+    @include until($desktop) {
+      display: block;
+    }
+  }
+}
+
 .navbar-dropdown {
   margin-top: -0.3rem;
   border-top: none;
@@ -26,7 +60,13 @@
 }
 
 .navbar-menu .navbar-item {
-  font-size: $size-6;
+  @include until($desktop) {
+  padding-top: $vertical-rhythm-unit-1;
+  font-size: $size-5;
+}
+  @include from($desktop) {
+    font-size: $size-6;
+  }
   &:last-child{
   }
 }
@@ -45,10 +85,60 @@
     }
   }
 }
+//search bar
+#main-nav {
+  .input {
+    border-radius: 1rem;
+    font-size: $size-6;
+
+  }
+  @include until($desktop) {
+    .input {
+      border-radius: 0;
+      font-size: $size-4;
+    }
+  span {
+      font-size: $size-4;
+    }
+  }
+}
 
 .pagination {
   margin: $vertical-rhythm-unit-1;
   .pagination-link {
     border-radius: 0 0 0.4em 0;
   }
+}
+
+.c-content {
+  padding: 20px;
+}
+
+.c-go-top {
+  background: none repeat scroll 0 0 padding-box $basic-red;
+  bottom: 20px;
+  border-radius: 0 0 12px 0;
+  color: #eee;
+  font-size: 12px;
+  opacity: 0.8;
+  padding: 10px;
+  position: fixed;
+  text-decoration: none;
+  z-index: 999;
+  right: 90px;
+  &::before {
+    content: 'w górę';
+  }
+  @include from($desktop) {
+    display: none;
+  }
+}
+
+.c-go-top:hover,
+.c-go-top:focus,
+.c-go-top:active,
+.c-go-top:visited {
+  color: #fff;
+  outline: 0;
+  text-decoration: none;
 }

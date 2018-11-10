@@ -20,7 +20,7 @@ body.home {
 
 .container {
   @include until($tablet){
-      max-width: 560px;
+      // max-width: 560px;
   }
 @include desktop-only {
         max-width: 1060px;

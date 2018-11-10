@@ -18,11 +18,11 @@ header
                   submenu: [
                     {title:'Program', href:  baseurl +'program.html'},
                     {title:'Audycje', href:  baseurl +'audycje.html'},
-                    {title:'Informacje', href:  baseurl +'informacje.html'},
-                    {title:'Pogoda', href:  baseurl +'pogoda.html'},
-                    {title:'Auto radio', href:  baseurl +'autoradio.html'},
-                    {title:'Wywiady', href:  baseurl +'wywiady.html'},
-                    {title:'Porady', href:  baseurl +'porady.html'}
+                    {title:'Informacje', href:  baseurl +'informacje.html',description: 'tutaj opis odnośnika'},
+                    {title:'Pogoda', href:  baseurl +'pogoda.html',description: 'tutaj opis odnośnika'},
+                    {title:'Auto radio', href:  baseurl +'autoradio.html',description: 'tutaj opis odnośnika'},
+                    {title:'Wywiady', href:  baseurl +'wywiady.html',description: 'tutaj opis odnośnika'},
+                    {title:'Porady', href:  baseurl +'porady.html',description: 'tutaj opis odnośnika'}
                   ]
                   
                 }, 
@@ -79,10 +79,11 @@ header
             .navbar-item.has-dropdown.is-hoverable
               a.navbar-link= menu.title
               .navbar-dropdown
-                each item in menu.submenu
-                  .navbar-item 
-                    a(href=item.href)= item.title
-                    hr.dropdown-divider
+                each item, index in menu.submenu
+                    .navbar-item 
+                      a(href=item.href)= item.title
+                    if index != (menu.submenu.length -1)
+                      hr.dropdown-divider
           .level
             .level-left
               .navbar-item.field
@@ -95,9 +96,9 @@ header
                   .social-icon
                     img(src= baseurl +'assets/files/img/facebook.svg')
                   .social-icon
-                    img.social-icon(src= baseurl +'assets/files/img/youtube.svg')
+                    img(src= baseurl +'assets/files/img/youtube.svg')
                   .social-icon
-                    img.social-icon(src= baseurl +'assets/files/img/instagram.svg')
+                    img(src= baseurl +'assets/files/img/instagram.svg')
                   .social-icon
-                    img.social-icon(src= baseurl +'assets/files/img/twitter.svg')
+                    img(src= baseurl +'assets/files/img/twitter.svg')
     .navbar-after-divider

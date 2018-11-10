@@ -131,27 +131,38 @@
 }
 }
 
-#main-nav {
-  .input {
-    border-radius: 1rem;
-    font-size: $size-6;
-  }
-}
-
 .on-air-top-bar {
   background-color: $player-light-gray;
   padding: $vertical-rhythm-unit-1/2 1.4rem;
 }
 
+.social-media-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
 .social-icon {
-  width: 0.85rem;
-  height: 0.85rem;
   display: inline-flex;
   margin-right: 0.5rem;
-  &:last-child {
-    margin-right: none;
+  @include until($desktop) {
+    border-radius: 1rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
+    margin-bottom: $vertical-rhythm-unit-3;
+    img {
+      filter: invert(.5);
+    }
+  }
+  @include from($desktop) {
+    width: 0.85rem;
+    height: 0.85rem;
+    &:last-child {
+      margin-right: none;
+    }
   }
   img {
+    padding: 0;
     width: 100%;
     height: 100%;
   }
@@ -176,39 +187,6 @@
     top: 0;
     left: 0;
   }
-}
-
-.c-content {
-  padding: 20px;
-}
-
-.c-go-top {
-  background: none repeat scroll 0 0 padding-box $basic-red;
-  bottom: 20px;
-  border-radius: 0 0 12px 0;
-  color: #eee;
-  font-size: 12px;
-  opacity: 0.8;
-  padding: 10px;
-  position: fixed;
-  text-decoration: none;
-  z-index: 999;
-  right: 90px;
-  &::before {
-    content: 'w górę';
-  }
-  @include from($desktop) {
-    display: none;
-  }
-}
-
-.c-go-top:hover,
-.c-go-top:focus,
-.c-go-top:active,
-.c-go-top:visited {
-  color: #fff;
-  outline: 0;
-  text-decoration: none;
 }
 
 .hourly-list {
