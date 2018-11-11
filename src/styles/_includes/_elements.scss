@@ -244,6 +244,7 @@
 .musician-illustration-right {
   position: relative;
   min-height: 20rem;
+  z-index: 5;
   img {
     position: absolute;
     height: 28rem;
@@ -261,9 +262,9 @@
 }
 .has-background-test {
   background-color: $light-gray;
-  background-image: url('../files/img/test_bcg3.jpg');
-  background-position: center;
-  background-size: cover;
+  background-image: url('../files/img/ep_naturalwhite.png');
+  // background-position: center;
+  // background-size: cover;
 }
 
 .responsive-yt-embed {

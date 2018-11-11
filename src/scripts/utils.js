@@ -44,18 +44,3 @@ export function tabs() {
       $('#' + tab ).removeClass('is-hidden-mobile');
   });
 }
-
-
-
-    //==================================================
-    // Player popup
-    //==================================================
-
-    // if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    //     $('#player-main-call-to-action').click(function(e) {
-    //         e.preventDefault();
-    //         window.open(this.href, "RK_Player", "width=360,height=640");
-    //         console.log('player popup');
-    //         return false;
-    //     });
-    // }
