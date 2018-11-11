@@ -261,7 +261,8 @@
 }
 .has-background-test {
   background-color: $light-gray;
-  // background-position: center;
+  background-image: url('../files/img/test_bcg3.jpg');
+  background-position: center;
   background-size: cover;
 }
 
