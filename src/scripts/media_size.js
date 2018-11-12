@@ -1,15 +1,14 @@
   const mediaSize = () => {
-      if (window.matchMedia('(min-width: 680px)').matches) {
-          $('.responsive-carousel').addClass('is-2');
-      } else {
-          $('.responsive-carousel').removeClass('is-4');
-      }
-      if (window.matchMedia('(min-width: 968px)').matches) {
+      if (Modernizr.mq('(min-width: 986px)')) {
           $('.responsive-carousel').addClass('is-4');
+          $('.responsive-carousel').removeClass('is-2');
       } else {
+          $('.responsive-carousel').addClass('is-2');
           $('.responsive-carousel').removeClass('is-4');
       }
   };
+
+let query = Modernizr.mq('(max-width: 900px)');
 
 export function responsiveResizing() {
   mediaSize();
