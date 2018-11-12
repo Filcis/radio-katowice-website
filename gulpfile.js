@@ -193,7 +193,7 @@ gulp.task('serve', function() {
     });
 
     gulp.watch([routes.styles.scss, routes.styles._scss], ['styles']);
-    gulp.watch([routes.templates.base,routes.templates.articles, routes.templates._includes], ['templates']);
+    gulp.watch([routes.templates.base,routes.templates.articles, routes.templates.onair, routes.templates.informations, routes.templates._includes], ['templates']);
     gulp.watch(routes.scripts.js, ['scripts']);
 });
 

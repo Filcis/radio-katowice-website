@@ -19,7 +19,7 @@ $music-color: #8E8E8E;
 
 
 // TYPOGRAPHY
-$body-size : 14px;
+$body-size : 15px;
 $family-primary	: 'IBM Plex Sans', sans-serif;
 $body-line-height: 1.4;
 $hr-background-color: $light-gray;
@@ -61,8 +61,8 @@ $navbar-item-img-max-height: 2.5rem;
 $navbar-fixed-z: 999;
 
 // LAYOUT
-$section-padding: $vertical-rhythm-unit-3 0.75rem;
-$mobile-content-padding: $vertical-rhythm-unit-3 0.75rem;
+$section-padding: $vertical-rhythm-unit-3 1.75rem;
+$mobile-content-padding: $vertical-rhythm-unit-3 1.75rem;
 $tag-radius: 0 0 5px 0;
 $tag-color: $basic-red;
 $large-mobile: 425px;

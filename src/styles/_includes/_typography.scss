@@ -4,6 +4,10 @@ html {
   }
 }
 
+.see-more-link {
+  color: $basic-red;
+}
+
 .section-title {
   font-size: $size-3;
   padding-bottom: 0.75rem;
@@ -34,8 +38,8 @@ article.intertext {
   }
 }
 
-.article-title {
-  font-size: $size-4;
+.article-title, .main-section-title {
+  font-size: $size-3;
   color: $dark-gray;
   font-weight: lighter;
   margin-bottom: $vertical-rhythm-unit-4;
@@ -45,6 +49,15 @@ article.intertext {
       font-size: $size-2;
       margin-bottom: $vertical-rhythm-unit-5;
   }
+}
+
+.has-border {
+  border-bottom: 1px solid $light-gray;
+}
+
+h2.section-subtitle {
+  font-size: $size-4;
+  margin-bottom: $vertical-rhythm-unit-1;
 }
 
 h2.article-subtitle {

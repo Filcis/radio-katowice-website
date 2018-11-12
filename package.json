@@ -25,6 +25,7 @@
     "bulma-carousel": "^3.0.0",
     "bulma-slider": "^2.0.0",
     "critical": "^0.8.0",
+    "faker": "^4.1.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.1",

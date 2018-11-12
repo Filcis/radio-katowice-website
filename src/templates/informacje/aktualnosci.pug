@@ -1,7 +1,62 @@
 extends ../layouts/static-layout.pug
+include ../_includes/mixins/_article_list.pug
 block vars
   -
     let title ="Polskie Radio Katowice - aktualności";
     let baseurl= "../";
+    var article1 = {
+      title:"Miasteczko na szczyt klimatyczny",
+      image: "miasteczko.jpg",
+      tags: ["region","Katowice", "kultura"],
+      date: "17.07.2018",
+      link: "miasteczko"
+    }
+    var article2 = {
+      title:"Trwa budowa drogi Pszczyna – Racibórz.",
+      image: "pszczyna-raciborz.jpg",
+      tags: ["region","Pszczyna", "Racibórz"],
+      date: "15.07.2018",
+      link: "pszczyna-raciborz"
+    }
+    var article3 = {
+      title:"Naukobus. Mobilne centrum Nauki.",
+      image: "naukobus.jpg",
+      tags: ["kultura","Katowice"],
+      date: "13.07.2018",
+      link: "naukobus"
+    }
+    var article4 = {
+      title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
+      image: "fetor.jpg",
+      tags: ["region","Jaworzno"],
+      date: "12.07.2018",
+      link: "fetor"
+    }
+    var mockup = {
+      title:"Tytuł artykułu.",
+      image: "https://loremflickr.com/534/300/news",
+      tags: ["tag 1","tag2", "tag3"],
+      date: "12.07.2018",
+      link: ""
+    }
 block main-content
   h2.section-title Aktualności
+  +article(article1)
+  +article(article2)
+  +article(article3)
+  +article(article4)
+  +article(mockup, true)
+  +article(mockup, true)
+  +article(mockup, true)
+  nav.pagination.is-small.is-centered
+    ul.pagination-list
+      li 
+        a.pagination-link.is-current 1
+      li 
+        a.pagination-link 2
+      li 
+        a.pagination-link 3
+      li 
+        a.pagination-link 4
+      li 
+        a.pagination-link 5

@@ -17,11 +17,13 @@
   }
 
   function fixedVideo(windowScrollTop) {
+    if(youtubeLive.length != 0) {
       if (windowScrollTop >= youtubeLiveScrollTop.top) {
           youtubeLive.addClass('fixed-player');
       } else {
           youtubeLive.removeClass('fixed-player');
       }
+    }
   }
 
   function toTheTop(windowScrollTop) {

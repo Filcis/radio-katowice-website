@@ -1,0 +1,19 @@
+.audition-list ul {
+  @include from($desktop) {
+    display: flex;
+    height: 16rem;
+    flex-wrap: wrap;
+    li {
+      width: 45%;
+      margin-right: 5%;
+    }
+  }
+  li {
+    margin-bottom: $vertical-rhythm-unit-1;
+    padding-bottom: $vertical-rhythm-unit-1;
+    border-bottom: 1px solid $light-gray;
+    &:last-child {
+      border: none;
+    }
+  }
+}

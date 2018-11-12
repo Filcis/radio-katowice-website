@@ -1,7 +1,33 @@
 extends ../layouts/static-layout.pug
+include ../_includes/mixins/_article_list.pug
 block vars
   -
     let title ="Polskie Radio Katowice - region";
     let baseurl= "../";
+    var mockup = {
+      title:"Tytuł artykułu.",
+      image: "https://loremflickr.com/534/300/news",
+      tags: ["tag 1","tag2", "tag3"],
+      date: "12.07.2018",
+      link: ""
+    }
 block main-content
   h2.section-title Region
+  +article(mockup, true)
+  +article(mockup, true)
+  +article(mockup, true)
+  +article(mockup, true)
+  +article(mockup, true)
+  +article(mockup, true)
+  nav.pagination.is-small.is-centered
+    ul.pagination-list
+      li 
+        a.pagination-link.is-current 1
+      li 
+        a.pagination-link 2
+      li 
+        a.pagination-link 3
+      li 
+        a.pagination-link 4
+      li 
+        a.pagination-link 5

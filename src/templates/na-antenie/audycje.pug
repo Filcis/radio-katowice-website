@@ -3,5 +3,62 @@ block vars
   -
     let title ="Polskie Radio Katowice - audycje";
     let baseurl= "../";
+    let auditionsList = [
+        'Res Musica',
+        'Każdemu dajemy radę',
+        'AS. Akademickie Studio Radia Katowice',
+        'Beskidzki zielnik',
+        'Bezpieczeństwo i aktywny styl życia seniorów',
+        'Być Ślązakiem, być Ślązaczką',
+        'Coś się stało',
+        'Czas na Nas - magazyn dla młodzieży',
+        'Czy to prawda, że...',
+        ];
 block main-content
-  h2.section-title Audycje
+  h1.section-title Audycje
+  section.main-auditions
+    .columns.is-multiline
+      .column.is-half
+        article
+          h2.section-subtitle
+            a(href="#") Res Musica
+          p Res Musica to magazyn wydarzeń muzycznych. Audycja na antenie Polskiego Radia Katowice emitowana jest nieprzerwanie od września 1981 roku.
+          a(href="#").see-more-link zobacz więcej
+      .column.is-half
+        article
+          h2.section-subtitle
+            a(href="#") Każdemy dajemy radę
+          p Każdemu damy radę, to program, w którym specjaliści z różnych dziedzin podpowiadają, jak rozwiązywać problemy związane z przepisami, pracą, domem i rodziną.
+          a(href="#").see-more-link zobacz więcej
+      .column.is-half
+        article
+          h2.section-subtitle
+            a(href="#") EKO-RANEK
+          p EKO-RANEK to cykliczna audycja Polskiego Radia Katowice, emitowana na antenie raz w tygodniu, w niedzielę.
+          a(href="#").see-more-link zobacz więcej
+      .column.is-half
+        article
+          h2.section-subtitle
+            a(href="#") Czy to prawda, że...
+          p Odpowiedź na proste pytanie rozpoczynające się od banalnych słów: „Czy to prawda, że?” może stać się początkiem fascynującej ...
+          a(href="#").see-more-link zobacz więcej
+  section.audition-list
+    ul
+      each val in auditionsList
+        li
+          a
+            span= val
+            span.icon.is-_small
+              i.fas.fa-arrow-right
+  nav.pagination.is-small.is-centered
+    ul.pagination-list
+      li 
+        a.pagination-link.is-current 1
+      li 
+        a.pagination-link 2
+      li 
+        a.pagination-link 3
+      li 
+        a.pagination-link 4
+      li 
+        a.pagination-link 5

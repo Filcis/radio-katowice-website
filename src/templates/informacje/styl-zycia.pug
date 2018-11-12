@@ -2,17 +2,17 @@ extends ../layouts/static-layout.pug
 include ../_includes/mixins/_article_list.pug
 block vars
   -
-    let title ="Polskie Radio Katowice - kultura";
+    let title ="Polskie Radio Katowice - styl życia";
     let baseurl= "../";
     var mockup = {
       title:"Tytuł artykułu.",
-      image: "https://loremflickr.com/534/300/culture",
+      image: "https://loremflickr.com/534/300/lifestyle",
       tags: ["tag 1","tag2", "tag3"],
       date: "12.07.2018",
       link: ""
     }
 block main-content
-  h2.section-title Kultura
+  h2.section-title Styl życia
   +article(mockup, true)
   +article(mockup, true)
   +article(mockup, true)

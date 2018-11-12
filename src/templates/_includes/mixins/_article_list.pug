@@ -1,10 +1,13 @@
-mixin article(articleContent)
+mixin article(articleContent, mockup)
   article.featured
     .article-wrapper.columns
       .column.is-half
         span.tag.date-tag.is-medium= articleContent.date
         a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
-          img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+          if mockup
+            img.featured-img(src=articleContent.image + "?sig=" + Math.floor(Math.random() * 20) + 1 )
+          else
+            img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
       .column
         .article-tags
           each val in articleContent.tags
