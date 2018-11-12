@@ -40,6 +40,8 @@ var routes = {
     templates: {
     	base: baseDirs.src+'templates/*.pug',
       articles: baseDirs.src+'templates/articles/*.pug',
+      onair: baseDirs.src+'templates/na-antenie/*.pug',
+      informations: baseDirs.src+'templates/informacje/*.pug',
       _includes: baseDirs.src+'templates/_includes/*.pug',
     },
 
@@ -70,7 +72,14 @@ var routes = {
 // Templating
 
 gulp.task('templates', function() {
-    return gulp.src([routes.templates.base, routes.templates.articles, '!' + routes.templates._includes], {base: baseDirs.src + 'templates'})
+    return gulp.src(
+      [
+        routes.templates.base,
+        routes.templates.articles,
+        routes.templates.onair,
+        routes.templates.informations,
+        '!' + routes.templates._includes
+    ],{base: baseDirs.src + 'templates'})
         .pipe(plumber({
             errorHandler: notify.onError({
                 title: "Error: Compiling pug.",

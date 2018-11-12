@@ -1,4 +1,4 @@
-extends ../layouts/layout.pug
+extends ../layouts/article-layout.pug
 include ../_includes/mixins/_article_list.pug 
 block vars
     -
@@ -39,46 +39,35 @@ block additionalHeadScripts
   script(src= baseurl + 'assets/js/lightslider.min.js')
 block additionalClosingScript
   script(src= baseurl + 'assets/js/gallery.js')
-block content
-    include ../_includes/_small_on_air.pug
-    main.main-content
-        .container
-            .columns.is-desktop
-                .column.is-10-desktop.is-9-widescreen
-                    .main-article-container
-                        .columns.is-centered
-                            .column.is-10
-                                article
-                                    .article-meta
-                                        span.article-category INFORMACJE
-                                        .article-tags
-                                            span.article-tag.is-medium Kultura
-                                        span.article-date 5-6.10.2018
-                                    h1.article-title Jimek Plus
-                                    p.lead
-                                        |  Przedstawiamy polskich artystów, których Jimek zaprosił do udziału w festiwalu: Kaliber 44 pionierzy i legenda polskiego hip-hopu, elektropopowy duet The Dumplings oraz znakomity wokalista Krzysztof Zalewski. Gościem specjalnym festiwalu będzie legenda amerykańskiego rapu i zdobywca nagrody Grammy Pharoahe Monch!
-                                    figure.image
-                                        img(src=baseurl + "assets/files/img/Jimek.jpg")
-                                    p Zespołu Kaliber 44, nikomu chyba nie trzeba przedstawiać. Pionierzy i legenda polskiego hip-hopu. Mają na swoim koncie imponującą listę ponadczasowych utworów: “Psychodela”, “Plus i minus (+i-)”, “Gruby czarny kot”, “Film”, “Konfrontacje”, "Normalnie o tej porze” czy “Nieodwracalne zmiany”. Na ich muzyce wychowały się już dwa pokolenia fanów, a ich kolejne koncerty przyciągają nieustannie nowych słuchaczy. Po powrocie na scenę w 2016, Kaliber 44 swoimi występami na najważniejszych imprezach w kraju (Orange Warsaw Festival, OFF Festival, Solidarity of Arts, Jarocin, Hip-Hop Kemp) potwierdzili świetną formę koncertową oraz status gwiazdy muzyki Hip-Hop.
-                                    p Duet The Dumplings, to nowoczesna elektronika nasiąknięta głębokim basem. Taneczny smutek i chwytliwe melodie. Elektropopowy duet mocno stawia na elektronikę w duchu nowych brzmień, ale nie zapomina o chwytliwych piosenkach - znaku rozpoznawalnym twórczości Justyny Święs i Kuby Karasia. Piosenka „Nie gotujemy” została obejrzana 5,5 mln razy w serwisie YouTube, ,,Kocham być z Tobą” – ponad 8 mln.
-                                    p Błyskotliwy debiut The Dumplings w 2013 roku sprawił, że ich muzyką zainteresowały się największe wytwórnie w Polsce. Piosenki The Dumplings znalazły się w filmie „Facet (nie)potrzebny od zaraz” i spektaklu „ONY” Teatru im. Juliusz Ostrewy w Gorzowie Wielkopolskim. Kuba Karaś skomponował muzykę do spektaklu „Elling” w Teatrze Śląskim w Katowicach.
-                                    p Zespół zagrał do tej pory setki koncertów, zarówno na festiwalach showcase’owych takich jak: Liverpool Sound City, The Great Escape w Brighton czy Europavox we Francji, jak i regularnych festiwalach polskich i zagranicznych: Off Festival, Grape Festival, Open’er, Colours of Ostrava, Sziget Festival. The Dumplings grali także koncerty w Tokio, Paryż u, Londynie, Meksyku oraz na legendarnym festiwalu dla młodych zespołów – SXSW w Austin w Teksasie.
-                                    p Krzysztof Zalewski - muzyk, kompozytor, multiinstrumentalista, tekściarz, uważany za jednego z najlepszych wokalistów w Polsce. Po wydaniu debiutanckiej płyty Pistolet zniknął na 9 lat z pierwszego planu na scenie. W tym czasie szlifował swój warsztat i zdobywał doświadczenie. Występował przez ten okres na scenie w zespołach: Nosowska, HEY, Muchy czy BRODKA. W 2013 roku powrócił z autorską, trudną do zakwalifikowania płytą "ZELIG", którą zebrał bardzo dobre recenzje i zyskał liczne grono fanów.
-                                    p Ostatnia autorska płyta Zalewskiego to krążek „ZŁOTO”, wpisujący się w tę szkołę grania muzyki, która mówi, że mniej znaczy lepiej, że to, co ciche i subtelne, często wybrzmiewa głośniej od huku przesterowanych gitar. „Złoto” jednak to nie same ballady, śpiewane do wtóru łkającej cicho gitary – choć i dla poszukujących takich wrażeń coś się znajdzie… Na płycie dominują numery dynamiczne, czy wręcz drapieżne. W porównaniu z poprzednią płytą uproszczone jednak zostały aranżacje, bardziej organiczne jest brzmienie i bardziej bezpośredni przekaz. Za "Złoto" otrzymał 3 nominacje do Fryderyka 2017 i płyta szybko pokryła się złotem. Teledysk do piosenki "Miłość Miłość" pochodzącej z płyty stał się przebojem z ogromną ilością odsłon (obecnie ok. 7mln), kolejny singiel "Polsko" przez wiele tygodni utrzymywał się na 1. miejscu Listy Przebojów Trójki.
-                                    p Najnowszym "dzieckiem" Krzysztofa jest płyta "Zalewski śpiewa Niemena" wydana w styczniu 2018 roku.
-                                    h2.article-subtitle Legenda Amerykańskiego rapu – Pharoahe Monh
-                                    p Zaproszenie do udziału w festiwalu JIMEK+ przyjął Pharoahe Monch, legendarny amerykański raper. To jeden z jego utworów zatytułowany ,,Simon Says” znalazł się na kultowej już  Hip-Hop History Orchestrated by JIMEK. Uczestnicy festiwalu będą mieli niepowtarzalną okazję zobaczyć obu muzyków razem na jednej scenie. Jimek: ,, Z całej mojej historii hiphopu, czy grałem ją w Polsce, Niemczech czy w Kenii ludzie najmocniej reagują właśnie na Simon Says – Pharoahe Monch’a. To będzie spełnienie marzeń zagrać to z nim symfonicznie. Zwłaszcza, że mam już dawno zorkiestrowane ‘Oh No’ i ‘F*** You’.
-                                    h2.article-subtitle Festiwal już w październiku w Gliwicach
-                                    p Festiwal Jimek+ odbędzie się w dniach 5-6 października w Arenie Gliwice. Podczas obu festiwalowych dni na scenie pojawi się headliner festiwalu – Jimek. Usłyszymy cały przekrój jego twórczości, w tym najpopularniejsze utwory z jego kompozytorskiego dorobku. Pojawią się kompozycje klasyczne, nagrodzona muzyka filmowa, nowe, nieprezentowane wersje kultowych już historii hip-hopu i jazzu oraz specjalnie przygotowane aranżacje. Jimek poprowadzi 60-osobową orkiestrę symfoniczną złożoną z najzdolniejszych muzyków młodego pokolenia. JIMEK SYMPHONIXX usłyszymy w utworach solowych pod batutą Jimka. 
-                                    ul#lightSlider
-                                      li
-                                        h1 first
-                                      li
-                                        h2 secorn   
-                                    include ../_includes/_article_footer.pug                     
-                .column.is-2-desktop.is-3-widescreen
-                    aside.sidebar
-                        include ../_includes/_sidebar.pug
+block article-meta
+  span.article-category INFORMACJE
+  .article-tags
+      span.article-tag.is-medium Kultura
+  span.article-date 5-6.10.2018
+block article-content    
+    h1.article-title Jimek Plus
+    p.lead
+        |  Przedstawiamy polskich artystów, których Jimek zaprosił do udziału w festiwalu: Kaliber 44 pionierzy i legenda polskiego hip-hopu, elektropopowy duet The Dumplings oraz znakomity wokalista Krzysztof Zalewski. Gościem specjalnym festiwalu będzie legenda amerykańskiego rapu i zdobywca nagrody Grammy Pharoahe Monch!
+    figure.image
+        img(src=baseurl + "assets/files/img/Jimek.jpg")
+    p Zespołu Kaliber 44, nikomu chyba nie trzeba przedstawiać. Pionierzy i legenda polskiego hip-hopu. Mają na swoim koncie imponującą listę ponadczasowych utworów: “Psychodela”, “Plus i minus (+i-)”, “Gruby czarny kot”, “Film”, “Konfrontacje”, "Normalnie o tej porze” czy “Nieodwracalne zmiany”. Na ich muzyce wychowały się już dwa pokolenia fanów, a ich kolejne koncerty przyciągają nieustannie nowych słuchaczy. Po powrocie na scenę w 2016, Kaliber 44 swoimi występami na najważniejszych imprezach w kraju (Orange Warsaw Festival, OFF Festival, Solidarity of Arts, Jarocin, Hip-Hop Kemp) potwierdzili świetną formę koncertową oraz status gwiazdy muzyki Hip-Hop.
+    p Duet The Dumplings, to nowoczesna elektronika nasiąknięta głębokim basem. Taneczny smutek i chwytliwe melodie. Elektropopowy duet mocno stawia na elektronikę w duchu nowych brzmień, ale nie zapomina o chwytliwych piosenkach - znaku rozpoznawalnym twórczości Justyny Święs i Kuby Karasia. Piosenka „Nie gotujemy” została obejrzana 5,5 mln razy w serwisie YouTube, ,,Kocham być z Tobą” – ponad 8 mln.
+    p Błyskotliwy debiut The Dumplings w 2013 roku sprawił, że ich muzyką zainteresowały się największe wytwórnie w Polsce. Piosenki The Dumplings znalazły się w filmie „Facet (nie)potrzebny od zaraz” i spektaklu „ONY” Teatru im. Juliusz Ostrewy w Gorzowie Wielkopolskim. Kuba Karaś skomponował muzykę do spektaklu „Elling” w Teatrze Śląskim w Katowicach.
+    p Zespół zagrał do tej pory setki koncertów, zarówno na festiwalach showcase’owych takich jak: Liverpool Sound City, The Great Escape w Brighton czy Europavox we Francji, jak i regularnych festiwalach polskich i zagranicznych: Off Festival, Grape Festival, Open’er, Colours of Ostrava, Sziget Festival. The Dumplings grali także koncerty w Tokio, Paryż u, Londynie, Meksyku oraz na legendarnym festiwalu dla młodych zespołów – SXSW w Austin w Teksasie.
+    p Krzysztof Zalewski - muzyk, kompozytor, multiinstrumentalista, tekściarz, uważany za jednego z najlepszych wokalistów w Polsce. Po wydaniu debiutanckiej płyty Pistolet zniknął na 9 lat z pierwszego planu na scenie. W tym czasie szlifował swój warsztat i zdobywał doświadczenie. Występował przez ten okres na scenie w zespołach: Nosowska, HEY, Muchy czy BRODKA. W 2013 roku powrócił z autorską, trudną do zakwalifikowania płytą "ZELIG", którą zebrał bardzo dobre recenzje i zyskał liczne grono fanów.
+    p Ostatnia autorska płyta Zalewskiego to krążek „ZŁOTO”, wpisujący się w tę szkołę grania muzyki, która mówi, że mniej znaczy lepiej, że to, co ciche i subtelne, często wybrzmiewa głośniej od huku przesterowanych gitar. „Złoto” jednak to nie same ballady, śpiewane do wtóru łkającej cicho gitary – choć i dla poszukujących takich wrażeń coś się znajdzie… Na płycie dominują numery dynamiczne, czy wręcz drapieżne. W porównaniu z poprzednią płytą uproszczone jednak zostały aranżacje, bardziej organiczne jest brzmienie i bardziej bezpośredni przekaz. Za "Złoto" otrzymał 3 nominacje do Fryderyka 2017 i płyta szybko pokryła się złotem. Teledysk do piosenki "Miłość Miłość" pochodzącej z płyty stał się przebojem z ogromną ilością odsłon (obecnie ok. 7mln), kolejny singiel "Polsko" przez wiele tygodni utrzymywał się na 1. miejscu Listy Przebojów Trójki.
+    p Najnowszym "dzieckiem" Krzysztofa jest płyta "Zalewski śpiewa Niemena" wydana w styczniu 2018 roku.
+    h2.article-subtitle Legenda Amerykańskiego rapu – Pharoahe Monh
+    p Zaproszenie do udziału w festiwalu JIMEK+ przyjął Pharoahe Monch, legendarny amerykański raper. To jeden z jego utworów zatytułowany ,,Simon Says” znalazł się na kultowej już  Hip-Hop History Orchestrated by JIMEK. Uczestnicy festiwalu będą mieli niepowtarzalną okazję zobaczyć obu muzyków razem na jednej scenie. Jimek: ,, Z całej mojej historii hiphopu, czy grałem ją w Polsce, Niemczech czy w Kenii ludzie najmocniej reagują właśnie na Simon Says – Pharoahe Monch’a. To będzie spełnienie marzeń zagrać to z nim symfonicznie. Zwłaszcza, że mam już dawno zorkiestrowane ‘Oh No’ i ‘F*** You’.
+    h2.article-subtitle Festiwal już w październiku w Gliwicach
+    p Festiwal Jimek+ odbędzie się w dniach 5-6 października w Arenie Gliwice. Podczas obu festiwalowych dni na scenie pojawi się headliner festiwalu – Jimek. Usłyszymy cały przekrój jego twórczości, w tym najpopularniejsze utwory z jego kompozytorskiego dorobku. Pojawią się kompozycje klasyczne, nagrodzona muzyka filmowa, nowe, nieprezentowane wersje kultowych już historii hip-hopu i jazzu oraz specjalnie przygotowane aranżacje. Jimek poprowadzi 60-osobową orkiestrę symfoniczną złożoną z najzdolniejszych muzyków młodego pokolenia. JIMEK SYMPHONIXX usłyszymy w utworach solowych pod batutą Jimka. 
+    ul#lightSlider
+      li
+        h1 first
+      li
+        h2 secorn   
+    include ../_includes/_article_footer.pug
+block after-main                     
     section.similiar-articles
         .container
           h2.section-title Podobne artykuły

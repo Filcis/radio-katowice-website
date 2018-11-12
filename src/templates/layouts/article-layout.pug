@@ -1,0 +1,19 @@
+extends ./layout.pug
+
+block content
+  include ../_includes/_small_on_air.pug
+  main.main-content
+      .container
+          .columns.is-desktop
+              .column.is-10-desktop.is-9-widescreen
+                  .main-article-container
+                      .columns.is-centered
+                          .column.is-10
+                              article
+                                .article-meta
+                                  block article-meta
+                                block article-content
+              .column.is-2-desktop.is-3-widescreen
+                  aside.sidebar
+                      include ../_includes/_sidebar.pug
+  block after-main
