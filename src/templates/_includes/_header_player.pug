@@ -1,19 +1,5 @@
 header
   nav.navbar.navbar-player.is-fixed-top
     .navbar-brand
-      a.navbar-item(href="index.html")
+      a.navbar-item(href="player.html")
         img.logo-player(src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice")
-      a#stream-dropdown.stream-menu-trigger(data-target="#stream-menu") Programy
-    .dropdown-menu(id="stream-menu")
-      .navbar-start
-        -
-          var menuItems = [
-              {'title':'główny'}, 
-              {'title':'oldies'}, 
-              {'title':'top50'},
-              {'title': 'stream'}
-          ];
-        each menu in menuItems
-          a.navbar-item
-            span= menu.title
-      

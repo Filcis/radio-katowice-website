@@ -1,7 +1,7 @@
 mixin current(current)
   .container.is-fullhd
     if current.image
-      .player-cover.cover(style= "background-image: url('assets/files/img/" + current.image + "')")
+      .player-cover.cover(style= "background-image: url("+ baseurl + "'assets/files/img/" + current.image + "')")
         include ../player_includes/_controls.pug
     else if current.icon
       .player-cover-icon
@@ -9,9 +9,21 @@ mixin current(current)
           i(class="fas fa-3x fa-"+ current.icon)
     .player-main 
       .player-live-info
-        p.is-red Teraz odtwarzane
-        if current.name
-          h1.player-artist-name= current.name
-        else if current.date
-          h1.player-artist-name= current.date
-        h2.player-song-title= current.title
+        .tabs.is-hidden-tablet.is-boxed.is-fullwidth.is-toggle
+          ul
+            li.tab-title.is-active(data-tab-content = "on-air-tab") 
+              a
+                span.icon
+                  img(src=baseurl + "assets/files/img/soundwave.svg")
+                span Teraz na antenie
+            li.tab-title(data-tab-content = "stations-tab") 
+              a Stacje
+        .content-tab#on-air-tab
+          .player-current
+            h3.audition-title Lato z Radiem Katowice
+            h3
+              span.artist-name HEY
+              span.song-title FIRE
+        .content-tab.is-hidden-mobile#stations-tab
+          .player-stations
+            h3.audition-title lista stacji

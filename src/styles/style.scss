@@ -302,42 +302,6 @@ footer.article-footer {
                           PLAYER INTERFACE
 =============================================================== */
 
-.player-main {
-  background-color: $player-light-gray;
-  display: flex;
-  .tabs {
-    a {
-      background-color: $light-gray;
-      color: $link;
-      padding: 0.25rem 0.5rem;
-    }
-    position: absolute;
-    top: -1.75rem;
-    line-height: 1.75;
-    }
-  padding: $vertical-rhythm-unit-1;
-  @include from($tablet) {
-      height: 15rem;
-  }
-}
-
-.player-main-center {
-  align-self: center;
-  width: 100%;
-}
-
-.player-cover,
-.player-cover-icon {
-  height: 15rem;
-  height: 85vw;
-  @include from($large-mobile) {
-    height: 20rem;
-  }
-  @include from($tablet) {
-    height: 18rem;
-  }
-}
-
 .cover {
   position: relative;
   background-position: center;

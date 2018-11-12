@@ -1,17 +1,15 @@
-doctype html
-html
-  include _includes/_head_player.pug
-  body.has-player-navbar-fixed-top
-    include _includes/_header_player.pug
-    section.player
-      include _includes/mixins/_player-current.pug
-      +current({
-      image: "Ferdek.jpg",
-      name: "Andrzej Grabowski",
-      title: "Jest dobrze"
-      })
-    section.section.player-stations-menu
-      include _includes/player_includes/_player_stations.pug
-    section.section.player-shortcuts
-      include _includes/_shortcuts.pug
-    script(src="assets/js/script.js")
+extends layouts/layout-player.pug
+include ./_includes/mixins/_player-current.pug
+block vars
+  -
+    let title ="Polskie Radio Katowice - player";
+    let baseurl= "";
+    let current = {
+      name: "Hey",
+      title: "Fire",
+      image: "Hey.jpg",
+    }
+block content
+  +current(current)
+  section.player-shortcuts
+    include ./_includes/_shortcuts.pug
