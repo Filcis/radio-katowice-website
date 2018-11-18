@@ -108,6 +108,19 @@ section.recent-news, .main-article-container, .similiar-articles {
   padding: $vertical-rhythm-unit-5 2rem;
 }
 
+.contact-section {
+  margin-top: $vertical-rhythm-unit-1;
+}
+
+.contact-level {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  .icon {
+    margin-right: 1rem;
+  }
+}
+
 .main-auditions {
     margin-bottom: $vertical-rhythm-unit-7;
 }

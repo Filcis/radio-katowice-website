@@ -1,0 +1,28 @@
+extends ../layouts/static-layout.pug
+block vars
+  -
+    let title ="Polskie Radio Katowice - kontakt";
+    let baseurl= "../";
+block main-content
+  h1.section-title Kontakt
+  p.is-size-4 Polskie Radio Regionalna Rozgłośnia w Katowicach Radio Katowice SA
+  section.contact-section
+    .contact-level
+      span.icon
+        i.fas.fa-map
+      span ul Ligonia 29, 40-953 Katowice 
+    .contact-level
+      span.icon
+        i.fas.fa-phone
+      span  +48 32 2005 400, 
+      span  fax +48 32 2005 581 
+    .contact-level
+      span.icon
+        i.fas.fa-at
+      a(href='mailto:sekretariat@radio.katowice.pl') sekretariat@radio.katowice.pl
+  section.contact-section
+    p NIP 634-00-20-312
+    p konto: ING BSK SA O/Katowice 
+    p IBAN: PL 57 1050 1214 1000 0007 0006 0692 
+    p Kod BIC (Swift): INGBPLPW
+block sidebar

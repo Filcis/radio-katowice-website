@@ -41,6 +41,7 @@ var routes = {
     	base: baseDirs.src+'templates/*.pug',
       articles: baseDirs.src+'templates/articles/*.pug',
       onair: baseDirs.src+'templates/radio/*.pug',
+      about: baseDirs.src+'templates/o-nas/*.pug',
       informations: baseDirs.src+'templates/informacje/*.pug',
       _includes: baseDirs.src+'templates/_includes/*.pug',
     },
@@ -77,6 +78,7 @@ gulp.task('templates', function() {
         routes.templates.base,
         routes.templates.articles,
         routes.templates.onair,
+        routes.templates.about,
         routes.templates.informations,
         '!' + routes.templates._includes
     ],{base: baseDirs.src + 'templates'})
@@ -193,7 +195,12 @@ gulp.task('serve', function() {
     });
 
     gulp.watch([routes.styles.scss, routes.styles._scss], ['styles']);
-    gulp.watch([routes.templates.base,routes.templates.articles, routes.templates.onair, routes.templates.informations, routes.templates._includes], ['templates']);
+    gulp.watch([routes.templates.base,
+      routes.templates.articles,
+      routes.templates.onair,
+      routes.templates.about,
+       routes.templates.informations,
+       routes.templates._includes], ['templates']);
     gulp.watch(routes.scripts.js, ['scripts']);
 });
 
