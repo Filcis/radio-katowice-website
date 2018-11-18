@@ -12,6 +12,7 @@ $carousel-sizes: (2, 3, 4, 5) !default
   display: block
   position: relative
   flex: 1 0 100%
+  z-index: 1
   &.has-background
     .is-background
       object-fit: cover
@@ -63,14 +64,21 @@ $carousel-sizes: (2, 3, 4, 5) !default
   display: flex
   justify-content: space-around
   width: 100%
+  height: 0px
   .carousel-nav-left,
   .carousel-nav-right
     padding: 1em
   &.is-centered
     justify-content: center
   &.is-overlay
+    top: 50%
+    transform: perspective(1px) translateY(-50%)
+    bottom: auto
+    left: auto
+    right: auto
     align-items: center
     justify-content: space-between
+    z-index: 99
     // z-index: 20
     .carousel-nav-left,
     .carousel-nav-right

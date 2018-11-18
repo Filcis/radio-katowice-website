@@ -12,12 +12,13 @@ mixin article(articleContent, mockup)
         .article-tags
           each val in articleContent.tags
             span.article-tag.is-medium= val
-        a(href=baseurl + 'articles/' + articleContent.link + '.html')
+        a.article_title_link(href=baseurl + 'articles/' + articleContent.link + '.html')
           h2.featured-article-title= articleContent.title
         if block
           block
         else
           p Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.
+        a.read_more(href=baseurl + 'articles/' + articleContent.link + '.html') czytaj
           
 mixin similiarArticles(articleContent)
   .column

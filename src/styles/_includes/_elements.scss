@@ -261,7 +261,7 @@
   left: -3rem;
 }
 .has-background-test {
-  background-color: $light-gray;
+  background-color: $dark-gray;
   background-image: url('../files/img/ep_naturalwhite.png');
   // background-position: center;
   // background-size: cover;
@@ -288,5 +288,19 @@
     width: 240px;
     bottom: 0;
     left: 0;
+  }
+}
+
+.newsletter-box {
+  padding: 1.7rem 2rem;
+  background-color: #e4e4e6;
+  border-radius: 0 0 1rem 0;
+  .control {
+    padding-bottom: 1rem;
+  }
+  input[type='submit'] {
+    background-color: #374e61;
+    color: #fff;
+    cursor: pointer;
   }
 }

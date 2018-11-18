@@ -129,6 +129,10 @@ blockquote {
 .featured-article-title {
   font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-1;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $basic-red;
+  }
 }
 
 .teaser-title {

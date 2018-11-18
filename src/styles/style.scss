@@ -16,7 +16,7 @@ body {
 }
 
 body.home {
-  background-color: transparent;
+  background-color: #f1f1f1;
 }
 
 .container {
@@ -264,12 +264,11 @@ footer.article-footer {
 
 // ----------- Video carousel ------------------
 
-.video-card {
-  @include from($tablet) {
-      max-width: 340px;
-  }
-
-}
+// .video-card {
+//   @include from($tablet) {
+//       max-width: 340px;
+//   }
+// }
 
 .video-card-img-wrapper {
   min-height: 8rem;
@@ -289,6 +288,7 @@ footer.article-footer {
 
 .video-card-tag {
   display: block;
+  font-size: $size-6;
   position: absolute;
   top:0;
   right:0;
