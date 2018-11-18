@@ -205,6 +205,15 @@ blockquote {
   margin-right: 1rem;
 }
 
+.shortcuts-group-title {
+  margin-top: 0.5rem;
+  font-size: $size-4;
+  margin-bottom: $vertical-rhythm-unit-1;
+  text-align: center;
+  border-bottom: 1px solid $light-gray;
+  padding-bottom: $vertical-rhythm-unit-1/2
+}
+
 .stationlink-artist-name {
   margin-left: 2rem;
 }

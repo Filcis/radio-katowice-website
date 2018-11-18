@@ -40,7 +40,7 @@ var routes = {
     templates: {
     	base: baseDirs.src+'templates/*.pug',
       articles: baseDirs.src+'templates/articles/*.pug',
-      onair: baseDirs.src+'templates/na-antenie/*.pug',
+      onair: baseDirs.src+'templates/radio/*.pug',
       informations: baseDirs.src+'templates/informacje/*.pug',
       _includes: baseDirs.src+'templates/_includes/*.pug',
     },

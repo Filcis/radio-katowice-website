@@ -20,10 +20,14 @@ mixin current(current)
               a Stacje
         .content-tab#on-air-tab
           .player-current
-            h3.audition-title Lato z Radiem Katowice
-            h3
-              span.artist-name HEY
-              span.song-title FIRE
+            .columns.is-mobile
+              .column.is-2
+                span.is-large.icon.player-current-station
+                  img(src=baseurl + "assets/files/img/logo-symbol-negatyw.svg")
+              .column.is-offset-1
+                h3
+                  span.artist-name HEY
+                  span.song-title FIRE
         .content-tab.is-hidden-mobile#stations-tab
           .player-stations
             h3.audition-title lista stacji

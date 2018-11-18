@@ -45,7 +45,7 @@ html * {
 }
 
 body {
-  background-color: #fff;
+  background-color: #eee;
 }
 
 html  {
@@ -58,6 +58,19 @@ html  {
     background-color: #fff;
     padding: $vertical-rhythm-unit-1 1.75rem;
   }
+}
+
+.player-current {
+  background-color: #fff;
+}
+
+.columns.has-small-gap-mobile {
+  @include until($tablet){
+    margin: -0.25rem;
+    .column {
+      padding: 0.25rem;
+    }
+}
 }
 
 /* =============================================================
@@ -114,6 +127,14 @@ html  {
       font-size: $size-4;
       margin-bottom: $vertical-rhythm-unit-1
     }
+  }
+}
+
+.player-current-station {
+  background-color: $gray;
+  border-radius: 3rem;
+  img{
+    max-width: 60%;
   }
 }
 
