@@ -1,5 +1,8 @@
 mixin shortcut(time, title, icon, isvertical)
-  a.player-shortcut(class= isvertical)
+  .player-shortcut(class= isvertical)
+    .pause
+      span.icon.is-large
+        i.fas.fa-stop
     .player-shortcut-icon-wrapper
       span.icon.is-large
         img(src=  baseurl + "assets/files/img/" + icon +".svg")
@@ -24,9 +27,9 @@ mixin shortcut(time, title, icon, isvertical)
         .carousel-item.is-active
           +shortcut('','Nazwa audycji', 'ico-audycje')(class='fas fa-music fa-2x')
         .carousel-item
-          +shortcut('','Bardzo bardzo bardzo długa nazwa audycji', 'ico-audycje')(class='fas fa-music fa-2x')
+          +shortcut('','Nazwa audycji 2', 'ico-audycje')(class='fas fa-music fa-2x')
         .carousel-item
-          +shortcut('','Nazwa audycji', 'ico-audycje')(class='fas fa-music fa-2x')
+          +shortcut('','Nazwa audycji 3', 'ico-audycje')(class='fas fa-music fa-2x')
       .carousel-navigation.is-overlay
         .carousel-nav-left
           i.fa.fa-chevron-left(aria-hidden="true")

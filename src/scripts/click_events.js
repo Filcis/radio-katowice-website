@@ -9,7 +9,7 @@ let goToTop = (event)=> {
 
 let dropdown = $('.navbar-link');
 let submenus = $('#main-menu .navbar-dropdown');
-
+let shortcuts = $('.player-shortcut');
 
 
 //==================================================
@@ -45,9 +45,17 @@ function initNav() {
       });
 }
 
+function togglePlay() {
+  shortcuts.on('click', function(){
+    shortcuts.not($(this)).removeClass('play');
+    $(this).toggleClass('play');
+  })
+}
+
 export let attachClickEvents = () => {
   goToTopButton.on('click', goToTop);
   initNav();
+  togglePlay();
   // $(window).on('resize', _.debounce( initNav, 300));
   playerPopup();
 }
