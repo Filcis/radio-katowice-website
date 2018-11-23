@@ -262,9 +262,9 @@
 }
 .has-background-test {
   background-color: $dark-gray;
-  background-image: url('../files/img/ep_naturalwhite.png');
+  background-image: url('../files/img/test_bcg1.jpg');
   // background-position: center;
-  // background-size: cover;
+  background-size: contain;
 }
 
 .responsive-yt-embed {
