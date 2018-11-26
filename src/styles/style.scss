@@ -55,6 +55,28 @@ body.home {
     display: flex;
   }
 }
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  .gallery-item {
+    min-width: 100px;
+    flex-basis: 20%;
+    padding: 0.25rem;
+    img {
+      border-radius: 0;
+    }
+    figure {
+      margin: 0;
+    }
+    &:last-child {
+      img {
+        border-radius: 0 0 1rem 0;
+      }
+    }
+  }
+}
+
 .on-air-wrapper {
   flex-grow: 2;
   @include from($tablet) {

@@ -1,0 +1,55 @@
+extends ../layouts/article-layout.pug
+include ../_includes/mixins/_article_list.pug 
+block vars
+    -
+        let title ="Polskie Radio Katowice";
+        let useFacebook= true;
+        let baseurl= "../";
+        var article1 = {
+            title:"Miasteczko na szczyt klimatyczny",
+            image: "miasteczko.jpg",
+            tags: ["Region","Katowice","Kultura"],
+            date: "17.07.2018",
+            link: "miasteczko"
+        };
+        var article2 = {
+            title:"Trwa budowa drogi Pszczyna – Racibórz.",
+            image: "pszczyna-raciborz.jpg",
+            tags: ["region","Pszczyna", "Racibórz"],
+            date: "15.07.2018",
+            link: "pszczyna-raciborz"
+        };
+        var article3 = {
+            title:"Naukobus. Mobilne centrum Nauki.",
+            image: "naukobus.jpg",
+            tags: ["kultura","Katowice"],
+            date: "13.07.2018",
+            link: "naukobus"
+        };
+        var article4 = {
+            title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
+            image: "fetor.jpg",
+            tags: ["region","Jaworzno"],
+            date: "12.07.2018",
+            link: "fetor"
+        }
+block article-meta
+  span.article-category INFORMACJE
+  .article-tags
+      span.article-tag.is-medium Kultura
+  span.article-date 20.11.2018
+block article-content    
+    h1.article-title Pomiędzy być a żyć. Spotkanie z księdzem Piotrem Brząkalikiem
+    p.lead "Pomiędzy być a żyć" – tak zatytułowana jest najnowsza książka księdza Piotra Brząkalika.
+    figure.image
+      img(src=baseurl + "assets/files/img/Pomiedzy-byc-a-zyc.jpg")
+    h3 GALERIA
+    hr
+    section
+      ul.gallery
+        - for (var i = 0; i < 10; ++i) {    
+          li.gallery-item
+            a(href="https://via.placeholder.com/800x450" data-lightbox='galeria-1')
+              figure.image.is-square
+                img(src="https://via.placeholder.com/300x300")
+        - }

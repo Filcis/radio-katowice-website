@@ -17,9 +17,7 @@ let shortcuts = $('.player-shortcut');
 //==================================================
 function playerPopup() {
   let WindowObjectReference;
-  console.log('playerPopup');
   function openRequestedPopup() {
-    console.log('openRequestedPopup');
       $('.button.call-to-action ').click(function(e) {
         e.preventDefault();
         WindowObjectReference = window.open(this.href, "RK_Player", "width=360,height=640");
