@@ -263,8 +263,9 @@
 .has-background-test {
   background-color: $dark-gray;
   background-image: url('../files/img/test_bcg1.jpg');
-  // background-position: center;
-  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .responsive-yt-embed {
