@@ -1,4 +1,4 @@
-extends ../layouts/layout.pug
+extends ../layouts/article-layout.pug
 include ../_includes/mixins/_article_list.pug 
 block vars
     -
@@ -33,43 +33,32 @@ block vars
             date: "12.07.2018",
             link: "fetor"
         }
-block content
-    include ../_includes/_small_on_air.pug
-    main.main-content
-        .container
-            .columns.is-desktop
-                .column.is-10-desktop.is-9-widescreen
-                    .main-article-container
-                        .columns.is-centered
-                            .column.is-10
-                                article
-                                    .article-meta
-                                        span.article-category informacje
-                                        .article-tags
-                                            span.article-tag.is-medium Katowice
-                                            span.article-tag.is-medium Kultura
-                                        span.article-date 15.07.2018
-                                    h1.article-title Naukobus. Mobilne centrum Nauki.
-                                    figure.image
-                                        img(src=baseurl + "/assets/files/img/naukobus.jpg")
-                                    blockquote Gminę Wręczyca Wielka w powiecie kłobuckim odwiedził "Naukobus".
-                                    p To mobilna wersja Centrum Nauki Kopernik przedstawiająca w interaktywny sposób zagadnienia z fizyki, biologii i chemii.
-                                    blockquote
-                                      | W ten sposób wychodzimy na przeciw tym, którzy nie mogą odwiedzić nas w Warszawie
-                                      small mówi Szymon Filipowicz z Centrum Nauki Kopernik.
-                                    audio(controls="true" src="https://www.radio.katowice.pl/sound/37848/07-26-Naukobus1.mp3")
-                                    p Odwiedzający mobilne centrum nauki zlokalizowane w Gminnym Ośrodku Kultury we Wręczycy Wielkiej mogą między innymi rozwiązywać łamigłówki, poznawać podstawowe zasady fizyki, czy poznać układ wnętrzności człowieka.
-                                    audio(controls="true" src="https://www.radio.katowice.pl/sound/37848/07-26-Naukobus2.mp3")
-                                    p Mobilne Centrum Nauki we Wręczycy Wielkiej otwarte jest do godziny 18:00. W piątek czekać będzie na zainteresowanych od 8:00 do 14:00.
-                                    include ../_includes/_article_footer.pug 
-                .column.is-2-desktop.is-3-widescreen
-                    aside.sidebar
-                        include ../_includes/_sidebar.pug
-    section.similiar-articles
-        .container
-          h2.section-title Podobne artykuły
-          .columns
-            +similiarArticles(article1)
-            +similiarArticles(article2)
-            +similiarArticles(article3)
-            +similiarArticles(article4)
+block article-meta
+  span.article-category informacje
+  .article-tags
+      span.article-tag.is-medium Katowice
+      span.article-tag.is-medium Kultura
+  span.article-date 15.07.2018
+block article-content 
+  h1.article-title Naukobus. Mobilne centrum Nauki.
+  figure.image
+      img(src=baseurl + "/assets/files/img/naukobus.jpg")
+  blockquote Gminę Wręczyca Wielka w powiecie kłobuckim odwiedził "Naukobus".
+  p To mobilna wersja Centrum Nauki Kopernik przedstawiająca w interaktywny sposób zagadnienia z fizyki, biologii i chemii.
+  blockquote
+    | W ten sposób wychodzimy na przeciw tym, którzy nie mogą odwiedzić nas w Warszawie
+    small mówi Szymon Filipowicz z Centrum Nauki Kopernik.
+  audio(controls="true" src="https://www.radio.katowice.pl/sound/37848/07-26-Naukobus1.mp3")
+  p Odwiedzający mobilne centrum nauki zlokalizowane w Gminnym Ośrodku Kultury we Wręczycy Wielkiej mogą między innymi rozwiązywać łamigłówki, poznawać podstawowe zasady fizyki, czy poznać układ wnętrzności człowieka.
+  audio(controls="true" src="https://www.radio.katowice.pl/sound/37848/07-26-Naukobus2.mp3")
+  p Mobilne Centrum Nauki we Wręczycy Wielkiej otwarte jest do godziny 18:00. W piątek czekać będzie na zainteresowanych od 8:00 do 14:00.
+  include ../_includes/_article_footer.pug 
+block after-main  
+  section.similiar-articles
+      .container
+        h2.section-title Podobne artykuły
+        .columns
+          +similiarArticles(article1)
+          +similiarArticles(article2)
+          +similiarArticles(article3)
+          +similiarArticles(article4)

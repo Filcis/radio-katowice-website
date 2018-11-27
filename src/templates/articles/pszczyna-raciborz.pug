@@ -1,4 +1,4 @@
-extends ../layouts/layout.pug
+extends ../layouts/article-layout.pug
 include ../_includes/mixins/_article_list.pug 
 block vars
     -
@@ -34,40 +34,29 @@ block vars
             date: "12.07.2018",
             link: "fetor"
         }
-block content
-    include ../_includes/_small_on_air.pug
-    main.main-content
-        .container
-            .columns.is-desktop
-                .column.is-10-desktop.is-9-widescreen
-                    .main-article-container
-                        .columns.is-centered
-                            .column.is-10
-                                article
-                                    .article-meta
-                                        span.article-category informacje
-                                        .article-tags
-                                            span.article-tag.is-medium Region
-                                            span.article-tag.is-medium Pszczyna
-                                            span.article-tag.is-medium Racibórz
-                                        span.article-date 15.07.2018
-                                    h1.article-title Trwa budowa drogi Pszczyna – Racibórz
-                                    p.lead
-                                        |  Gotowy jest pierwszy kilometr drogi Racibórz – Pszczyna.
-                                    figure.image
-                                        img(src=baseurl + "assets/files/img/pszczyna-raciborz.jpg")
-                                    p Symboliczny odcinek został położony od strony Żor. Jednocześnie trwają intensywne prace związane z betonowaniem 13 obiektów mostowych.
-                                    p W ubiegłym miesiącu wykonawca lał beton przez około 30 godzin ciągle na wiadukcie przy Wodzisławskiej, gdzie dostarczył 140 betoniarek betonu.
-                                    p Droga Racibórz – Pszczyna będzie miała po dwa pasy ruchu w dwóch kierunkach. Zakończenie rybnickiego odcinka inwestycji zaplanowano na lato 2019 roku. Łączna wartość projektu wyniesie ponad 430 milionów złotych.
-                                    include ../_includes/_article_footer.pug                     
-                .column.is-2-desktop.is-3-widescreen
-                    aside.sidebar
-                        include ../_includes/_sidebar.pug
-    section.similiar-articles
-        .container
-          h2.section-title Podobne artykuły
-          .columns
-            +similiarArticles(article1)
-            +similiarArticles(article2)
-            +similiarArticles(article3)
-            +similiarArticles(article4)
+block article-meta
+  span.article-category informacje
+  .article-tags
+      span.article-tag.is-medium Region
+      span.article-tag.is-medium Pszczyna
+      span.article-tag.is-medium Racibórz
+  span.article-date 15.07.2018
+block article-content
+  h1.article-title Trwa budowa drogi Pszczyna – Racibórz
+  p.lead
+      |  Gotowy jest pierwszy kilometr drogi Racibórz – Pszczyna.
+  figure.image
+      img(src=baseurl + "assets/files/img/pszczyna-raciborz.jpg")
+  p Symboliczny odcinek został położony od strony Żor. Jednocześnie trwają intensywne prace związane z betonowaniem 13 obiektów mostowych.
+  p W ubiegłym miesiącu wykonawca lał beton przez około 30 godzin ciągle na wiadukcie przy Wodzisławskiej, gdzie dostarczył 140 betoniarek betonu.
+  p Droga Racibórz – Pszczyna będzie miała po dwa pasy ruchu w dwóch kierunkach. Zakończenie rybnickiego odcinka inwestycji zaplanowano na lato 2019 roku. Łączna wartość projektu wyniesie ponad 430 milionów złotych.
+  include ../_includes/_article_footer.pug                     
+block after-main  
+  section.similiar-articles
+      .container
+        h2.section-title Podobne artykuły
+        .columns
+          +similiarArticles(article1)
+          +similiarArticles(article2)
+          +similiarArticles(article3)
+          +similiarArticles(article4)

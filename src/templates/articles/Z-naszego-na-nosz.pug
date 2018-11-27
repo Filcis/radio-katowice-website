@@ -1,112 +1,117 @@
-extends ../layouts/layout.pug
+extends ../layouts/article-layout.pug
 include ../_includes/mixins/_article_list.pug 
 block vars
     -
         let title ="Polskie Radio Katowice";
         let useFacebook= true;
         let baseurl= "../";
+        var mockup = {
+          title:"Tytuł artykułu.",
+          tags: ["tag 1","tag2", "tag3"],
+          date: "12.07.2018",
+          link: ""
+        }
         
-block content
-    include ../_includes/_small_on_air.pug
-    main.main-content
+block article-meta
+  span.article-category wydarzenia radiowe
+  span.article-date 12.10.2018
+block article-content
+  h1.article-title Z naszego na nosz! Niezwykłe wersje zwykłych piosenek.
+  p.lead Fragmenty porannego programu Radia Katowice. #DzieńDobryDziśPiątek
+  figure.image
+      img(src=baseurl + "/assets/files/img/z-naszego-na-nosz.jpg")  
+  p Prezentujemy niezwykłe wersje znanych piosenek i ich tłumaczenia! Zapraszają Dariusz Schmidt i Mariusz Masiarek
+  p Tutaj można znaleźć wykonania, a poniżej teksty. Zapraszamy do tworzenia własnych wersji i przesyłania filmików pod adres: #[a(href="mailto:radio@radio.katowice.pl") radio@radio.katowice.pl] w tytule Z naszego na nosz.
+  p Miłej zabawy! Autorem przekładów jest Dariusz Schmidt.
+  .article-iframe-container
+    iframe(width="560" height="315" src="https://www.youtube.com/embed/0eKlbTrY3EE?list=PLAmtuk4m9auOOH44rdEfydI_n9k4WW0ZT" modestbranding=1 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen) 
+  section
+    h2.article-subtitle SEZON II 2018/2019
+    article.intertext
+      h3.article-subtitle Dawid Podsiadło - Nie ma fal/Bez cufal
+      p 
+        | Fal, bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+      p
+        | bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufaaal #[br]
+        | gryfnie #[br]
+        | godo nom sie całkym gryfnie #[br]
+        | i podobo nom  terazki kozdy łobejrzany film #[br]
+        | wy mie #[br] 
+        | jakiś pieron wy mie dzymie #[br]
+        | co mi koże  kopać w  ziymie, #[br]
+        | yno sie zy mie niy smiyj  #[br]
+      p
+        | moze  przida zajś potym #[br]
+        | znojdz mie pod potym #[br]
+        | tyż  jo chca cie łoboczyć bo   #[br]
+      p
+        | szczynka #[br]
+        | moga chycić cie za rynka #[br]
+        | jak już chcesz wyciepna kozde stare kalmory na roz   #[br]
+        | a to śmiyszne #[br]
+        | niy rozumia tego jeszcze #[br]
+        | tamta baba  chciała żebych wiyncy już  tukej niy stoł  #[br]
+      p
+        | ale dej sie znać potym #[br]
+        | kajś mie znojdz potym #[br]
+        | jak się niy trefiymy to #[br]
+        | fal bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+        | bez cufal #[br]
+    .article-iframe-container
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/Vlurf0OvceY" modestbranding=1 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+    article.intertext
+      h3.article-subtitle Enej – Kamiyń z napisym LOVE
+      p
+        | Dołżech ci kamiyń z napisym love,#[br]
+        | to go teraz gipko skow, #[br]
+        | inkszego nic niy moga dać,#[br]
+        | mosz kamiyń z napisym love.#[br]
+        | Jo dołżech ci kamiyń z gryfnym love,#[br]
+        | to go teraz gipko skow,#[br]
+        | inkszego nic niy moga dać,#[br]
+        | mosz kamiyń z napisym love.#[br]
+      p  
+        | Na sztandzie u Andzie#[br]
+        | drogo jak pieron#[br]
+        | kupiołbych ci keta, dwie bych może wzion,#[br]
+        | i byś przajała mi i łotworzoła drzwi,#[br]
+        | ale na karku dali bydzie nic.#[br]
+      p                                           
+        | Dołżech ci kamiyń z napisym love,#[br]
+        | to go teraz gipko skow,#[br]
+        | inkszego nic niy moga dać,#[br]
+        | mosz kamiyń z napisym love.#[br]
+        | Jo dołżech ci kamiyń z gryfnym love,#[br]
+        | to go teraz gipko skow,#[br]
+        | inkszego nic niy moga dać,#[br]
+        | mosz kamiyń z napisym love.#[br]
+      p
+        | Prziszoł dzisioj geltag#[br]
+        | i naszporowoł żech#[br]
+        | dołbych ci jo kwiotkow nowet połny miech#[br]
+        | i poprzojałabyś i pochalałabyś#[br]
+        | Potem z głodu grace byda gryź.#[br]
+    .article-iframe-container
+      iframe(width="560" height="315" src="https://www.youtube.com/embed/kaeM79Ud3ls" modestbranding=1 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)    
+  include ../_includes/_article_footer.pug  
+block sidebar
+  include ../_includes/_sidebar_events.pug
+block after-main                     
+    section.similiar-articles
         .container
-            .columns.is-desktop
-                .column.is-10-desktop.is-9-widescreen
-                    .main-article-container
-                        .columns.is-centered
-                            .column.is-10
-                                article
-                                    .article-meta
-                                        span.article-category wydarzenia radiowe
-                                        span.article-date 12.10.2018
-                                    h1.article-title Z naszego na nosz! Niezwykłe wersje zwykłych piosenek.
-                                    p.lead Fragmenty porannego programu Radia Katowice. #DzieńDobryDziśPiątek
-                                    figure.image
-                                        img(src=baseurl + "/assets/files/img/z-naszego-na-nosz.jpg")  
-                                    p Prezentujemy niezwykłe wersje znanych piosenek i ich tłumaczenia! Zapraszają Dariusz Schmidt i Mariusz Masiarek
-                                    p Tutaj można znaleźć wykonania, a poniżej teksty. Zapraszamy do tworzenia własnych wersji i przesyłania filmików pod adres: #[a(href="mailto:radio@radio.katowice.pl") radio@radio.katowice.pl] w tytule Z naszego na nosz.
-                                    p Miłej zabawy! Autorem przekładów jest Dariusz Schmidt.
-                                    .article-iframe-container
-                                      iframe(width="560" height="315" src="https://www.youtube.com/embed/0eKlbTrY3EE?list=PLAmtuk4m9auOOH44rdEfydI_n9k4WW0ZT" modestbranding=1 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen) 
-                                    section
-                                      h2.article-subtitle SEZON II 2018/2019
-                                      article.intertext
-                                        h3.article-subtitle Dawid Podsiadło - Nie ma fal/Bez cufal
-                                        p 
-                                          | Fal, bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                        p
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufaaal #[br]
-                                          | gryfnie #[br]
-                                          | godo nom sie całkym gryfnie #[br]
-                                          | i podobo nom  terazki kozdy łobejrzany film #[br]
-                                          | wy mie #[br] 
-                                          | jakiś pieron wy mie dzymie #[br]
-                                          | co mi koże  kopać w  ziymie, #[br]
-                                          | yno sie zy mie niy smiyj  #[br]
-                                        p
-                                          | moze  przida zajś potym #[br]
-                                          | znojdz mie pod potym #[br]
-                                          | tyż  jo chca cie łoboczyć bo   #[br]
-                                        p
-                                          | szczynka #[br]
-                                          | moga chycić cie za rynka #[br]
-                                          | jak już chcesz wyciepna kozde stare kalmory na roz   #[br]
-                                          | a to śmiyszne #[br]
-                                          | niy rozumia tego jeszcze #[br]
-                                          | tamta baba  chciała żebych wiyncy już  tukej niy stoł  #[br]
-                                        p
-                                          | ale dej sie znać potym #[br]
-                                          | kajś mie znojdz potym #[br]
-                                          | jak się niy trefiymy to #[br]
-                                          | fal bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                          | bez cufal #[br]
-                                      .article-iframe-container
-                                        iframe(width="560" height="315" src="https://www.youtube.com/embed/Vlurf0OvceY" modestbranding=1 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-                                      article.intertext
-                                        h3.article-subtitle Enej – Kamiyń z napisym LOVE
-                                        p
-                                          | Dołżech ci kamiyń z napisym love,#[br]
-                                          | to go teraz gipko skow, #[br]
-                                          | inkszego nic niy moga dać,#[br]
-                                          | mosz kamiyń z napisym love.#[br]
-                                          | Jo dołżech ci kamiyń z gryfnym love,#[br]
-                                          | to go teraz gipko skow,#[br]
-                                          | inkszego nic niy moga dać,#[br]
-                                          | mosz kamiyń z napisym love.#[br]
-                                        p  
-                                          | Na sztandzie u Andzie#[br]
-                                          | drogo jak pieron#[br]
-                                          | kupiołbych ci keta, dwie bych może wzion,#[br]
-                                          | i byś przajała mi i łotworzoła drzwi,#[br]
-                                          | ale na karku dali bydzie nic.#[br]
-                                        p                                           
-                                          | Dołżech ci kamiyń z napisym love,#[br]
-                                          | to go teraz gipko skow,#[br]
-                                          | inkszego nic niy moga dać,#[br]
-                                          | mosz kamiyń z napisym love.#[br]
-                                          | Jo dołżech ci kamiyń z gryfnym love,#[br]
-                                          | to go teraz gipko skow,#[br]
-                                          | inkszego nic niy moga dać,#[br]
-                                          | mosz kamiyń z napisym love.#[br]
-                                        p
-                                          | Prziszoł dzisioj geltag#[br]
-                                          | i naszporowoł żech#[br]
-                                          | dołbych ci jo kwiotkow nowet połny miech#[br]
-                                          | i poprzojałabyś i pochalałabyś#[br]
-                                          | Potem z głodu grace byda gryź.#[br]
-                                      .article-iframe-container
-                                        iframe(width="560" height="315" src="https://www.youtube.com/embed/kaeM79Ud3ls" modestbranding=1 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)    
-                                    include ../_includes/_article_footer.pug  
-                .column.is-2-desktop.is-3-widescreen
-                    aside.sidebar
-                        include ../_includes/_sidebar_events.pug
+          h2.section-title Podobne wydarzenia
+          .columns
+            +similiarArticles(mockup)
+            +similiarArticles(mockup)
+            +similiarArticles(mockup)
+            +similiarArticles(mockup)

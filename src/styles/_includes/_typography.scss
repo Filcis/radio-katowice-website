@@ -31,7 +31,6 @@ html {
 article p {
   color: $dark-gray;
   @include from($desktop) {
-    padding-right: 4rem;
     line-height: 1.6;
   }
 }

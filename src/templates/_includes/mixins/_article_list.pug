@@ -25,8 +25,11 @@ mixin similiarArticles(articleContent)
     article.featured
       .similiar-article-wrapper
         span.tag.date-tag.is-medium= articleContent.date
-        a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
-          img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+        if articleContent.image
+          a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
+            img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+        else
+          img(src="https://via.placeholder.com/320x180").featured-img
         .article-tags
           each val in articleContent.tags
             span.article-tag.is-medium= val
