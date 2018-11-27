@@ -13,6 +13,12 @@ html {
   padding-bottom: 0.75rem;
   border-bottom: 1px solid $grey;
   margin-bottom: $vertical-rhythm-unit-4;
+  &.accordion-title {
+    font-size: $size-4;
+    margin-bottom: $vertical-rhythm-unit-4;
+    margin-top: $vertical-rhythm-unit-4;
+    border-bottom: 1px solid $light-gray;
+  }
 }
 
 .section-title-secondary {

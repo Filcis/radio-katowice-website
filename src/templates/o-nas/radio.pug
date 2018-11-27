@@ -1,0 +1,40 @@
+extends ../layouts/static-layout.pug
+block vars
+  -
+    let title ="Polskie Radio Katowice - o Radiu";
+    let baseurl= "../";
+block main-content
+  article
+    h1.section-title O Radiu
+    p.is-size-4 Nowoczesna technika i 90-letnia tradycja. Tak w skrócie można opisać Polskie Radio Katowice, jedną z największych i najstarszych rozgłośni w kraju.
+    section
+      p Przez całą dobę kilka milionów słuchaczy odbiera nasz program w całym województwie śląskim a także w Czechach, na Słowacji oraz w części województw małopolskiego, opolskiego i łódzkiego. Wykorzystujemy cztery nadajniki emitujące nasz program na falach 102.2, 101.2, 103.0, 98.4, 97.0, 89.3 MHz znajdujące się w Katowicach, Bielsku-Białej, Częstochowie, Raciborzu i Gliwicach. Program Polskiego Radia Katowice jest również odbierany na całym świecie za pośrednictwem internetu. 1 października 2013 roku Radio Katowice rozpoczęło nadawanie sygnału cyfrowego w systemie DAB Plus. 
+      p Najważniejsze dla nas są sprawy naszego regionu. To właśnie im poświęcamy największą część programu Radia Katowice. Słuchaczom proponujemy wszystko to, co naszym zdaniem powinno znaleźć się radiu publicznym:  informację, reportaż, publicystykę, sport, kulturę i oczywiście dobrą muzykę, także poważną. Wiele miejsca na naszej antenie poświęcamy audycjom edukacyjnym.
+      p Jednak najistotniejsi dla Radia Katowice są ludzie mieszkający w naszym regionie. Aby być bliżej nich utworzyliśmy redakcje terenowe: w Bielsku-Białej, Częstochowie i Zawierciu. Dzięki temu nasi dziennikarze są zawsze najbliżej lokalnych wydarzeń.
+      p Patronujemy najważniejszym imprezom kulturalnym w regionie. Sami również je organizujemy. "Dyktando", czy "Po naszymu, czyli po śląsku" weszły już na stałe w kalendarz imprez i cieszą się coraz większą popularnością.
+      p Nasi dziennikarze to zgrany zespół profesjonalistów. Świadczą o tym nagrody zdobywane przez nich w ogólnopolskich i zagranicznych konkursach. Wśród nich znajdują się te najbardziej prestiżowe jak Złoty Mikrofon czy Prix Italia.
+      p Poza emisją programu radiowego Polskie Radio Katowice od ponad 20 lat zajmuje się działalnością wydawniczą. Wydawanym przez nas płytom kilkakrotnie udawało się uzyskać status "Złotej Płyty". Studio nagrań należy do najnowocześniejszych w naszym regionie. Nagrywali u nas Leszek Możdżer, grupa "Myslovitz" oraz Kwartet Śląski.
+block sidebar
+  .sidebar-content
+    .sidebar-box
+      .sidebar-box-body
+        .sidebar-box-item
+          table.table
+            thead
+              tr
+                th(colspan=2) Zasięg i częstotliwości
+            -
+              var frequencies = [
+                {'freq': '101.2 FM',  'city': 'Katowice'},
+                {'freq': '102.2 FM',  'city': 'Katowice'},
+                {'freq': '103.0 FM',  'city': 'Bielsko-Biała'},
+                {'freq': '89.3 FM',   'city': 'Gliwice'},
+                {'freq': '97.0 FM',   'city': 'Racibórz'},
+                {'freq': '98.4 FM',   'city': 'Częstochowa'},
+              ]
+            each f in frequencies
+              tr
+                td= f.freq
+                td= f.city
+block after-main
+  

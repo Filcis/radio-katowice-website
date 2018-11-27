@@ -1,0 +1,29 @@
+extends ../layouts/static-layout.pug
+include ../_includes/mixins/_media.pug 
+block vars
+  -
+    let title ="Polskie Radio Katowice - ludzie radia";
+    let baseurl= "../";
+block main-content
+  section
+    h1.section-title Ludzie Radia
+    .columns.is-multiline
+      .column.is-half
+        +media('Piotr Ornowski', 'Prezes Zarządu. Redaktor Naczelny Polskiego Radia Katowice')
+      .column.is-half
+        +media('Piotr Karmański', 'Dyrektor Kreatywny')
+      .column.is-half
+        +media('Marek Ciepliński', 'Dyrektor Programowy')
+      .column.is-half
+        +media('Mariusz Masiarek', 'Zastępca Dyrektora Programowego')
+  section
+    h2.section-title.accordion-title Zespół dziennikarski
+  section
+    h2.section-title.accordion-title Dział techniki
+  section
+    h2.section-title.accordion-title Zespół Współpracowników
+  section
+    h2.section-title.accordion-title Dział Promocji i Marketingu
+block sidebar
+block after-main
+  

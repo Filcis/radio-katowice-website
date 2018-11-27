@@ -1,0 +1,8 @@
+mixin media(name, position)
+  article.media
+    figure.media-left  
+      img.image.is-128x128(src="https://via.placeholder.com/128x128")
+    .media-content
+      .content
+        p #[strong= name]
+        p= position

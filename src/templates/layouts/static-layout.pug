@@ -5,8 +5,11 @@ block content
   main.main-content.section
     .container
       .columns.is-desktop.is-gapless
-        .column.is-10-desktop.is-9-widescreen
-          block main-content
-        .column.is-2-desktop.is-3-widescreen
-          block sidebar
+        .column.is-9-desktop
+          .columns.is-centered
+              .column.is-10
+                block main-content
+        .column.is-3-desktop
+          aside.sidebar
+            block sidebar
   block after-main

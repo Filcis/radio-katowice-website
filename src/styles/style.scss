@@ -19,16 +19,6 @@ body.home {
   background-color: #f1f1f1;
 }
 
-.container {
-@include until($tablet){
-      // max-width: 560px;
-  }
-@include desktop-only {
-        max-width: 1060px;
-        width: 1060px;
-    }
-  }
-
 .columns.has-small-gap-mobile {
   @include until($tablet){
     margin: -0.25rem;
@@ -42,6 +32,9 @@ body.home {
 @include from ($desktop) {
   margin-top: $vertical-rhythm-unit-5;
   margin-bottom: $vertical-rhythm-unit-5;
+  }
+  section{
+    margin-bottom: $vertical-rhythm-unit-1;
   }
 }
 .hero-body {
@@ -125,7 +118,7 @@ a{
   display: flex;
 }
 
-section.recent-news, .main-article-container, .similiar-articles {
+section.recent-news, article, .similiar-articles {
   background-color: #fff;
   padding: $vertical-rhythm-unit-5 2rem;
 }
