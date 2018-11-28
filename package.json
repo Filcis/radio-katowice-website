@@ -21,7 +21,7 @@
     "yeoman-generator"
   ],
   "dependencies": {
-    "bulma": "^0.7.1",
+    "bulma": "^0.7.2",
     "bulma-carousel": "^3.0.0",
     "bulma-slider": "^2.0.0",
     "critical": "^0.8.0",

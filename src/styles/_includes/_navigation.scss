@@ -110,6 +110,15 @@
   }
 }
 
+.day-selection {
+  border-bottom: 1px solid $gray;
+  border-top: 1px solid $gray;
+  margin-bottom: $vertical-rhythm-unit-3;
+  padding-bottom: $vertical-rhythm-unit-3;
+  margin-top: $vertical-rhythm-unit-3;
+  padding-top: $vertical-rhythm-unit-3;
+}
+
 .c-content {
   padding: 20px;
 }

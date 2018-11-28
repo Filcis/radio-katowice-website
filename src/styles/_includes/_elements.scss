@@ -45,6 +45,10 @@
   display: flex;
   font-size: $size-6;
   position: relative;
+  .icon {
+    width: 3.1rem;
+    opacity: 0.5;
+  }
   .play-icon-wrapper {
     @include play-icon-wrapper($light-gray, 1.2rem);
     position: absolute;
