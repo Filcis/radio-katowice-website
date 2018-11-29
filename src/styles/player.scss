@@ -4,9 +4,9 @@
 @import '_includes/_carousel.sass';
 @import '_includes/_mixins';
 @import '_includes/_typography';
-@import '_includes/_elements';
-@import '_includes/_lists';
-@import '_includes/_navigation';
+// @import '_includes/_elements';
+// @import '_includes/_lists';
+// @import '_includes/_navigation';
 
 
 /* =============================================================
@@ -14,6 +14,14 @@
 =============================================================== */
 
 // Player Navigation
+
+html {
+  font-size: 16px;
+}
+
+.is-hidden-mobile {
+  display: none;
+}
 
 .navbar.navbar-player {
   position: static;
@@ -40,12 +48,10 @@
 /* =============================================================
                           LAYOUT
 =============================================================== */
-html * {
-  // max-width: 360px;
-}
 
-body {
+body, .container {
   background-color: #eee;
+  max-width: 460px;
 }
 
 html  {
@@ -65,12 +71,10 @@ html  {
 }
 
 .columns.has-small-gap-mobile {
-  @include until($tablet){
     margin: -0.25rem;
     .column {
       padding: 0.25rem;
     }
-}
 }
 
 /* =============================================================
@@ -84,7 +88,7 @@ html  {
 
 .player-cover,
 .player-cover-icon {
-  height: 18rem;
+  max-height: 18rem;
   height: 90vw;
 }
 
@@ -116,18 +120,7 @@ html  {
 
 //wrapper
 .player-shortcuts {
-  @include until($desktop) {
-    padding: 1.4rem 0.75rem;
-  }
-  @include from($desktop){
-    background-color: transparent;
-    padding-bottom: $vertical-rhythm-unit-4;
-    h2 {
-      margin-top: 0.5rem;
-      font-size: $size-4;
-      margin-bottom: $vertical-rhythm-unit-1
-    }
-  }
+  padding: 1.4rem 0.75rem;
 }
 
 .player-current-station {
@@ -149,12 +142,6 @@ html  {
   padding: 1rem;
   border-radius: 0 0 12px 0;
   border:1px solid $player-light-gray;
-  @include from($desktop) {
-    transition: border 0.3s ease-in-out;
-    &:hover {
-      border:1px solid lighten($basic-red, 20);
-    }
-  }
 }
 
 .player-shortcut {
@@ -195,14 +182,6 @@ html  {
 .player-shortcut-icon-wrapper {
   flex-grow: 1;
   text-align: center;
-  @include from($large-mobile) {
-    margin-right: 1rem; //taki sam jak padding rodzica
-  }
-  .icon {
-    @include from($tablet) {
-      font-size: $size-7;
-    }
-  }
 }
 
 .player-shortcut-info-wrapper {
@@ -244,11 +223,9 @@ html  {
 }
 
 .shortcut-is-vertical-mobile {
-  @include until($large-mobile) {
     display: block;
     text-align: center;
     padding: 0.75rem;
-  }
   .player-shortcut-icon-wrapper {
     padding: 0;
   }

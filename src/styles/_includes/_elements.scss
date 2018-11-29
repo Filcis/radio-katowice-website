@@ -63,7 +63,7 @@
   .icon {
     width: 2.6rem;
     opacity: 0.5;
-    img{
+    img {
       height: 100%;
     }
   }
@@ -91,6 +91,11 @@ article.main-article figure {
 
 .featured .article-tags {
   margin-bottom: $vertical-rhythm-unit-1;
+}
+
+.article-tags i {
+  font-size: 0.8rem;
+  color: $light-gray;
 }
 
 .article-teaser .article-tags {

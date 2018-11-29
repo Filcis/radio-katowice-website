@@ -12,4 +12,37 @@ block vars
 block content
   +current(current)
   section.player-shortcuts
-    include ./_includes/_shortcuts.pug
+    mixin shortcut(time, title, icon, isvertical)
+      .player-shortcut(class= isvertical)
+        .pause
+          span.icon.is-large
+            i.fas.fa-stop
+        .player-shortcut-icon-wrapper
+          span.icon.is-large
+            img(src=  baseurl + "assets/files/img/" + icon +".svg")
+        .player-shortcut-info-wrapper
+          span.player-shortcut-time= time
+          span.player-shortcut-title= title
+          span.player-shortcut-call-to-action słuchaj
+    h2.shortcuts-group-title Serwisy
+    .columns.is-mobile.is-1
+      .column.is-4
+        +shortcut('','Pogoda','ico-pogoda', 'shortcut-is-vertical-mobile')(class='fas fa-cloud fa-2x')
+      .column.is-4
+        +shortcut('','Auto Radio','ico-autoradio', 'shortcut-is-vertical-mobile')(class='fas fa-car fa-2x')
+      .column.is-4
+        +shortcut('','Informacje','ico-informacje', 'shortcut-is-vertical-mobile')(class='fas fa-info fa-2x')
+    h2.shortcuts-group-title Podcasty
+    .carousel.carousel-animated.carousel-animate-slide
+      .carousel-container
+        .carousel-item.is-active
+          +shortcut('','Nazwa audycji', 'ico-audycje')(class='fas fa-music fa-2x')
+        .carousel-item
+          +shortcut('','Nazwa audycji 2', 'ico-audycje')(class='fas fa-music fa-2x')
+        .carousel-item
+          +shortcut('','Nazwa audycji 3', 'ico-audycje')(class='fas fa-music fa-2x')
+      .carousel-navigation.is-overlay
+        .carousel-nav-left
+          i.fa.fa-chevron-left(aria-hidden="true")
+        .carousel-nav-right
+          i.fa.fa-chevron-right(aria-hidden="true")

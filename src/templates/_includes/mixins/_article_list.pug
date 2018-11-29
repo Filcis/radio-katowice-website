@@ -12,6 +12,10 @@ mixin article(articleContent, mockup)
         .article-tags
           each val in articleContent.tags
             span.article-tag.is-medium= val
+          if articleContent.icons
+            each val in articleContent.icons
+              span.icon
+                i.fas(class='fa-' + val) 
         a.article_title_link(href=baseurl + 'articles/' + articleContent.link + '.html')
           h2.featured-article-title= articleContent.title
         if block
