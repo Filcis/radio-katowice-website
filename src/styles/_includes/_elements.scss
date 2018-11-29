@@ -3,8 +3,12 @@
 =============================================================== */
 
 .button {
-  @extend button;
+  // @extend button;
   border-radius: 0 0 0.5rem 0;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    border-radius: 0.7rem;
+  }
 }
 
 .on-air .button {
@@ -13,11 +17,11 @@
 }
 
 .call-to-action {
-  background-color: $basic-red;
+  background-color: darken($basic-red, 5);
   color: #fff;
   font-weight: 400;
   border: 1px solid $basic-red;
-  transition: 0.2s background-color ease-in-out;
+  // transition: 0.2s background-color ease-in-out;
   margin-right: 0.5rem;
   i {
     font-size: 0.5rem;
@@ -26,7 +30,7 @@
   }
   &:hover {
     color: #fff;
-    background-color: darken($basic-red, 15);
+    background-color: darken($basic-red, 40);
   }
 }
 .station-list {

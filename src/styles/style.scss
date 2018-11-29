@@ -383,7 +383,7 @@ footer.article-footer {
     padding: 1.4rem 0.75rem;
   }
   @include from($desktop){
-    background-color: transparent;
+    // background-color: transparent;
     padding-bottom: $vertical-rhythm-unit-4;
   }
 }
@@ -397,12 +397,13 @@ footer.article-footer {
   font-size: 0.8rem;
   background-color: white;
   padding: 1rem;
-  border-radius: 0 0 12px 0;
-  border:1px solid $player-light-gray;
+  border-radius: 0 0 0.75rem 0;
+  border:2px solid $player-light-gray;
   @include from($desktop) {
-    transition: border 0.3s ease-in-out;
+    transition: border 0.3s ease-in-out, border-radius 0.3s ease-in-out ;
     &:hover {
-      border:1px solid lighten($basic-red, 20);
+      border:2px solid lighten($basic-red, 20);
+      border-radius: 0.75rem;
     }
   }
 }
@@ -419,8 +420,8 @@ footer.article-footer {
     align-items: center;
     justify-content: center;
     background-color: rgba(255,255,255,.8);
-    border-radius: 0 0 12px 0;
-    visibility: hidden;
+    border-radius: 0.75rem;
+    opacity: 0;
     z-index: -999;
     .icon {
       transition: width 0.2s ease-out, height 0.2s ease-out;
@@ -434,7 +435,7 @@ footer.article-footer {
 }
 
 .player-shortcut.play .pause {
-  visibility: visible;
+  opacity: 1;
   z-index: 2;
   .icon{
     width: 3rem;
