@@ -20,7 +20,7 @@ body.home {
 }
 
 .columns.has-small-gap-mobile {
-  @include until($tablet){
+  @include until(980px){
     margin: -0.25rem;
     .column {
       padding: 0.25rem;
@@ -120,6 +120,11 @@ a{
 section.recent-news, article.main-article, .similiar-articles {
   background-color: #fff;
   padding: $vertical-rhythm-unit-5 2rem;
+}
+
+.recent-video {
+  background-image: radial-gradient(ellipse at center -50%, #2e3844 0%,#2e363e 18%,#233952 57%,#10171f 100%);
+  color: #fff;
 }
 
 .contact-section {
@@ -302,26 +307,42 @@ footer.article-footer {
 
 // ----------- Video carousel ------------------
 
-// .video-card {
-//   @include from($tablet) {
-//       max-width: 340px;
-//   }
-// }
+.video-card {
+  @include until($tablet) {
+      padding: 0.5rem;
+  }
+}
 
 .video-card-img-wrapper {
-  min-height: 8rem;
-  width: 100%;
+  @extend .image;
+  @extend .is-16by9;
+  // min-height: 180px;
+  // font-size: 0;
+  // // width: 100%;
   position: relative;
+  img {
+    // max-height: 180px;
+    display:block
+  }
 }
 
 .video-card-body {
-  color: $gray;
-  padding:$vertical-rhythm-unit-1 1rem;
+  color: #aaa;
+  background-color: #121a24;
+  padding:$vertical-rhythm-unit-3 1rem;
+  font-size: $size-5;
+  @include from($desktop) {
+    font-size: $size-6;
+  }
 }
 
 .video-card-title {
   display: block;
+  color: #eee;
   font-size: $size-4;
+  @include from($desktop) {
+    font-size: $size-5;
+  }
 }
 
 .video-card-tag {
@@ -446,7 +467,7 @@ footer.article-footer {
 .player-shortcut-icon-wrapper {
   flex-grow: 1;
   text-align: center;
-  @include from($large-mobile) {
+  @include from(980px) {
     margin-right: 1rem; //taki sam jak padding rodzica
   }
   .icon {

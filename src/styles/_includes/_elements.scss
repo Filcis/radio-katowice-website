@@ -130,15 +130,20 @@ article.main-article figure {
   }
 }
 
-@include from($desktop){
 .carousel-nav-left,
 .carousel-nav-right {
-  transition: background 0.2s ease-in-out;
-  &:hover {
-    background: $basic-red !important;
-    color: #fff !important;
+  height: 3rem;
+  width: 2rem;
+  background-color: $gray;
+  color: #fff;
+@include from($desktop) {
+  background-color: rgba(0,0,0,0.4);
+  transition: background-color 0.2s ease-in-out;
+    &:hover {
+      background-color: $basic-red !important;
+      color: #fff !important;
+    }
   }
-}
 }
 
 .on-air-top-bar {
