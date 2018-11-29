@@ -61,8 +61,11 @@
   font-size: $size-6;
   position: relative;
   .icon {
-    width: 3.1rem;
+    width: 2.6rem;
     opacity: 0.5;
+    img{
+      height: 100%;
+    }
   }
   .play-icon-wrapper {
     @include play-icon-wrapper($light-gray, 1.2rem);
@@ -235,7 +238,6 @@ article.main-article figure {
   .hour {
     color: $basic-red;
     position: relative;
-    // margin-right: 1rem;
     margin-left: -3rem;
     background-color: #fff;
     z-index: 2;
@@ -285,8 +287,8 @@ article.main-article figure {
   left: -3rem;
 }
 .has-background-test {
-  background-color: $dark-gray;
-  background-image: radial-gradient(ellipse at center -50%, #14283d 0%,#154270 18%,#2c5f96 57%,#10171f 100%);
+  background-color: #2a68aa;
+  background-image: linear-gradient(#14283d 0%,#14487d 16%,#2a68aa 57%,#f1f1f1 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;

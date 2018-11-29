@@ -42,8 +42,8 @@ body.home {
     padding: 0;
   }
     @include from ($tablet) {
-    min-height: 22rem;
-    height: 50vh;
+    min-height: 24rem;
+    height: 55vh;
     justify-content: center;
     align-items: center;
     display: flex;
