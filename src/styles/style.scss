@@ -38,11 +38,12 @@ body.home {
   }
 }
 .hero-body {
-    @include until($tablet) {
-      // padding: 0.75rem;
-    }
+  @include until($large-mobile) {
+    padding: 0;
+  }
     @include from ($tablet) {
     min-height: 22rem;
+    height: 50vh;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -80,6 +81,13 @@ body.home {
   }
   @include from($fullhd) {
     max-width: 960px;
+  }
+}
+
+.on-air-inner-wrapper {
+  @include from($desktop) {
+    height: 100%;
+    position: relative;
   }
 }
 

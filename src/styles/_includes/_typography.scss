@@ -1,5 +1,5 @@
 html {
-  @include from($tablet){
+  @include from(600px){
     font-size: 17px;
   }
   @include from($fullhd){
