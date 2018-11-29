@@ -9,12 +9,14 @@
 
 .on-air .button {
   font-size: $size-5 * 0.9;
+  padding: 1rem 1rem;
 }
 
 .call-to-action {
   background-color: $basic-red;
   color: #fff;
-  border: none;
+  font-weight: 400;
+  border: 1px solid $basic-red;
   transition: 0.2s background-color ease-in-out;
   margin-right: 0.5rem;
   i {
@@ -266,7 +268,7 @@ article.main-article figure {
 }
 .has-background-test {
   background-color: $dark-gray;
-  background-image: url('../files/img/test_bcg1.jpg');
+  background-image: radial-gradient(ellipse at center -50%, #14283d 0%,#154270 18%,#2c5f96 57%,#10171f 100%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: auto;

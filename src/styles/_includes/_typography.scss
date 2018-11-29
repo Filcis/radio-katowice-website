@@ -2,6 +2,9 @@ html {
   @include from($tablet){
     font-size: 17px;
   }
+  @include from($fullhd){
+    font-size: 18px;
+  }
 }
 
 .see-more-link {
@@ -217,10 +220,10 @@ blockquote {
 .shortcuts-group-title {
   margin-top: 0.5rem;
   font-size: $size-4;
-  margin-bottom: $vertical-rhythm-unit-1;
+  margin-bottom: $vertical-rhythm-unit-2;
   text-align: center;
-  border-bottom: 1px solid $light-gray;
-  padding-bottom: $vertical-rhythm-unit-1/2
+  border-bottom: 2px solid $light-gray;
+  padding-bottom: $vertical-rhythm-unit-1
 }
 
 .stationlink-artist-name {
