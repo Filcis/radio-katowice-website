@@ -15,26 +15,22 @@ let shortcuts = $('.player-shortcut');
 //==================================================
 // Player popup
 //==================================================
+var rk_WindowObjectReference = null;
 function playerPopup() {
-  let WindowObjectReference;
-  function openRequestedPopup() {
-      $('.button.call-to-action ').click(function(e) {
-        e.preventDefault();
-        WindowObjectReference = window.open(this.href, "RK_Player", "width=360,height=640");
-        return false;
-    });
-  }
-  openRequestedPopup();
+  $('.button.call-to-action, #player-main-call-to-action').click(function(e) {
+    e.preventDefault();
+    openRequestedPopup($(this).attr('href'));
+    return false;
+  });
 }
-//
-// if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//     $('#player-main-call-to-action').click(function(e) {
-//         e.preventDefault();
-//         window.open(this.href, "RK_Player", "width=360,height=640");
-//         console.log('player popup');
-//         return false;
-//     });
-// }
+
+function openRequestedPopup(url) {
+  if (rk_WindowObjectReference == null || rk_WindowObjectReference.closed) {
+    rk_WindowObjectReference = window.open(url, "RK_Player", "width=360,height=640");
+  } else {
+    rk_WindowObjectReference.focus();
+  }
+}
 
 //NAVIGATION
 function initNav() {
@@ -54,6 +50,5 @@ export let attachClickEvents = () => {
   goToTopButton.on('click', goToTop);
   initNav();
   togglePlay();
-  // $(window).on('resize', _.debounce( initNav, 300));
   playerPopup();
 }
