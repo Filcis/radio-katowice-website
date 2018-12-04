@@ -50,7 +50,7 @@ html {
 =============================================================== */
 
 body, .container {
-  background-color: #eee;
+  background-color: #efefef;
   max-width: 460px;
 }
 
@@ -62,7 +62,8 @@ html  {
   height: auto;
   .content-tab {
     background-color: #fff;
-    padding: $vertical-rhythm-unit-1 1.75rem;
+    padding: $vertical-rhythm-unit-4 1.75rem;
+    border-bottom: 1px solid $light-gray;
   }
 }
 
@@ -76,6 +77,11 @@ html  {
       padding: 0.25rem;
     }
 }
+
+.player-live-info .tabs {
+    margin-bottom: 0;
+  }
+
 
 /* =============================================================
                           PLAYER INTERFACE
@@ -120,8 +126,41 @@ html  {
 
 //wrapper
 .player-shortcuts {
-  padding: 1.4rem 0.75rem;
+  padding: 1.1rem 1.25rem;
+  &:last-child {
+    background: lighten(#2e3844, 67);
+    .shortcuts-group-title{
+      span {
+      background: lighten(#2e3844, 67);
+    }
+  }
+  }
+  background: lighten(#2e3844, 70);
+  .column {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
 }
+
+.shortcuts-group-title {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  &:before {
+    border-top: 1px solid #99a;
+    content:"";
+    margin: 0 auto; /* this centers the line to the full width specified */
+    position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+    top: 50%; left: 0; right: 0; bottom: 0;
+    width: 95%;
+    z-index: -1;
+  }
+  span {
+    background: lighten(#2e3844, 70);
+    padding: 0 15px;
+  }
+}
+
 
 .player-current-station {
   background-color: $gray;
@@ -232,7 +271,7 @@ html  {
 }
 
 .player-body .player-auditions-carousel {
-    margin: $vertical-rhythm-unit-1 0.25em;
+    margin: $vertical-rhythm-unit-1;
 }
 
 .controls {
@@ -243,6 +282,23 @@ html  {
   bottom: 1rem;
   align-items: center;
   justify-content: space-around;
+  color: #fff;
+}
+
+.player-shortcuts .carousel {
+  margin: -0.5rem;
+  .carousel-item {
+    padding: 0.5rem;
+    flex: 1 0 90% !important;
+    margin: 0 5%;
+  }
+}
+
+.carousel-nav-left,
+.carousel-nav-right {
+  height: 2rem;
+  width: 2rem;
+  background-color: $medium-gray;
   color: #fff;
 }
 

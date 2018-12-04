@@ -218,12 +218,15 @@ blockquote {
 }
 
 .shortcuts-group-title {
-  margin-top: 0.5rem;
-  font-size: $size-4;
-  margin-bottom: $vertical-rhythm-unit-2;
-  text-align: center;
-  border-bottom: 2px solid $light-gray;
-  padding-bottom: $vertical-rhythm-unit-1
+  font-size: $size-5;
+  margin-bottom: $vertical-rhythm-unit-1;
+  @include from($desktop) {
+    font-size: $size-4;
+    margin-top: 0.5rem;
+    border-bottom: 2px solid $light-gray;
+    padding-bottom: $vertical-rhythm-unit-1;
+    text-align: center;
+  }
 }
 
 .stationlink-artist-name {
