@@ -26,8 +26,8 @@ mixin current(current)
                   img(src=baseurl + "assets/files/img/logo-symbol-negatyw.svg")
               .column.is-offset-1
                 h3
-                  span.artist-name Andrzej Grabowski
-                  span.song-title Jest dobrze
+                  span.artist-name= current.name
+                  span.song-title= current.title
         .content-tab.is-hidden-mobile#stations-tab
           .player-stations
             h3.audition-title lista stacji
