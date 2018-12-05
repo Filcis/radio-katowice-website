@@ -14,7 +14,7 @@
   <script type="text/javascript" src="assets/js/modernizr.js"></script>
   <script type="text/javascript" src="assets/js/bulma-carousel.min.js"></script>
 </head>
-<body>
+<body class="player-body">
   <header>
     <nav class="navbar navbar-player is-fixed-top">
       <div class="navbar-brand"><a class="navbar-item" href="player.html"><img class="logo-player" src="assets/files/img/Polskie-Radio-Katowice-Logo-n.svg" alt="Polskie Radio Katowice"></a></div>
@@ -52,7 +52,24 @@
         </div>
         <div class="content-tab is-hidden-mobile" id="stations-tab">
           <div class="player-stations">
-            <h3 class="audition-title">lista stacji</h3>
+            <ul class="station-list">
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/live.svg"/></span><span class="stationlink-artist-name">Nick Cave & The Bad Seeds <span class="stationlink-title">Jubilee Street </span></span>
+                  <div class="play-icon-wrapper">
+                    <div class="play-icon"></div>
+                  </div></a></li>
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/top50.svg"/></span><span class="stationlink-artist-name">Tom Waits <span class="stationlink-title">Ol'55 </span></span>
+                  <div class="play-icon-wrapper">
+                    <div class="play-icon"></div>
+                  </div></a></li>
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/moje_radio.svg"/></span><span class="stationlink-artist-name">The Dumplings <span class="stationlink-title">Raj </span></span>
+                  <div class="play-icon-wrapper">
+                    <div class="play-icon"></div>
+                  </div></a></li>
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/dance.svg"/></span><span class="stationlink-artist-name">Elvis Presley <span class="stationlink-title">Crawfish </span></span>
+                  <div class="play-icon-wrapper">
+                    <div class="play-icon"></div>
+                  </div></a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -117,6 +134,17 @@
         </div>
       </div>
     </div>
+  </section>
+  <section class="player-articles">
+    <h2 class="section-title-secondary">Tym żyje region</h2>
+    <ul>
+      <li><a><span class="player-articles-title">Odlotowa zabawa w Radiu Katowice</span><span>Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł</span></a></li>
+      <li><a><span class="player-articles-title">Radio Katowice najlepsze na rynku</span><span>Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!</span></a></li>
+      <li><a><span class="player-articles-title">Lista Przebojów</span><span>20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00</span></a></li>
+      <li><a><span class="player-articles-title">Auto Radio – aktualne informacje drogowe</span><span>Informacje z dróg województwa śląskiego.</span></a></li>
+      <li><a><span class="player-articles-title">Trójwymiarowa Prognoza Pogody na dziś</span><span>Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!</span></a></li>
+      <li><a><span class="player-articles-title">Infostrada</span><span>Magazyn reporterów Radia Katowice. Każdego dnia od 14.00</span></a></li>
+    </ul>
   </section>
   <script type="text/javascript" src="assets/js/index.js"></script>
 </body>

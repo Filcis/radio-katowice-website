@@ -82,6 +82,31 @@ html  {
     margin-bottom: 0;
   }
 
+.player-articles-title {
+  display: block;
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.player-articles {
+  background-color: #2e3844;
+  padding: $vertical-rhythm-unit-5 0.75rem;
+  h2 {
+    color: #fff;
+  }
+   .section-title-secondary {
+       text-align: center;
+   }
+   li {
+     padding: $vertical-rhythm-unit-1;
+     max-width: 90%;
+     a {
+        color: #a8a8a8;
+     }
+   }
+}
 
 /* =============================================================
                           PLAYER INTERFACE
@@ -131,6 +156,7 @@ html  {
   padding: 1.1rem 1.25rem;
   &:last-child {
     background: lighten(#2e3844, 67);
+    padding-bottom: 3rem;
     .shortcuts-group-title{
       span {
       background: lighten(#2e3844, 67);
@@ -148,6 +174,7 @@ html  {
   position: relative;
   z-index: 1;
   text-align: center;
+  margin-bottom: $vertical-rhythm-unit-1;
   &:before {
     border-top: 1px solid #99a;
     content:"";
@@ -335,4 +362,43 @@ html  {
 
 .station-tooltip {
   display: none;
+}
+
+.station-list {
+  li {
+    padding-bottom: $vertical-rhythm-unit-1;
+    margin-bottom: $vertical-rhythm-unit-1;
+    border-bottom: 1px solid $light-gray;
+    &:last-child {
+      border:none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.station-link {
+  display: flex;
+  align-items: center;
+  font-size: $size-6;
+  position: relative;
+  .icon {
+    height: 1.25rem;
+    width: auto;
+    flex-shrink: 0;
+    img {
+      height: 100%;
+    }
+  }
+  .play-icon-wrapper {
+    @include play-icon-wrapper($light-gray, 1.2rem);
+    flex-grow: 0;
+    margin-left: 0.5rem;
+    right: 0;
+  }
+  &:hover {
+    .play-icon-wrapper {
+      color: $basic-red;
+    }
+  }
 }

@@ -9,6 +9,32 @@ block vars
       title: "Kot bez ogona",
       image: "okladka_nuta.svg",
     }
+    let player_news = [
+      {
+        title: "Odlotowa zabawa w Radiu Katowice",
+        description:"Letni konkurs Radia Katowice z nagrodą o wartości 8000 zł"
+      },
+      {
+        title: "Radio Katowice najlepsze na rynku",
+        description:"Konkurs fotograficzny dla Słuchaczy! Nagrody każdego dnia!"
+      },
+      {
+        title: "Lista Przebojów",
+        description:"20 hitów! Przebojowy początek weekendu! Zagłosuj i słuchaj! Każdy piątek! 19:00"
+      },
+      {
+        title: "Auto Radio – aktualne informacje drogowe",
+        description:"Informacje z dróg województwa śląskiego."
+      },
+      {
+        title: "Trójwymiarowa Prognoza Pogody na dziś",
+        description:"Cezary Orzech o pogodzie! Każdego dnia! 7:15 i 10:15 i on-line. ZOBACZ!"
+      },
+      {
+        title: "Infostrada",
+        description:"Magazyn reporterów Radia Katowice. Każdego dnia od 14.00"
+      },
+    ]
 mixin shortcut(time, title, icon, isvertical)
   .player-shortcut(class= isvertical)
     .pause
@@ -50,3 +76,11 @@ block content
             i.fa.fa-chevron-left(aria-hidden="true")
           .carousel-nav-right
             i.fa.fa-chevron-right(aria-hidden="true")
+  section.player-articles
+    h2.section-title-secondary Tym żyje region
+    ul
+      each val in player_news
+        li
+          a
+            span.player-articles-title= val.title
+            span= val.description

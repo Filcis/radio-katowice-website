@@ -48,28 +48,34 @@
     padding-right: 0.5rem;
 }
   li {
-    padding-bottom: $vertical-rhythm-unit-1/2;
-    margin-bottom: $vertical-rhythm-unit-1/2;
+    padding-bottom: $vertical-rhythm-unit-1;
+    margin-bottom: $vertical-rhythm-unit-1;
     border-bottom: 1px solid $light-gray;
     &:last-child {
       border:none;
+      margin: 0;
+      padding: 0;
     }
   }
 }
 .station-link {
   display: flex;
+  align-items: center;
   font-size: $size-6;
   position: relative;
   .icon {
-    width: 2.6rem;
-    opacity: 0.5;
+    height: 1.35rem;
+    width: auto;
+    flex-shrink: 0;
+    opacity: 0.8;
     img {
       height: 100%;
     }
   }
   .play-icon-wrapper {
     @include play-icon-wrapper($light-gray, 1.2rem);
-    position: absolute;
+    flex-grow: 0;
+    margin-left: 0.5rem;
     right: 0;
   }
   &:hover {
