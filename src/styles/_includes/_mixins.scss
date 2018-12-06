@@ -13,6 +13,20 @@
   transform: translate(-25%, -50%); //pierwsza wartośc to korekta optyczna, poziom
 }
 
+@mixin square-icon($color: black, $size: 2em) {
+  display: block;
+  position: absolute;
+  top:50%;
+  left:50%;
+  text-align: center;
+  border-color: $color;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  border-width: $size/8;
+  transform: translate(-50%, -50%);
+}
+
 @mixin play-icon-wrapper($color: black, $size: 2em) {
   min-width: $size;
   text-align: center;
@@ -23,6 +37,19 @@
   margin: 0 $size/3 0 0;
   .play-icon {
       @include triangle-icon($color, $size);
+  }
+}
+
+@mixin stop-icon-wrapper($color: black, $size: 2em) {
+  min-width: $size;
+  text-align: center;
+  height: $size;
+  border-radius: $size;
+  border: 1px solid $color;
+  position: relative;
+  margin: 0 $size/3 0 0;
+  .play-icon {
+      @include square-icon($color, $size);
   }
 }
 

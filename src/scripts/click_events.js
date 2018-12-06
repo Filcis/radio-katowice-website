@@ -10,6 +10,7 @@ let goToTop = (event)=> {
 let dropdown = $('.navbar-link');
 let submenus = $('#main-menu .navbar-dropdown');
 let shortcuts = $('.player-shortcut');
+let player_button = $('#player-button-play');
 
 
 //==================================================
@@ -46,9 +47,16 @@ function togglePlay() {
   })
 }
 
+function playerTogglePlay() {
+  player_button.on('click', function(){
+    $(this).toggleClass('playing');
+  })
+}
+
 export let attachClickEvents = () => {
   goToTopButton.on('click', goToTop);
   initNav();
+  playerTogglePlay();
   togglePlay();
   playerPopup();
 }
