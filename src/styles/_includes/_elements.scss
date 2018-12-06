@@ -287,6 +287,10 @@ article.main-article figure {
     height: 28rem;
     max-width: none;
     top: -2rem;
+    @include from(1600px) {
+      top: -6rem;
+      height: 36rem;
+    }
   }
 }
 

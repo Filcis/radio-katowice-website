@@ -5,6 +5,9 @@ html {
   @include from($fullhd){
     font-size: 18px;
   }
+  @include from(1600px){
+    font-size: 19px;
+  }
 }
 
 .see-more-link {

@@ -28,6 +28,13 @@ body.home {
 }
 }
 
+@include from (1600px) {
+  .container {
+    max-width: 1700px;
+    width: 90%;
+  }
+}
+
 .main-content {
 @include from ($desktop) {
   margin-top: $vertical-rhythm-unit-5;
@@ -47,6 +54,10 @@ body.home {
     justify-content: center;
     align-items: center;
     display: flex;
+  }
+  @include from ($fullhd) {
+    min-height: 32rem;
+    height: 50vh;
   }
 }
 
