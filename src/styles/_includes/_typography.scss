@@ -160,12 +160,13 @@ blockquote {
 }
 
 .footer_headline {
-  color: lighten($link, 50);
-  font-size: $size-5;
+  display: inline-block;
+  color: lighten($link, 40);
+  font-size: $size-6;
   text-transform: uppercase;
-  padding-bottom: $vertical-rhythm-unit-1;
-  margin-bottom: $vertical-rhythm-unit-1;
-  border-bottom: 1px solid #ccc;
+  padding-bottom: $vertical-rhythm-unit-1/2;
+  margin-bottom: $vertical-rhythm-unit-1/2;
+  border-bottom: 1px solid #aaa;
 }
 
 .carousel-title {
@@ -251,6 +252,9 @@ footer {
     a, p {
       color: lighten($link, 20);
       line-height: $vertical-rhythm-unit-3;
+    }
+    a:hover {
+      color: #fff;
     }
 }
 
