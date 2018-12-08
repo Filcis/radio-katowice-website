@@ -17,3 +17,21 @@
     }
   }
 }
+
+.is-circle-bullet-list {
+  list-style-type: none;
+  li:before {
+    content: "\2022";
+     color: $basic-red;
+     font-weight: bold;
+     display: inline-block;
+     width: 1em;
+     margin-left: -1em;
+  }
+}
+
+.is-spaced-list {
+  li {
+    padding-bottom: $vertical-rhythm-unit-1;
+  }
+}

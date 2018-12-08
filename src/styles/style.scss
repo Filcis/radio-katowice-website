@@ -160,6 +160,7 @@ section.recent-news, article.main-article, .similiar-articles {
   align-items: center;
   .icon {
     margin-right: 1rem;
+    flex-shrink: 0;
   }
 }
 
@@ -253,7 +254,7 @@ aside.sidebar {
  }
 }
 
-footer {
+footer#main-footer {
   padding: $vertical-rhythm-unit-5 0rem !important;
   margin: auto 0 0 0;
   background-image: radial-gradient(ellipse at center -50%, #252e39 0%, #20282f 18%, #1c2e42 57%, #10171f 100%);

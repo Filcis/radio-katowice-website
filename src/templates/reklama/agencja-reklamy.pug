@@ -1,0 +1,67 @@
+extends ../layouts/static-layout.pug
+include ../_includes/mixins/_media.pug 
+block vars
+  -
+    let title ="Agencja reklamy";
+    let baseurl= "../";
+block main-content
+    h1.page-title Agencja reklamy
+    section
+      h2.section-subtitle Dlaczego radio?
+      ul.is-circle-bullet-list.is-spaced-list 
+        li Radio to pierwsze źródło wiadomości z jakim stykamy się w ciągu dnia. Reklamy emitowane rano są skuteczniej przyswajane przez wypoczęty umysł.
+        li Radio z założenia jest medium tolerancyjnym, gdyż pozwala na wykonywanie w trakcie słuchania innych czynności.
+        li Wielką zaletą radia jest jego mobilność, czyli możliwość dotarcia do odbiorcy w domu, pracy, podróży, samochodzie i sklepie. Towarzyszy słuchaczom w pracy i w chwilach relaksu. Ponieważ radia słucha się wszędzie i o każdej porze dlatego jest doskonałym nośnikiem reklamy.
+        li Radio kreuje atmosferę prywatności i nie stwarza dystansu pomiędzy nadawcą a odbiorcą. Pozwala dotrzeć do słuchacza na poziomie bardziej osobistym niż czynią to inne media.
+        li Radio jest medium interaktywnym daje możliwość wykorzystania aktywnych form reklamy takich jak konkursy i quizy.
+        li Nawyk słuchania radia i przywiązanie do stacji ludzi w różnym wieku stwarza interesujące możliwości projektowania kampanii reklamowych. Radio wystarczy włączyć by usłyszeć reklamę. Nie trzeba jej szukać
+    section
+      h2.section-subtitle Zespół Agencji Reklamy
+      .columns.is-multiline
+        .column.is-half
+          +media('Janusz Kurek', 'Dyrektor')
+        .column.is-half
+          +media('Elżbieta Sikora ', 'Dyrektor do spraw promocji')
+        .column.is-half
+          +media('Marcela Dudek', 'Specjalista do spraw reklamy')
+        .column.is-half
+          +media('Dagmara Karch', 'Referent ds. Reklamy')
+        .column.is-half
+          +media('Robert Koczyba', 'Specjalista do spraw reklamy')
+    section
+      .box
+        span Cennik emisji reklam radiowych od 01.01.2017
+        span.icon.is-red
+          i.fa.fa-download
+block sidebar
+  .sidebar-content
+    h2.sidebar-headline Kontakt
+    .sidebar-box
+      ul.sidebar-box-list
+          li.sidebar-box-item
+            .contact-level
+              span.icon.is-medium
+                i.fas.fa-map-marker-alt
+              span Agencja Reklamy Radia Katowice 40-036 Katowice ul. Ligonia 29
+          li.sidebar-box-item
+            .contact-level
+              span.icon.is-medium
+                i.fas.fa-phone
+              ul
+                li telefon: +48 32 251 15 15,
+                li +48 32 251 16 16
+                li fax: +48 32 251 98 79
+          li.sidebar-box-item
+            .contact-level
+              span.icon.is-medium
+                i.fas.fa-at
+              span e-mail: #[a(href="mailto:arrkokay@ka.onet.pl") arrkokay@ka.onet.pl]
+          li.sidebar-box-item
+            .contact-level
+              span.icon.is-medium
+                i.fas.fa-university
+              ul
+                li NIP 634-020-25-33
+                li Nr konta bankowego: II PKO BP Katowice 09 1020 2313 0000 3402 0020 1681
+block after-main
+  

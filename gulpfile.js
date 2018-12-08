@@ -43,6 +43,7 @@ var routes = {
       onair: baseDirs.src+'templates/radio/*.pug',
       about: baseDirs.src+'templates/o-nas/*.pug',
       music: baseDirs.src+'templates/muzyka/*.pug',
+      adverts: baseDirs.src+'templates/reklama/*.pug',
       informations: baseDirs.src+'templates/informacje/*.pug',
       _includes: baseDirs.src+'templates/_includes/*.pug',
     },
@@ -81,6 +82,7 @@ gulp.task('templates', function() {
         routes.templates.onair,
         routes.templates.about,
         routes.templates.music,
+        routes.templates.adverts,
         routes.templates.informations,
         '!' + routes.templates._includes
     ],{base: baseDirs.src + 'templates'})
@@ -202,6 +204,7 @@ gulp.task('serve', function() {
       routes.templates.onair,
       routes.templates.about,
       routes.templates.music,
+      routes.templates.adverts,
       routes.templates.informations,
       routes.templates._includes], ['templates']);
     gulp.watch(routes.scripts.js, ['scripts']);
