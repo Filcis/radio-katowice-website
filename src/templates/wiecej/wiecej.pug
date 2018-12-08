@@ -1,0 +1,14 @@
+extends ../layouts/static-layout.pug
+block vars
+  -
+    let title ="Więcej";
+    let baseurl= "../";
+    var mockup = {
+      title:"Tytuł artykułu.",
+      image: "https://loremflickr.com/534/300/recomended",
+      tags: ["tag 1","tag2", "tag3"],
+      date: "12.07.2018",
+      link: ""
+    }
+block main-content
+  h1.page-title Więcej
