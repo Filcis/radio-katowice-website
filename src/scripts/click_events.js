@@ -9,6 +9,8 @@ let goToTop = (event)=> {
 
 let dropdown = $('.navbar-link');
 let submenus = $('#main-menu .navbar-dropdown');
+let accordionLink = $('.accordion-title');
+let accordionContent = $('.accordion-content');
 let shortcuts = $('.player-shortcut');
 let player_button = $('#player-button-play');
 
@@ -34,9 +36,9 @@ function openRequestedPopup(url) {
 }
 
 //NAVIGATION
-function initNav() {
-    dropdown.on('click', function() {
-        $(this).siblings('.navbar-dropdown').toggleClass('open');
+function initNav(link, element) {
+    link.on('click', function() {
+        $(this).siblings(element).toggleClass('open');
       });
 }
 
@@ -55,7 +57,8 @@ function playerTogglePlay() {
 
 export let attachClickEvents = () => {
   goToTopButton.on('click', goToTop);
-  initNav();
+  initNav(dropdown, submenus);
+  initNav(accordionLink, accordionContent);
   playerTogglePlay();
   togglePlay();
   playerPopup();

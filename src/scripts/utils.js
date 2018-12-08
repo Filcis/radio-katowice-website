@@ -32,6 +32,8 @@ export function attachCarousels() {
 /* ==================================================
                    Tabs
 ================================================== */
+//TODO: use data-attributes to create tab groups to prevent tabs from conflicting in case of multiple instances
+
 export function tabs() {
   $('.tab-title').on('click', function() {
       var tab = $(this).data('tab-content');
@@ -39,12 +41,17 @@ export function tabs() {
       $('.tab-title').removeClass('is-active');
       $(this).addClass('is-active');
 
-      $('.content-tab').addClass('is-hidden-mobile');
-      console.log($(this).data('tab-content'));
-      $('#' + tab ).removeClass('is-hidden-mobile');
+      if ($('#' + tab ).hasClass('is-hidden-mobile')) {
+        $('.content-tab').addClass('is-hidden-mobile');
+        console.log($(this).data('tab-content'));
+        $('#' + tab ).removeClass('is-hidden-mobile');
+      }
+
+      if ($('#' + tab ).hasClass('is-hidden')) {
+        $('.content-tab').addClass('is-hidden');
+        console.log($(this).data('tab-content'));
+        $('#' + tab ).removeClass('is-hidden');
+      }
+
   });
 }
-
-/* ==================================================
-                   Lightbox options
-================================================== */

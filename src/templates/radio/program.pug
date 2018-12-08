@@ -4,11 +4,11 @@ block vars
     let title ="Program";
     let baseurl= "../";
 block main-content
-  h2.page-title
+  h1.page-title
     span.icon.is-large
       i.fas.fa-calendar-alt
     Programy Informacyjne
-  section.accordion-content
+  section
     table.table.information-program
       tr
         td.table-title Informacje
@@ -39,35 +39,48 @@ block main-content
     span.icon.is-large
       i.fas.fa-calendar-alt
     Ramowy Program Radia Katowice
-  section.accordion-content
+  section
     .tabs.is-medium
       ul
-        li.is-active
-          a pon
         li
-          a wt
+          a.tab-title.is-active(data-tab-content="monday") pon
         li
-          a śr
+          a.tab-title(data-tab-content="tuesday") wt
         li
-          a czw
+          a.tab-title(data-tab-content="wednesday") śr
         li
-          a pt
+          a.tab-title(data-tab-content="thursday") czw
         li
-          a sob
+          a.tab-title(data-tab-content="friday") pt
         li
-          a nd
-    ul.hourly-list
-      li  #[span.hour 00:00] Lwowska Fala - powtórka programu
-      li  #[span.hour 01:00] Noc z Radiem Katowice
-      li  #[span.hour 01:15] Melodie Świata
-      li  #[span.hour 10:00] Przystanek Lato - Wakacyjny Program Radia Katowice od 10:00 do 14:00
-      li  #[span.hour 10:45] Konkurs
-      li  #[span.hour 11:45] Każdemu damy radę - magazyn poradniczy
-      li  #[span.hour 12:25] Kalendarium historyczne
-      li  #[span.hour 14:05] Za kierownicą - magazyn motoryzacyjny
-      li  #[span.hour 14:20] Trójwymiarowa Prognoca Pogody
-      li  #[span.hour 15:00] Instrukcja Obsługi Leżaka
-      li  #[span.hour 15:25] Konkurs
-      li  #[span.hour 16:45] Popołudnie z reportażem
-      li  #[span.hour 17:25] Ślady - magazyn religijny
-      li  #[span.hour 20:05] Radio Katowice - każdego dnia! - program wieczorny
+          a.tab-title(data-tab-content="saturday") sob
+        li
+          a.tab-title(data-tab-content="sunday") nd
+    .content-tab#monday
+      ul.hourly-list
+        li  #[span.hour 00:00] Lwowska Fala - powtórka programu
+        li  #[span.hour 01:00] Noc z Radiem Katowice
+        li  #[span.hour 01:15] Melodie Świata
+        li  #[span.hour 10:00] Przystanek Lato - Wakacyjny Program Radia Katowice od 10:00 do 14:00
+        li  #[span.hour 10:45] Konkurs
+        li  #[span.hour 11:45] Każdemu damy radę - magazyn poradniczy
+        li  #[span.hour 12:25] Kalendarium historyczne
+        li  #[span.hour 14:05] Za kierownicą - magazyn motoryzacyjny
+        li  #[span.hour 14:20] Trójwymiarowa Prognoca Pogody
+        li  #[span.hour 15:00] Instrukcja Obsługi Leżaka
+        li  #[span.hour 15:25] Konkurs
+        li  #[span.hour 16:45] Popołudnie z reportażem
+        li  #[span.hour 17:25] Ślady - magazyn religijny
+        li  #[span.hour 20:05] Radio Katowice - każdego dnia! - program wieczorny
+    .content-tab#tuesday.is-hidden
+      p wtorek
+    .content-tab#wednesday.is-hidden
+      p środa
+    .content-tab#thursday.is-hidden
+      p czwartek
+    .content-tab#friday.is-hidden
+      p piątek
+    .content-tab#saturday.is-hidden
+      p sobota
+    .content-tab#sunday.is-hidden
+      p niedziela
