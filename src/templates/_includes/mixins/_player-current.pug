@@ -1,4 +1,4 @@
-mixin current(current)
+mixin current(current, station)
   .container.is-fullhd
     if current.image
       .player-cover.cover(style= "background-image: url("+ baseurl + "'assets/files/img/" + current.image + "')")
@@ -15,7 +15,7 @@ mixin current(current)
               a
                 span.icon
                   img(src=baseurl + "assets/files/img/soundwave.svg")
-                span Teraz na antenie
+                span Teraz grane
             li.tab-title(data-tab-content = "stations-tab") 
               a Stacje
         .content-tab#on-air-tab
@@ -31,6 +31,13 @@ mixin current(current)
         .content-tab.is-hidden-mobile#stations-tab
           .player-stations
             ul.station-list
+              li
+                a.station-link(href='#') 
+                  span.icon
+                    img(src=baseurl + "assets/files/img/glowny.svg")
+                  span.stationlink-artist-name Varius Manx, Kasia Stankiewicz #[span.stationlink-title Kot bez ogona ]
+                  .play-icon-wrapper
+                    .play-icon
               li
                 a.station-link(href='#') 
                   span.icon
