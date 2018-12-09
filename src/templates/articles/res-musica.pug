@@ -1,0 +1,120 @@
+extends ../layouts/article-layout.pug
+include ../_includes/mixins/_article_list.pug
+include ../_includes/mixins/_media.pug 
+block vars
+    -
+        let title ="Res Musica";
+        let baseurl= "../";
+        let useFacebook= true;
+        var article1 = {
+            title:"Miasteczko na szczyt klimatyczny",
+            image: "miasteczko.jpg",
+            tags: ["Region","Katowice","Kultura"],
+            date: "17.07.2018",
+            link: "miasteczko"
+        };
+        var article2 = {
+            title:"Trwa budowa drogi Pszczyna – Racibórz.",
+            image: "pszczyna-raciborz.jpg",
+            tags: ["region","Pszczyna", "Racibórz"],
+            date: "15.07.2018",
+            link: "pszczyna-raciborz"
+        };
+        var article3 = {
+            title:"Naukobus. Mobilne centrum Nauki.",
+            image: "naukobus.jpg",
+            tags: ["kultura","Katowice"],
+            date: "13.07.2018",
+            link: "naukobus"
+        };
+        var article4 = {
+            title:"Prezydent Silbert: nie ma odpowiednich przepisów do walki z fetorem.",
+            image: "fetor.jpg",
+            tags: ["region","Jaworzno"],
+            date: "12.07.2018",
+            link: "fetor"
+        }
+block article-meta
+  span.article-category AUDYCJE
+block article-content    
+    h1.article-title Res Musica
+    p.lead Res Musica to magazyn wydarzeń muzycznych. Audycja na antenie Polskiego Radia Katowice emitowana jest nieprzerwanie od września 1981 roku.
+    figure.image
+      img(src=baseurl + "assets/files/img/res-musica.jpg")
+    p Res Musica to magazyn wydarzeń muzycznych. Audycja na antenie Polskiego Radia Katowice emitowana jest nieprzerwanie od września 1981 roku.
+    p W programie znajdują się omówienia, relacje i recenzje najważniejszych w koncertów i festiwali organizowanych w śląskich świątyniach i salach koncertowych, w których udział biorą wiodące orkiestry symfoniczne, soliści, chóry i zespoły kameralne reprezentujące artystyczny nurt funkcjonowania muzyki na Śląsku.
+    p Wiodącym celem prezentacji ukazujących się w tej audycji jest szeroka popularyzacja działalności tych formacji na czele z Narodową Orkiestrą Symfoniczną Polskiego Radia i Telewizji w Katowicach oraz artystami skupionymi wokół katowickiej Akademii Muzycznej im. Karola Szymanowskiego.
+    p Poprzez to słuchacz otrzymuje szeroki przegląd wydarzeń muzycznych, których organizatorami są te ważne instytucje, śląskie samorządy, a także różnego typu ośrodki kultury działające w całym regionie. Poprzez tak ukształtowaną tematykę magazynu Res Musica staramy się też uwrażliwiać naszych słuchaczy na najpiękniejsze pozycje repertuarowe w ich wykonaniu, dzieła wielkich kompozytorów, mistrzów swego gatunku od wieków dawnych po współczesność – pojawiające się w programach koncertów omawianych i relacjonowanych w magazynie Res Musica.
+    p Niedziela, godz. 20.05
+    footer.article-footer
+      p Kontakt: #[a(href="mailto:cierpiol@radio.katowice.pl") cierpiol@radio.katowice.pl]
+      h3.article-subtitle.has-border Prowadzi:
+      +media("Henryk Cierpioł", "dziennikarz")
+block after-article
+  article.main-article
+    .article-meta
+      .article-tags
+          span.article-tag.is-medium Region
+          span.article-tag.is-medium Kultura
+      span.article-date 15.07.2018
+    h1.article-title Res Musica
+    p  W magazynie wydarzeń muzycznych Res Musica  przedstawimy Państwu między innymi rozmowy o  rozpoczynającym się w piątek 12 maja najważniejszym festiwalu muzycznym organizowanym na Śląsku – III  Festiwalu  Kultura Natura , rozmawiać będziemy ze współautorem jego programu i zawartości  treściowej prof. Marcinem Trzęsiokiem z Katowickiej Akademii Muzycznej.  
+    p O  20-leciu  artystycznej działalności  Orkiestry Muzyki Nowej opowie jej szef artystyczny Szymon Bywalec. Nie zabraknie  spotkania z laureatem jednej z nagród, tegorocznych Fryderyków - prof. Markiem Toporowskim, tym razem  w kategorii muzyka dawna. Artysta  ten jest związany  z katowicką Akademią Muzyczną prowadząc klasę organów  i  klawesynu.  Nie zabraknie też refleksji  o śląskich muzeach w tym szczególnym wymiarze  tworzenia  ekspozycji  obejmującej historię śląskiej  muzyki, - muzyki w Katowicach  w szczególności - a noc muzeów  już niedługo.
+    footer.article-footer
+      .level
+        .level-left.social-media-icons
+          .addthis_inline_share_toolbox
+        .level-right
+          p.article-author Autor:         
+block after-main 
+  section.similiar-articles
+      .container
+        h2.section-title Aktualności
+        .columns
+          +similiarArticles(article1)
+          +similiarArticles(article2)
+          +similiarArticles(article3)
+          +similiarArticles(article4)
+block sidebar
+  .sidebar-content
+    .sidebar-box
+      h3.sidebar-headline Archiwum Audycji
+      .sidebar-box-body
+        ul.sidebar-box-list
+          li.sidebar-box-item
+            span #[small.sidebar-date 21-06-2018 ]
+            a.sidebar-link
+              span Spotkania Medyczne im. Krystyny Bochenek. Menopauza i andropauza
+              span.icon.is-small
+                i.fas.fa-arrow-right
+          li.sidebar-box-item 
+            span #[small.sidebar-date 15-04-2018 ]
+            a.sidebar-link
+              span Nagroda dla naszej redakcyjnej koleżanki Ewy Niewiadomskiej! 
+              span.icon.is-small
+                i.fas.fa-arrow-right
+          li.sidebar-box-item 
+            span #[small.sidebar-date 11-02-2018 ]
+            a.sidebar-link 
+              span Malarstwo Ewy Błaszak
+              span.icon.is-small
+                i.fas.fa-arrow-right
+          li.sidebar-box-item 
+            span #[small.sidebar-date 22-01-2018 ]
+            a.sidebar-link 
+              span Velostrada otwarta! Pierwsza w Polsce autostrada dla rowerow
+              span.icon.is-small
+                i.fas.fa-arrow-right
+        nav.pagination.is-small.is-centered
+          ul.pagination-list
+            li 
+              a.pagination-link.is-current 1
+            li 
+              a.pagination-link 2
+            li 
+              a.pagination-link 3
+            li 
+              span.pagination-ellipsis &hellip;
+            li 
+              a.pagination-link 20
+    include ../_includes/sidebar_includes/_newsletter.pug 

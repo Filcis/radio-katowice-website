@@ -160,6 +160,7 @@ a {
 section.recent-news, article.main-article, .similiar-articles {
   background-color: #fff;
   padding: $vertical-rhythm-unit-5 2rem;
+  border-bottom: none;
 }
 
 .recent-video {
@@ -333,7 +334,6 @@ footer.article-footer {
   background-color: transparent;
   padding-top: $vertical-rhythm-unit-1;
   margin-top: $vertical-rhythm-unit-1*2;
-  border-top: 1px solid $light-gray;
   min-height: 3rem;
 }
 

@@ -70,12 +70,12 @@ article.intertext {
   border-bottom: 1px solid $light-gray;
 }
 
-h2.section-subtitle {
+.section-subtitle {
   font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-1;
 }
 
-h2.article-subtitle {
+.article-subtitle {
   font-size: $size-3;
   margin-bottom: $vertical-rhythm-unit-3;
   margin-top: $vertical-rhythm-unit-5;
@@ -114,6 +114,14 @@ h3.article-subtitle {
         display: block;
         margin-bottom: $vertical-rhythm-unit-1/2;
     }
+}
+
+.article-footer {
+  a {
+    &:hover {
+      color: $basic-red;
+    }
+  }
 }
 
 blockquote {
