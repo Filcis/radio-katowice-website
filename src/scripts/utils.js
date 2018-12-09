@@ -29,6 +29,29 @@ export function attachCarousels() {
   var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 }
 
+const contentSwiperPrev = $('.swiperPrevButton');
+const contentSwiperNext = $('.swiperNextButton');
+
+export function contentSwiper() {
+
+  $(contentSwiperPrev).on('click', function() {
+    var context = $(this).data('scope');
+    var content = $(`.swiper-content[data-scope=${context}]`);
+    if ($(content).find('.swiper-item.is-active').prev().length != 0) {
+        $(content).find('.swiper-item.is-active').prev().addClass('is-active').next().removeClass('is-active');
+    }
+  });
+
+  $(contentSwiperNext).on('click', function() {
+    var context = $(this).data('scope');
+    var content = $(`.swiper-content[data-scope=${context}]`);
+    if ($(content).find('.swiper-item.is-active').next().length != 0) {
+        $(content).find('.swiper-item.is-active').next().addClass('is-active').prev().removeClass('is-active');
+    }
+  });
+
+}
+
 /* ==================================================
                    Tabs
 ================================================== */

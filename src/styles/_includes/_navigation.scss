@@ -38,9 +38,7 @@
 .navbar-dropdown, .accordion-content {
   display: none;
   &.open {
-    @include until($desktop) {
       display: block;
-    }
   }
 }
 

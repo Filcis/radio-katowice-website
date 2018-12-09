@@ -12,4 +12,5 @@ rkUtilities.dropdownHandler();
 rkUtilities.burgerHandler();
 rkUtilities.attachCarousels();
 rkUtilities.tabs();
+rkUtilities.contentSwiper();
 //testy

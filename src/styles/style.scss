@@ -130,6 +130,13 @@ a {
 }
 }
 
+.swiper-item {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
 .audition-info {
   align-items: center;
   justify-content: center;
