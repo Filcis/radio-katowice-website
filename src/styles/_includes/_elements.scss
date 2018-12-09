@@ -347,3 +347,25 @@ article.main-article figure {
     cursor: pointer;
   }
 }
+
+.swiper-item {
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
+
+.swiperNextButton, .swiperPrevButton {
+  cursor: pointer;
+  &.inactive {
+    color: #eee;
+    cursor: default;
+  }
+}
+
+.current-day{
+  display: none;
+  &.is-active {
+    display: block;
+  }
+}
