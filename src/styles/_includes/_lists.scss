@@ -35,3 +35,37 @@
     padding-bottom: $vertical-rhythm-unit-1;
   }
 }
+
+.top-list {
+  td {
+    vertical-align: middle;
+    font-size: $size-4;
+  }
+  th {
+    font-weight: normal;
+  }
+  th:last-child {
+    text-align: right;
+  }
+  .cover {
+    width: 128px;
+  }
+  .position {
+    width: 64px;
+    font-size: $size-4;
+    text-align: center;
+  }
+  .change {
+    text-align: right;
+  }
+}
+
+.playlist {
+  th {
+    vertical-align: middle;
+  }
+  .hour {
+    color: $basic-red;
+    width: 5rem;
+  }
+}

@@ -3,5 +3,39 @@ block vars
   -
     let title ="Lista przebojów";
     let baseurl= "../";
+    let songs = [
+      { title: "Thank U, Ariana Grande", change: "up"},
+      { title:"Happier, Marshmello & Bastille", change: "up"},
+      { title:"Without Me, Halsey", change: "down"},
+      { title:"High Hopes, Panic! At The Disco", change: "up"},
+      { title:"Take that, ODYSSEY", change: "down"},
+    ]
+    
 block main-content
   h1.page-title.is-borderless Lista przebojów
+  table.top-list.table.is-fullwidth
+    thead
+      tr
+        th(abbr title="Pozycja") Pozycja
+        th(colspan="2" abbr title="Tytuł, Artysta") Tytuł, artysta
+        th(abbr title="Zmiana pozycji") Zmiana pozycji
+    tbody
+      each song, index in songs
+        tr
+          td.position
+            span= index +1
+          td.cover
+            figure.image.is-128x128
+              img(src="https://via.placeholder.com/128x128")
+          td
+            span.song=song.title
+          td.change
+            if song.change === "up"
+              span.icon.has-text-success
+                i.fas.fa-arrow-up
+            else
+              span.icon.is-red
+                i.fas.fa-arrow-down
+block sidebar
+  include ../_includes/sidebar_includes/_newsletter.pug 
+    

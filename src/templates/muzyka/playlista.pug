@@ -20,8 +20,8 @@ block main-content
             i.fa-arrow-right.fas
   // tabela 1
   .swiper-content(data-scope="playlist")
-    .swiper-item(data-day="WCZORAJ")
-      table.table
+    .swiper-item(data-day="WCZORAJ") 
+      table.table.playlist.is-fullwidth
         thead
           tr
             th(colspan=2) 
@@ -38,10 +38,10 @@ block main-content
           ]
         each f in hour1
           tr
-            td= f.h
+            td.hour= f.h
             td= f.a
       // tabela 2
-      table.table
+      table.table.playlist.is-fullwidth
         thead
           tr
             th(colspan=2) 
@@ -58,10 +58,10 @@ block main-content
           ]
         each f in hour2
           tr
-            td= f.h
+            td.hour= f.h
             td= f.a
     .swiper-item.is-active(data-day="DZISIAJ")
-      table.table
+      table.table.playlist.is-fullwidth
         thead
           tr
             th(colspan=2) 
@@ -78,10 +78,10 @@ block main-content
           ]
         each f in hour1
           tr
-            td= f.h
+            td.hour= f.h
             td= f.a
       // tabela 2
-      table.table
+      table.table.playlist.is-fullwidth
         thead
           tr
             th(colspan=2) 
@@ -98,5 +98,7 @@ block main-content
           ]
         each f in hour2
           tr
-            td= f.h
+            td.hour= f.h
             td= f.a
+block sidebar
+  include ../_includes/sidebar_includes/_newsletter.pug 
