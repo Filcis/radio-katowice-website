@@ -17,6 +17,7 @@ html {
 .section-title,
 .page-title {
   font-size: $size-3;
+  display: flex;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid $grey;
   margin-bottom: $vertical-rhythm-unit-4;
