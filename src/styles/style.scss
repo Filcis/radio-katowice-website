@@ -137,6 +137,14 @@ a {
   }
 }
 
+.swiperNextButton, .swiperPrevButton {
+  cursor: pointer;
+  &.inactive {
+    color: #eee;
+    cursor: default;
+  }
+}
+
 .audition-info {
   align-items: center;
   justify-content: center;

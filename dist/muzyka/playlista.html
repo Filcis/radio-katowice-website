@@ -149,7 +149,7 @@
                   <div class="level-item">
                     <div class="swiperPrevButton" role="button" data-scope="playlist"> <span class="icon"><i class="fa-arrow-left fas"></i></span></div>
                   </div>
-                  <div class="level-item">     <span class="current-day">DZISIAJ</span></div>
+                  <div class="level-item">     <span class="current-day" data-scope="playlist">DZISIAJ</span></div>
                   <div class="level-item">
                     <div class="swiperNextButton" role="button" data-scope="playlist"><span class="icon"><i class="fa-arrow-right fas"></i></span></div>
                   </div>
@@ -157,7 +157,7 @@
               </div>
               <!-- tabela 1-->
               <div class="swiper-content" data-scope="playlist">
-                <div class="swiper-item">
+                <div class="swiper-item" data-day="WCZORAJ">
                   <table class="table">
                     <thead>
                       <tr>
@@ -214,7 +214,7 @@
                     </tr>
                   </table>
                 </div>
-                <div class="swiper-item is-active">
+                <div class="swiper-item is-active" data-day="DZISIAJ">
                   <table class="table">
                     <thead>
                       <tr>

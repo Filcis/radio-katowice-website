@@ -29,16 +29,56 @@ export function attachCarousels() {
   var carousels = bulmaCarousel.attach(); // carousels now contains an array of all Carousel instances
 }
 
+/* ==================================================
+                   Swiper
+================================================== */
+//TODO : simplify. Too much repeating
+
 const contentSwiperPrev = $('.swiperPrevButton');
 const contentSwiperNext = $('.swiperNextButton');
 
+function toggleSwiperButtons() {
+
+  $(contentSwiperPrev).each( function() {
+
+    var context = $(this).data('scope');
+    var content = $(`.swiper-content[data-scope=${context}]`);
+    var counter = $(content).find('.swiper-item.is-active').prev().length;
+
+    if (counter > 0) {
+      $(this).removeClass('inactive');
+
+    } else {
+      $(this).addClass('inactive');
+    }
+  });
+
+  $(contentSwiperNext).each( function() {
+
+    var context = $(this).data('scope');
+    var content = $(`.swiper-content[data-scope=${context}]`);
+    var counter = $(content).find('.swiper-item.is-active').next().length;
+
+    if (counter > 0) {
+      $(this).removeClass('inactive');
+
+    } else {
+      $(this).addClass('inactive');
+    }
+  });
+
+}
+
 export function contentSwiper() {
+
+  toggleSwiperButtons();
 
   $(contentSwiperPrev).on('click', function() {
     var context = $(this).data('scope');
     var content = $(`.swiper-content[data-scope=${context}]`);
     if ($(content).find('.swiper-item.is-active').prev().length != 0) {
         $(content).find('.swiper-item.is-active').prev().addClass('is-active').next().removeClass('is-active');
+        toggleSwiperButtons();
     }
   });
 
@@ -47,6 +87,7 @@ export function contentSwiper() {
     var content = $(`.swiper-content[data-scope=${context}]`);
     if ($(content).find('.swiper-item.is-active').next().length != 0) {
         $(content).find('.swiper-item.is-active').next().addClass('is-active').prev().removeClass('is-active');
+            toggleSwiperButtons();
     }
   });
 

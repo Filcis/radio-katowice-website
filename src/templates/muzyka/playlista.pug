@@ -12,14 +12,14 @@ block main-content
           span.icon
             i.fa-arrow-left.fas
       .level-item      
-        span.current-day DZISIAJ
+        span.current-day(data-scope="playlist") DZISIAJ
       .level-item
         .swiperNextButton(role="button" data-scope="playlist")
           span.icon
             i.fa-arrow-right.fas
   // tabela 1
   .swiper-content(data-scope="playlist")
-    .swiper-item
+    .swiper-item(data-day="WCZORAJ")
       table.table
         thead
           tr
@@ -59,7 +59,7 @@ block main-content
           tr
             td= f.h
             td= f.a
-    .swiper-item.is-active
+    .swiper-item.is-active(data-day="DZISIAJ")
       table.table
         thead
           tr
