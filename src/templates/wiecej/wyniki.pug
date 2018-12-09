@@ -1,0 +1,28 @@
+extends ../layouts/static-layout.pug
+include ../_includes/mixins/_media.pug 
+block vars
+  -
+    let title ="Wyniki wyszukiwania";
+    let baseurl= "../";
+    let results = [
+      "wynik wyszukiwania 1",
+      "wynik wyszukiwania 2",
+      "wynik wyszukiwania 3",
+      "wynik wyszukiwania 4",
+      "wynik wyszukiwania 5",
+      "wynik wyszukiwania 6",
+      "wynik wyszukiwania 7",
+      "wynik wyszukiwania 8",
+      "wynik wyszukiwania 9",
+      "wynik wyszukiwania 10",
+    ]
+block main-content
+    h1.page-title Wyniki wyszukiwania dla hasła: #[br] #[i hasło]
+    section.is-vmargin-5
+      ul.is-circle-bullet-list.is-spaced-list.is-size-4
+        each val in results
+          li
+            a=val
+block sidebar
+  include ../_includes/sidebar_includes/_region.pug
+  include ../_includes/sidebar_includes/_newsletter.pug

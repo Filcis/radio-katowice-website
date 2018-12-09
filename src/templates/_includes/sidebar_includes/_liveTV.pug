@@ -1,0 +1,29 @@
+.sidebar-box
+  h3.sidebar-headline Live TV
+  #sidebar-fixedIframe-wrapper
+    .responsive-yt-embed
+      #ytplayer
+.sidebar-box
+.advertisement-placeholder
+  p reklama
+
+  script.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    var player;
+    
+    function onYouTubePlayerAPIReady() {
+      player = new YT.Player('ytplayer', {
+        videoId: 'M7lc1UVf-VE',
+        events: {
+          'onReady': onPlayerReady
+        }
+      });
+    }
+    
+    function onPlayerReady(e) {
+      e.target.setVolume(0);
+      e.target.playVideo();
+    }
