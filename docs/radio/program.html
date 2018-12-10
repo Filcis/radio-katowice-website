@@ -78,9 +78,9 @@
             </div>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Reklama</a>
               <div class="navbar-dropdown">
-                <div class="navbar-item"> <a href="../agencja-reklamy.html">Agencja reklamy</a></div>
+                <div class="navbar-item"> <a href="../reklama/agencja-reklamy.html">Agencja reklamy</a></div>
                 <hr class="dropdown-divider">
-                <div class="navbar-item"> <a href="../promocja.html">Promocja i marketing</a></div>
+                <div class="navbar-item"> <a href="../reklama/promocja.html">Promocja i marketing</a></div>
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">O nas</a>
@@ -94,11 +94,11 @@
             </div>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Więcej</a>
               <div class="navbar-dropdown">
-                <div class="navbar-item"> <a href="../polecamy.html">Polecamy</a></div>
+                <div class="navbar-item"> <a href="../wiecej/polecamy.html">Polecamy</a></div>
                 <hr class="dropdown-divider">
-                <div class="navbar-item"> <a href="../patronaty.html">Patronaty</a></div>
+                <div class="navbar-item"> <a href="../wiecej/patronaty.html">Patronaty</a></div>
                 <hr class="dropdown-divider">
-                <div class="navbar-item"> <a href="../wydarzenia.html">Radiowe wydarzenia</a></div>
+                <div class="navbar-item"> <a href="../wiecej/wydarzenia.html">Radiowe wydarzenia</a></div>
                 <hr class="dropdown-divider">
                 <div class="navbar-item"> <a href="#">Więcej</a></div>
               </div>
@@ -142,11 +142,9 @@
       <div class="columns is-desktop is-gapless">
         <div class="column is-9-desktop">
           <div class="columns is-centered">
-            <div class="column is-10">
-              <h2 class="page-title"><span class="icon is-large"><i class="fas fa-calendar-alt"></i></span>
-                <Programy>Informacyjne</Programy>
-              </h2>
-              <section class="accordion-content">
+            <div class="column is-10 is-9-fullhd">
+              <h1 class="page-title"><span class="icon is-medium"><img src="../assets/files/img/program.svg"></span><span>Programy Informacyjne</span></h1>
+              <section class="is-vmargin-5">
                 <table class="table information-program">
                   <tr>
                     <td class="table-title">Informacje</td>
@@ -183,37 +181,55 @@
                   </tr>
                 </table>
               </section>
-              <h1 class="section-title"><span class="icon is-large"><i class="fas fa-calendar-alt"></i></span>
-                <Ramowy>Program Radia Katowice</Ramowy>
-              </h1>
-              <section class="accordion-content">
+              <h1 class="section-title"><span class="icon is-medium"><img src="../assets/files/img/program.svg"></span><span>Ramowy Program Radia Katowice</span></h1>
+              <section class="is-vmargin-5">
                 <div class="tabs is-medium">
                   <ul>
-                    <li class="is-active"><a>pon</a></li>
-                    <li><a>wt</a></li>
-                    <li><a>śr</a></li>
-                    <li><a>czw</a></li>
-                    <li><a>pt</a></li>
-                    <li><a>sob</a></li>
-                    <li><a>nd</a></li>
+                    <li><a class="tab-title is-active" data-tab-content="monday">pon</a></li>
+                    <li><a class="tab-title" data-tab-content="tuesday">wt</a></li>
+                    <li><a class="tab-title" data-tab-content="wednesday">śr</a></li>
+                    <li><a class="tab-title" data-tab-content="thursday">czw</a></li>
+                    <li><a class="tab-title" data-tab-content="friday">pt</a></li>
+                    <li><a class="tab-title" data-tab-content="saturday">sob</a></li>
+                    <li><a class="tab-title" data-tab-content="sunday">nd</a></li>
                   </ul>
                 </div>
-                <ul class="hourly-list">
-                  <li> <span class="hour">00:00</span> Lwowska Fala - powtórka programu</li>
-                  <li> <span class="hour">01:00</span> Noc z Radiem Katowice</li>
-                  <li> <span class="hour">01:15</span> Melodie Świata</li>
-                  <li> <span class="hour">10:00</span> Przystanek Lato - Wakacyjny Program Radia Katowice od 10:00 do 14:00</li>
-                  <li> <span class="hour">10:45</span> Konkurs</li>
-                  <li> <span class="hour">11:45</span> Każdemu damy radę - magazyn poradniczy</li>
-                  <li> <span class="hour">12:25</span> Kalendarium historyczne</li>
-                  <li> <span class="hour">14:05</span> Za kierownicą - magazyn motoryzacyjny</li>
-                  <li> <span class="hour">14:20</span> Trójwymiarowa Prognoca Pogody</li>
-                  <li> <span class="hour">15:00</span> Instrukcja Obsługi Leżaka</li>
-                  <li> <span class="hour">15:25</span> Konkurs</li>
-                  <li> <span class="hour">16:45</span> Popołudnie z reportażem</li>
-                  <li> <span class="hour">17:25</span> Ślady - magazyn religijny</li>
-                  <li> <span class="hour">20:05</span> Radio Katowice - każdego dnia! - program wieczorny</li>
-                </ul>
+                <div class="content-tab" id="monday">
+                  <ul class="hourly-list">
+                    <li> <span class="hour">00:00</span> Lwowska Fala - powtórka programu</li>
+                    <li> <span class="hour">01:00</span> Noc z Radiem Katowice</li>
+                    <li> <span class="hour">01:15</span> Melodie Świata</li>
+                    <li> <span class="hour">10:00</span> Przystanek Lato - Wakacyjny Program Radia Katowice od 10:00 do 14:00</li>
+                    <li> <span class="hour">10:45</span> Konkurs</li>
+                    <li> <span class="hour">11:45</span> Każdemu damy radę - magazyn poradniczy</li>
+                    <li> <span class="hour">12:25</span> Kalendarium historyczne</li>
+                    <li> <span class="hour">14:05</span> Za kierownicą - magazyn motoryzacyjny</li>
+                    <li> <span class="hour">14:20</span> Trójwymiarowa Prognoca Pogody</li>
+                    <li> <span class="hour">15:00</span> Instrukcja Obsługi Leżaka</li>
+                    <li> <span class="hour">15:25</span> Konkurs</li>
+                    <li> <span class="hour">16:45</span> Popołudnie z reportażem</li>
+                    <li> <span class="hour">17:25</span> Ślady - magazyn religijny</li>
+                    <li> <span class="hour">20:05</span> Radio Katowice - każdego dnia! - program wieczorny</li>
+                  </ul>
+                </div>
+                <div class="content-tab is-hidden" id="tuesday">
+                  <p>wtorek</p>
+                </div>
+                <div class="content-tab is-hidden" id="wednesday">
+                  <p>środa</p>
+                </div>
+                <div class="content-tab is-hidden" id="thursday">
+                  <p>czwartek</p>
+                </div>
+                <div class="content-tab is-hidden" id="friday">
+                  <p>piątek</p>
+                </div>
+                <div class="content-tab is-hidden" id="saturday">
+                  <p>sobota</p>
+                </div>
+                <div class="content-tab is-hidden" id="sunday">
+                  <p>niedziela</p>
+                </div>
               </section>
             </div>
           </div>
@@ -225,10 +241,10 @@
       </div>
     </div>
   </main><a class="c-go-top" href="#" id="c-go-top"><i class="fa fa-arrow-up fa-fw"></i></a>
-  <footer class="section is-size-7">
+  <footer id="main-footer">
     <div class="container">
       <div class="columns">
-        <div class="column is-2">
+        <div class="column is-3">
           <section>
             <h4 class="footer_headline">Partnerzy radia katowice</h4>
             <ul>
@@ -242,7 +258,7 @@
             </ul>
           </section>
         </div>
-        <div class="column is-2">
+        <div class="column is-3">
           <section>
             <h4 class="footer_headline">archiwum dźwiękowe</h4>
             <ul>

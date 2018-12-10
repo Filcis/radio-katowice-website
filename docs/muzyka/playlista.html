@@ -78,9 +78,9 @@
             </div>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Reklama</a>
               <div class="navbar-dropdown">
-                <div class="navbar-item"> <a href="../agencja-reklamy.html">Agencja reklamy</a></div>
+                <div class="navbar-item"> <a href="../reklama/agencja-reklamy.html">Agencja reklamy</a></div>
                 <hr class="dropdown-divider">
-                <div class="navbar-item"> <a href="../promocja.html">Promocja i marketing</a></div>
+                <div class="navbar-item"> <a href="../reklama/promocja.html">Promocja i marketing</a></div>
               </div>
             </div>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">O nas</a>
@@ -94,11 +94,11 @@
             </div>
             <div class="navbar-item has-dropdown is-hoverable"><a class="navbar-link">Więcej</a>
               <div class="navbar-dropdown">
-                <div class="navbar-item"> <a href="../polecamy.html">Polecamy</a></div>
+                <div class="navbar-item"> <a href="../wiecej/polecamy.html">Polecamy</a></div>
                 <hr class="dropdown-divider">
-                <div class="navbar-item"> <a href="../patronaty.html">Patronaty</a></div>
+                <div class="navbar-item"> <a href="../wiecej/patronaty.html">Patronaty</a></div>
                 <hr class="dropdown-divider">
-                <div class="navbar-item"> <a href="../wydarzenia.html">Radiowe wydarzenia</a></div>
+                <div class="navbar-item"> <a href="../wiecej/wydarzenia.html">Radiowe wydarzenia</a></div>
                 <hr class="dropdown-divider">
                 <div class="navbar-item"> <a href="#">Więcej</a></div>
               </div>
@@ -142,89 +142,163 @@
       <div class="columns is-desktop is-gapless">
         <div class="column is-9-desktop">
           <div class="columns is-centered">
-            <div class="column is-10">
+            <div class="column is-10 is-9-fullhd">
               <h1 class="page-title is-borderless">Co było grane w Radiu Katowice</h1>
               <div class="day-selection">
                 <div class="level">
                   <div class="level-item">
-                    <div class="figure icon"><i class="fa-arrow-left fas"></i></div>
+                    <div class="swiperPrevButton" role="button" data-scope="playlist"> <span class="icon"><i class="fa-arrow-left fas"></i></span></div>
                   </div>
-                  <div class="level-item">     <span class="current-day">DZISIAJ</span></div>
+                  <div class="level-item">     <span class="current-day" data-scope="playlist">WCZORAJ</span><span class="current-day is-active" data-scope="playlist">DZISIAJ</span></div>
                   <div class="level-item">
-                    <div class="figure icon"><i class="fa-arrow-right fas"></i></div>
+                    <div class="swiperNextButton" role="button" data-scope="playlist"><span class="icon"><i class="fa-arrow-right fas"></i></span></div>
                   </div>
                 </div>
               </div>
               <!-- tabela 1-->
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th colspan="2"> <span class="icon is-large"><i class="fas fa-clock"></i></span>17:00</th>
-                  </tr>
-                </thead>
-                <tr>
-                  <td>17:52</td>
-                  <td>Rod Stewart - BABY JANE</td>
-                </tr>
-                <tr>
-                  <td>17:49</td>
-                  <td>Alizee - J'EN AI MARRE!</td>
-                </tr>
-                <tr>
-                  <td>17:45</td>
-                  <td>Procol Harum - A WHITER SHADE OF PALE</td>
-                </tr>
-                <tr>
-                  <td>17:37</td>
-                  <td>Budka Suflera - V BIEG</td>
-                </tr>
-                <tr>
-                  <td>17:30</td>
-                  <td>Dire Straits - SO FAR AWAY</td>
-                </tr>
-              </table>
-              <!-- tabela 2-->
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th colspan="2"> <span class="icon is-large"><i class="fas fa-clock"></i></span>16:00</th>
-                  </tr>
-                </thead>
-                <tr>
-                  <td>16:52</td>
-                  <td>Goya - TYLKO MNIE KOCHAJ</td>
-                </tr>
-                <tr>
-                  <td>16:49</td>
-                  <td>Starship - SARA</td>
-                </tr>
-                <tr>
-                  <td>16:45</td>
-                  <td>Selena Gomez - BACK TO YOU</td>
-                </tr>
-                <tr>
-                  <td>16:37</td>
-                  <td>Jamelia - SUPERSTAR</td>
-                </tr>
-                <tr>
-                  <td>16:30</td>
-                  <td>The Beatles - ELEANOR RIGBY</td>
-                </tr>
-              </table>
+              <div class="swiper-content" data-scope="playlist">
+                <div class="swiper-item" data-day="WCZORAJ"> 
+                  <table class="table playlist is-fullwidth">
+                    <thead>
+                      <tr>
+                        <th colspan="2"> <span class="icon is-large"><i class="fas fa-clock"></i></span><span>17:00</span></th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td class="hour">17:52</td>
+                      <td> John Lennon - NOBODY TOLD ME</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:49</td>
+                      <td>Ania Dąbrowska - SERCE NIE SŁUGA</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:45</td>
+                      <td>The Specials - PRESSURE DROP</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:37</td>
+                      <td>Kayah - DING DONG</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:30</td>
+                      <td>Artur Andrus - SZPARAG SERGE</td>
+                    </tr>
+                  </table>
+                  <!-- tabela 2-->
+                  <table class="table playlist is-fullwidth">
+                    <thead>
+                      <tr>
+                        <th colspan="2"> <span class="icon is-large"><i class="fas fa-clock"></i></span><span>16:00</span></th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td class="hour">16:52</td>
+                      <td>Bajka o Jazzie - PIOSENKA UWERTUROWA</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:49</td>
+                      <td>Arka Noego - ŚWIĘTY ŚWIĘTY UŚMIECHNIĘTY</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:45</td>
+                      <td>Grzegorz Hyży - PECH TO NIE GRZECH</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:37</td>
+                      <td>Mrozu - JAK NIE MY TO KTO</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:30</td>
+                      <td>Olly Murs, Snoop Dogg - MOVES</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="swiper-item is-active" data-day="DZISIAJ">
+                  <table class="table playlist is-fullwidth">
+                    <thead>
+                      <tr>
+                        <th colspan="2"> <span class="icon is-large"><i class="fas fa-clock"></i></span><span>17:00</span></th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td class="hour">17:52</td>
+                      <td>Rod Stewart - BABY JANE</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:49</td>
+                      <td>Alizee - J'EN AI MARRE!</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:45</td>
+                      <td>Procol Harum - A WHITER SHADE OF PALE</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:37</td>
+                      <td>Budka Suflera - V BIEG</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">17:30</td>
+                      <td>Dire Straits - SO FAR AWAY</td>
+                    </tr>
+                  </table>
+                  <!-- tabela 2-->
+                  <table class="table playlist is-fullwidth">
+                    <thead>
+                      <tr>
+                        <th colspan="2"> <span class="icon is-large"><i class="fas fa-clock"></i></span><span>16:00</span></th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td class="hour">16:52</td>
+                      <td>Goya - TYLKO MNIE KOCHAJ</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:49</td>
+                      <td>Starship - SARA</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:45</td>
+                      <td>Selena Gomez - BACK TO YOU</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:37</td>
+                      <td>Jamelia - SUPERSTAR</td>
+                    </tr>
+                    <tr>
+                      <td class="hour">16:30</td>
+                      <td>The Beatles - ELEANOR RIGBY</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="column is-3-desktop">
           <aside class="sidebar">
+            <div class="sidebar-content">
+              <div class="newsletter-box">
+                <h1 class="section-title-secondary">Zapisz się do naszego newslettera</h1>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-medium" placeholder="e-mail" type="e-mail">
+                  </div>
+                  <div class="control">
+                    <input class="input" type="submit">
+                  </div><span><small>*Tu powinna się znalezc klauzula RODO</small> </span>
+                </div>
+              </div>
+            </div>
           </aside>
         </div>
       </div>
     </div>
   </main><a class="c-go-top" href="#" id="c-go-top"><i class="fa fa-arrow-up fa-fw"></i></a>
-  <footer class="section is-size-7">
+  <footer id="main-footer">
     <div class="container">
       <div class="columns">
-        <div class="column is-2">
+        <div class="column is-3">
           <section>
             <h4 class="footer_headline">Partnerzy radia katowice</h4>
             <ul>
@@ -238,7 +312,7 @@
             </ul>
           </section>
         </div>
-        <div class="column is-2">
+        <div class="column is-3">
           <section>
             <h4 class="footer_headline">archiwum dźwiękowe</h4>
             <ul>

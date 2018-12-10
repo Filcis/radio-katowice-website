@@ -21,9 +21,9 @@
     </nav>
   </header>
   <div class="container is-fullhd">
-    <div class="player-cover cover" style="background-image: url('assets/files/img/okladka_nuta.svg')">
+    <div class="player-cover cover" style="background-image: url('assets/files/img/okladka_mikrofon_m.svg')">
       <div class="controls">
-        <button id="player-button-play">
+        <button class="playing" id="player-button-play">
           <div class="play-icon-wrapper"><span class="play-icon"></span></div>
         </button>
         <div class="volume-control"><i class="fas fa-volume-up"></i>
@@ -36,16 +36,18 @@
       <div class="player-live-info">
         <div class="tabs is-boxed is-fullwidth is-toggle">
           <ul>
-            <li class="tab-title is-active" data-tab-content="on-air-tab"> <a><span class="icon"><img src="assets/files/img/soundwave.svg"/></span><span>Teraz na antenie</span></a></li>
+            <li class="tab-title is-active" data-tab-content="on-air-tab"> <a><span class="icon"><img src="assets/files/img/soundwave.svg"/></span><span>Teraz grane</span></a></li>
             <li class="tab-title" data-tab-content="stations-tab"> <a>Stacje</a></li>
           </ul>
         </div>
         <div class="content-tab" id="on-air-tab">
           <div class="player-current">
             <div class="columns is-mobile is-vcentered">
-              <div class="column is-2"><span class="is-large icon player-current-station"><img src="assets/files/img/logo-symbol-negatyw.svg"/></span></div>
-              <div class="column is-offset-1">
-                <h3><span class="artist-name">Varius Manx, Kasia Stankiewicz</span><span class="song-title">Kot bez ogona</span></h3>
+              <div class="column is-narrow">
+                <div class="player-current-station"><span class="icon"><img src="assets/files/img/ikony/stacja_katowice.svg"/></span></div>
+              </div>
+              <div class="column">
+                <h3><span class="artist-name">Informacje</span><span class="song-title">Nazwa programu</span></h3>
               </div>
             </div>
           </div>
@@ -53,19 +55,19 @@
         <div class="content-tab is-hidden-mobile" id="stations-tab">
           <div class="player-stations">
             <ul class="station-list">
-              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/live.svg"/></span><span class="stationlink-artist-name">Nick Cave & The Bad Seeds <span class="stationlink-title">Jubilee Street </span></span>
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/ikony/stacja_live.svg"/></span><span class="stationlink-artist-name">Nick Cave & The Bad Seeds <span class="stationlink-title">Jubilee Street </span></span>
                   <div class="play-icon-wrapper">
                     <div class="play-icon"></div>
                   </div></a></li>
-              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/top50.svg"/></span><span class="stationlink-artist-name">Tom Waits <span class="stationlink-title">Ol'55 </span></span>
+              <li><a class="station-link" href="player-top50.html"> <span class="icon"><img src="assets/files/img/ikony/stacja_top50.svg"/></span><span class="stationlink-artist-name">Tom Waits <span class="stationlink-title">Ol'55 </span></span>
                   <div class="play-icon-wrapper">
                     <div class="play-icon"></div>
                   </div></a></li>
-              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/moje_radio.svg"/></span><span class="stationlink-artist-name">The Dumplings <span class="stationlink-title">Raj </span></span>
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/ikony/stacja_moje_radio.svg"/></span><span class="stationlink-artist-name">The Dumplings <span class="stationlink-title">Raj </span></span>
                   <div class="play-icon-wrapper">
                     <div class="play-icon"></div>
                   </div></a></li>
-              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/dance.svg"/></span><span class="stationlink-artist-name">Elvis Presley <span class="stationlink-title">Crawfish </span></span>
+              <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/ikony/stacja_dance.svg"/></span><span class="stationlink-artist-name">Elvis Presley <span class="stationlink-title">Crawfish </span></span>
                   <div class="play-icon-wrapper">
                     <div class="play-icon"></div>
                   </div></a></li>
