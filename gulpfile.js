@@ -147,10 +147,10 @@ gulp.task('scripts', function() {
     }))
     .pipe(source('index.js'))
     .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
+    // .pipe(sourcemaps.init({loadMaps: true}))
         // Add transformation tasks to the pipeline here.
-        .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
+        // .pipe(uglify())
+    // .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist/assets/js/'))
     .pipe(browserSync.stream())
     .pipe(notify({
