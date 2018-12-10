@@ -398,6 +398,7 @@ footer.article-footer {
   display: block;
   font-size: $size-6;
   position: absolute;
+  z-index: 1;
   top:0;
   right:0;
   color: #fff;
