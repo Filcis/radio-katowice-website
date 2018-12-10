@@ -4,9 +4,6 @@
 @import '_includes/_carousel.sass';
 @import '_includes/_mixins';
 @import '_includes/_typography';
-// @import '_includes/_elements';
-// @import '_includes/_lists';
-// @import '_includes/_navigation';
 
 
 /* =============================================================
@@ -141,7 +138,11 @@ html  {
   }
 }
 
-.stations-list {
+.station-list {
+  .station-link .icon {
+    height: 2rem;
+    opacity: 0.7;
+  }
 }
 
 .player-artist-name,
@@ -192,10 +193,12 @@ html  {
 
 
 .player-current-station {
-  background-color: $gray;
-  border-radius: 3rem;
-  img{
-    max-width: 60%;
+  padding-right: 1.25rem;
+  width: 100%;
+  border-right: 1px solid $light-gray;
+  .icon {
+    height: 4.5rem;
+    width: 4.5rem;
   }
 }
 
@@ -406,7 +409,7 @@ html  {
   }
   &:hover {
     .play-icon-wrapper {
-      color: $basic-red;
+      border-color: $basic-red;
     }
   }
 }

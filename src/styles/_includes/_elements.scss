@@ -41,6 +41,9 @@
     color: #fff;
     background-color: darken($basic-red, 40);
   }
+  &:active {
+    color: #fff;
+  }
 }
 .station-list {
   padding-right: 0.5rem;

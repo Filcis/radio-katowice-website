@@ -5,9 +5,9 @@ block vars
     let title ="Polskie Radio Katowice - player";
     let baseurl= "";
     let current = {
-      name: "Informacje",
-      title: "Nazwa programu",
-      image: "okladka_mikrofon_m.svg",
+      name: "Varius Manx, Kasia Stankiewicz",
+      title: "Kot bez ogona",
+      image: "okladka_nuta_m.svg",
     }
     let player_news = [
       {
@@ -48,7 +48,7 @@ mixin shortcut(time, title, icon, isvertical)
       span.player-shortcut-title= title
       span.player-shortcut-call-to-action słuchaj
 block content
-  +current(current, "katowice")
+  +current(current, "top50")
   section.player-shortcut-group
     .player-shortcuts
       h2.shortcuts-group-title 

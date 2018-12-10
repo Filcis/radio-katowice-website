@@ -210,6 +210,9 @@ blockquote {
 }
 
 .song-title, .artist-name {
+  @include until($large-mobile) {
+    font-size: $size-5;
+  }
   display: inline-block;
   font-size: $size-4;
 }
