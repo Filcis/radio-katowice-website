@@ -20,46 +20,6 @@ block main-content
             i.fa-arrow-right.fas
   // tabela 1
   .swiper-content(data-scope="playlist")
-    .swiper-item(data-day="WCZORAJ") 
-      table.table.playlist.is-fullwidth
-        thead
-          tr
-            th(colspan=2) 
-              span.icon.is-large
-                i.fas.fa-clock
-              span 17:00
-        -
-          var hour1 = [
-            {'h': '17:52',  'a': ' John Lennon - NOBODY TOLD ME'},
-            {'h': '17:49',  'a': 'Ania Dąbrowska - SERCE NIE SŁUGA'},
-            {'h': '17:45',  'a': 'The Specials - PRESSURE DROP'},
-            {'h': '17:37',   'a': 'Kayah - DING DONG'},
-            {'h': '17:30',   'a': 'Artur Andrus - SZPARAG SERGE'},
-          ]
-        each f in hour1
-          tr
-            td.hour= f.h
-            td= f.a
-      // tabela 2
-      table.table.playlist.is-fullwidth
-        thead
-          tr
-            th(colspan=2) 
-              span.icon.is-large
-                i.fas.fa-clock
-              span 16:00
-        -
-          var hour2 = [
-            {'h': '16:52',  'a': 'Bajka o Jazzie - PIOSENKA UWERTUROWA'},
-            {'h': '16:49',  'a': 'Arka Noego - ŚWIĘTY ŚWIĘTY UŚMIECHNIĘTY'},
-            {'h': '16:45',  'a': 'Grzegorz Hyży - PECH TO NIE GRZECH'},
-            {'h': '16:37',   'a': 'Mrozu - JAK NIE MY TO KTO'},
-            {'h': '16:30',   'a': 'Olly Murs, Snoop Dogg - MOVES'},
-          ]
-        each f in hour2
-          tr
-            td.hour= f.h
-            td= f.a
     .swiper-item.is-active(data-day="DZISIAJ")
       table.table.playlist.is-fullwidth
         thead
@@ -95,6 +55,46 @@ block main-content
             {'h': '16:45',  'a': 'Selena Gomez - BACK TO YOU'},
             {'h': '16:37',   'a': 'Jamelia - SUPERSTAR'},
             {'h': '16:30',   'a': 'The Beatles - ELEANOR RIGBY'},
+          ]
+        each f in hour2
+          tr
+            td.hour= f.h
+            td= f.a
+    .swiper-item(data-day="WCZORAJ") 
+      table.table.playlist.is-fullwidth
+        thead
+          tr
+            th(colspan=2) 
+              span.icon.is-large
+                i.fas.fa-clock
+              span 17:00
+        -
+          var hour1 = [
+            {'h': '17:52',  'a': ' John Lennon - NOBODY TOLD ME'},
+            {'h': '17:49',  'a': 'Ania Dąbrowska - SERCE NIE SŁUGA'},
+            {'h': '17:45',  'a': 'The Specials - PRESSURE DROP'},
+            {'h': '17:37',   'a': 'Kayah - DING DONG'},
+            {'h': '17:30',   'a': 'Artur Andrus - SZPARAG SERGE'},
+          ]
+        each f in hour1
+          tr
+            td.hour= f.h
+            td= f.a
+      // tabela 2
+      table.table.playlist.is-fullwidth
+        thead
+          tr
+            th(colspan=2) 
+              span.icon.is-large
+                i.fas.fa-clock
+              span 16:00
+        -
+          var hour2 = [
+            {'h': '16:52',  'a': 'Bajka o Jazzie - PIOSENKA UWERTUROWA'},
+            {'h': '16:49',  'a': 'Arka Noego - ŚWIĘTY ŚWIĘTY UŚMIECHNIĘTY'},
+            {'h': '16:45',  'a': 'Grzegorz Hyży - PECH TO NIE GRZECH'},
+            {'h': '16:37',   'a': 'Mrozu - JAK NIE MY TO KTO'},
+            {'h': '16:30',   'a': 'Olly Murs, Snoop Dogg - MOVES'},
           ]
         each f in hour2
           tr

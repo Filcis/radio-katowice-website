@@ -58,7 +58,7 @@ class rkSwiper {
     const elements = document.querySelectorAll(selector);
     [].forEach.call(elements, element => {
       setTimeout(() => {
-        instances.push(new Swiper(element));
+        instances.push(new rkSwiper(element));
       }, 100);
     });
     return instances;
@@ -80,26 +80,27 @@ class rkSwiper {
      }
   }
 
-  prev() {
-    if (this.counter < this.length - 1) {
+  nextIndexAddActive() {
+  if (this.counter < this.length - 1) {
       this.counter++;
-      $(`[data-scope=${this.scope}]`).find(".swiper-item.is-active").prev().addClass('is-active').next().removeClass('is-active');
-      $(`.current-day.is-active[data-scope=${this.scope}]`).prev().addClass('is-active').next().removeClass('is-active');
-      this.togglebuttons();
-    }
-  }
-  next() {
-    if (this.counter > 0) {
-      this.counter--;
-      $(`[data-scope=${this.scope}]`).find(".swiper-item.is-active").next().addClass('is-active').prev().removeClass('is-active');
+      $(this.items[this.counter]).addClass('is-active').prev().removeClass('is-active');
       $(`.current-day.is-active[data-scope=${this.scope}]`).next().addClass('is-active').prev().removeClass('is-active');
       this.togglebuttons();
     }
   }
 
+  prevIndexAddActive() {
+    if (this.counter > 0) {
+      this.counter--;
+      $(this.items[this.counter]).addClass('is-active').next().removeClass('is-active');
+      $(`.current-day.is-active[data-scope=${this.scope}]`).prev().addClass('is-active').next().removeClass('is-active');
+      this.togglebuttons();
+    }
+  }
+
   bindEvents() {
-    $(this.prevButton).click(this.prev);
-    $(this.nextButton).click(this.next);
+    $(this.prevButton).click(this.nextIndexAddActive);
+    $(this.nextButton).click(this.prevIndexAddActive);
   }
 
 }
