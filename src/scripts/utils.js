@@ -32,73 +32,80 @@ export function attachCarousels() {
 /* ==================================================
                    Swiper
 ================================================== */
-//TODO : simplify. Too much repeating
+class rkSwiper {
+  constructor(selector) {
 
-const contentSwiperPrev = $('.swiperPrevButton');
-const contentSwiperNext = $('.swiperNextButton');
+    this.element = $(selector);
+    this.scope = $(this.element).data('scope');
+    this.prevButton = $(`.swiperPrevButton[data-scope=${this.scope}]`);
+    this.nextButton = $(`.swiperNextButton[data-scope=${this.scope}]`);
+    this.items = $(this.element).find('.swiper-item');
 
-function toggleSwiperButtons() {
+    //current element
+    this.counter = 0;
+    this.length = this.items.length;
 
-  $(contentSwiperPrev).each( function() {
+    //functions
+    this.next = this.next.bind(this);
+    this.prev = this.prev.bind(this);
 
-    var context = $(this).data('scope');
-    var content = $(`.swiper-content[data-scope=${context}]`);
-    var counter = $(content).find('.swiper-item.is-active').prev().length;
+    this.init();
+  }
 
-    if (counter > 0) {
-      $(this).removeClass('inactive');
+  static attach(selector = '.swiper-content') {
+    let instances = new Array();
 
-    } else {
-      $(this).addClass('inactive');
+    const elements = document.querySelectorAll(selector);
+    [].forEach.call(elements, element => {
+      setTimeout(() => {
+        instances.push(new Swiper(element));
+      }, 100);
+    });
+    return instances;
+  }
+
+  init() {
+    this.togglebuttons();
+    this.bindEvents();
+  }
+
+  togglebuttons() {
+    if (this.counter === 0) {
+       $(this.prevButton).removeClass('inactive');
+       $(this.nextButton).addClass('inactive');
+
+     } else {
+       $(this.prevButton).addClass('inactive');
+       $(this.nextButton).removeClass('inactive');
+     }
+  }
+
+  prev() {
+    if (this.counter < this.length - 1) {
+      this.counter++;
+      $(`[data-scope=${this.scope}]`).find(".swiper-item.is-active").prev().addClass('is-active').next().removeClass('is-active');
+      $(`.current-day.is-active[data-scope=${this.scope}]`).prev().addClass('is-active').next().removeClass('is-active');
+      this.togglebuttons();
     }
-  });
-
-  $(contentSwiperNext).each( function() {
-
-    var context = $(this).data('scope');
-    var content = $(`.swiper-content[data-scope=${context}]`);
-    var counter = $(content).find('.swiper-item.is-active').next().length;
-
-    if (counter > 0) {
-      $(this).removeClass('inactive');
-
-    } else {
-      $(this).addClass('inactive');
+  }
+  next() {
+    if (this.counter > 0) {
+      this.counter--;
+      $(`[data-scope=${this.scope}]`).find(".swiper-item.is-active").next().addClass('is-active').prev().removeClass('is-active');
+      $(`.current-day.is-active[data-scope=${this.scope}]`).next().addClass('is-active').prev().removeClass('is-active');
+      this.togglebuttons();
     }
-  });
+  }
+
+  bindEvents() {
+    $(this.prevButton).click(this.prev);
+    $(this.nextButton).click(this.next);
+  }
 
 }
 
 export function contentSwiper() {
-
-  toggleSwiperButtons();
-
-  $(contentSwiperPrev).on('click', function() {
-    var context = $(this).data('scope');
-    var content = $(`.swiper-content[data-scope=${context}]`);
-    var currentDay = $(`.current-day.is-active[data-scope=${context}]`);
-
-    if ($(content).find('.swiper-item.is-active').prev().length != 0) {
-        $(content).find('.swiper-item.is-active').prev().addClass('is-active').next().removeClass('is-active');
-        $(currentDay).prev().addClass('is-active').next().removeClass('is-active');
-        toggleSwiperButtons();
-    }
-
-  });
-
-  $(contentSwiperNext).on('click', function() {
-
-    var context = $(this).data('scope');
-    var content = $(`.swiper-content[data-scope=${context}]`);
-    var currentDay = $(`.current-day.is-active[data-scope=${context}]`);
-
-    if ($(content).find('.swiper-item.is-active').next().length != 0) {
-        $(content).find('.swiper-item.is-active').next().addClass('is-active').prev().removeClass('is-active');
-        $(currentDay).next().addClass('is-active').prev().removeClass('is-active');
-        toggleSwiperButtons();
-    }
-  });
-
+  var swipers = rkSwiper.attach();
 }
 
 /* ==================================================
