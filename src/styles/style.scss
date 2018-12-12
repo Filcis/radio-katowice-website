@@ -67,19 +67,30 @@ body.home {
 
 .hero-body {
   @include until($large-mobile) {
-    padding: 0;
+    // padding: 0;
   }
     @include from ($tablet) {
-    min-height: 24rem;
-    height: 55vh;
+    min-height: 20rem;
+    height: 32vh;
     justify-content: center;
     align-items: center;
     display: flex;
   }
   @include from ($fullhd) {
-    min-height: 32rem;
-    height: 50vh;
+    min-height: 24rem;
+    height: 40vh;
   }
+}
+
+.has-background-test {
+  // background-color: #2a68aa;
+  background-image: linear-gradient(#14283d 0%,#14487d 16%,#2a68aa 57%,#f1f1f1 100%);
+  // background-image: url('https://svgshare.com/i/2x3.svg');
+  // background-image: url('../files/img/testowe_tlo.svg');
+  // background-position: bottom;
+  // background-position: 0% 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .gallery {
@@ -104,38 +115,48 @@ body.home {
 }
 
 .on-air-wrapper {
-  flex-grow: 2;
   @include from($tablet) {
     max-width: 800px;
-  }
-  @include from($widescreen) {
-    max-width: 900px;
   }
   @include from($fullhd) {
     max-width: 960px;
   }
 }
 
-.on-air-inner-wrapper {
+// .on-air-inner-wrapper {
+//   @include from($desktop) {
+//     height: 100%;
+//     position: relative;
+//   }
+// }
+
+$on-air-vPadding: 1.5rem;
+$on-air-hPadding: 2.35rem;
+
+.on-air {
+  overflow: hidden;
+  background-color: lighten(#e5eaef, 2);
+  padding: $on-air-vPadding $on-air-hPadding;
+  box-shadow:  0 0 8px rgba(240,240,240,0.7);
   @include from($desktop) {
-    height: 100%;
-    position: relative;
+    border-radius: 0.4rem;
+  }
+  & > .columns {
+    margin: (-$on-air-vPadding) (-$on-air-hPadding);
+    & > .column {
+      padding: $on-air-vPadding $on-air-hPadding;
+      &:last-child {
+        background-color: #e5eaef;
+      }
+    }
   }
 }
 
-.on-air {
-  position: relative;
-  background-color: #fff;
-  padding: 1rem 1rem;
-  box-shadow:  3px 3px 7px -1px rgba(50,50,50,1);
-  @include from($tablet) {
-    padding: 1.5rem 2rem;
-  }
-  @include from($desktop) {
-    margin-bottom: $vertical-rhythm-unit-4;
-    padding: 2.5rem 2.5rem;
-    border-radius: 0 0 1.2rem 0;
-  }
+#on-air-tab > .on-air-inner-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .on-air-wrapper .tabs {

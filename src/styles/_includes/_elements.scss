@@ -12,39 +12,27 @@
 }
 
 .on-air .button {
-  font-size: $size-5 * 0.9;
-  padding: 1rem 1rem;
+  font-size: $size-5 * 0.85;
+  padding: 0.8rem 0.8rem;
 }
 
-.on-air {
-  .buttons-wrapper {
-      @include from($desktop) {
-    position: absolute;
-    bottom: 0;
-  }
-}
-}
 
 .call-to-action {
-  background-color: darken($basic-red, 5);
+  background-color: #225e9e;
   color: #fff;
   font-weight: 400;
-  border: 1px solid $basic-red;
+  border: 1px solid #225e9e;
   // transition: 0.2s background-color ease-in-out;
   margin-right: 0.5rem;
-  i {
-    font-size: 0.5rem;
-    position: relative;
-    top: 0.1rem;
-  }
   &:hover {
     color: #fff;
-    background-color: darken($basic-red, 40);
+    background-color: darken(#225e9e, 40);
   }
   &:active {
     color: #fff;
   }
 }
+
 .station-list {
   padding-right: 0.5rem;
   @include from($desktop){
@@ -53,7 +41,6 @@
   li {
     padding-bottom: $vertical-rhythm-unit-1;
     margin-bottom: $vertical-rhythm-unit-1;
-    border-bottom: 1px solid $light-gray;
     &:last-child {
       border:none;
       margin: 0;
@@ -70,7 +57,7 @@
     height: 1.35rem;
     width: auto;
     flex-shrink: 0;
-    opacity: 0.8;
+    opacity: 0.6;
     img {
       height: 100%;
     }
@@ -291,8 +278,8 @@ article.main-article > figure {
     max-width: none;
     top: -2rem;
     @include from(1600px) {
-      top: -6rem;
-      height: 36rem;
+      top: -4rem;
+      height: 28rem;
     }
   }
 }
@@ -304,15 +291,7 @@ article.main-article > figure {
 .musician-illustration-right img {
   left: -3rem;
 }
-.has-background-test {
-  // background-color: #2a68aa;
-  background-image: linear-gradient(#14283d 0%,#14487d 16%,#2a68aa 57%,#f1f1f1 100%);
-  background-image: url('https://svgshare.com/i/2x3.svg');
-  background-image: url('../files/img/testowe_tlo.svg');
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 .responsive-yt-embed {
   overflow:hidden;
