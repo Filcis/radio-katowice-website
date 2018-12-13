@@ -53,8 +53,9 @@
   height: 0.3rem;
   width: 100%;
   position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
+  bottom: -0.3rem;
+  background-image: linear-gradient(to left, #2e77b9, #f09d9d);
+  // background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
 }
 
 .navbar-menu .navbar-item {

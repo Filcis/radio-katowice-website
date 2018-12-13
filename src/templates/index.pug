@@ -5,8 +5,9 @@ block vars
     let bodyClass ="home"
     let baseurl= "";
 block content 
-  section.hero.has-background-test 
+  section.hero#homepage-hero
     .hero-body
+      .container.is-flex-tablet
         .musician-illustration-left.is-hidden-touch
             img(src= baseurl + "assets/files/img/grajek_chudy.svg")
         .on-air-wrapper
