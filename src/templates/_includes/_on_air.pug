@@ -1,64 +1,46 @@
-.tabs.is-hidden-tablet.is-boxed.is-fullwidth.is-toggle
+.tabs.is-medium
   ul
     li.tab-title.is-active(data-tab-content = "on-air-tab") 
-      a
-        span.icon
-          img(src=baseurl + "assets/files/img/soundwave.svg")
-        span Teraz na antenie
+      a Teraz na antenie
     li.tab-title(data-tab-content = "stations-tab") 
       a Stacje
 .on-air
-  .columns.is-2-mobile.is-2-tablet
-    .column.is-6.content-tab#on-air-tab
-      .on-air-inner-wrapper.current
-        h1.on-air-title.is-hidden-mobile
-          span.icon
-            img(src=baseurl + "assets/files/img/soundwave.svg")
-          span Teraz na antenie
-        // obrazek i tytuł utworu
-        .columns.is-vcentered.current-audition.is-mobile
-          .column.is-4
-            .audition-cover
-              figure.image
-                img(src= baseurl + 'assets/files/img/Hey.jpg')
-          .column
-            .audition-info
-              h3
-                span.artist-name Hey
-                span.song-title One of them
-        .buttons-wrapper
-          a(href=baseurl + "player.html" target="_blank").button.call-to-action 
-            span Słuchaj Radia
-          a(href=baseurl + "radio/program.html").button Sprawdź program
-    .column.is-6.content-tab.is-hidden-mobile#stations-tab
-      .on-air-inner-wrapper.stations
-        h1.on-air-title.is-hidden-mobile Stacje
-        ul.station-list
-          li
-            a.station-link(href='#') 
-              span.icon
-                img(src=baseurl + "assets/files/img/live.svg")
-              span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
-              .play-icon-wrapper
-                .play-icon
-          li
-            a.station-link(href='#') 
-              span.icon
-                img(src=baseurl + "assets/files/img/top50.svg")
-              span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
-              .play-icon-wrapper
-                .play-icon
-          li
-            a.station-link(href='#') 
-              span.icon
-                img(src=baseurl + "assets/files/img/moje_radio.svg")
-              span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
-              .play-icon-wrapper
-                .play-icon
-          li
-            a.station-link(href='#') 
-              span.icon
-                img(src=baseurl + "assets/files/img/dance.svg")
-              span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
-              .play-icon-wrapper
-                .play-icon
+  .content-tab#on-air-tab
+    .on-air-inner-wrapper.current
+      .columns.is-vcentered.current-audition.is-mobile
+        .column.is-narrow
+          .audition-cover
+            figure.image
+              img(src= baseurl + 'assets/files/img/Hey.jpg')
+        .column
+          .audition-info
+            h3
+              span.artist-name Hey
+              span.song-title One of them
+      .buttons-wrapper
+        a(href=baseurl + "player.html" target="_blank").button.call-to-action 
+          span Słuchaj Radia
+        a(href=baseurl + "radio/program.html").button Sprawdź program
+  .content-tab.is-hidden#stations-tab
+    .on-air-inner-wrapper.stations
+      ul.station-list
+        li
+          a.station-link(href='#') 
+            span.icon
+              img(src=baseurl + "assets/files/img/live.svg")
+            span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
+        li
+          a.station-link(href='#') 
+            span.icon
+              img(src=baseurl + "assets/files/img/top50.svg")
+            span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
+        li
+          a.station-link(href='#') 
+            span.icon
+              img(src=baseurl + "assets/files/img/moje_radio.svg")
+            span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
+        li
+          a.station-link(href='#') 
+            span.icon
+              img(src=baseurl + "assets/files/img/dance.svg")
+            span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]

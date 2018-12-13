@@ -69,3 +69,44 @@
     width: 5rem;
   }
 }
+
+.station-list {
+  li {
+    padding-bottom: $vertical-rhythm-unit-1;
+    margin-bottom: $vertical-rhythm-unit-1;
+    &:last-child {
+      border:none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.station-link {
+  font-size: $size-6;
+  position: relative;
+  .icon {
+    height: 1.8rem;
+    width: auto;
+    opacity: 0.9;
+    position: absolute;
+    left: 0;
+    background-color: #f3f3f3;
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    img {
+      height: 100%;
+    }
+  }
+}
+.station-list-item {
+  padding: 0 0.25rem;
+  @include from($tablet) {
+    padding: 0 1rem;
+  }
+}
+.station-list li a {
+  color: #f2f2f2;
+  padding-left: 4rem;
+  line-height: 1.8rem;
+}

@@ -130,63 +130,51 @@
   </header>
   <section class="hero" id="homepage-hero">
     <div class="hero-body">
-      <div class="container is-flex-tablet">
-        <div class="musician-illustration-left is-hidden-touch"><img src="assets/files/img/grajek_chudy.svg"></div>
-        <div class="on-air-wrapper">
-          <div class="tabs is-hidden-tablet is-boxed is-fullwidth is-toggle">
-            <ul>
-              <li class="tab-title is-active" data-tab-content="on-air-tab"> <a><span class="icon"><img src="assets/files/img/soundwave.svg"></span><span>Teraz na antenie</span></a></li>
-              <li class="tab-title" data-tab-content="stations-tab"> <a>Stacje</a></li>
-            </ul>
-          </div>
-          <div class="on-air">
-            <div class="columns is-2-mobile is-2-tablet">
-              <div class="column is-6 content-tab" id="on-air-tab">
-                <div class="on-air-inner-wrapper current">
-                  <h1 class="on-air-title is-hidden-mobile"><span class="icon"><img src="assets/files/img/soundwave.svg"></span><span>Teraz na antenie</span></h1>
-                  <!-- obrazek i tytuł utworu-->
-                  <div class="columns is-vcentered current-audition is-mobile">
-                    <div class="column is-4">
-                      <div class="audition-cover">
-                        <figure class="image"><img src="assets/files/img/Hey.jpg"></figure>
-                      </div>
-                    </div>
-                    <div class="column">
-                      <div class="audition-info">
-                        <h3><span class="artist-name">Hey</span><span class="song-title">One of them</span></h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="buttons-wrapper"><a class="button call-to-action" href="player.html" target="_blank"> <span>Słuchaj Radia</span></a><a class="button" href="radio/program.html">Sprawdź program</a></div>
-                </div>
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8">
+            <div class="on-air-wrapper">
+              <div class="tabs is-medium">
+                <ul>
+                  <li class="tab-title is-active" data-tab-content="on-air-tab"> <a>Teraz na antenie</a></li>
+                  <li class="tab-title" data-tab-content="stations-tab"> <a>Stacje</a></li>
+                </ul>
               </div>
-              <div class="column is-6 content-tab is-hidden-mobile" id="stations-tab">
-                <div class="on-air-inner-wrapper stations">
-                  <h1 class="on-air-title is-hidden-mobile">Stacje</h1>
-                  <ul class="station-list">
-                    <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/live.svg"></span><span class="stationlink-artist-name">Nick Cave <span class="stationlink-title">Jubilee Street </span></span>
-                        <div class="play-icon-wrapper">
-                          <div class="play-icon"></div>
-                        </div></a></li>
-                    <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/top50.svg"></span><span class="stationlink-artist-name">Tom Waits <span class="stationlink-title">Ol'55 </span></span>
-                        <div class="play-icon-wrapper">
-                          <div class="play-icon"></div>
-                        </div></a></li>
-                    <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/moje_radio.svg"></span><span class="stationlink-artist-name">The Dumplings <span class="stationlink-title">Raj </span></span>
-                        <div class="play-icon-wrapper">
-                          <div class="play-icon"></div>
-                        </div></a></li>
-                    <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/dance.svg"></span><span class="stationlink-artist-name">Elvis Presley <span class="stationlink-title">Crawfish </span></span>
-                        <div class="play-icon-wrapper">
-                          <div class="play-icon"></div>
-                        </div></a></li>
-                  </ul>
+              <div class="on-air">
+                <div class="content-tab" id="on-air-tab">
+                  <div class="on-air-inner-wrapper current">
+                    <div class="columns is-vcentered current-audition is-mobile">
+                      <div class="column is-narrow">
+                        <div class="audition-cover">
+                          <figure class="image"><img src="assets/files/img/Hey.jpg"></figure>
+                        </div>
+                      </div>
+                      <div class="column">
+                        <div class="audition-info">
+                          <h3><span class="artist-name">Hey</span><span class="song-title">One of them</span></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="buttons-wrapper"><a class="button call-to-action" href="player.html" target="_blank"> <span>Słuchaj Radia</span></a><a class="button" href="radio/program.html">Sprawdź program</a></div>
+                  </div>
+                </div>
+                <div class="content-tab is-hidden" id="stations-tab">
+                  <div class="on-air-inner-wrapper stations">
+                    <ul class="station-list">
+                      <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/live.svg"></span><span class="stationlink-artist-name">Nick Cave <span class="stationlink-title">Jubilee Street </span></span></a></li>
+                      <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/top50.svg"></span><span class="stationlink-artist-name">Tom Waits <span class="stationlink-title">Ol'55 </span></span></a></li>
+                      <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/moje_radio.svg"></span><span class="stationlink-artist-name">The Dumplings <span class="stationlink-title">Raj </span></span></a></li>
+                      <li><a class="station-link" href="#"> <span class="icon"><img src="assets/files/img/dance.svg"></span><span class="stationlink-artist-name">Elvis Presley <span class="stationlink-title">Crawfish </span></span></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="column is-4 is-hidden-mobile">
+            <div class="musicians-illustration"><img src="assets/files/img/grajki.svg"></div>
+          </div>
         </div>
-        <div class="musician-illustration-right is-hidden-touch"><img src="assets/files/img/grajek_gruby.svg"></div>
       </div>
     </div>
   </section>

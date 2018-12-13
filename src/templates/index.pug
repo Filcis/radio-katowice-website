@@ -7,13 +7,14 @@ block vars
 block content 
   section.hero#homepage-hero
     .hero-body
-      .container.is-flex-tablet
-        .musician-illustration-left.is-hidden-touch
-            img(src= baseurl + "assets/files/img/grajek_chudy.svg")
-        .on-air-wrapper
-          include _includes/_on_air.pug
-        .musician-illustration-right.is-hidden-touch
-            img(src= baseurl + "assets/files/img/grajek_gruby.svg")
+      .container
+        .columns
+          .column.is-8
+            .on-air-wrapper
+              include _includes/_on_air.pug
+          .column.is-4.is-hidden-mobile
+            .musicians-illustration
+                img(src= baseurl + "assets/files/img/grajki.svg")
   section.main-content
     .container
       section.player-shortcuts

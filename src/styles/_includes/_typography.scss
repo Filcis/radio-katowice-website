@@ -194,19 +194,15 @@ blockquote {
   }
   font-weight: lighter;
   text-transform: uppercase;
-  a {
-      min-height: 2.6rem;
-      background-color: $light-gray;
-  }
 }
 
 .on-air .on-air-title {
-  font-size: $size-5;
+  font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-3;
 }
 
 .audition-info {
-  max-width: 250px;
+  color: #f3f3f3;
 }
 
 .song-title, .artist-name {
@@ -214,7 +210,14 @@ blockquote {
     font-size: $size-5;
   }
   display: inline-block;
-  font-size: $size-4;
+  font-size: $size-2;
+
+  @include from($fullhd) {
+    font-size: $size-1 * 0.9;
+  }
+  .player-current & {
+    font-size: $size-5;
+  }
 }
 
 .artist-name {
@@ -223,6 +226,8 @@ blockquote {
 
 .song-title {
   font-weight: bold;
+  font-style: italic;
+  color: #c1daf5;
 }
 
 .audition-title {
