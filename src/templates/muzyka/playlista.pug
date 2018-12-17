@@ -6,14 +6,14 @@ block vars
 block main-content
   h1.page-title.is-borderless Co było grane w Radiu Katowice
   .day-selection
-    .level
+    .level.is-mobile
       .level-item
         .swiperPrevButton(role="button" data-scope="playlist")  
           span.icon
             i.fa-arrow-left.fas
       .level-item      
-        span.current-day(data-scope="playlist") WCZORAJ
         span.current-day.is-active(data-scope="playlist") DZISIAJ
+        span.current-day(data-scope="playlist") WCZORAJ
       .level-item
         .swiperNextButton(role="button" data-scope="playlist")
           span.icon
