@@ -46,8 +46,8 @@ class rkSwiper {
     this.length = this.items.length;
 
     //functions
-    this.next = this.next.bind(this);
-    this.prev = this.prev.bind(this);
+    this.nextIndexAddActive = this.nextIndexAddActive.bind(this);
+    this.prevIndexAddActive = this.prevIndexAddActive.bind(this);
 
     this.init();
   }
