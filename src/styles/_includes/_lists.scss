@@ -72,12 +72,9 @@
 
 .station-list {
   li {
-    padding-bottom: $vertical-rhythm-unit-1;
     margin-bottom: $vertical-rhythm-unit-1;
     &:last-child {
-      border:none;
       margin: 0;
-      padding: 0;
     }
   }
 }
@@ -85,20 +82,37 @@
 .station-link {
   font-size: $size-6;
   position: relative;
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+  display: inline-block;
+  padding-bottom: 1rem;
+
   .icon {
-    height: 1.8rem;
+    height: 2rem;
     width: auto;
-    opacity: 0.9;
     position: absolute;
-    left: 0;
-    background-color: #f3f3f3;
-    padding: 0.3rem;
-    border-radius: 0.25rem;
-    img {
-      height: 100%;
+    left: 0.5rem;
+    svg {
+      width: auto;
+      height: 1.6rem;
+      //nazwa stacji
+      path {
+        fill: $light;
+        transition: all 0.3s ease-in-out;
+      }
+      //logo
+      path:last-child {
+        fill: $light-gray;
+        fill: rgba(255,255,255, 0.3);
+        transition: all 0.2s ease-in-out;
+      }
     }
   }
+  &:hover svg path:last-child,
+  &:hover svg path, {
+     fill: $basic-red;
+   }
 }
+
 .station-list-item {
   padding: 0 0.25rem;
   @include from($tablet) {
@@ -107,6 +121,6 @@
 }
 .station-list li a {
   color: #f2f2f2;
-  padding-left: 4rem;
+  padding-left: 3.5rem;
   line-height: 1.8rem;
 }

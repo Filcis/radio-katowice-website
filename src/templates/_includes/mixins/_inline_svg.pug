@@ -1,0 +1,13 @@
+mixin svg-icon
+  -
+    var icon = attributes['svg-icon-name']
+  
+  case icon
+    when 'top-50'
+      include svg_icons/top_50
+    when 'live'
+      include svg_icons/live
+    when 'moje-radio'
+      include svg_icons/moje_radio
+    when 'dance'
+      include svg_icons/dance

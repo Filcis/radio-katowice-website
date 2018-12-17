@@ -1,3 +1,4 @@
+include ./mixins/_inline_svg.pug
 .tabs.is-medium
   ul
     li.tab-title.is-active(data-tab-content = "on-air-tab") 
@@ -27,20 +28,20 @@
         li
           a.station-link(href='#') 
             span.icon
-              img(src=baseurl + "assets/files/img/live.svg")
+              +svg-icon(svg-icon-name ="top-50")
             span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
         li
           a.station-link(href='#') 
             span.icon
-              img(src=baseurl + "assets/files/img/top50.svg")
+              +svg-icon(svg-icon-name ="live")
             span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
         li
           a.station-link(href='#') 
             span.icon
-              img(src=baseurl + "assets/files/img/moje_radio.svg")
+              +svg-icon(svg-icon-name ="moje-radio")
             span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
         li
           a.station-link(href='#') 
             span.icon
-              img(src=baseurl + "assets/files/img/dance.svg")
+              +svg-icon(svg-icon-name ="dance")
             span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
