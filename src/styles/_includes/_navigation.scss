@@ -16,7 +16,7 @@
   }
   @include until($desktop) {
     padding: 0 1rem;
-    background-color: $player-light-gray;
+    background-color: $very-light-gray;
   }
 }
 

@@ -29,12 +29,12 @@
 
 @mixin play-icon-wrapper($color: black, $size: 2em) {
   min-width: $size;
+  max-width: $size;
   text-align: center;
   height: $size;
   border-radius: $size;
   border: 1px solid $color;
   position: relative;
-  margin: 0 $size/3 0 0;
   .play-icon {
       @include triangle-icon($color, $size);
   }

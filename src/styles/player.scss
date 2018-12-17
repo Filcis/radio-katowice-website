@@ -212,7 +212,7 @@ html  {
   background-color: white;
   padding: 1rem;
   border-radius: 0 0 12px 0;
-  border:1px solid $player-light-gray;
+  border:1px solid $very-light-gray;
 }
 
 .player-shortcut {
@@ -284,13 +284,6 @@ html  {
 
 .player-shortcut-call-to-action{
   color: $basic-red;
-}
-
-.player-shortcut-icon-wrapper {
-  .fa-music {color: $music-color};
-  .fa-info {color: $info-color};
-  .fa-cloud {color: $weather-color};
-  .fa-car {color: $auto-radio-color};
 }
 
 .shortcut-is-vertical-mobile {

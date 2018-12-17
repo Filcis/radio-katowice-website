@@ -125,8 +125,21 @@ article.main-article > figure {
 }
 
 .on-air-top-bar {
-  background-color: $player-light-gray;
-  padding: $vertical-rhythm-unit-1/2 1.4rem;
+  @include until($tablet) {
+  }
+  min-height: 4rem;
+  background-color: $very-light-gray;
+  padding: $vertical-rhythm-unit-1/1.5 1.4rem;
+}
+
+#top-bar-call-to-action {
+    height: 2.5rem;
+    margin: 0 auto;
+    @include from($tablet) {
+      float: right;
+      display: inline-flex;
+      align-items: center;
+    }
 }
 
 .social-media-icons {

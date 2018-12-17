@@ -60,7 +60,7 @@ article.intertext {
   font-weight: lighter;
   margin-bottom: $vertical-rhythm-unit-4;
   @include from($desktop) {
-      border-top: 1px solid $player-light-gray;
+      border-top: 1px solid $very-light-gray;
       padding-top: $vertical-rhythm-unit-1;
       font-size: $size-2;
       margin-bottom: $vertical-rhythm-unit-5;
@@ -199,6 +199,26 @@ blockquote {
 .on-air .on-air-title {
   font-size: $size-4;
   margin-bottom: $vertical-rhythm-unit-3;
+}
+
+h2.on-air-top-info {
+  @include until($tablet) {
+    padding-bottom: $vertical-rhythm-unit-1;
+    border-bottom: 1px solid $light-gray;
+  }
+}
+h3.on-air-top-name {
+  @include until($tablet) {
+    display: inline-block;
+  }
+}
+
+span.on-air-top-title {
+   @include until($tablet) {
+    display: inline-block;
+  }
+  font-weight: bold;
+  font-style: italic;
 }
 
 .audition-info {

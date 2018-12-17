@@ -9,6 +9,49 @@
 @import '_includes/_navigation';
 
 /* =============================================================
+                          MODIFIERS
+=============================================================== */
+
+.is-vmargin-1 {
+  margin-bottom: $vertical-rhythm-unit-1;
+}
+
+.is-vmargin-2 {
+  margin-bottom: $vertical-rhythm-unit-2;
+}
+
+.is-vmargin-3 {
+  margin-bottom: $vertical-rhythm-unit-3;
+}
+
+.is-vmargin-4 {
+  margin-bottom: $vertical-rhythm-unit-4;
+}
+
+.is-vmargin-5 {
+  margin-bottom: $vertical-rhythm-unit-5;
+}
+
+.is-fullwidth-mobile {
+  @include until($tablet) {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.is-large-mobile {
+  @include from($large-mobile) {
+    display: flex;
+  }
+}
+
+.is-offset-one-desktop {
+  @include from($desktop) {
+    margin-left: 8.3333%;
+ }
+}
+
+/* =============================================================
                           LAYOUT
 =============================================================== */
 body {
@@ -29,26 +72,6 @@ body.home {
       padding: 0.25rem;
     }
 }
-}
-
-.is-vmargin-1 {
-  margin-bottom: $vertical-rhythm-unit-1;
-}
-
-.is-vmargin-2 {
-  margin-bottom: $vertical-rhythm-unit-2;
-}
-
-.is-vmargin-3 {
-  margin-bottom: $vertical-rhythm-unit-3;
-}
-
-.is-vmargin-4 {
-  margin-bottom: $vertical-rhythm-unit-4;
-}
-
-.is-vmargin-5 {
-  margin-bottom: $vertical-rhythm-unit-5;
 }
 
 @include from (1600px) {
@@ -223,18 +246,6 @@ aside.sidebar {
   &:last-child {
     border: none;
   }
-}
-
-.is-large-mobile {
-  @include from($large-mobile) {
-    display: flex;
-  }
-}
-
-.is-offset-one-desktop {
-  @include from($desktop) {
-    margin-left: 8.3333%;
- }
 }
 
 footer#main-footer {
@@ -422,7 +433,7 @@ footer.article-footer {
   background-color: white;
   padding: 1rem;
   border-radius: 0 0 0.75rem 0;
-  border:2px solid $player-light-gray;
+  border:2px solid $very-light-gray;
   @include from($desktop) {
     transition: border 0.3s ease-in-out, border-radius 0.3s ease-in-out ;
     &:hover {
@@ -511,13 +522,6 @@ footer.article-footer {
   color: $basic-red;
 }
 
-.player-shortcut-icon-wrapper {
-  .fa-music {color: $music-color};
-  .fa-info {color: $info-color};
-  .fa-cloud {color: $weather-color};
-  .fa-car {color: $auto-radio-color};
-}
-
 .shortcut-is-vertical-mobile {
   @include until($large-mobile) {
     display: block;
@@ -526,44 +530,6 @@ footer.article-footer {
   }
   .player-shortcut-icon-wrapper {
     padding: 0;
-  }
-}
-
-
-#player-main-call-to-action {
-    display: inline-flex;
-    align-items: center;
-    // border-radius: 0 0 15px 0;
-    height: 3rem;
-    font-size: $size-5;
-    color: $gray;
-  &:active, &:hover {
-    color: $basic-red;
-  }
-  .play-icon-wrapper {
-    @include play-icon-wrapper($basic-red, 2rem);
-    @include from($desktop) {
-      transition: all 0.1s ease-in-out;
-      // background-color: $basic-red;
-
-    }
-  }
-  @include from($desktop) {
-    &:hover {
-      .play-icon-wrapper {
-        transform: scale(1.2);
-        background-color: $basic-red;
-        .play-icon {
-          border-color: transparent transparent transparent #fff;
-        }
-      }
-    }
-  }
-  .button-span-text {
-
-  }
-  @include from($tablet) {
-
   }
 }
 

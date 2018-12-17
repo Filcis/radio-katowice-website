@@ -1,7 +1,10 @@
 .on-air-top-bar
   .container
-    .level
-      h3 teraz na antenie
-      h2 Varius Manx, Kasia Stankiewicz #[b KOT BEZ OGONA]
-      a#player-main-call-to-action(type="button" href="player.html") #[.play-icon-wrapper: span.play-icon] 
-        span.button-span-text posłuchaj na żywo
+    .columns.is-vcentered
+      .column
+        h2.on-air-top-info Teraz na antenie:
+      .column
+        h3.on-air-top-name Varius Manx, Kasia Stankiewicz #[span.on-air-top-title KOT BEZ OGONA]
+      .column
+        a#top-bar-call-to-action.button.is-primary.is-outlined(aria-label="Play" href="player.html")
+          span.button-span-text posłuchaj na żywo
