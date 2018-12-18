@@ -266,13 +266,12 @@ span.on-air-top-title {
 .home .shortcuts-group-title {
   font-size: $size-5;
   margin-bottom: $vertical-rhythm-unit-1;
-  padding-bottom: $vertical-rhythm-unit-1;
   text-align: center;
-  border-bottom: 1px solid $light-gray;
+  // border-bottom: 1px solid $light-gray;
   @include from($desktop) {
     font-size: $size-4;
     margin-top: 0.5rem;
-    border-bottom: 2px solid $light-gray;
+    // border-bottom: 2px solid $light-gray;
   }
 }
 

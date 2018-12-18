@@ -6,6 +6,7 @@
   let goToTop = $('#c-go-top');
 
   function fixNavbarOnScroll() {
+    //bez debounce
     let windowScrollTop = $(window).scrollTop();
       if (windowScrollTop >= adspace) {
           navbar.addClass('is-fixed-top');
@@ -30,15 +31,14 @@
     let offset = 1000;
     var fadeDuration = 500;
     if (windowScrollTop > offset) {
-        goToTop.fadeIn(fadeDuration);
-    } else {
+        goToTop.fadeTo(fadeDuration, 0.8);
+    } else if (windowScrollTop <= offset) {
         goToTop.fadeOut(fadeDuration);
     }
   }
 
     function debouncedScrollEvents () {
       let windowScrollTop = $(window).scrollTop();
-      fixNavbarOnScroll(windowScrollTop);
       fixedVideo(windowScrollTop);
       toTheTop(windowScrollTop);
     }

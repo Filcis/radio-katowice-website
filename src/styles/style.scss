@@ -62,7 +62,7 @@ body {
 }
 
 body.home {
-  background-color: #f1f1f1;
+  background-color: #fbfbfb;
 }
 
 .columns.has-small-gap-mobile {
@@ -108,7 +108,7 @@ body.home {
     margin-right: 0.5rem;
   }
   li a {
-    color: #aaa;
+    color: #ccc;
     border-bottom-color: #aaa;
     margin-bottom: 0;
   }
@@ -149,8 +149,8 @@ body.home {
 }
 
 section.recent-news, article.main-article, .similiar-articles {
+  @extend .section;
   background-color: #fff;
-  padding: $vertical-rhythm-unit-5 2rem;
   border-bottom: none;
 }
 
@@ -172,6 +172,12 @@ section.recent-news, article.main-article, .similiar-articles {
 
 .main-auditions {
     margin-bottom: $vertical-rhythm-unit-7;
+}
+
+.home .sidebar {
+  @include from($desktop) {
+    padding-top: 1.4rem;
+  }
 }
 
 aside.sidebar {
@@ -419,7 +425,7 @@ footer.article-footer {
   }
   @include from($desktop){
     // background-color: transparent;
-    padding-bottom: $vertical-rhythm-unit-4;
+    margin-bottom: $vertical-rhythm-unit-5;
   }
 }
 
