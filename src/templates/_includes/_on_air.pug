@@ -29,19 +29,35 @@ include ./mixins/_inline_svg.pug
           a.station-link(href='#') 
             span.icon
               +svg-icon(svg-icon-name ="top-50")
-            span.stationlink-artist-name Nick Cave #[span.stationlink-title Jubilee Street ]
+            .station-link-current-item
+              span.stationlink-artist-name Nick Cave
+              span.stationlink-title Jubilee Street
+            .play-icon-wrapper
+              .play-icon
         li
           a.station-link(href='#') 
             span.icon
               +svg-icon(svg-icon-name ="live")
-            span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
+            .station-link-current-item
+              span.stationlink-artist-name Tom Waits
+              span.stationlink-title Ol'55
+            .play-icon-wrapper
+              .play-icon
         li
           a.station-link(href='#') 
             span.icon
               +svg-icon(svg-icon-name ="moje-radio")
-            span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
+            .station-link-current-item
+              span.stationlink-artist-name The Dumplings
+              span.stationlink-title Raj
+            .play-icon-wrapper
+              .play-icon
         li
           a.station-link(href='#') 
             span.icon
               +svg-icon(svg-icon-name ="dance")
-            span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
+            .station-link-current-item
+              span.stationlink-artist-name Elvis Presley
+              span.stationlink-title Crawfish
+            .play-icon-wrapper
+              .play-icon

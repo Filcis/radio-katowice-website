@@ -250,6 +250,10 @@ span.on-air-top-title {
   color: #c1daf5;
 }
 
+.player-main .song-title {
+  color: #516e8e;
+}
+
 .audition-title {
   font-style: italic;
   font-size: $size-6;
@@ -273,12 +277,10 @@ span.on-air-top-title {
 }
 
 .stationlink-artist-name {
-  margin-left: 2rem;
-  flex-grow: 1;
-}
-
-.stationlink-title {
   font-weight: bold;
+  &::after {
+    content: " "
+  }
 }
 
 .sidebar-headline {

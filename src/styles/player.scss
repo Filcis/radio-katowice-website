@@ -79,6 +79,14 @@ html  {
     margin-bottom: 0;
   }
 
+.player-live-info .tab-title {
+height: 100%;
+a {
+  background-color: #eee;
+  height: 100%;
+}
+}
+
 .player-articles-title {
   display: block;
   color: #fff;
@@ -138,11 +146,75 @@ html  {
   }
 }
 
-.station-list {
-  .station-link .icon {
+.station-link {
+  font-size: $size-6;
+  position: relative;
+  border-bottom: 1px solid rgba(255,255,255, 0.5);
+  display: block;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  .icon {
     height: 2rem;
-    opacity: 0.7;
+    width: auto;
+    position: absolute;
+    left: 0.5rem;
+    svg {
+      width: auto;
+      height: 1.6rem;
+      //nazwa stacji
+      path {
+        fill: $gray;
+        transition: all 0.3s ease-in-out;
+      }
+      //logo
+      path:last-child {
+        fill: $gray;
+        transition: all 0.2s ease-in-out;
+      }
+    }
   }
+  &:hover svg path:last-child,
+  &:hover svg path, {
+     fill: $basic-red;
+   }
+}
+
+.station-link-current-item {
+  padding-right: 2rem;
+}
+
+.station-link {
+  .play-icon-wrapper {
+    @include play-icon-wrapper($gray, 1.5rem);
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+  }
+}
+
+.player-current-station {
+  .icon {
+    height: 2rem;
+    width: auto;
+    svg {
+      width: auto;
+      height: 1.6rem;
+      path {
+        fill: $gray;
+      }
+      //logo
+      path:last-child {
+        fill: $gray;
+      }
+    }
+  }
+}
+
+.station-list li a {
+  padding-left: 6rem;
 }
 
 .player-artist-name,
@@ -377,32 +449,6 @@ html  {
       border:none;
       margin-bottom: 0;
       padding-bottom: 0;
-    }
-  }
-}
-
-.station-link {
-  display: flex;
-  align-items: center;
-  font-size: $size-6;
-  position: relative;
-  .icon {
-    height: 1.25rem;
-    width: auto;
-    flex-shrink: 0;
-    img {
-      height: 100%;
-    }
-  }
-  .play-icon-wrapper {
-    @include play-icon-wrapper($light-gray, 1.2rem);
-    flex-grow: 0;
-    margin-left: 0.5rem;
-    right: 0;
-  }
-  &:hover {
-    .play-icon-wrapper {
-      border-color: $basic-red;
     }
   }
 }

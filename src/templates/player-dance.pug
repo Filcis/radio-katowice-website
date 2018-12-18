@@ -3,11 +3,11 @@ include ./_includes/mixins/_player-current.pug
 include ./_includes/mixins/_inline_svg.pug
 block vars
   -
-    let title ="Polskie Radio Katowice - top50";
+    let title ="Polskie Radio Katowice - dance";
     let baseurl= "";
     let current = {
-      name: "Nick Cave & The Bad Seeds",
-      title: "Jubilee Street",
+      name: "Elvis Presley",
+      title: "Crawfish",
       image: "okladka_nuta_m.svg",
     }
     let player_news = [
@@ -49,29 +49,29 @@ mixin shortcut(time, title, icon, isvertical)
       span.player-shortcut-title= title
       span.player-shortcut-call-to-action słuchaj
 block content
-  +current(current, "top50")
+  +current(current, "dance")
   section.player-shortcut-group
     .player-shortcuts
       h2.shortcuts-group-title 
         span Serwisy
       .columns.is-mobile
         .column.is-4
-          +shortcut('','Pogoda','ico-pogoda', 'shortcut-is-vertical-mobile')(class='fas fa-cloud fa-2x')
+          +shortcut('','Pogoda','ico-pogoda', 'shortcut-is-vertical-mobile')
         .column.is-4
-          +shortcut('','Auto Radio','ico-autoradio', 'shortcut-is-vertical-mobile')(class='fas fa-car fa-2x')
+          +shortcut('','Auto Radio','ico-autoradio', 'shortcut-is-vertical-mobile')
         .column.is-4
-          +shortcut('','Informacje','ico-informacje', 'shortcut-is-vertical-mobile')(class='fas fa-info fa-2x')
+          +shortcut('','Informacje','ico-informacje', 'shortcut-is-vertical-mobile')
     .player-shortcuts
       h2.shortcuts-group-title
         span Podcasty
       .carousel.carousel-animated.carousel-animate-slide
         .carousel-container
           .carousel-item.is-active
-            +shortcut('','Nazwa audycji', 'ico-audycje')(class='fas fa-music fa-2x')
+            +shortcut('','Nazwa audycji', 'ico-audycje')
           .carousel-item
-            +shortcut('','Nazwa audycji 2', 'ico-audycje')(class='fas fa-music fa-2x')
+            +shortcut('','Nazwa audycji 2', 'ico-audycje')
           .carousel-item
-            +shortcut('','Nazwa audycji 3', 'ico-audycje')(class='fas fa-music fa-2x')
+            +shortcut('','Nazwa audycji 3', 'ico-audycje')
         .carousel-navigation.is-overlay
           .carousel-nav-left
             i.fa.fa-chevron-left(aria-hidden="true")

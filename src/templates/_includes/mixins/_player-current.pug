@@ -1,3 +1,4 @@
+include ../mixins/_inline_svg.pug
 mixin current(current, station)
   .container.is-fullhd
     if current.image
@@ -26,11 +27,11 @@ mixin current(current, station)
                   span.icon
                     case station
                       when "top50"
-                        img(src=baseurl + "assets/files/img/ikony/stacja_top50.svg")
+                        +svg-icon(svg-icon-name ="top-50")
                       when "live"
-                        img(src=baseurl + "assets/files/img/ikony/stacja_live.svg")
+                        +svg-icon(svg-icon-name ="live")
                       default
-                        img(src=baseurl + "assets/files/img/ikony/stacja_katowice.svg")
+                        +svg-icon(svg-icon-name ="katowice")
               .column
                 h3
                   span.artist-name= current.name
@@ -42,39 +43,49 @@ mixin current(current, station)
                 li
                   a.station-link(href=baseurl +'player.html') 
                     span.icon
-                      img(src=baseurl + "assets/files/img/ikony/stacja_katowice.svg")
-                    span.stationlink-artist-name Varius Manx, Kasia Stankiewicz #[span.stationlink-title Kot bez ogona ]
+                      +svg-icon(svg-icon-name ="katowice")
+                    .station-link-current-item
+                      span.stationlink-artist-name Varius Manx, Kasia Stankiewicz
+                      span.stationlink-title Kot bez ogona
                     .play-icon-wrapper
                       .play-icon
               if station != "live"
                 li
                   a.station-link(href='#') 
                     span.icon
-                      img(src=baseurl + "assets/files/img/ikony/stacja_live.svg")
-                    span.stationlink-artist-name Nick Cave & The Bad Seeds #[span.stationlink-title Jubilee Street ]
+                      +svg-icon(svg-icon-name ="live")
+                    .station-link-current-item
+                      span.stationlink-artist-name Nick Cave & The Bad Seeds
+                      span.stationlink-title Jubilee Street
                     .play-icon-wrapper
                       .play-icon
               if station != "top50"
                 li
                   a.station-link(href=baseurl +'player-top50.html') 
                     span.icon
-                      img(src=baseurl + "assets/files/img/ikony/stacja_top50.svg")
-                    span.stationlink-artist-name Tom Waits #[span.stationlink-title Ol'55 ]
+                      +svg-icon(svg-icon-name ="top-50")
+                    .station-link-current-item
+                      span.stationlink-artist-name Tom Waits
+                      span.stationlink-title Ol'55
                     .play-icon-wrapper
                       .play-icon
               if station != "moje_radio"
                 li
                   a.station-link(href='#') 
                     span.icon
-                      img(src=baseurl + "assets/files/img/ikony/stacja_moje_radio.svg")
-                    span.stationlink-artist-name The Dumplings #[span.stationlink-title Raj ]
+                      +svg-icon(svg-icon-name ="moje-radio")
+                    .station-link-current-item
+                      span.stationlink-artist-name The Dumplings
+                      span.stationlink-title Raj
                     .play-icon-wrapper
                       .play-icon
               if station != "dance"
                 li
                   a.station-link(href='#') 
                     span.icon
-                      img(src=baseurl + "assets/files/img/ikony/stacja_dance.svg")
-                    span.stationlink-artist-name Elvis Presley #[span.stationlink-title Crawfish ]
+                      +svg-icon(svg-icon-name ="dance")
+                    .station-link-current-item
+                      span.stationlink-artist-name Elvis Presley
+                      span.stationlink-title Crawfish
                     .play-icon-wrapper
                       .play-icon
