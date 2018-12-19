@@ -11,6 +11,10 @@
   }
 }
 
+.tabs li.is-active a {
+  border-bottom: 1px solid $light-gray;
+}
+
 .on-air .button {
   font-size: $size-5 * 0.85;
   padding: 1.3rem 1.5rem;
@@ -292,6 +296,12 @@ article.main-article > figure {
     color: #fff;
     cursor: pointer;
   }
+}
+
+.top-list-form {
+  max-width: 70%;
+  padding: 1rem;
+  background-color: $light;
 }
 
 .swiper-item {

@@ -54,12 +54,11 @@
 }
 
 .navbar-after-divider {
-  height: 0rem;
+  height: 0.15rem;
   width: 100%;
   position: absolute;
-  bottom: -0.3rem;
-  // background-image: linear-gradient(to left, #2e77b9, #f09d9d);
-  background-color: #2e77b9;
+  bottom: 0rem;
+  background-image: linear-gradient(to left, #2e77b9, #f09d9d);
   // background-image: linear-gradient(to left, $basic-red, lighten($basic-red, 20%));
   .cssgradients &{
     background-image: linear-gradient(to left, #d13131, #f09d9d);

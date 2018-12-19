@@ -143,67 +143,177 @@
   </div>
   <main class="main-content section">
     <div class="container">
-      <div class="columns is-desktop is-gapless">
+      <div class="columns is-desktop">
         <div class="column is-9-desktop">
           <div class="columns is-centered">
             <div class="column is-10 is-9-fullhd">
-              <h1 class="page-title is-borderless">Lista przebojów</h1>
-              <table class="top-list table is-fullwidth">
-                <thead>
-                  <tr>
-                    <th abbr title="Pozycja">Pozycja</th>
-                    <th colspan="2" abbr title="Tytuł, Artysta">Tytuł, artysta</th>
-                    <th abbr title="Zmiana pozycji">Zmiana pozycji</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="position"><span>1</span></td>
-                    <td class="cover">
-                      <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
-                    </td>
-                    <td><span class="song">Thank U, Ariana Grande</span></td>
-                    <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="position"><span>2</span></td>
-                    <td class="cover">
-                      <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
-                    </td>
-                    <td><span class="song">Happier, Marshmello &amp; Bastille</span></td>
-                    <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="position"><span>3</span></td>
-                    <td class="cover">
-                      <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
-                    </td>
-                    <td><span class="song">Without Me, Halsey</span></td>
-                    <td class="change"><span class="icon is-red"><i class="fas fa-arrow-down"></i></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="position"><span>4</span></td>
-                    <td class="cover">
-                      <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
-                    </td>
-                    <td><span class="song">High Hopes, Panic! At The Disco</span></td>
-                    <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="position"><span>5</span></td>
-                    <td class="cover">
-                      <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
-                    </td>
-                    <td><span class="song">Take that, ODYSSEY</span></td>
-                    <td class="change"><span class="icon is-red"><i class="fas fa-arrow-down"></i></span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <h1 class="page-title">Lista przebojów</h1>
+              <p class="lead">Przebojowy początek weekendu! 20 największych hitów w regionie i piosenki, które kiedyś będą nucić wszyscy, ale jeszcze nikt o tym nie wie. Do tego konkursy, zaproszenia na koncerty i nie zawsze obliczalny prowadzący – Bartek Gruchlik.</p>
+              <div class="tabs is-medium">
+                <ul>
+                  <li><a class="tab-title is-active" data-tab-content="toplist">lista przebojów</a></li>
+                  <li><a class="tab-title" data-tab-content="waiting-room">poczekalnia</a></li>
+                  <li><a class="tab-title" data-tab-content="your-proposition">twoja propozycja</a></li>
+                </ul>
+              </div>
+              <div class="content-tab" id="toplist">
+                <table class="top-list table is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th abbr title="Pozycja">Pozycja</th>
+                      <th colspan="3" abbr title="Tytuł, Artysta">Tytuł, artysta</th>
+                      <th abbr title="Zmiana pozycji">Zmiana pozycji</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="position"><span>1</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Thank U, Ariana Grande</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>2</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Happier, Marshmello &amp; Bastille</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>3</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Without Me, Halsey</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><i class="fas fa-minus"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>4</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">High Hopes, Panic! At The Disco</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>5</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Take that, ODYSSEY</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon is-red"><i class="fas fa-arrow-down"></i></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="content-tab is-hidden" id="waiting-room">
+                <table class="top-list table is-fullwidth">
+                  <thead>
+                    <tr>
+                      <th abbr title="Pozycja">Pozycja</th>
+                      <th colspan="3" abbr title="Tytuł, Artysta">Tytuł, artysta</th>
+                      <th abbr title="Zmiana pozycji">Zmiana pozycji</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="position"><span>1</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Thank U, Ariana Grande</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>2</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Happier, Marshmello &amp; Bastille</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>3</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Without Me, Halsey</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><i class="fas fa-minus"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>4</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">High Hopes, Panic! At The Disco</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon has-text-success"><i class="fas fa-arrow-up"></i></span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="position"><span>5</span></td>
+                      <td class="cover">
+                        <figure class="image is-128x128"><img src="https://via.placeholder.com/128x128"></figure>
+                      </td>
+                      <td><span class="song">Take that, ODYSSEY</span></td>
+                      <td>
+                        <button class="button">zagłosuj</button>
+                      </td>
+                      <td class="change"><span class="icon is-red"><i class="fas fa-arrow-down"></i></span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="content-tab is-hidden" id="your-proposition">
+                <form class="top-list-form" action="">
+                  <h3 class="is-vmargin-1"> Twoja propozycja</h3>
+                  <label class="label">Wpisz zespół lub wykonawcę</label>
+                  <input class="input is-vmargin-1">
+                  <label class="label">Wpisz tytuł utworu</label>
+                  <input class="input is-vmargin-1">
+                  <div class="control">
+                    <button class="button">submit              </button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

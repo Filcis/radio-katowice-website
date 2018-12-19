@@ -6,36 +6,87 @@ block vars
     let songs = [
       { title: "Thank U, Ariana Grande", change: "up"},
       { title:"Happier, Marshmello & Bastille", change: "up"},
-      { title:"Without Me, Halsey", change: "down"},
+      { title:"Without Me, Halsey", change: ""},
       { title:"High Hopes, Panic! At The Disco", change: "up"},
       { title:"Take that, ODYSSEY", change: "down"},
     ]
     
 block main-content
-  h1.page-title.is-borderless Lista przebojów
-  table.top-list.table.is-fullwidth
-    thead
-      tr
-        th(abbr title="Pozycja") Pozycja
-        th(colspan="2" abbr title="Tytuł, Artysta") Tytuł, artysta
-        th(abbr title="Zmiana pozycji") Zmiana pozycji
-    tbody
-      each song, index in songs
+  h1.page-title Lista przebojów
+  p.lead Przebojowy początek weekendu! 20 największych hitów w regionie i piosenki, które kiedyś będą nucić wszyscy, ale jeszcze nikt o tym nie wie. Do tego konkursy, zaproszenia na koncerty i nie zawsze obliczalny prowadzący – Bartek Gruchlik.
+  .tabs.is-medium
+    ul
+      li
+        a.tab-title.is-active(data-tab-content="toplist") lista przebojów
+      li
+        a.tab-title(data-tab-content="waiting-room") poczekalnia
+      li
+        a.tab-title(data-tab-content="your-proposition") twoja propozycja
+  .content-tab#toplist
+    table.top-list.table.is-fullwidth
+      thead
         tr
-          td.position
-            span= index +1
-          td.cover
-            figure.image.is-128x128
-              img(src="https://via.placeholder.com/128x128")
-          td
-            span.song=song.title
-          td.change
-            if song.change === "up"
-              span.icon.has-text-success
-                i.fas.fa-arrow-up
-            else
-              span.icon.is-red
-                i.fas.fa-arrow-down
+          th(abbr title="Pozycja") Pozycja
+          th(colspan="3" abbr title="Tytuł, Artysta") Tytuł, artysta
+          th(abbr title="Zmiana pozycji") Zmiana pozycji
+      tbody
+        each song, index in songs
+          tr
+            td.position
+              span= index +1
+            td.cover
+              figure.image.is-128x128
+                img(src="https://via.placeholder.com/128x128")
+            td
+              span.song=song.title
+            td
+              button.button zagłosuj
+            td.change
+              if song.change === "up"
+                span.icon.has-text-success
+                  i.fas.fa-arrow-up
+              else if song.change === "down"
+                span.icon.is-red
+                  i.fas.fa-arrow-down
+              else
+                i.fas.fa-minus
+  .content-tab#waiting-room.is-hidden
+    table.top-list.table.is-fullwidth
+      thead
+        tr
+          th(abbr title="Pozycja") Pozycja
+          th(colspan="3" abbr title="Tytuł, Artysta") Tytuł, artysta
+          th(abbr title="Zmiana pozycji") Zmiana pozycji
+      tbody
+        each song, index in songs
+          tr
+            td.position
+              span= index +1
+            td.cover
+              figure.image.is-128x128
+                img(src="https://via.placeholder.com/128x128")
+            td
+              span.song=song.title
+            td
+              button.button zagłosuj
+            td.change
+              if song.change === "up"
+                span.icon.has-text-success
+                  i.fas.fa-arrow-up
+              else if song.change === "down"
+                span.icon.is-red
+                  i.fas.fa-arrow-down
+              else
+                i.fas.fa-minus
+  .content-tab#your-proposition.is-hidden
+    form.top-list-form(action='')
+      h3.is-vmargin-1  Twoja propozycja
+      label.label Wpisz zespół lub wykonawcę
+      input.input.is-vmargin-1 
+      label.label Wpisz tytuł utworu
+      input.input.is-vmargin-1 
+      .control
+        button.button submit              
 block sidebar
   .sidebar-content
     include ../_includes/sidebar_includes/_newsletter.pug 
