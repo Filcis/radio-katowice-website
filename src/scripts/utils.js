@@ -30,37 +30,37 @@ export function attachCarousels() {
 }
 
 /* ==================================================
-                   Swiper
+                   Accordion
 ================================================== */
 
-class rkAccordion {
-  constructor(selector) {
-    this.instance = $(selector);
-    this.accordionLinks = $(this.element).find('.accordion-title, navbar-link');
-    this.init();
-  }
-
-  static attach(selector = '.accordion, .navbar-menu') {
-    let instances = new Array();
-    const elements = document.querySelectorAll(selector);
-    [].forEach.call(elements, element => {
-      setTimeout(() => {
-        instances.push(new rkAccordion(element));
-      }, 100);
-    });
-    return instances;
-  }
-
-  init() {
-    this.accordionLinks.click()
-    console.log("accordion initiated");
-  }
-
-}
-
-export function accordions() {
-  var accordions = rkAccordion.attach();
-}
+// class rkAccordion {
+//   constructor(selector) {
+//     this.instance = $(selector);
+//     this.accordionLinks = $(this.element).find('.accordion-title, navbar-link');
+//     this.init();
+//   }
+//
+//   static attach(selector = '.accordion, .navbar-menu') {
+//     let instances = new Array();
+//     const elements = document.querySelectorAll(selector);
+//     [].forEach.call(elements, element => {
+//       setTimeout(() => {
+//         instances.push(new rkAccordion(element));
+//       }, 100);
+//     });
+//     return instances;
+//   }
+//
+//   init() {
+//     this.accordionLinks.click()
+//     console.log("accordion initiated");
+//   }
+//
+// }
+//
+// export function accordions() {
+//   var accordions = rkAccordion.attach();
+// }
 
 /* ==================================================
                    Swiper

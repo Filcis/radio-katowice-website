@@ -38,7 +38,12 @@ function openRequestedPopup(url) {
 //NAVIGATION
 function initNav(link, element) {
     link.on('click', function() {
-        $(this).siblings(element).toggleClass('open');
+      $(this).toggleClass('open');
+      if ($(this).hasClass('open')) {
+        $(this).siblings(element).slideDown(300);
+      } else {
+        $(this).siblings(element).slideUp(300);
+      }
       });
 }
 
@@ -55,9 +60,16 @@ function playerTogglePlay() {
   })
 }
 
+function responsiveNav() {
+  if(Modernizr.mq('(max-width: 1087px)')) {
+      initNav(dropdown, submenus);
+  }
+}
+
 export let attachClickEvents = () => {
   goToTopButton.on('click', goToTop);
-  initNav(dropdown, submenus);
+  responsiveNav()
+  $(window).on('resize', _.debounce( responsiveNav, 100));
   initNav(accordionLink, accordionContent);
   playerTogglePlay();
   togglePlay();

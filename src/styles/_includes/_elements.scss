@@ -231,8 +231,24 @@ article.main-article > figure {
   @include until($desktop) {
       padding: $vertical-rhythm-unit-1 2rem;
   }
-  @include from($desktop) {
-      padding-left: 3rem;
+}
+
+.accordion-title {
+  display: block;
+  cursor: pointer;
+  i {
+    color: $light-gray;
+  }
+  .fa-minus {
+    display: none;
+  }
+  &.open {
+    .fa-minus {
+        display: block;
+    }
+    .fa-plus {
+      display: none;
+    }
   }
 }
 
