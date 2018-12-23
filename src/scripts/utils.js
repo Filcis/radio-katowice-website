@@ -46,6 +46,7 @@ class rkAccordionMenu {
 
   init() {
     $(this.accordionLinks).on('click', this.clickHandler);
+    $(this.accordionLinks).siblings().on('click', (e) => {e.stopPropagation()});
     $(document).on('click', () => {
       $(this.accordionLinks).siblings('.navbar-dropdown').slideUp(300);
       $(this.accordionLinks).removeClass('is-active');
