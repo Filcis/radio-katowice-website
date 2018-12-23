@@ -54,7 +54,7 @@ class rkAccordionMenu {
 
   clickHandler(e) {
     e.stopPropagation();
-    $(this.accordionLinks).not($(e.currentTarget)).siblings('.navbar-dropdown').slideUp(300);
+    $(this.accordionLinks).not($(e.currentTarget)).siblings('.navbar-dropdown').slideUp(300).removeClass('is-active');;
     $(e.currentTarget).siblings('.accordion-content, .navbar-dropdown').slideToggle(300);
     $(e.currentTarget).toggleClass('is-active');
   }
