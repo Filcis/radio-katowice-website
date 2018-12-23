@@ -48,6 +48,7 @@ class rkAccordionMenu {
     $(this.accordionLinks).on('click', this.clickHandler);
     $(document).on('click', () => {
       $(this.accordionLinks).siblings('.navbar-dropdown').slideUp(300);
+      $(this.accordionLinks).removeClass('.is-active');
     });
   }
 
@@ -55,6 +56,7 @@ class rkAccordionMenu {
     e.stopPropagation();
     $(this.accordionLinks).not($(e.currentTarget)).siblings('.navbar-dropdown').slideUp(300);
     $(e.currentTarget).siblings('.accordion-content, .navbar-dropdown').slideToggle(300);
+    $(e.currentTarget).toggleClass('is-active');
   }
 }
 

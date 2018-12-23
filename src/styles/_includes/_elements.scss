@@ -242,7 +242,7 @@ article.main-article > figure {
   .fa-minus {
     display: none;
   }
-  &.open {
+  &.is-active {
     .fa-minus {
         display: block;
     }
