@@ -8,7 +8,6 @@ import * as rkUtilities from './utils.js'
 attachScrollEvents();
 attachClickEvents();
 responsiveResizing();
-rkUtilities.dropdownHandler();
 rkUtilities.burgerHandler();
 rkUtilities.attachCarousels();
 rkUtilities.tabs();

@@ -1,23 +1,14 @@
-const dropdown = $('#stream-dropdown');
-const navbarBurgers = $('.navbar-burger');
+// const dropdown = $('#stream-dropdown');
+let navbarBurgers = $('.navbar-burger');
 
-/* ==================================================
-                    Dropdown
-================================================== */
-export function dropdownHandler(){
-  dropdown.on('click', ((e) => {
-      $(e.currentTarget).toggleClass('is-active');
-      $(e.currentTarget.dataset.target).slideToggle("slow");
-  }));
-}
 
 /* ==================================================
                    Burger Menu
 ================================================== */
+
 export function burgerHandler(){
   navbarBurgers.on('click',((e) => {
       $(e.currentTarget).toggleClass('is-active');
-      console.log(e.currentTarget.dataset);
       $(e.currentTarget.dataset.target).toggleClass('is-active');
   }));
 }

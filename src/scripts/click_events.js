@@ -47,6 +47,20 @@ function initNav(link, element) {
       });
 }
 
+function detachNav(link){
+  link.off('click');
+}
+
+function responsiveNav() {
+  if(Modernizr.mq('(max-width: 1087px)')) {
+    detachNav(dropdown);
+    initNav(dropdown, submenus);
+  } else {
+    detachNav(dropdown);
+    $(dropdown).siblings(submenus).removeAttr('style');
+  }
+}
+
 function togglePlay() {
   shortcuts.on('click', function(){
     shortcuts.not($(this)).removeClass('play');
@@ -58,12 +72,6 @@ function playerTogglePlay() {
   player_button.on('click', function(){
     $(this).toggleClass('playing');
   })
-}
-
-function responsiveNav() {
-  if(Modernizr.mq('(max-width: 1087px)')) {
-      initNav(dropdown, submenus);
-  }
 }
 
 export let attachClickEvents = () => {
