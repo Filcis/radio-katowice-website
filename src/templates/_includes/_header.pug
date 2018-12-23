@@ -78,8 +78,7 @@ header
               a.navbar-link= menu.title
               .navbar-dropdown
                 each item, index in menu.submenu
-                    .navbar-item 
-                      a(href=item.href)= item.title
+                    a.navbar-item(href=item.href)= item.title
                     if index != (menu.submenu.length -1)
                       hr.dropdown-divider
           .level
