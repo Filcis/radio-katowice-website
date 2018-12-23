@@ -35,31 +35,31 @@ function openRequestedPopup(url) {
   }
 }
 
-//NAVIGATION
-function initNav(link, element) {
-    link.on('click', function() {
-      $(this).toggleClass('open');
-      if ($(this).hasClass('open')) {
-        $(this).siblings(element).slideDown(300);
-      } else {
-        $(this).siblings(element).slideUp(300);
-      }
-      });
-}
-
-function detachNav(link){
-  link.off('click');
-}
-
-function responsiveNav() {
-  if(Modernizr.mq('(max-width: 1087px)')) {
-    detachNav(dropdown);
-    initNav(dropdown, submenus);
-  } else {
-    detachNav(dropdown);
-    $(dropdown).siblings(submenus).removeAttr('style');
-  }
-}
+// ACCORDION
+// function dropdownToggle(link, element) {
+//     link.on('click', function() {
+//         $(this).toggleClass('is-active');
+//         if ($(this).hasClass('is-active')) {
+//           $(this).siblings(element).slideDown(300);
+//         } else {
+//           $(this).siblings(element).slideUp(300);
+//         }
+//       });
+// }
+//
+// function detachNav(link){
+//   link.off('click');
+// }
+//
+// function responsiveNav() {
+//   if(Modernizr.mq('(max-width: 1087px)')) {
+//     detachNav(dropdown);
+//     dropdownToggle(dropdown, submenus);
+//   } else {
+//     detachNav(dropdown);
+//     $(dropdown).siblings(submenus).removeAttr('style');
+//   }
+// }
 
 function togglePlay() {
   shortcuts.on('click', function(){
@@ -76,9 +76,9 @@ function playerTogglePlay() {
 
 export let attachClickEvents = () => {
   goToTopButton.on('click', goToTop);
-  responsiveNav()
-  $(window).on('resize', _.debounce( responsiveNav, 100));
-  initNav(accordionLink, accordionContent);
+  // responsiveNav()
+  // $(window).on('resize', _.debounce( responsiveNav, 100));
+  // dropdownToggle(accordionLink, accordionContent);
   playerTogglePlay();
   togglePlay();
   playerPopup();

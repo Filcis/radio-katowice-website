@@ -6,6 +6,10 @@
   height: 100%;
 }
 
+.js .navbar-item.is-hoverable .navbar-dropdown {
+  display: none;
+}
+
 .navbar {
   max-width: 100%;
 }
@@ -35,11 +39,8 @@
   }
 }
 
-.navbar-dropdown, .accordion-content {
+.js .navbar-dropdown, .accordion-content {
   display: none;
-  // &.open {
-  //     display: block;
-  // }
 }
 
 .navbar-dropdown {

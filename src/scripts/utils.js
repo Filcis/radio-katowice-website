@@ -21,37 +21,46 @@ export function attachCarousels() {
 }
 
 /* ==================================================
-                   Accordion
+                   Navigation
 ================================================== */
 
-// class rkAccordion {
-//   constructor(selector) {
-//     this.instance = $(selector);
-//     this.accordionLinks = $(this.element).find('.accordion-title, navbar-link');
-//     this.init();
-//   }
-//
-//   static attach(selector = '.accordion, .navbar-menu') {
-//     let instances = new Array();
-//     const elements = document.querySelectorAll(selector);
-//     [].forEach.call(elements, element => {
-//       setTimeout(() => {
-//         instances.push(new rkAccordion(element));
-//       }, 100);
-//     });
-//     return instances;
-//   }
-//
-//   init() {
-//     this.accordionLinks.click()
-//     console.log("accordion initiated");
-//   }
-//
-// }
-//
-// export function accordions() {
-//   var accordions = rkAccordion.attach();
-// }
+class rkAccordionMenu {
+  constructor(selector) {
+    this.instance = $(selector);
+    this.accordionLinks = $(this.instance).find('.accordion-title, .navbar-link');
+    this.clickHandler = this.clickHandler.bind(this);
+
+    this.init();
+  }
+
+  static attach(selector = '.accordion, .navbar-menu') {
+    let instances = new Array();
+    const elements = document.querySelectorAll(selector);
+    [].forEach.call(elements, element => {
+      setTimeout(() => {
+        instances.push(new rkAccordionMenu(element));
+      }, 100);
+    });
+    return instances;
+  }
+
+  init() {
+    $(this.accordionLinks).on('click', this.clickHandler);
+    $(document).on('click', () => {
+      $(this.accordionLinks).siblings('.navbar-dropdown').slideUp(300);
+    });
+  }
+
+  clickHandler(e) {
+    e.stopPropagation();
+    $(this.accordionLinks).not($(e.currentTarget)).siblings('.navbar-dropdown').slideUp(300);
+    $(e.currentTarget).siblings('.accordion-content, .navbar-dropdown').slideToggle(300);
+  }
+}
+
+export function accordions() {
+  var accordions = rkAccordionMenu.attach();
+}
 
 /* ==================================================
                    Swiper
@@ -147,13 +156,11 @@ export function tabs() {
 
       if ($('#' + tab ).hasClass('is-hidden-mobile')) {
         $('.content-tab').addClass('is-hidden-mobile');
-        console.log($(this).data('tab-content'));
         $('#' + tab ).removeClass('is-hidden-mobile');
       }
 
       if ($('#' + tab ).hasClass('is-hidden')) {
         $('.content-tab').addClass('is-hidden');
-        console.log($(this).data('tab-content'));
         $('#' + tab ).removeClass('is-hidden');
       }
 

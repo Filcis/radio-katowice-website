@@ -10,6 +10,7 @@ attachClickEvents();
 responsiveResizing();
 rkUtilities.burgerHandler();
 rkUtilities.attachCarousels();
+rkUtilities.accordions();
 rkUtilities.tabs();
 rkUtilities.contentSwiper();
 //testy
