@@ -6,9 +6,13 @@ mixin article(articleContent, mockup)
         a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
           figure.image.is-16by9
             if mockup
-              img.featured-img(src=articleContent.image + "?sig=" + Math.floor(Math.random() * 20) + 1 )
+              img.lazyload.featured-img(data-src=articleContent.image + "?sig=" + Math.floor(Math.random() * 20) + 1 )
+              noscript
+                img(src=articleContent.image + "?sig=" + Math.floor(Math.random() * 20) + 1)
             else
-              img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+              img.lazyload.featured-img(data-src=baseurl + "assets/files/img/" + articleContent.image)
+              noscript
+                img(src=baseurl + "assets/files/img/" + articleContent.image)
       .column
         .article-tags
           each val in articleContent.tags
@@ -33,10 +37,14 @@ mixin similiarArticles(articleContent)
         if articleContent.image
           figure.image.is-16by9
             a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
-              img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+              img.lazyload.featured-img(data-src=baseurl + "assets/files/img/" + articleContent.image)
+              noscript
+                img(src=baseurl + "assets/files/img/" + articleContent.image)
         else
           figure.image.is-16by9
-            img(src="https://via.placeholder.com/320x180").featured-img
+            img.lazyload(data-src="https://via.placeholder.com/320x180").featured-img
+            noscript
+              img(src="https://via.placeholder.com/320x180")
         .article-tags
           each val in articleContent.tags
             span.article-tag.is-medium= val

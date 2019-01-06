@@ -44,8 +44,13 @@
   }
 }
 
-//preloader gif in article images
-figure.image {
+.lazyload {
+	opacity: 0;
+}
+
+.lazyloading {
+	opacity: 1;
+	transition: opacity 300ms;
   background-image: url("../files/img/rk_preloader.gif");
   background-repeat: no-repeat;
   background-size: cover;
