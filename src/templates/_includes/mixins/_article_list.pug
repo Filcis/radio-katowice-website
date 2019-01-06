@@ -4,10 +4,11 @@ mixin article(articleContent, mockup)
       .column.is-half
         span.tag.date-tag.is-medium= articleContent.date
         a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
-          if mockup
-            img.featured-img(src=articleContent.image + "?sig=" + Math.floor(Math.random() * 20) + 1 )
-          else
-            img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+          figure.image.is-16by9
+            if mockup
+              img.featured-img(src=articleContent.image + "?sig=" + Math.floor(Math.random() * 20) + 1 )
+            else
+              img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
       .column
         .article-tags
           each val in articleContent.tags
@@ -30,10 +31,12 @@ mixin similiarArticles(articleContent)
       .similiar-article-wrapper
         span.tag.date-tag.is-medium= articleContent.date
         if articleContent.image
-          a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
-            img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
+          figure.image.is-16by9
+            a.featured-img-anchor(href=baseurl + 'articles/' + articleContent.link + '.html')
+              img.featured-img(src=baseurl + "assets/files/img/" + articleContent.image)
         else
-          img(src="https://via.placeholder.com/320x180").featured-img
+          figure.image.is-16by9
+            img(src="https://via.placeholder.com/320x180").featured-img
         .article-tags
           each val in articleContent.tags
             span.article-tag.is-medium= val

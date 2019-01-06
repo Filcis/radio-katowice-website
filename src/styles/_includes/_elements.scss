@@ -45,8 +45,8 @@
 }
 
 //preloader gif in article images
-article img {
-  background-image: url("../files/img/rk_placeholder.gif");
+figure.image {
+  background-image: url("../files/img/rk_preloader.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
