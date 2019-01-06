@@ -36,12 +36,20 @@
   margin-right: 0.5rem;
   &:hover {
     color: #fff;
-    background-color: darken($basic-red, 40);
-    border: 1px solid darken($basic-red, 40);
+    background-color: lighten(#1c4089, 10);
+    border: 1px solid lighten(#1c4089, 10);
   }
   &:active {
     color: #fff;
   }
+}
+
+//preloader gif in article images
+article img {
+  background-image: url("../files/img/rk_placeholder.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 article.main-article > figure {
