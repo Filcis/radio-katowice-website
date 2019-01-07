@@ -45,19 +45,16 @@
 }
 
 .lazyload {
+  opacity:0;
+}
+
+.lazyloading {
+  opacity:1;
+  transition: 1ms;
   background-image: url("../files/img/rk_preloader.gif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.lazyloading {
-  opacity:0;
-}
-
-.lazyloaded {
-  opacity:1;
-  transition: 300ms;
 }
 
 article.main-article > figure {
