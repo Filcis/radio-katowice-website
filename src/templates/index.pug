@@ -5,16 +5,13 @@ block vars
     let bodyClass ="home"
     let baseurl= "";
 block content 
-  section.hero#homepage-hero
+  section.hero.is-medium#homepage-hero
     .hero-body
       .container
         .columns
-          .column.is-8
+          .column.is-narrow
             .on-air-wrapper
               include _includes/_on_air.pug
-          .column.is-4.is-hidden-mobile
-            .musicians-illustration
-                img(src= baseurl + "assets/files/img/grajki.svg")
   section.main-content
     .container
       section.player-shortcuts

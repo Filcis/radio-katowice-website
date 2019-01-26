@@ -19,8 +19,8 @@
   font-size: $size-5 * 0.85;
   padding: 1.3rem 1.5rem;
   background-color: transparent;
-  color: #c1daf5;
-  border-color: #c1daf5;
+  color: #fff;
+  border-color: #fff;
   @include from($desktop) {
     font-size: $size-5 * 0.85;
     padding: 1.5rem 1.8rem;
@@ -29,15 +29,15 @@
 
 
 .on-air .call-to-action {
-  background-color: #1c4089;
+  background-color: #fff;
   font-weight: 400;
-  border: 1px solid #1c4089;
+  border: 1px solid #fff;
+  color: $basic-red;
+  opacity: 0.8;
   // transition: 0.2s background-color ease-in-out;
   margin-right: 0.5rem;
   &:hover {
-    color: #fff;
-    background-color: lighten(#1c4089, 10);
-    border: 1px solid lighten(#1c4089, 10);
+    opacity: 1;
   }
   &:active {
     color: #fff;

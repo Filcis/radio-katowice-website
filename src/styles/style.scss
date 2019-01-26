@@ -94,18 +94,23 @@ body.home {
 
 #homepage-hero {
   // background-color: #2a68aa;
-  background-image: linear-gradient(60deg, #70acf1 0%, #3071bd 30%, #1e66bb 60%, #81ade0 100%);
-  background-image: url("../files/img/testowe_tlo_2.svg");
+  @include until($tablet) {
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%), url("../files/img/czerwone_tlo.jpg");
+  }
+  @include until($tablet) {
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%), url("../files/img/czerwone_tlo.jpg");
+  }
+  background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%), url("../files/img/czerwone_tlo2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-}
-
-.on-air-wrapper {
-  @include from($desktop) {
-      margin-top: $vertical-rhythm-unit-5;
+  background-position: top center;
+  .container {
+    @include from($desktop) {
+          min-height: 24rem;
+    }
   }
 }
+
 
 .on-air-wrapper .tabs {
   .tab-title {

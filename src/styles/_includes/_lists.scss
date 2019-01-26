@@ -99,20 +99,21 @@
       height: 1.6rem;
       //nazwa stacji
       path {
-        fill: $light;
+        fill: $light-gray;
+        fill: rgba(255,255,255, 0.75);
         transition: all 0.3s ease-in-out;
       }
       //logo
       path:last-child {
         fill: $light-gray;
-        fill: rgba(255,255,255, 0.3);
+        fill: rgba(255,255,255, 0.75);
         transition: all 0.2s ease-in-out;
       }
     }
   }
   &:hover svg path:last-child,
   &:hover svg path, {
-     fill: $basic-red;
+     fill: #fff;
    }
 }
 
