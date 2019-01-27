@@ -75,6 +75,9 @@
     margin-bottom: $vertical-rhythm-unit-1;
     &:last-child {
       margin: 0;
+      .station-link {
+        border: none;
+      }
     }
   }
 }

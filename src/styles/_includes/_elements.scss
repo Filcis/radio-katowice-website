@@ -17,10 +17,13 @@
 
 .on-air .button {
   font-size: $size-5 * 0.85;
-  padding: 1.3rem 1.5rem;
+  padding: 1rem 1.2rem;
   background-color: transparent;
   color: #fff;
   border-color: #fff;
+  @include from($large-mobile) {
+    padding: 1.3rem 1.5rem;
+  }
   @include from($desktop) {
     font-size: $size-5 * 0.85;
     padding: 1.5rem 1.8rem;

@@ -94,20 +94,51 @@ body.home {
 
 #homepage-hero {
   // background-color: #2a68aa;
-  @include until($tablet) {
-    background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%), url("../files/img/czerwone_tlo.jpg");
+  background-image: url("../files/img/hero_phone_1x.jpg");
+  background-image: image-set(url('../files/img/hero_phone_1x.jpg') 1x, url('../files/img/hero_phone_2x.jpg') 2x);
+  @include from(700px) {
+    background-image: url("../files/img/hero_tablet_1x.jpg");
+    background-image: image-set(url('../files/img/hero_tablet_1x.jpg') 1x, url('../files/img/hero_tablet_2x.jpg') 2x);
   }
-  @include until($tablet) {
-    background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%), url("../files/img/czerwone_tlo.jpg");
+  @include from(961px) {
+    background-image: url("../files/img/hero_laptop_1x.jpg");
+    background-image: image-set(url('../files/img/hero_laptop_1x.jpg') 1x, url('../files/img/hero_laptop_2x.jpg') 2x);
   }
-  background-image: linear-gradient(0deg,rgba(0,0,0,0.3), rgba(0,0,0,0.2) 15%, rgba(0,0,0,0) 45%), url("../files/img/czerwone_tlo2.jpg");
+  @include from(1367px) {
+    background-image: url("../files/img/hero_desktop_1x.jpg");
+    background-image: image-set(url('../files/img/hero_desktop_1x.jpg') 1x, url('../files/img/hero_desktop_2x.jpg') 2x);
+  }
+  @include from(1921px) {
+    background-image: url("../files/img/hero_hidpi_desktop_1x.jpg");
+    background-image: image-set(url('../files/img/hero_hidpi_desktop_1x.jpg') 1x, url('../files/img/hero_hidpi_desktop_2x.jpg') 2x);
+  }
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top center;
-  .container {
-    @include from($desktop) {
-          min-height: 24rem;
-    }
+  background-position: top right;
+}
+
+#homepage-hero .hero-body {
+  @include from(700px) {
+    padding: 2rem 1.5rem;
+  }
+  @include from(961px) {
+    padding: 2rem 1.5rem;
+  }
+  @include from(1367px) {
+    padding: 4rem 1.5rem;
+  }
+  @include from(1921px) {
+  padding: 7rem 1.5rem;
+  }
+}
+
+#homepage-hero .container {
+  min-height: 20rem;
+  @include from($tablet) {
+    min-height: 20rem;
+  }
+  @include from($desktop) {
+    min-height: 22rem;
   }
 }
 
