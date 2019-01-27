@@ -67,6 +67,10 @@ article.main-article > figure {
   }
 }
 
+.similiar-article-wrapper figure {
+  margin-bottom: $vertical-rhythm-unit-1;
+}
+
 .featured .article-tags {
   margin-bottom: $vertical-rhythm-unit-1;
 }
@@ -294,6 +298,7 @@ article.main-article > figure {
   padding-bottom:56.25%;
   position:relative;
   height:0;
+  border: 1px solid #f2f2f2;
   & iframe {
     left:0;
     top:0;

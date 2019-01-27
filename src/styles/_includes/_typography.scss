@@ -160,6 +160,16 @@ blockquote {
   }
 }
 
+figcaption .caption {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding-left: 1rem;
+  border-left: 1px solid $light-gray;
+  font-size: $size-6;
+
+}
+
 .teaser-title {
   font-size: $size-4;
 }
