@@ -263,6 +263,11 @@ aside.sidebar {
   span {
       color: $gray;
       transition: color 0.2s ease;
+      &:first-child {
+        i.fas {
+          color: #ccc;
+        }
+      }
   }
   .icon {
     margin-left: 0.5rem;

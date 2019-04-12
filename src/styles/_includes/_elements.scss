@@ -286,13 +286,17 @@ article.main-article > figure {
 }
 
 .audition-cover {
-  padding: 0.25rem;
+  padding: 1px;
   width: 100px;
   height: 100px;
-  background-color: #666;
+  border-radius: 50%;
+  .image img {
+    border-radius: 50%;
+  }
+  background-color: #be273a;
   @include from($fullhd) {
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
   }
 }
 
